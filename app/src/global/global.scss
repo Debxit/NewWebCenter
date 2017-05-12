@@ -1,0 +1,145 @@
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: $font-main;
+	font-weight: 400;
+	color: $color-main;
+	margin:0;
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	height: 100vh ;
+
+	&.shadow{
+		&:after{
+			content: '';
+			width:100%;
+			height:100%;
+			position: absolute;
+			z-index: 2;
+			background: rgba(0,0,0,0.3);
+		}
+	}
+
+}
+
+#workarea{
+
+}
+.main {
+	.container
+	{
+		height: 60vh;
+	}
+
+	flex: 1 0 auto;
+
+}
+.header, footer {
+	flex-grow: 0;
+	flex-shrink: 0;
+	-webkit-flex: 0 0 auto;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	padding-left:15px;
+	padding-right:15px;
+	width:1170px;
+	margin:0 auto;
+
+	@include screen-lg(){
+		width:970px;
+	}
+	@include screen-md(){
+		width:770px;
+	}
+	@include screen-sm(){
+		width:100%;
+	}
+}
+
+a{
+	text-decoration:  none;
+}
+
+input,
+textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+textarea {
+	resize: none;
+}
+
+hr {
+	margin: 0;
+}
+
+::selection {
+
+}
+
+.hidden{
+	display: none;
+}
+
+
+.btn{
+	border: $red solid 2px;
+	border-radius: 13px;
+	font-family: $font-main;
+	padding: 0 15px;
+	color: $red;
+	background:transparent;
+	transition: all .3s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 30px;
+
+	&:hover{
+		color: white;
+		background: $red;
+	}
+}
+
+
+#svg-map{
+	position: relative;
+	margin-top: 9%;
+	z-index: 0;
+
+	@include screen-xl(){
+		margin-top: 0;
+	}
+}
+#svg-map path{
+	transition: fill ease .2s;
+	fill: #d8d8d9;
+}
+
+#svg-map path.red{
+	fill: $red !important;
+}
+#svg-map path:hover{
+	fill: $red !important;
+}
+
+
+.red{
+	color: $red;
+}

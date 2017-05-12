@@ -1,0 +1,157 @@
+.header {
+  font-family: $font-days;
+  margin-top: 40px;
+
+
+  @include  screen-xl(){
+    margin-top: 10px;
+  }
+
+  &__right, &__left {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  &__left {
+    left: 15px;
+    top: 0;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+.logo {
+  .empty-logo {
+    font-size: 35px;
+  }
+}
+
+
+.phones {
+
+
+  &__spb, &__msc {
+    display: inline-block;
+    padding: 15px;
+    transform: scaleY(1.2);
+  }
+}
+
+.menu-icon {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 35px;
+  width:35px;
+  margin-left: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+  .bar {
+    width: 30px;
+    height: 5px;
+    background-color: $color-main;
+    border-radius: 2px;
+    position: relative;
+    /* autoprefixer: off */
+    transition: background linear .1s;
+    transition-delay: .2s;
+
+    &:before {
+      top: -10px;
+      /* autoprefixer: off */
+      transition-property: top, transform,  background;
+    }
+    &:after {
+      bottom: -10px;
+      /* autoprefixer: off */
+      transition-property: bottom, transform,  background;
+    }
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      left: 0;
+      border-radius: 2px;
+      width: 35px;
+      height: 5px;
+      background-color: $color-main;
+      content: "";
+      /* autoprefixer: off */
+      transition-duration: .3s, .3s;
+      transition-delay: .2s, .0s, .1s;
+    }
+  }
+
+  &.active {
+    z-index: 10;
+
+    .bar {
+      background: transparent;
+      /* autoprefixer: off */
+      transition-delay: .2s;
+
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+      &:before, &:after {
+        background: #fff;
+        /* autoprefixer: off */
+        transition-delay: .0s, .2s;
+      }
+    }
+  }
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+}
+
+.side-menu .nav li:hover a {
+  padding-left: 10px;
+}
+
+.side-menu{
+  position: fixed;
+  z-index:5;
+  padding-top: 200px;
+  right: 0;
+  top:0;
+  width:300px;
+  transform: translateX(100%);
+  transition: transform  .4s ease;
+  background: $color-main;
+  height: 100%;
+
+  .nav{
+
+    &__item{
+      a{
+        color: #fff;
+        display: block;
+        padding: 10px 0;
+        transition: padding .3s ease;
+      }
+    }
+  }
+
+  &.open{
+    transform: translateX(0);
+  }
+}
