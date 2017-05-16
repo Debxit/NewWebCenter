@@ -12,7 +12,7 @@ $(document).ready(function(){
 
         var currDot = $("#svg-map path:nth-child("+currDotNumber+")");
 
-        currDot.css({'fill': color});
+        currDot.addClass('red');
 
         $('body').animate({},4000,  function(){
             setTimeout(function(){
@@ -21,6 +21,7 @@ $(document).ready(function(){
         });
 
     }
+
 
     animate_map();
 
@@ -31,7 +32,7 @@ $(document).ready(function(){
 
    $(".menu-icon").click(function(){
        $('.side-menu').toggleClass('open');
-       $(this).toggleClass('active');
+       $(".menu-icon").toggleClass('active');
        $('body').toggleClass('shadow');
        return false;
    });
@@ -53,6 +54,15 @@ $(document).ready(function(){
 
     });
 
-
+    $('.page-slider').slick({
+        infinite: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        customPaging : function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a ><div class="nav__item"> '+thumb+'</div></a>';
+        }
+    });
 
 });

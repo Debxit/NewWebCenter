@@ -9,7 +9,11 @@
     justify-content: space-between;
     align-items: center;
   }
-
+.company{
+  @include screen-xs(){
+    max-width: 160px;
+  }
+}
   .socials{
     font-size: 26px;
     display: inline-flex;

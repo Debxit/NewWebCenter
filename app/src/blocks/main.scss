@@ -1,3 +1,170 @@
 .main {
+  overflow-x: hidden;
+  flex: 1 0 auto;
 
+  .container
+  {
+    height: 60vh;
+    position: relative;
+  }
+
+}
+
+.first-page{
+  text-align: center;
+  font-family: $font-days;
+  //padding-top: 9%;
+
+  @include screen-xl(){
+    padding-top: 5%;
+  }
+  @include screen-sm(){
+    padding-top: 15%;
+  }
+  @include screen-xs(){
+    padding-top: 40%;
+  }
+  .small-line{
+    font-size: 19px;
+    transform: scaleY(1.2);
+
+
+    @include screen-xs(){
+      font-size: 16px;
+    }
+
+  }
+  .full-logo{
+    max-width: 60%;
+    margin: 25px auto;
+
+    @include screen-xl() {
+      max-width: 50%;
+    }
+
+    @include screen-xs(){
+      margin: 15px auto;
+    }
+  }
+}
+.map{
+  margin-top: 145px;
+
+  @include screen-xl() {
+    margin-top: 70px;
+  }
+
+  &__line{
+    height: 1px;
+    border-bottom: 1px dashed $red;
+    margin:0 85px;
+
+    @include screen-md(){
+      margin: 0 55px;
+    }
+  }
+
+  &__descr{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    margin-bottom: 15px;
+    font-weight:500;
+
+    @include screen-sm(){
+      display: none;
+    }
+
+  }
+
+  .descr__item{
+    @include screen-lg(){
+      font-size: 14px;
+    }
+    @include screen-md(){
+      width:11%;
+      text-align: center;
+    }
+    &:nth-child(3){
+      width: 11%;
+    }
+  }
+
+  &__circles{
+    margin:0 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -8px;
+
+    @include screen-md(){
+      margin: 0 50px;
+      margin-top: -8px;
+    }
+
+    .circle{
+      display: block;
+      width: 15px;
+      height:15px;
+      border: 2px solid $red;
+      border-radius: 15px;
+      background: #fff;
+    }
+  }
+}
+
+
+.page{
+  text-align: center;
+  padding:30px 0;
+  &__title{
+    font-size: 30px;
+    font-family: $font-days;
+    transform: scaleY(1.2);
+    margin: 50px 0;
+  }
+  &__description{
+    font-weight: 300;
+    font-size: 23px;
+    margin-bottom:40px;
+  }
+}
+.profits{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  .profit{
+    text-align: center ;
+    width:20%;
+
+    &__img{
+      width: 55px;
+      height:55px;
+      margin:10px auto;
+      position: relative;
+      border:3px $red solid;
+      border-radius: 50%;
+      img{
+        position: absolute;
+        max-width: 80px;
+        top: 5px;
+        right: -25px;
+      }
+    }
+    &__name{
+      font-weight: 500;
+    }
+  }
+}
+
+.slick-dots{
+  list-style: none;
+  padding: 0;
+
+  li{
+    &:first-child{
+    display: none;
+    }
+  }
 }
