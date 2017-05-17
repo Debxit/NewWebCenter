@@ -38,17 +38,19 @@
   .empty-logo {
     width: 50px;
 
-    @include screen-sm() {
-      display: none;
-    }
+    //@include screen-sm() {
+    //  display: none;
+    //}
   }
 
   .full-logo{
-    display: none;
-    @include screen-sm() {
-      display: block;
-      width: 100px;
-    }
+    //display: none;
+    width: 100px;
+
+    //@include screen-sm() {
+    //  display: block;
+    //  width: 100px;
+    //}
   }
 }
 

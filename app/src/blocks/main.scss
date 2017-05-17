@@ -2,109 +2,115 @@
   overflow-x: hidden;
   flex: 1 0 auto;
 
-  .container
-  {
+  .container {
     height: 60vh;
     position: relative;
   }
 
 }
 
-.first-page{
+.first-page {
   text-align: center;
   font-family: $font-days;
-  //padding-top: 9%;
+  padding-top: 3%;
+  padding-bottom: 2%;
 
-  @include screen-xl(){
-    padding-top: 5%;
+  &:focus {
+    outline: none;
   }
-  @include screen-sm(){
+
+  @include screen-xl() {
+    padding-top: 1%;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  @include screen-sm() {
     padding-top: 15%;
   }
-  @include screen-xs(){
+  @include screen-xs() {
     padding-top: 40%;
   }
-  .small-line{
+  .small-line {
     font-size: 19px;
     transform: scaleY(1.2);
 
-
-    @include screen-xs(){
+    @include screen-xs() {
       font-size: 16px;
     }
 
   }
-  .full-logo{
+  .full-logo {
     max-width: 60%;
     margin: 25px auto;
 
     @include screen-xl() {
-      max-width: 50%;
+      max-width: 40%;
     }
 
-    @include screen-xs(){
+    @include screen-xs() {
       margin: 15px auto;
     }
   }
 }
-.map{
+
+.map {
   margin-top: 145px;
 
   @include screen-xl() {
     margin-top: 70px;
   }
 
-  &__line{
+  &__line {
     height: 1px;
     border-bottom: 1px dashed $red;
-    margin:0 85px;
+    margin: 0 85px;
 
-    @include screen-md(){
+    @include screen-md() {
       margin: 0 55px;
     }
   }
 
-  &__descr{
+  &__descr {
     display: flex;
     justify-content: space-between;
     margin: 0 10px;
     margin-bottom: 15px;
-    font-weight:500;
+    font-weight: 500;
 
-    @include screen-sm(){
+    @include screen-sm() {
       display: none;
     }
 
   }
 
-  .descr__item{
-    @include screen-lg(){
+  .descr__item {
+    @include screen-lg() {
       font-size: 14px;
     }
-    @include screen-md(){
-      width:11%;
+    @include screen-md() {
+      width: 11%;
       text-align: center;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       width: 11%;
     }
   }
 
-  &__circles{
-    margin:0 80px;
+  &__circles {
+    margin: 0 80px;
     display: flex;
     justify-content: space-between;
     margin-top: -8px;
 
-    @include screen-md(){
+    @include screen-md() {
       margin: 0 50px;
       margin-top: -8px;
     }
 
-    .circle{
+    .circle {
       display: block;
       width: 15px;
-      height:15px;
+      height: 15px;
       border: 2px solid $red;
       border-radius: 15px;
       background: #fff;
@@ -112,59 +118,129 @@
   }
 }
 
-
-.page{
+.page {
   text-align: center;
-  padding:30px 0;
-  &__title{
+  padding: 30px 0;
+
+  @include screen-xl() {
+    padding: 15px 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &__title {
     font-size: 30px;
     font-family: $font-days;
     transform: scaleY(1.2);
     margin: 50px 0;
+    text-transform: uppercase;
+
+    @include screen-xl() {
+      margin: 30px 0;
+    }
   }
-  &__description{
+  &__description {
     font-weight: 300;
     font-size: 23px;
-    margin-bottom:40px;
+    margin-bottom: 40px;
+
+    @include screen-xl() {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
   }
 }
-.profits{
+
+.profits {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
 
-  .profit{
-    text-align: center ;
-    width:20%;
+  .profit {
+    text-align: center;
+    width: 20%;
 
-    &__img{
+    &__img {
       width: 55px;
-      height:55px;
-      margin:10px auto;
+      height: 55px;
+      margin: 10px auto;
       position: relative;
-      border:3px $red solid;
+      border: 3px $red solid;
       border-radius: 50%;
-      img{
+      img {
         position: absolute;
         max-width: 80px;
         top: 5px;
         right: -25px;
       }
     }
-    &__name{
+    &__name {
       font-weight: 500;
     }
   }
 }
 
-.slick-dots{
+.slick-dots {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 
-  li{
-    &:first-child{
-    display: none;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    z-index: -1;
+    display: block;
+    height: 1px;
+    width: 90%;
+    border-bottom: 1px dashed $red;
+  }
+
+  li {
+    text-align: center;
+    transition: color ease .3s;
+
+    &.slick-active {
+      color: $red;
+
+      .dot{
+        &__circle{
+          border:3px solid $red;
+        }
+      }
+    }
+
+    &:first-child {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
+
+  }
+
+  .dot {
+
+    &__item {
+      margin: 0 10px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    &__circle {
+      width: 15px;
+      height: 15px;
+      margin: 0 auto;
+      border: 2px solid $red;
+      border-radius: 15px;
+      background: #fff;
+      transition: all;
     }
   }
 }

@@ -47,7 +47,10 @@
     }
   }
 
-  .st0{display:none;fill:#FFFFFF;}
+  .st0{
+    display:none;
+    fill:#FFFFFF;
+  }
   .st1{
     fill:$color-main;
     transition: all .3s ease;
