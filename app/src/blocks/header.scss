@@ -22,7 +22,7 @@
 
   &__left {
     left: 15px;
-    top: 3px;
+    top: 0px;
   }
 
   .container {
@@ -35,23 +35,31 @@
 }
 
 .logo {
-  .empty-logo {
-    width: 50px;
 
-    //@include screen-sm() {
-    //  display: none;
-    //}
+  transform: scaleY(1.2);
+  a{
+    color: $color-main;
+  }
+  .logo_main{
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    font-size: 35px;
+  }
+  .logo_small {
+    font-size: 21px;
+    display: block;
+    text-align: center;
+    margin-top: -13px;
+    color: $red;
   }
 
-  .full-logo{
-    //display: none;
-    width: 100px;
+  .brace-left,.brace-right{
+     display: inline-block;
+     width:16px;
+    //padding: 0 2px;
+   }
 
-    //@include screen-sm() {
-    //  display: block;
-    //  width: 100px;
-    //}
-  }
 }
 
 .phones {

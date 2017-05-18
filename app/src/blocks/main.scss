@@ -12,8 +12,7 @@
 .first-page {
   text-align: center;
   font-family: $font-days;
-  padding-top: 3%;
-  padding-bottom: 2%;
+  padding: 1.5% 0;
 
   &:focus {
     outline: none;
@@ -25,10 +24,10 @@
     margin-bottom: 20px;
   }
   @include screen-sm() {
-    padding-top: 15%;
+    padding-top: 5%;
   }
   @include screen-xs() {
-    padding-top: 40%;
+    //padding-top: 40%;
   }
   .small-line {
     font-size: 19px;
@@ -171,9 +170,9 @@
       border-radius: 50%;
       img {
         position: absolute;
-        max-width: 80px;
+        max-height: 35px;
         top: 5px;
-        right: -25px;
+        right: -15px;
       }
     }
     &__name {
@@ -188,17 +187,22 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  margin: 0 5%;
 
   &:after {
     content: '';
     position: absolute;
-    bottom: 10px;
-    left: 5%;
+    bottom: 7px;
+    left: 7%;
     z-index: -1;
     display: block;
     height: 1px;
-    width: 90%;
+    width: 86%;
     border-bottom: 1px dashed $red;
+    @include screen-sm(){
+      width: 100%;
+      left:0;
+    }
   }
 
   li {
@@ -208,9 +212,13 @@
     &.slick-active {
       color: $red;
 
-      .dot{
-        &__circle{
-          border:3px solid $red;
+      .dot {
+        &__item{
+          position: relative;
+          top:-5px;
+        }
+        &__circle {
+          box-shadow: inset 0 0 5px 2px $red;
         }
       }
     }
@@ -221,7 +229,12 @@
 
     &:hover {
       cursor: pointer;
-      color: $red;
+
+      .dot__item{
+        position: relative;
+        top:-5px;
+        color: $red;
+      }
     }
 
   }
@@ -229,18 +242,37 @@
   .dot {
 
     &__item {
+      top:0;
       margin: 0 10px;
       margin-bottom: 15px;
       font-weight: 500;
+      transition: all .2s ease;
+
+      @include screen-sm(){
+        display: none;
+      }
     }
     &__circle {
       width: 15px;
       height: 15px;
       margin: 0 auto;
-      border: 2px solid $red;
+      box-shadow: inset 0 0 2px 1px $red;
       border-radius: 15px;
       background: #fff;
-      transition: all;
+      transition: all .2s ease;
     }
   }
 }
+
+.test {
+  height: 140px;
+  width: 160px;
+  margin: 0 auto;
+  background: aquamarine;
+  .red{
+    width:50px;
+    height:50px;
+    background: $red;
+  }
+}
+
