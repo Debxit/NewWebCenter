@@ -1,8 +1,12 @@
 $(document).ready(function () {
 
-
     //background map infinite filling
     var dotsNumber = $("#svg-map path").length;
+    var countInterval = 0;
+
+    function random(min, max){
+        return (Math.random() * (max - min)) + min;
+    }
 
     function animate_map() {
         var currDotNumber = Math.floor((Math.random() * dotsNumber) + 1);
@@ -10,23 +14,24 @@ $(document).ready(function () {
         var currDot = $("#svg-map path:nth-child(" + currDotNumber + ")");
 
         currDot.addClass('red');
-
-        $('body').animate({}, 4000, function () {
-            setTimeout(function () {
-                animate_map();
-            }, 3000);
-        });
-
     }
 
-    animate_map();
 
-    // $("#svg-map path").click(function(){
-    //     $(this).addClass('red');
-    // });
+    var intervalID = setInterval(function () {
+        animate_map();
+        countInterval++;
+        // console.log(countInterval);
+    }, 5000);
+
+    //didn't work
+    if (countInterval > 50) {
+        console.log("stop");
+        console.log(countInterval);
+        clearInterval(intervalID);
+    }
 
 
-    // open aor close side menu
+    // open and close side menu
     $(".menu-icon").click(function () {
         $('.side-menu').toggleClass('open');
         $(".menu-icon").toggleClass('active');
@@ -58,8 +63,16 @@ $(document).ready(function () {
         slidesToScroll: 1,
         customPaging: function (slider, i) {
             var thumb = $(slider.$slides[i]).data('thumb');
-            return '<div class="dot__item"> ' + thumb + '</div><div class="dot__circle"></div>';
-        }
+            return '<div class="dot__item"> ' + thumb + '</div><div class="dot__circle"><div class="circle__line"></div></div>';
+        },
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    adaptiveHeight: true
+                }
+            }
+        ]
     });
 
 
@@ -75,7 +88,8 @@ $(document).ready(function () {
     });
 
     $('.full-logo').click(function () {
-
+        console.log("click");
+        e.PreventDefault();
         if ($('.page-slider').length) {
             $('.page-slider').slick('slickGoTo', 0);
             return false;
@@ -91,25 +105,38 @@ $(document).ready(function () {
             j = 0;
 
         function write_web() {
+            $('.logo_main').addClass("cursor");
             setInterval(function () {
                 if (i < logo_main.length) {
                     $('.logo_main').text($('.logo_main').text() + logo_main[i]);
                     i++;
                 }
+
             }, 150);
         }
 
         function write_center() {
+            $('.logo_main').removeClass("cursor");
+            $('.logo_small').addClass("cursor");
+
             setInterval(function () {
                 if (j < logo_small.length) {
                     $('.logo_small').text($('.logo_small').text() + logo_small[j]);
                     j++;
                 }
             }, 150);
+            $('.logo').addClass('full-logo');
+
+            setTimeout(function () {
+                $('.logo_small').removeClass("cursor");
+            }, 3000);
         }
 
         function delete_web() {
             var str = logo_main;
+            $('.logo_small').removeClass("cursor");
+            $('.logo_main').addClass("cursor");
+
             setInterval(function () {
                 if (i < logo_main.length) {
                     str = str.slice(0, -1);
@@ -117,9 +144,16 @@ $(document).ready(function () {
                     i++;
                 }
             }, 150);
+            setTimeout(function () {
+                $('.logo').removeClass('full-logo');
+            }, 150);
+            setTimeout(function () {
+                $('.logo_main').removeClass("cursor");
+            }, 600);
         }
 
         function delete_center() {
+            $('.logo_small').addClass("cursor");
             var str = logo_small;
             setInterval(function () {
                 if (j < logo_small.length) {
@@ -131,126 +165,56 @@ $(document).ready(function () {
         }
 
         if ((currentSlide == 0) && (nextSlide != 0)) {
-            $('.logo').addClass('full-logo');
 
             write_web();
             setTimeout(write_center, 450);
 
+            $('.svg-wrap').addClass('light');
         }
 
-        if (nextSlide == 0) {
-            $('.logo').removeClass('full-logo');
+        if ((currentSlide != 0) && (nextSlide == 0)) {
 
             delete_center();
             setTimeout(delete_web, 900);
+
+            $('.svg-wrap').removeClass('light');
         }
     });
 
 
     /********************* animation *****************/
 
-    var explode = function (el) {
-        var i, j, left, top, mx, my,
-            pieces = 4;
-        rows = pieces;//? Math.round( Math.sqrt( pieces ) ) : 9,
-        cells = rows,
-            element = $(el),
-            show = "fadeIn",
+    //animate logo at the first screen
+    $('.logo-container').velocity({
+        opacity: "1",
+        scale: "1"
+    }, 700, function () {
+        $('.logo-center').velocity({
+            opacity: "1",
+            translateX: "0"
+        }, 500, "ease", function () {
+            $('.brace-left, .brace-right').velocity({
+                opacity: "1",
+                translateX:"0"
+            }, 500, "ease");
+        });
+    });
 
-            // Show and then visibility:hidden the element before calculating offset
-            offset = element.show().css("visibility", "hidden").offset(),
+    var text = $(".small-line").text();
 
-            // Width and height of a piece
-            width = Math.ceil(element.outerWidth() / cells),
-            height = Math.ceil(element.outerHeight() / rows),
-            pieces = [];
+    var split = text.split("");
+
+    $(split).each(function(i) {
+        // console.log(this);
+        // $(this).velocity({
+        //     opacity: 0,
+        //     translateX: random(-500, 500),
+        //     translateY: random(-500, 500),
+        //     translateZ: random(-500, 500),
+        //     scale: .1,
+        //     delay: i * .02
+        // });
+    });
 
 
-        // Children animate complete:
-        function childComplete(elem) {
-            pieces.push(elem);
-            if (pieces.length === rows * cells) {
-                animComplete();
-            }
-        }
-
-        // Clone the element for each row and cell.
-        for (i = 0; i < rows; i++) { // ===>
-            top = offset.top + i * height;
-            my = i - ( rows - 1 ) / 2;
-
-            for (j = 0; j < cells; j++) { // |||
-                left = offset.left + j * width;
-                mx = j - ( cells - 1 ) / 2;
-
-                // Create a clone of the now hidden main element that will be absolute positioned
-                // within a wrapper div off the -left and -top equal to size of our pieces
-                element
-                    .clone()
-                    .appendTo("body")
-                    .wrap("<div class='elem-part'></div>")
-                    .css({
-                        position: "absolute",
-                        visibility: "visible",
-                        left: -j * width,
-                        top: -i * height
-                    })
-
-                    // Select the wrapper - make it overflow: hidden and absolute positioned based on
-                    // where the original was located +left and +top equal to the size of pieces
-                    .parent()
-                    // .addClass( "effect-explode" )
-                    .css({
-                        position: "absolute",
-                        overflow: "hidden",
-                        width: width,
-                        height: height,
-                        left: left + ( show ? mx * width : 0 ),
-                        top: top + ( show ? my * height : 0 ),
-                        opacity: show ? 0 : 1
-                    })
-                    .velocity({
-
-                        rotateY: "360deg",
-                        rotateZ: "360deg",
-                        left: left + ( show ? 0 : mx * width ),
-                        top: top + ( show ? 0 : my * height ),
-                        opacity: show ? 1 : 0
-                    }, {
-                        queue: false,
-                        duration: 1500,
-                        complete: function () {
-                            // console.log(this);
-                            childComplete(this);
-                        }
-                    });
-                //   .animate( {
-                //       left: left + ( show ? 0 : mx * width ),
-                //       top: top + ( show ? 0 : my * height ),
-                //       opacity: show ? 1 : 0
-                //   }, 1500, childComplete );
-            }
-        }
-
-        function animComplete() {
-            element.css({
-                visibility: "visible"
-            });
-            // console.log($(pieces));
-            // $( pieces ).remove();
-            $('.elem-part').remove();
-        }
-    };
-
-    //
-    // $('.test').click(
-    //     function () {
-    //         explode(this);
-    //     }
-    // );
-
-    // $('.page').click(function () {
-    //     console.log(this);
-    //     explode(this);
-    // });
 });

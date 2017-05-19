@@ -37,29 +37,44 @@
 .logo {
 
   transform: scaleY(1.2);
+
   a{
     color: $color-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 120px;
+    height: 50px;
   }
+
   .logo_main{
     display: inline-block;
     position: relative;
-    top: -2px;
+    top: -6px;
     font-size: 35px;
   }
+
   .logo_small {
     font-size: 21px;
     display: block;
     text-align: center;
-    margin-top: -13px;
+    margin-top: -16px;
     color: $red;
   }
 
   .brace-left,.brace-right{
      display: inline-block;
-     width:16px;
-    //padding: 0 2px;
+     width: 16px;
+     margin: 0 3px;
    }
 
+}
+
+.full-logo {
+  .brace-left,.brace-right{
+    margin:0;
+  }
 }
 
 .phones {
@@ -198,8 +213,3 @@
   }
 }
 
-.full-logo {
-  .tiny {
-    font-size: 0.6em;
-  }
-}
