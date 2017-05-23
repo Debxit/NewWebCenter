@@ -399,6 +399,29 @@
     content: '';
   }
 }
+.left{
+  transition: all .3s ease;
+  transform: translateX(20px);
+}
+.slick-slide{
+  transition: all .6s ease-out;
+  opacity: 0;
+  transform: translateZ(-1500px) scale(0.2);
+}
+.first-page{
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+}
+/*simple slide animation*/
+//.slick-slide{
+//  transition: all .6s ease-out;
+//  opacity: 0;
+//  transform: translateZ(1000px) scale(0.2);
+//}
+//.slick-active{
+//  opacity: 1;
+//  transform: translateZ(0) scale(1);
+//}
 
 
 @keyframes cursor-blink {

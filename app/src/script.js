@@ -179,8 +179,38 @@ $(document).ready(function () {
 
             $('.svg-wrap').removeClass('light');
         }
-    });
 
+       var $animateCurrent = $('.slick-slide[data-slick-index="' + currentSlide + '"]');
+
+       var $animateNext = $('.slick-slide[data-slick-index="' + nextSlide + '"]');
+
+
+        console.log('before curr '+currentSlide);
+        $animateCurrent.velocity({
+            opacity: "0",
+            scale: "2",
+            translateZ: "1500px"
+        }, 700, function () {
+            $animateCurrent.velocity({
+                opacity: "0",
+                scale: "0.3",
+                translateZ: "-1500px"
+            },300);
+        });
+
+    });
+    $('.page-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        // console.log('after curr '+currentSlide);
+        var $animateNext = $('.slick-slide[data-slick-index="' + currentSlide + '"]');
+
+        $animateNext.velocity({
+            opacity: "1",
+            scale: "1",
+            translateZ: "0"
+        }, 700,function () {
+            // console.log(nextSlide);
+        })
+    });
 
     /********************* animation *****************/
 
@@ -188,7 +218,7 @@ $(document).ready(function () {
     $('.logo-container').velocity({
         opacity: "1",
         scale: "1"
-    }, 700, function () {
+         }, 700, function () {
         $('.logo-center').velocity({
             opacity: "1",
             translateX: "0"
@@ -200,21 +230,7 @@ $(document).ready(function () {
         });
     });
 
-    var text = $(".small-line").text();
 
-    var split = text.split("");
-
-    $(split).each(function(i) {
-        // console.log(this);
-        // $(this).velocity({
-        //     opacity: 0,
-        //     translateX: random(-500, 500),
-        //     translateY: random(-500, 500),
-        //     translateZ: random(-500, 500),
-        //     scale: .1,
-        //     delay: i * .02
-        // });
-    });
 
 
 });
