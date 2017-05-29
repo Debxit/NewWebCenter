@@ -4,7 +4,7 @@ $(document).ready(function () {
     var dotsNumber = $("#svg-map path").length;
     var countInterval = 0;
 
-    function random(min, max){
+    function random(min, max) {
         return (Math.random() * (max - min)) + min;
     }
 
@@ -59,6 +59,7 @@ $(document).ready(function () {
         infinite: false,
         dots: true,
         arrows: false,
+        fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         customPaging: function (slider, i) {
@@ -87,9 +88,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.full-logo').click(function () {
-        console.log("click");
-        e.PreventDefault();
+    $('a.full-logo').click(function (e) {
+
         if ($('.page-slider').length) {
             $('.page-slider').slick('slickGoTo', 0);
             return false;
@@ -125,11 +125,11 @@ $(document).ready(function () {
                     j++;
                 }
             }, 150);
-            $('.logo').addClass('full-logo');
+            $('.logo a').addClass('full-logo');
 
             setTimeout(function () {
                 $('.logo_small').removeClass("cursor");
-            }, 3000);
+            }, 2000);
         }
 
         function delete_web() {
@@ -145,7 +145,7 @@ $(document).ready(function () {
                 }
             }, 150);
             setTimeout(function () {
-                $('.logo').removeClass('full-logo');
+                $('.logo a').removeClass('full-logo');
             }, 150);
             setTimeout(function () {
                 $('.logo_main').removeClass("cursor");
@@ -180,57 +180,66 @@ $(document).ready(function () {
             $('.svg-wrap').removeClass('light');
         }
 
-       var $animateCurrent = $('.slick-slide[data-slick-index="' + currentSlide + '"]');
-
-       var $animateNext = $('.slick-slide[data-slick-index="' + nextSlide + '"]');
+        var $animateCurrent = $('.slick-slide[data-slick-index="' + currentSlide + '"]>div');
 
 
-        console.log('before curr '+currentSlide);
-        $animateCurrent.velocity({
-            opacity: "0",
-            scale: "2",
-            translateZ: "1500px"
-        }, 700, function () {
+        if (nextSlide > currentSlide){
             $animateCurrent.velocity({
                 opacity: "0",
                 scale: "0.3",
                 translateZ: "-1500px"
-            },300);
-        });
-
+            }, 300/*, setTimeout( function () {
+                $animateCurrent.velocity({
+                    opacity: "0",
+                    scale: "2",
+                    translateZ: "1500px"
+                }, 300);
+            },500)*/);
+        }
+        else{
+            $animateCurrent.velocity({
+                opacity: "0",
+                scale: "2",
+                translateZ: "1500px"
+            }, 300/*, setTimeout( function () {
+                $animateCurrent.velocity({
+                    opacity: "0",
+                    scale: "0.3",
+                    translateZ: "-1500px"
+                }, 300);
+            },500)*/);
+        }
+        //end BeforeChange()
     });
-    $('.page-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-        // console.log('after curr '+currentSlide);
-        var $animateNext = $('.slick-slide[data-slick-index="' + currentSlide + '"]');
 
-        $animateNext.velocity({
-            opacity: "1",
-            scale: "1",
-            translateZ: "0"
-        }, 700,function () {
-            // console.log(nextSlide);
-        })
-    });
+     $('.page-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
 
-    /********************* animation *****************/
+            var $animateNext = $('.slick-slide[data-slick-index="' + currentSlide + '"]>div');
 
-    //animate logo at the first screen
-    $('.logo-container').velocity({
-        opacity: "1",
-        scale: "1"
-         }, 700, function () {
-        $('.logo-center').velocity({
-            opacity: "1",
-            translateX: "0"
-        }, 500, "ease", function () {
-            $('.brace-left, .brace-right').velocity({
+            $animateNext.velocity({
                 opacity: "1",
-                translateX:"0"
-            }, 500, "ease");
+                scale: "1",
+                translateZ: "0"
+            }, 700, function () {
+            })
         });
+
+        /********************* animation *****************/
+
+        //animate logo at the first screen
+        $('.logo-container').velocity({
+            opacity: "1",
+            scale: "1"
+        }, 700, function () {
+            $('.logo-center').velocity({
+                opacity: "1",
+                translateX: "0"
+            }, 500, "ease", function () {
+                $('.logo-container .brace-left,.logo-container .brace-right').velocity({
+                    opacity: "1",
+                    translateX: "0"
+                }, 500, "ease");
+            });
+        });
+
     });
-
-
-
-
-});
