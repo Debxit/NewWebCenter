@@ -10,6 +10,7 @@ body {
   color: $color-main;
   margin: 0;
   height: 100%;
+  overflow:hidden;
 
   &.shadow {
     &:after {
@@ -21,6 +22,10 @@ body {
       background: rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+a{
+  color: inherit;
 }
 .wrapper{
   display: flex;
@@ -190,4 +195,21 @@ hr {
 
 .bold {
   font-weight: 400;
+}
+
+
+.main {
+  flex: 1 0 auto;
+
+  .container {
+    position: relative;
+  }
+
+  &.main_without-bg{
+    background: none;
+  }
+}
+
+.main{
+
 }

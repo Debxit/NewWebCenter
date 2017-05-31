@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //background map infinite filling
+    //background map infinite dot blinking
     var dotsNumber = $("#svg-map path").length;
     var countInterval = 0;
 
@@ -10,25 +10,15 @@ $(document).ready(function () {
 
     function animate_map() {
         var currDotNumber = Math.floor((Math.random() * dotsNumber) + 1);
-
+        var dots = $("#svg-map path");
         var currDot = $("#svg-map path:nth-child(" + currDotNumber + ")");
-
+        dots.removeClass('red');
         currDot.addClass('red');
     }
 
-
-    var intervalID = setInterval(function () {
+    setInterval(function () {
         animate_map();
-        countInterval++;
-        // console.log(countInterval);
-    }, 5000);
-
-    //didn't work
-    if (countInterval > 50) {
-        console.log("stop");
-        console.log(countInterval);
-        clearInterval(intervalID);
-    }
+    }, 2500);
 
 
     // open and close side menu
