@@ -1,0 +1,21 @@
+.input {
+	border: none;
+	border-bottom: 1px solid rgba($color-main, .4);
+	color: $color-main;
+	font-family: $font-main;
+	font-size: 1.6rem;
+	height: 30px;
+	padding: 5px 0;
+	-webkit-appearance: none;
+	border-radius: 0;
+
+	@include input-placeholder {
+		color: $color-main;
+	};
+
+	@include input-autofill($color-main);
+}
+
+textarea.input {
+	height: 4.5em;
+}

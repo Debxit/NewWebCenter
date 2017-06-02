@@ -1,3 +1,58 @@
+.main {
+
+  &__title {
+    font-size: 30px;
+    font-family: $font-days;
+    transform: scaleY(1.2);
+    margin: 50px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    @include screen-xl() {
+      margin: 35px 0;
+      font-size: 27px;
+    }
+
+    @include screen-xs() {
+      font-size: 22px;
+    }
+
+    &_lower {
+      text-transform: none;
+    }
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    margin: 20px 0;
+    font-weight: 500;
+
+    @include screen-xl() {
+      margin: 15px 0;
+      font-size: 23px;
+    }
+
+    @include screen-xs() {
+      font-size: 20px;
+    }
+  }
+
+
+  &__desc {
+    font-weight: 300;
+    font-size: 20px;
+    margin: 25px 0;
+
+    @include screen-xl() {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    @include screen-xs() {
+      font-size: 16px;
+    }
+  }
+}
 
 .first-page {
   text-align: center;
@@ -132,21 +187,6 @@
 
   &:focus {
     outline: none;
-  }
-  &__title {
-    font-size: 30px;
-    font-family: $font-days;
-    transform: scaleY(1.2);
-    margin: 50px 0;
-    text-transform: uppercase;
-
-    @include screen-xl() {
-      margin: 35px 0;
-      font-size: 27px;
-    }
-    @include screen-xs() {
-      font-size: 22px;
-    }
   }
   &__description {
     font-weight: 300;

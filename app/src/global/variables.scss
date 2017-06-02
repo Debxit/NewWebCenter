@@ -24,27 +24,27 @@ $path: '../';
 }
 
 @mixin screen-xs($direct: 'max') {
-	@media (if($direct == 'max', 'max-width: #{$point-xs} - 1', 'min-width: #{$point-xs}')) {
+	@media (if($direct == 'min', 'min-width: #{$point-xs}', 'max-width: #{$point-xs} - 1')) {
 		@content;
 	}
 }
 @mixin screen-sm($direct: 'max') {
-	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
+	@media (if($direct == 'min', 'min-width: #{$point-sm}', 'max-width: #{$point-sm} - 1')) {
 		@content;
 	}
 }
 @mixin screen-md($direct: 'max') {
-	@media (if($direct == 'max', 'max-width: #{$point-md} - 1', 'min-width: #{$point-md}')) {
+	@media (if($direct == 'min', 'min-width: #{$point-md}', 'max-width: #{$point-md} - 1')) {
 		@content;
 	}
 }
 @mixin screen-lg($direct: 'max') {
-	@media (if($direct == 'max', 'max-width: #{$point-lg} - 1', 'min-width: #{$point-lg}')) {
+	@media (if($direct == 'min', 'min-width: #{$point-lg}', 'max-width: #{$point-lg} - 1')) {
 		@content;
 	}
 }
 @mixin screen-xl($direct: 'max') {
-	@media (if($direct == 'max', 'max-width: #{$point-xl} - 1', 'min-width: #{$point-xl}')) {
+	@media (if($direct == 'min', 'min-width: #{$point-xl}', 'max-width: #{$point-xl} - 1')) {
 		@content;
 	}
 }
@@ -71,5 +71,40 @@ $path: '../';
 		}
 
 		background-size: $width $height;
+	}
+}
+
+// Стилизация плейсхолдеров инпутов
+@mixin input-placeholder() {
+
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+// Стилизация инпутов при автозаполнении форм
+@mixin input-autofill($font-color: black, $font-color-selected: $font-color, $bg-color: white) {
+
+	&:-webkit-autofill {
+		-webkit-box-shadow: inset 0 0 0 50px $bg-color; /* Цвет фона */
+		-webkit-text-fill-color: $font-color; /* цвет текста */
+		color: $font-color; /* цвет текста */
+
+		&::selection {
+			-webkit-text-fill-color: $font-color-selected; /* цвет текста */
+			color: $font-color-selected; /* цвет текста */
+		}
 	}
 }

@@ -1,7 +1,10 @@
 @import url('global/variables.scss'); // SASS переменные
 @import url('global/fonts.scss'); // Шрифты
 @import url('global/global.scss'); // Глобальные стили
-@import url('global/global.scss'); // Глобальные стили
+
+@import url('blocks/grid.scss'); // Сетка
+@import url('blocks/form.scss'); // Обычная форма
+@import url('blocks/input.scss'); // Поля ввода
 
 @import url('blocks/portfolio.scss');
 @import url('blocks/header.scss'); // Шапка

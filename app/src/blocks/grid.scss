@@ -1,0 +1,16 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__sm-6 {
+		padding: 0 15px;
+
+		@include screen-sm(min) {
+			width: 50%;
+		}
+	}
+
+	&_neg {
+		margin: 0 -15px;
+	}
+}
