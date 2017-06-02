@@ -1,9 +1,11 @@
 @import url('global/variables.scss'); // SASS переменные
 @import url('global/fonts.scss'); // Шрифты
 @import url('global/global.scss'); // Глобальные стили
-@import url('global/global.scss'); // Глобальные стили
 
-@import url('blocks/portfolio.scss');
+
 @import url('blocks/header.scss'); // Шапка
 @import url('blocks/main.scss'); // Контейнер контента
 @import url('blocks/footer.scss'); // Подвал
+
+@import url('blocks/side-menu.scss');
+@import url('blocks/portfolio.scss');

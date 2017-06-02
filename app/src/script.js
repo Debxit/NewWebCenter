@@ -66,6 +66,26 @@ $(document).ready(function () {
         ]
     });
 
+ $('.portfolio-slider').slick({
+     infinite: false,
+     dots: true,
+     arrows: false,
+     fade: true,
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     customPaging: function (slider, i) {
+       //  var thumb = $(slider.$slides[i]).data('thumb');
+         return '<div class="portfolio-nav-item"> </div>';
+     },
+     responsive: [
+         {
+             breakpoint: 768,
+             settings: {
+                 unslick: true
+             }
+         }
+     ]
+ });
 
     $('.page-slider').mousewheel(function (e) {
         e.preventDefault();
@@ -174,30 +194,19 @@ $(document).ready(function () {
 
 
         if (nextSlide > currentSlide){
+
             $animateCurrent.velocity({
                 opacity: "0",
-                scale: "0.3",
-                translateZ: "-1500px"
-            }, 300/*, setTimeout( function () {
-                $animateCurrent.velocity({
-                    opacity: "0",
-                    scale: "2",
-                    translateZ: "1500px"
-                }, 300);
-            },500)*/);
+                scale: "0.5",
+                translateZ: "-1000px"
+            }, 500);
         }
         else{
             $animateCurrent.velocity({
                 opacity: "0",
-                scale: "2",
-                translateZ: "1500px"
-            }, 300/*, setTimeout( function () {
-                $animateCurrent.velocity({
-                    opacity: "0",
-                    scale: "0.3",
-                    translateZ: "-1500px"
-                }, 300);
-            },500)*/);
+                scale: "1.5",
+                translateZ: "1000px"
+            }, 500);
         }
         //end BeforeChange()
     });
@@ -210,7 +219,7 @@ $(document).ready(function () {
                 opacity: "1",
                 scale: "1",
                 translateZ: "0"
-            }, 700, function () {
+            }, 500, function () {
             })
         });
 
