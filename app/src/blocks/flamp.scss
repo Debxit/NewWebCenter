@@ -1,0 +1,20 @@
+.flamp {
+	margin: 0 auto;
+	width: 23px;
+	height: 30px;
+
+	&:hover{
+		.st1{
+			fill:$red;
+		}
+	}
+
+	.st0{
+		display:none;
+		fill:#FFFFFF;
+	}
+	.st1{
+		fill:$color-main;
+		transition: all .3s ease;
+	}
+}

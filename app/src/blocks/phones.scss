@@ -1,0 +1,21 @@
+.phones {
+
+	@include screen-lg() {
+		font-size: 14px;
+	}
+
+	@include screen-xs() {
+		display: none;
+	}
+
+	&__spb,
+	&__msc {
+		display: inline-block;
+		padding: 15px;
+		transform: scaleY(1.2);
+		@include screen-md() {
+			padding: 4px;
+			display: block;
+		}
+	}
+}

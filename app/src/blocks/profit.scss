@@ -1,0 +1,28 @@
+.profit {
+	text-align: center;
+	width: 20%;
+
+	@include screen-sm() {
+		width: 30%;
+	}
+	@include screen-xs() {
+		width: 80%;
+	}
+	&__img {
+		width: 55px;
+		height: 55px;
+		margin: 10px auto;
+		position: relative;
+		border: 3px $red solid;
+		border-radius: 50%;
+		img {
+			position: absolute;
+			height: 40px;
+			top: 5px;
+			right: -17px;
+		}
+	}
+	&__name {
+		font-weight: 500;
+	}
+}

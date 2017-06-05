@@ -1,0 +1,37 @@
+.page {
+	text-align: center;
+	padding: 1% 0;
+
+	@include screen-xl() {
+		padding: 15px 0;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&__description {
+		font-weight: 300;
+		font-size: 23px;
+		margin-bottom: 40px;
+
+		@include screen-xl() {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		@include screen-xs() {
+			font-size: 16px;
+		}
+	}
+
+	&__profits {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50px;
+
+		@include screen-sm() {
+			flex-wrap: wrap;
+		}
+	}
+}

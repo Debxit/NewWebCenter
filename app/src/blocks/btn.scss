@@ -1,0 +1,43 @@
+.btn {
+	border: $red solid 2px;
+	border-radius: 13px;
+	font-family: $font-main;
+	padding: 1px 15px;
+	color: $red;
+	background: transparent;
+	transition: all .3s ease;
+	text-align: center;
+	min-height: 30px;
+	cursor: pointer;
+
+	&:hover {
+		color: white;
+		background: $red;
+	}
+
+	&:hover, &:focus {
+		outline: none;
+	}
+
+	&_fill {
+		border-radius: 9px;
+		background: $red;
+		color: #fff;
+		font-weight: 500;
+		padding: 10px 25px;
+		font-size: 20px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.23);
+
+		@include screen-xs(){
+			padding: 7px 17px;
+			font-size: 16px;
+		}
+
+		&:hover {
+			background: $color-main;
+			border-color: $color-main;
+		}
+	}
+}

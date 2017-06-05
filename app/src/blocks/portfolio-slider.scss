@@ -1,0 +1,34 @@
+.portfolio-slider {
+	padding: 0 50px;
+
+	&__wrap {
+		//padding-bottom:50%;
+		height: 60vh;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.portfolio-nav-item {
+		width: 35px;
+		height: 5px;
+		border-radius: 5px;
+		background: $color-main;
+	}
+
+	.slick-active {
+		.portfolio-nav-item {
+			background: $red;
+		}
+	}
+	.slick-dots {
+		position: absolute;
+		top: 20%;
+		right: 0;
+	}
+	.slick-dots li {
+		padding: 10px 0;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

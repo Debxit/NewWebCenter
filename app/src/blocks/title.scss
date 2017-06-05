@@ -1,0 +1,21 @@
+.title {
+	font-size: 30px;
+	font-family: $font-days;
+	transform: scaleY(1.2);
+	margin: 50px 0;
+	text-transform: uppercase;
+	font-weight: 400;
+
+	@include screen-xl() {
+		margin: 35px 0;
+		font-size: 27px;
+	}
+
+	@include screen-xs() {
+		font-size: 22px;
+	}
+
+	&_lower {
+		text-transform: none;
+	}
+}

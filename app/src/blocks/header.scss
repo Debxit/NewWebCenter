@@ -7,11 +7,16 @@
     margin-top: 10px;
   }
 
-  .btn {
+  &__btn {
     @include screen-sm() {
       display: none;
     }
   }
+
+  &__menu-icon {
+    margin-left: 30px;
+  }
+
   &__right, &__left {
     align-items: center;
     display: inline-flex;
@@ -31,196 +36,5 @@
     //justify-content: center;
     //align-items: center;
     text-align: center;
-  }
-
-}
-
-.logo {
-
-  transform: scaleY(1.2);
-
-  a{
-    color: $color-main;
-    text-align: center;
-    width: 120px;
-    height: 50px;
-    font-size: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  .logo_main{
-    display: inline-block;
-    position: relative;
-    top: -2px;
-    font-size: 35px;
-    line-height: 0.7em;
-  }
-
-  .logo_small {
-    font-size: 21px;
-    line-height: 0.7em;
-    display: block;
-    text-align: center;
-    margin-top: 5px;
-    color: $red;
-  }
-
-  .brace-left,.brace-right{
-     display: inline-block;
-     width: 16px;
-    height: 22px;
-     margin: 0 3px;
-   }
-
-}
-
-.cursor {
-  &:after {
-    display: inline-block;
-    width: 1px;
-    height: 0.6em;
-    position: relative;
-    top: 1px;
-    margin-left: 1px;
-    background: $color-main;
-    animation: cursor-blink 1.25s infinite;
-    content: '';
-  }
-}
-
-.full-logo {
-  .brace-left,.brace-right{
-    margin:0;
-  }
-}
-
-.phones {
-
-  @include screen-lg() {
-    font-size: 14px;
-  }
-
-  @include screen-xs() {
-    display: none;
-  }
-
-  &__spb, &__msc {
-    display: inline-block;
-    padding: 15px;
-    transform: scaleY(1.2);
-    @include screen-md() {
-      padding: 4px;
-      display: block;
-    }
-  }
-}
-
-.menu-icon {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 35px;
-  width: 35px;
-  margin-left: 30px;
-  transition: opacity linear .2s;
-
-  &:not(.active){
-    &:hover {
-      .bar {
-        &:before {
-          animation: jump-up .2s linear;
-        }
-        &:after {
-          animation: jump-down .2s linear;
-        }
-      }
-    }
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  .bar {
-    width: 30px;
-    height: 5px;
-    background-color: $color-main;
-    border-radius: 2px;
-    position: relative;
-    /* autoprefixer: off */
-    transition: background linear .1s;
-    /* autoprefixer: off */
-    transition-delay: .3s;
-
-    &:before {
-      top: -10px;
-      /* autoprefixer: off */
-      transition-property: top, transform, background;
-    }
-    &:after {
-      bottom: -10px;
-      /* autoprefixer: off */
-      transition-property: bottom, transform, background;
-    }
-    &:before, &:after {
-      position: absolute;
-      display: block;
-      left: 0;
-      border-radius: 2px;
-      width: 35px;
-      height: 5px;
-      background-color: $color-main;
-      content: "";
-      /* autoprefixer: off */
-      transition-duration: .3s, .3s;
-      transition-delay: .2s, .0s, .3s;
-    }
-  }
-
-  &.active {
-
-    .bar {
-      background: transparent;
-      /* autoprefixer: off */
-      transition-delay: .2s;
-
-      &:before {
-        top: 0;
-        transform: rotate(45deg);
-      }
-      &:after {
-        bottom: 0;
-        transform: rotate(-45deg);
-      }
-      &:before, &:after {
-        background: #fff;
-        /* autoprefixer: off */
-        transition-delay: .0s, .2s;
-      }
-    }
-  }
-}
-
-
-
-@keyframes jump-up {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes jump-down {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }

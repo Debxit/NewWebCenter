@@ -109,16 +109,16 @@ $(document).ready(function () {
 
     $('.page-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
-        var logo_main = "web",
-            logo_small = 'center',
+        var logo__main = "web",
+            logo__small = 'center',
             i = 0,
             j = 0;
 
         function write_web() {
-            $('.logo_main').addClass("cursor");
+            $('.logo__main').addClass("cursor");
             setInterval(function () {
-                if (i < logo_main.length) {
-                    $('.logo_main').text($('.logo_main').text() + logo_main[i]);
+                if (i < logo__main.length) {
+                    $('.logo__main').text($('.logo__main').text() + logo__main[i]);
                     i++;
                 }
 
@@ -126,31 +126,31 @@ $(document).ready(function () {
         }
 
         function write_center() {
-            $('.logo_main').removeClass("cursor");
-            $('.logo_small').addClass("cursor");
+            $('.logo__main').removeClass("cursor");
+            $('.logo__small').addClass("cursor");
 
             setInterval(function () {
-                if (j < logo_small.length) {
-                    $('.logo_small').text($('.logo_small').text() + logo_small[j]);
+                if (j < logo__small.length) {
+                    $('.logo__small').text($('.logo__small').text() + logo__small[j]);
                     j++;
                 }
             }, 150);
             $('.logo a').addClass('full-logo');
 
             setTimeout(function () {
-                $('.logo_small').removeClass("cursor");
+                $('.logo__small').removeClass("cursor");
             }, 2000);
         }
 
         function delete_web() {
-            var str = logo_main;
-            $('.logo_small').removeClass("cursor");
-            $('.logo_main').addClass("cursor");
+            var str = logo__main;
+            $('.logo__small').removeClass("cursor");
+            $('.logo__main').addClass("cursor");
 
             setInterval(function () {
-                if (i < logo_main.length) {
+                if (i < logo__main.length) {
                     str = str.slice(0, -1);
-                    $('.logo_main').text(str);
+                    $('.logo__main').text(str);
                     i++;
                 }
             }, 150);
@@ -158,17 +158,17 @@ $(document).ready(function () {
                 $('.logo a').removeClass('full-logo');
             }, 150);
             setTimeout(function () {
-                $('.logo_main').removeClass("cursor");
+                $('.logo__main').removeClass("cursor");
             }, 600);
         }
 
         function delete_center() {
-            $('.logo_small').addClass("cursor");
-            var str = logo_small;
+            $('.logo__small').addClass("cursor");
+            var str = logo__small;
             setInterval(function () {
-                if (j < logo_small.length) {
+                if (j < logo__small.length) {
                     str = str.slice(0, -1);
-                    $('.logo_small').text(str);
+                    $('.logo__small').text(str);
                     j++;
                 }
             }, 150);
