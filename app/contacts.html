@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     @@include('partials/head.html')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap" async defer></script>
     <title>Contacts</title>
 </head>
 <body>
@@ -10,52 +11,64 @@
     @@include('partials/header.html')
 
     <main class="main">
-        <div class="container">
-            <div class="grid">
-                <div class="grid__sm-6">
-                    <h2 class="title title_lower">Контакты</h2>
+        <div class="map map_light">
+            <div class="map__wrap" id="map"></div>
+        </div>
+        <div class="cont-panel">
+            <div class="cont-panel__left">
+                <div class="cont-panel__wrap container">
+                    <div class="cont-panel__i">
+                        <div class="grid">
+                            <div class="grid__sm-6">
+                                <h2 class="title title_lower">Контакты</h2>
 
-                    <h3 class="main__subtitle">Адрес:</h3>
-                    <p class="main__desc">
-                        Россия, Санкт-Петербург<br>
-                        ул. Гаккелевская 21А (БЦ "БДЦ"),<br>
-                        офис 20.03
-                    </p>
+                                <h3 class="main__subtitle">Адрес:</h3>
+                                <p class="main__desc">
+                                    Россия, Санкт-Петербург<br>
+                                    ул. Гаккелевская 21А (БЦ "БДЦ"),<br>
+                                    офис 20.03
+                                </p>
 
-                    <h3 class="main__subtitle">Телефоны:</h3>
-                    <p class="main__desc">
-                        +7 (812) <b>424-38-66 СПБ</b><br>
-                        +7 (812) <b>932-08-46 СПБ</b><br>
-                        +7 (495) <b>481-34-76 МСК</b>
-                    </p>
+                                <h3 class="main__subtitle">Телефоны:</h3>
+                                <p class="main__desc">
+                                    +7 (812) <b>424-38-66 СПБ</b><br>
+                                    +7 (812) <b>932-08-46 СПБ</b><br>
+                                    +7 (495) <b>481-34-76 МСК</b>
+                                </p>
 
-                    <h3 class="main__subtitle">Электронная почта:</h3>
-                    <p class="main__desc"><a class="main__link" href="mailto:support@webcenter.pro">support@webcenter.pro</a></p>
+                                <h3 class="main__subtitle">Электронная почта:</h3>
+                                <p class="main__desc">
+                                    <a class="main__link" href="mailto:support@webcenter.pro">support@webcenter.pro</a>
+                                </p>
 
-                    <h3 class="main__subtitle">Наши реквизиты:</h3>
-                    <p class="main__desc">
-                        ООО "Кибернетика"<br>
-                        ИНН 7814484402<br>
-                        ОГРН 1107847392696 от 23.11.2010
-                    </p>
-                </div>
-                <div class="grid__sm-6">
-                    <h2 class="title title_lower">Связаться с нами</h2>
+                                <h3 class="main__subtitle">Наши реквизиты:</h3>
+                                <p class="main__desc">
+                                    ООО "Кибернетика"<br>
+                                    ИНН 7814484402<br>
+                                    ОГРН 1107847392696 от 23.11.2010
+                                </p>
+                            </div>
+                            <div class="grid__sm-6">
+                                <h2 class="title title_lower">Связаться с нами</h2>
 
-                    <form class="form">
-                        <input class="input form__input" type="text" placeholder="Ваше имя">
-                        <input class="input form__input" type="email" placeholder="Электронная почта">
-                        <input class="input form__input" type="tel" placeholder="Телефон">
-                        <input class="input form__input" type="text" placeholder="Компания">
-                        <textarea class="input form__input" placeholder="Комментарии"></textarea>
-                        <div class="file-input form__input">
-                            <input class="file-input__input" type="file" id="file">
-                            <label class="file-input__label" for="file">Прикрепить файл</label>
+                                <form class="form">
+                                    <input class="input form__input" type="text" placeholder="Ваше имя">
+                                    <input class="input form__input" type="email" placeholder="Электронная почта">
+                                    <input class="input form__input" type="tel" placeholder="Телефон">
+                                    <input class="input form__input" type="text" placeholder="Компания">
+                                    <textarea class="input form__input" placeholder="Комментарии"></textarea>
+                                    <div class="file-input form__input">
+                                        <input class="file-input__input" type="file" id="file">
+                                        <label class="file-input__label" for="file">Прикрепить файл</label>
+                                    </div>
+                                    <input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
+                                </form>
+                            </div>
                         </div>
-                        <input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
-                    </form>
+                    </div>
                 </div>
             </div>
+            <div class="cont-panel__btn">Открыть</div>
         </div>
     </main>
 

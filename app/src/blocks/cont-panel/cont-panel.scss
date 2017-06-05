@@ -1,0 +1,75 @@
+.cont-panel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	&__left {
+		width: 70%;
+		height: 100%;
+		background: white;
+		border-right: 1px solid rgba($color-main, .87);
+	}
+
+	&__wrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__i {
+		position: absolute;
+		width: 70%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		overflow-y: auto;
+	}
+
+	&__btn {
+		position: absolute;
+		left: 70%;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left: 5px;
+		padding: 30px 15px 30px 0;
+		font-weight: 600;
+		cursor: pointer;
+		transition: $duration ease;
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-right: 5px;
+			border-right: 20px solid rgba($color-main, .67);
+			border-left: none;
+			border-top: 17px solid transparent;
+			border-bottom: 17px solid transparent;
+			transition: $duration ease;
+		}
+
+		&:hover {
+			color: $red;
+
+			&::before {
+				border-right-color: $red;
+			}
+		}
+
+		&_closed {
+			margin-left: 25px;
+
+			&::before {
+				transform: translateY(-50%) rotate(180deg);
+				margin-right: 5px;
+			}
+		}
+	}
+}

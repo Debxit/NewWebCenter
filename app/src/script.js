@@ -1,5 +1,8 @@
+@@include('blocks/map/map.js')
+
 $(document).ready(function () {
 	@@include('blocks/file-input/file-input.js')
+	@@include('blocks/cont-panel/cont-panel.js')
 
     //background map infinite dot blinking
     var dotsNumber = $("#svg-map path").length;

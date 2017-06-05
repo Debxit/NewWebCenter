@@ -44,9 +44,6 @@ a{
 
 .main {
   flex: 1 0 auto;
-  .container {
-    position: relative;
-  }
 
   &.main_without-bg{
 
@@ -68,6 +65,7 @@ ul{
   padding-right: 15px;
   width: 1170px;
   margin: 0 auto;
+  position: relative;
 
   @include screen-lg() {
     width: 970px;
