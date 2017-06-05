@@ -68,7 +68,7 @@
     padding: 1% 0;
   }
   @include screen-sm() {
-    padding-top: 5%;
+    padding-top: 4%;
   }
   @include screen-xs() {
     //padding-top: 40%;
@@ -169,9 +169,11 @@
       @include screen-md() {
         font-size: 35px;
       }
+      @include screen-sm() {
+        margin-top: -5%;
+      }
       @include screen-xs() {
         font-size: 27px;
-        margin-top: -5%;
       }
     }
   }
@@ -242,147 +244,135 @@
   }
 }
 
-.slick-dots {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin: 0 5%;
+.left {
+  transition: transform .3s ease;
+  transform: translateX(20px);
+}
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    left: 7%;
-    z-index: -1;
-    display: block;
-    height: 1px;
-    width: 86%;
-    border-bottom: 1px dashed $red;
-    @include screen-sm() {
-      width: 100%;
-      left: 0;
+.page-slider{
+  margin-bottom: 30px;
+
+
+  .slick-dots {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 5%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 7px;
+      left: 7%;
+      z-index: -1;
+      display: block;
+      height: 1px;
+      width: 86%;
+      border-bottom: 1px dashed $red;
+      @include screen-sm() {
+        width: 100%;
+        left: 0;
+      }
     }
-  }
 
-  li {
-    text-align: center;
-    transition: color ease .3s;
+    li {
+      text-align: center;
+      transition: color ease .3s;
 
-    &.slick-active {
-      color: $red;
+      &.slick-active {
+        color: $red;
 
-      .dot {
-        &__item {
-          position: relative;
-          top: -5px;
-        }
-        &__circle {
-          box-shadow: inset 0 0 0 4px $red;
-
-          &:before, &:after {
-            width: 10px;
-            height: 5px;
-            background: $red;
+        .dot {
+          &__item {
+            position: relative;
+            top: -5px;
           }
-
-          .circle__line {
+          &__circle {
+            box-shadow: inset 0 0 0 4px $red;
 
             &:before, &:after {
-              width: 8px;
-              height: 3px;
+              width: 10px;
+              height: 5px;
               background: $red;
             }
-          }
 
-        }
-      }
-    }
+            .circle__line {
 
-    &:first-child {
-      display: none;
-    }
+              &:before, &:after {
+                width: 8px;
+                height: 3px;
+                background: $red;
+              }
+            }
 
-    &:nth-child(2) {
-      .dot__circle {
-        &:before {
-          display: none;
-        }
-        .circle__line {
-          &:before {
-            display: none
           }
         }
       }
-    }
-    &:last-child {
-      .dot__circle {
-        &:after {
-          display: none;
-        }
-        .circle__line {
-          &:after {
-            display: none
-          }
-        }
-      }
-    }
-    &:hover {
-      cursor: pointer;
 
-      .dot__item {
-        position: relative;
-        top: -5px;
-        color: $red;
-      }
-    }
-  }
-
-  .dot {
-
-    &__item {
-      top: 0;
-      margin: 0 10px;
-      margin-bottom: 15px;
-      font-weight: 500;
-      transition: all .2s ease;
-
-      @include screen-sm() {
+      &:first-child {
         display: none;
       }
+
+      &:nth-child(2) {
+        .dot__circle {
+          &:before {
+            display: none;
+          }
+          .circle__line {
+            &:before {
+              display: none
+            }
+          }
+        }
+      }
+      &:last-child {
+        .dot__circle {
+          &:after {
+            display: none;
+          }
+          .circle__line {
+            &:after {
+              display: none
+            }
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+
+        .dot__item {
+          position: relative;
+          top: -5px;
+          color: $red;
+        }
+      }
     }
 
-    &__circle {
-      position: relative;
-      width: 15px;
-      height: 15px;
-      margin: 0 auto;
-      box-shadow: inset 0 0 0 2px $red;
-      border-radius: 15px;
-      background: #fff;
-      transition: all .2s ease;
+    .dot {
 
-      &:before, &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 0;
-        top: 5px;
-        transition: all ease .3s;
+      &__item {
+        top: 0;
+        margin: 0 10px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        transition: all .2s ease;
+
+        @include screen-sm() {
+          display: none;
+        }
       }
 
-      &:before {
-        left: -12px;
-      }
-
-      &:after {
-        right: -12px;
-      }
-
-      .circle__line {
+      &__circle {
         position: relative;
+        width: 15px;
+        height: 15px;
+        margin: 0 auto;
+        box-shadow: inset 0 0 0 2px $red;
+        border-radius: 15px;
+        background: #fff;
+        transition: all .2s ease;
 
         &:before, &:after {
           content: '';
@@ -390,48 +380,62 @@
           position: absolute;
           width: 0;
           height: 0;
-          top: 6px;
+          top: 5px;
           transition: all ease .3s;
         }
 
         &:before {
-          left: -23px;
+          left: -12px;
         }
 
         &:after {
-          right: -23px;
+          right: -12px;
         }
 
+        .circle__line {
+          position: relative;
+
+          &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 6px;
+            transition: all ease .3s;
+          }
+
+          &:before {
+            left: -23px;
+          }
+
+          &:after {
+            right: -23px;
+          }
+
+        }
       }
+
     }
 
   }
 
-}
+  //.slick-slide {
+  //  &>div {
+  //    transition: transform .5s ease-out;
+  //    opacity: 0;
+  //    transform: translateZ(1000px) scale(1.5);
+  //  }
+  //}
 
-
-.left {
-  transition: all .3s ease;
-  transform: translateX(20px);
-}
-
-.page-slider{
-  margin-bottom: 30px;
-}
-.slick-slide {
- &>div {
-    transition: all .3s ease-out;
-    opacity: 0;
-    transform: translateZ(1500px) scale(2);
+  .first-page {
+    &>div {
+      opacity: 1;
+      transform: translateZ(0) scale(1);
+    }
   }
 }
 
-.first-page {
- &>div {
-    opacity: 1;
-    transform: translateZ(0) scale(1);
-  }
-}
 
 /*simple slide animation*/
 //.slick-slide{
@@ -445,13 +449,37 @@
 //}
 
 @keyframes cursor-blink {
+   0% {
+     opacity: 0;
+   }
+   50% {
+     opacity: 1;
+   }
+   100% {
+     opacity: 0;
+   }
+ }
+
+
+
+@keyframes fade_from{
   0% {
     opacity: 0;
+    transform: translateZ(-1500px) scale(0.3);
   }
-  50% {
+  100% {
     opacity: 1;
+    transform: translateZ(0) scale(1);
+  }
+}
+
+@keyframes fade_to{
+  0% {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
   }
   100% {
     opacity: 0;
+    transform: translateZ(1500px) scale(2);
   }
 }

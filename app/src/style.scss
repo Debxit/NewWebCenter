@@ -6,7 +6,9 @@
 @import url('blocks/form.scss'); // Обычная форма
 @import url('blocks/input.scss'); // Поля ввода
 
-@import url('blocks/portfolio.scss');
 @import url('blocks/header.scss'); // Шапка
 @import url('blocks/main.scss'); // Контейнер контента
 @import url('blocks/footer.scss'); // Подвал
+
+@import url('blocks/side-menu.scss');
+@import url('blocks/portfolio.scss');
