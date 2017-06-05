@@ -1,0 +1,40 @@
+.file-input {
+	display: inline-block;
+	text-align: left;
+
+	&__label {
+		border-bottom: 1px solid $color-main;
+		position: relative;
+		margin-right: .8em;
+		cursor: pointer;
+		transition: $duration ease;
+
+		&::after {
+			content: '+';
+			color: $red;
+			position: absolute;
+			right: -.8em;
+		}
+
+		&:hover,
+		&_focus {
+			border-bottom-color: transparent;
+		}
+	}
+
+	&__input {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+		&:focus {
+
+			+ label {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+}

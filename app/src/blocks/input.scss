@@ -11,9 +11,19 @@
 
 	@include input-placeholder {
 		color: $color-main;
-	};
+		transition: text-indent $duration ease, opacity $duration ease;
+	}
 
 	@include input-autofill($color-main);
+
+	&:focus {
+
+		@include input-placeholder {
+			text-indent: 20px;
+			opacity: 0;
+			transition: text-indent $duration ease, opacity $duration ease $duration;
+		}
+	}
 }
 
 textarea.input {

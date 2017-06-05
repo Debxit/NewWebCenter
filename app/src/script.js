@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	@@include('blocks/file-input/file-input.js')
 
     //background map infinite dot blinking
     var dotsNumber = $("#svg-map path").length;

@@ -1,32 +1,43 @@
 .main {
+  position: relative;
 
   &__subtitle {
-    font-size: 25px;
-    margin: 20px 0;
+    font-size: 2.2rem;
+    margin: 1.5em 0 .5em;
     font-weight: 500;
 
     @include screen-xl() {
-      margin: 15px 0;
-      font-size: 23px;
+      font-size: 2rem;
     }
 
     @include screen-xs() {
-      font-size: 20px;
+      font-size: 1.7rem;
     }
   }
 
   &__desc {
     font-weight: 300;
-    font-size: 20px;
-    margin: 25px 0;
+    font-size: 2rem;
+    margin: .5em 0;
 
     @include screen-xl() {
-      font-size: 18px;
-      margin: 15px 0;
+      font-size: 1.8rem;
     }
 
     @include screen-xs() {
-      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__link {
+    color: $red;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: $duration ease;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $red;
     }
   }
 }
