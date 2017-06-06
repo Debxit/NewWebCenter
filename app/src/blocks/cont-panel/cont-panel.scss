@@ -4,6 +4,7 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
+	transition: transform $duration * 2 ease;
 
 	&__left {
 		width: 70%;
@@ -35,9 +36,13 @@
 		left: 70%;
 		top: 50%;
 		transform: translateY(-50%);
-		margin-left: 5px;
-		padding: 30px 15px 30px 0;
+		width: 30%;
+		height: 100%;
+		padding-left: 5px;
+		display: flex;
+		align-items: center;
 		font-weight: 600;
+		text-shadow: 1px 1px 0 rgba(white, .5);
 		cursor: pointer;
 		transition: $duration ease;
 
@@ -47,11 +52,11 @@
 			right: 100%;
 			top: 50%;
 			transform: translateY(-50%);
-			margin-right: 5px;
 			border-right: 20px solid rgba($color-main, .67);
 			border-left: none;
 			border-top: 17px solid transparent;
 			border-bottom: 17px solid transparent;
+			text-shadow: 1px 1px 0 rgba(white, .5);
 			transition: $duration ease;
 		}
 
@@ -62,13 +67,25 @@
 				border-right-color: $red;
 			}
 		}
+	}
 
-		&_closed {
-			margin-left: 25px;
+	&_closed {
+		transform: translateX(-100%);
 
-			&::before {
-				transform: translateY(-50%) rotate(180deg);
-				margin-right: 5px;
+		.cont-panel {
+			// =====
+
+			&__btn {
+				left: 100%;
+				width: auto;
+				height: 100px;
+				padding-left: 25px;
+				padding-right: 10px;
+
+				&::before {
+					transform: translateY(-50%) rotate(180deg);
+					margin-right: -20px;
+				}
 			}
 		}
 	}
