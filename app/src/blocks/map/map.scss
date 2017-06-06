@@ -1,20 +1,28 @@
 .map {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	height: 500px;
 
-	&::after {
-		content: '';
+	@include screen-sm(min) {
+		height: auto;
 		position: absolute;
-		top: 100%;
-		left: 0;
+		top: 0;
 		right: 0;
 		bottom: 0;
-		background: radial-gradient(transparent, white);
-		opacity: 0;
-		transition: $duration ease, 0s ease top $duration;
+		left: 0;
+	}
+
+	&::after {
+
+		@include screen-sm(min) {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: radial-gradient(transparent, white);
+			opacity: 0;
+			transition: $duration ease, 0s ease top $duration;
+		}
 	}
 
 	&__wrap {
@@ -25,9 +33,12 @@
 	&_light {
 
 		&::after {
-			opacity: 1;
-			top: 0;
-			transition: 0.3s ease, 0s ease top;
+
+			@include screen-sm(min) {
+				opacity: 1;
+				top: 0;
+				transition: 0.3s ease, 0s ease top;
+			}
 		}
 	}
 }

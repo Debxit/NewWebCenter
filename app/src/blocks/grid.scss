@@ -2,10 +2,10 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	&__sm-6 {
+	&__md-6 {
 		padding: 0 15px;
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			width: 50%;
 		}
 	}

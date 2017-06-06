@@ -6,14 +6,13 @@ function initMap() {
 
 	/* Точки */
 	var dot1 = {lat: 59.999921, lng: 30.256418}; // Гаккелевская, 21А
-	var dot2 = {lat: 59.999921, lng: 30.229}; // Чуть сбоку от адреса
 	/* ===== */
 
 	/* Карты */
 	if (document.getElementById('mapContacts')) { // Карта в контактах
 		var map1 = new google.maps.Map(document.getElementById('mapContacts'), {
 			zoom: 15,
-			center: dot2,
+			center: dot1,
 			scrollwheel: false,
 			mapTypeControl: true,
 			streetViewControl: false,
