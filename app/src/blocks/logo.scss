@@ -24,7 +24,6 @@
 		line-height: 0.7em;
 		display: block;
 		text-align: center;
-		margin-top: 5px;
 		color: $red;
 	}
 
@@ -40,5 +39,9 @@
 
 	.logo__brace {
 		margin:0;
+	}
+
+	.logo__small{
+		margin-top: 5px;
 	}
 }
