@@ -32,9 +32,18 @@ function initMap() {
 		});
 
 		/* Центрирование карты при ресайзе */
+		var lastSize = 0; // Предыдущая ширина экрана
 		google.maps.event.addDomListener(window, "resize", function() {
-			google.maps.event.trigger(map1, "resize");
-			map1.panTo(dot1);
+			if ((window.innerWidth == 768) && (lastSize == 767)) {
+				setTimeout(function() {
+					google.maps.event.trigger(map1, "resize");
+					map1.panTo(dot1);
+				}, 600);
+			} else {
+				google.maps.event.trigger(map1, "resize");
+				map1.panTo(dot1);
+			}
+			lastSize = window.innerWidth;
 		});
 		/* ===== */
 

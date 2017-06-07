@@ -6,15 +6,20 @@ var
 	$panBtn = $('.cont-panel__btn'), // Кнопка сворачивания / разворачиавания панели
 	$map = $('#mapContacts').parent(), // Контейнер карты
 	mapLight = 'map_light', // Класс засветлённой карты
-	mapRight = 'map__wrap_right'; // Класс, отодвигающий карту вправо
+	mapRight = 'map_collapse'; // Класс, схлопывающий карту
 
 
 $panBtn.on('click', function() {
 	$pan.toggleClass(panClosed);
 	$map
 		.toggleClass(mapLight)
-		.children(0)
 		.toggleClass(mapRight);
+
+	if ($panBtn.text() == 'Открыть карту') {
+		$panBtn.text('Закрыть карту');
+	} else {
+		$panBtn.text('Открыть карту');
+	}
 });
 
 $panI.perfectScrollbar(); // Кастомный ползунок
