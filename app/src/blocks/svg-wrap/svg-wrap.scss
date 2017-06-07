@@ -4,8 +4,8 @@
 	position: absolute;
 	margin-top: 5%;
 	z-index: -1;
-	margin-left: -5%;
-	margin-right: -5%;
+	margin-left: -7.5%;
+	margin-right: -7.5%;
 	&:after{
 		content: '';
 		position: absolute;
@@ -49,4 +49,22 @@
 
 #svg-map path:hover {
 	fill: $red !important;
+}
+
+
+.map-bg{
+	width: 115%;
+	background: url("../img/map.svg") no-repeat center top;
+	//min-height: calc(100vh - 280px);
+	position: relative;
+	margin: 0 -7.5%;
+	z-index: 0;
+	padding: 0 7.5%;
+
+	@include screen-xl() {
+		padding: 0;
+		margin:0;
+		max-width: 100%;
+	}
+
 }

@@ -30,10 +30,11 @@ $(document).ready(function () {
              }
          },
          {
-             breakpoint: 992,
-             settings: {
-                 unslick: true
-             }
+             breakpoint: 768,
+             settings: "unslick"
+             // settings: {
+             //     unslick: true
+             // }
          }
      ]
  });

@@ -1,6 +1,11 @@
 .portfolio-slider {
   padding: 0 50px;
-
+  @include screen-sm() {
+    padding: 0 10px;
+  }
+  @include screen-xs() {
+    padding: 0;
+  }
   &__wrap {
     //padding-bottom:50%;
     height: 60vh;
