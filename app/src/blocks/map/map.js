@@ -30,6 +30,30 @@ function initMap() {
 			title: 'Webcenter',
 			id: 'marker1'
 		});
+
+		/* Центрирование карты при ресайзе */
+		google.maps.event.addDomListener(window, "resize", function() {
+			google.maps.event.trigger(map1, "resize");
+			map1.panTo(dot1);
+		});
+		/* ===== */
+
+		/* Центрирование карты при клике на кнопку панели */
+		document.querySelector('.cont-panel__btn').addEventListener('click', function() {
+			var
+				delay = 20, // Частота срабатывания таймера
+				delCnt = 0; // Суммарное время работы таймера
+
+			var mapInt = setInterval(function() {
+				google.maps.event.trigger(map1, "resize");
+				map1.panTo(dot1);
+				delCnt += delay;
+				if (delCnt >= 600) {
+					clearInterval(mapInt);
+				}
+			}, delay);
+		});
+		/* ===== */
 	}
 	/* ===== */
 }

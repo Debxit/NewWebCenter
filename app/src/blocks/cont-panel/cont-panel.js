@@ -5,12 +5,16 @@ var
 	$panI = $('.cont-panel__i'), // Внешний контейнер панели
 	$panBtn = $('.cont-panel__btn'), // Кнопка сворачивания / разворачиавания панели
 	$map = $('#mapContacts').parent(), // Контейнер карты
-	mapLight = 'map_light'; // Класс засветлённой карты
+	mapLight = 'map_light', // Класс засветлённой карты
+	mapRight = 'map__wrap_right'; // Класс, отодвигающий карту вправо
 
 
 $panBtn.on('click', function() {
 	$pan.toggleClass(panClosed);
-	$map.toggleClass(mapLight);
+	$map
+		.toggleClass(mapLight)
+		.children(0)
+		.toggleClass(mapRight);
 });
 
 $panI.perfectScrollbar(); // Кастомный ползунок
