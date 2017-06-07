@@ -2,13 +2,20 @@
 	border: $red solid 2px;
 	border-radius: 13px;
 	font-family: $font-main;
-	padding: 1px 15px;
+	padding: 0 15px;
 	color: $red;
+    display: inline-flex;
 	background: transparent;
 	transition: all .3s ease;
 	text-align: center;
-	min-height: 30px;
 	cursor: pointer;
+	div{
+		align-items: center;
+		display:flex; //if you have items within the child you'll need to make it display flex
+		justify-content: center;
+		flex-direction: column;
+		min-height: 26px;
+	}
 
 	&:hover,
 	&:focus {
