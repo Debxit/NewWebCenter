@@ -25,14 +25,14 @@
 	}
 
 	&_fill {
+		display: block;
 		border-radius: 9px;
 		background: $red;
 		color: #fff;
 		font-weight: 500;
 		padding: 10px 25px;
 		font-size: 20px;
-		margin: 0 auto;
-		margin-bottom: 15px;
+		margin: 0 auto 15px;
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.23);
 
 		@include screen-xs(){
