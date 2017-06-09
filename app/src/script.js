@@ -6,6 +6,7 @@ $(document).ready(function () {
 	@@include('blocks/svg-wrap/svg-map.js')
 	@@include('blocks/page-slider/page-slider.js')
 	@@include('blocks/side-menu/side-menu.js')
+	@@include('blocks/accord/accord.js')
 
 
 

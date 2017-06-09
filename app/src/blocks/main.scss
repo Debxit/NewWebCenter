@@ -40,6 +40,11 @@
       border-bottom-color: $red;
     }
   }
+
+  &__head-wrap {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 .left {
