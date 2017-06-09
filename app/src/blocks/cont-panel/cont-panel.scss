@@ -152,8 +152,8 @@
 			left: 50%;
 			transform: translateX(-50%);
 			transition: $duration ease;
-			border-bottom: 20px solid rgba($color-main, .67);
-			border-top: none;
+			border-top: 20px solid rgba($color-main, .67);
+			border-bottom: none;
 			border-left: 17px solid transparent;
 			border-right: 17px solid transparent;
 
@@ -174,7 +174,7 @@
 			color: $red;
 
 			&::before {
-				border-bottom-color: $red;
+				border-top-color: $red;
 
 				@include screen-sm(min) {
 					border-right-color: $red;

@@ -24,6 +24,15 @@
 			transition: text-indent $duration ease, opacity $duration ease $duration;
 		}
 	}
+
+	&_invalid {
+		border-color: $red;
+		color: $red;
+
+		@include input-placeholder {
+			color: $red;
+		}
+	}
 }
 
 textarea.input {
