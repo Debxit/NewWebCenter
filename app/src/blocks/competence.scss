@@ -4,11 +4,54 @@
 		font-size: 18px;
 		font-weight: 500;
 		margin-bottom: 15px;
+
+		@include screen-xs() {
+			text-align: center;
+		}
 	}
 
 	&__img {
-		display: block;
+		margin: 0 0 30px;
 		max-width: 75%;
-		margin-bottom: 30px;
+		display: block;
+
+		@include screen-md() {
+			display: inline-block;
+			max-width: none;
+			height: 70px;
+			margin: 0 10px 10px 0;
+		}
+
+		@include screen-xs() {
+			height: auto;
+			display: block;
+			width: 100%;
+			margin: 0 auto 10px;
+		}
+
+		&_1 {
+
+			@include screen-xs() {
+				float: left;
+				padding-right: 10px;
+				width: 47.2%;
+			}
+		}
+
+		&_2 {
+
+		}
+
+		&_3 {
+
+			@include screen-xs() {
+				float: left;
+				width: 52.8%;
+			}
+		}
+
+		&_4 {
+
+		}
 	}
 }

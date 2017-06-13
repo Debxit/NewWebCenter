@@ -1,8 +1,12 @@
 .price {
 	font-weight: 500;
+	font-size: 16px;
+
+	@include screen-md(min) {
+		font-size: 24px;
+	}
 
 	&__title {
-		font-size: 24px;
 		margin: 0;
 		display: inline-block;
 		position: relative;
@@ -12,25 +16,38 @@
 			content: '';
 			position: absolute;
 			background: $red;
+			right: -20px;
+			top: -11px;
+
+			@include screen-md(min) {
+				right: -24px;
+				top: -11px;
+			}
 		}
 
 		&::before {
-			height: 43px;
-			width: 8px;
-			right: -24px;
-			top: -11px;
+			height: 30px;
+			width: 6px;
+
+			@include screen-md(min) {
+				height: 43px;
+				width: 8px;
+			}
 		}
 
 		&::after {
-			width: 43px;
-			height: 8px;
-			right: -24px;
-			top: -11px;
+			width: 30px;
+			height: 6px;
+
+			@include screen-md(min) {
+				width: 43px;
+				height: 8px;
+			}
 		}
 	}
 
 	&__cost-wrap {
-		font-size: 37px;
+		font-size: 1.54em;
 		margin: 0;
 	}
 

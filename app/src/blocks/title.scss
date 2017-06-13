@@ -20,30 +20,41 @@
 	}
 
 	&_angle {
-		position: relative;
-		display: inline-block;
+
+		@include screen-sm(min) {
+			position: relative;
+			display: inline-block;
+		}
 
 		&::before,
 		&::after {
-			content: '';
-			position: absolute;
-			background: $red;
+
+			@include screen-sm(min) {
+				content: '';
+				position: absolute;
+				background: $red;
+				left: -20px;
+			}
 		}
 
 		&::before {
-			height: 45px;
-			width: 8px;
-			left: -20px;
-			bottom: -10px;
-			transform: scaleY(0.85);
+
+			@include screen-sm(min) {
+				height: 45px;
+				width: 8px;
+				bottom: -10px;
+				transform: scaleY(0.85);
+			}
 		}
 
 		&::after {
-			width: 45px;
-			height: 8px;
-			left: -20px;
-			bottom: -7px;
-			transform: scaleY(0.89);
+
+			@include screen-sm(min) {
+				width: 45px;
+				height: 8px;
+				bottom: -7px;
+				transform: scaleY(0.89);
+			}
 		}
 	}
 }

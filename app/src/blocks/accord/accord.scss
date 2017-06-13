@@ -10,11 +10,19 @@
 		opacity: .5;
 		transform: scaleY(1.2);
 		pointer-events: none;
+
+		@include screen-sm() {
+			display: none;
+		}
 	}
 
 	&__panel {
 		position: relative;
 		margin: 0 0 30px 5em;
+
+		@include screen-sm() {
+			margin-left: 0;
+		}
 
 		&::before,
 		&::after {
@@ -81,6 +89,10 @@
 		padding: 0 15px 0 4em;
 		outline: none;
 		cursor: pointer;
+
+		@include screen-sm() {
+			padding: 0 0 0 35px;
+		}
 	}
 
 	&__title {
@@ -100,6 +112,10 @@
 	&__body {
 		padding: 37px 15px 8px 4em;
 		display: none;
+
+		@include screen-sm() {
+			padding: 37px 0 8px 35px;
+		}
 	}
 
 	&__radio-wrap {
@@ -123,6 +139,10 @@
 		padding: 7px 0 7px 4em;
 		position: relative;
 		cursor: pointer;
+
+		@include screen-sm() {
+			padding-left: 35px;
+		}
 
 		&::before {
 			content: '';
