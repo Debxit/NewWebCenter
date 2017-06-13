@@ -4,7 +4,9 @@ var
 	accordOpened = 'accord__panel_opened', // Класс открытой панели
 	accordRadio = 'accord__radio', // Класс чекбокса
 	accordRadioChecked = 'accord__radio_checked', // Класс активного чекбокса
-	$accordRadio = $('.' + accordRadio); // Чекбоксы
+	$accordRadio = $('.' + accordRadio), // Чекбоксы
+	$mainCostWrap = $('.price__cost'), // Фиксированный блок стоимости
+	$bottomCostWrap= $('.main__total-cost'); // Блок стоимости снизу
 
 $accordHead.on('click', function() {
 	var
@@ -23,17 +25,31 @@ $accordHead.on('click', function() {
 
 $accordRadio.on('click', function() {
 	var
-		$this = $(this);
+		$this = $(this),
+		cost = +$mainCostWrap.text(); // Стоимость
 
 	if ($this.hasClass(accordRadioChecked)) {
 		$this
 			.removeClass(accordRadioChecked)
 			.prop('checked', false);
+
+		cost -= +$this.val();
 	} else {
-		$this.parent().parent().find('.' + accordRadio).removeClass(accordRadioChecked);
+		var $prev = $this.parent().parent().find('.' + accordRadio);
+
+		if ($prev.filter('.' + accordRadioChecked).length) {
+			cost -= +$prev.filter('.' + accordRadioChecked).val();
+		}
+		$prev.removeClass(accordRadioChecked);
+
 		$this
 			.addClass(accordRadioChecked)
 			.prop('checked', true);
+
+		cost += +$this.val();
 	}
+
+	$mainCostWrap.text(cost);
+	$bottomCostWrap.text(cost);
 });
 /* ========== */

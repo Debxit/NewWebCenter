@@ -29,7 +29,7 @@
 			margin: 0 auto 10px;
 		}
 
-		&_1 {
+		&_half-1 {
 
 			@include screen-xs() {
 				float: left;
@@ -38,20 +38,12 @@
 			}
 		}
 
-		&_2 {
-
-		}
-
-		&_3 {
+		&_half-2 {
 
 			@include screen-xs() {
 				float: left;
 				width: 52.8%;
 			}
-		}
-
-		&_4 {
-
 		}
 	}
 }
