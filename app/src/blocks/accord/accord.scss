@@ -1,13 +1,62 @@
 .accord {
 
+	&__panel {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 22px;
+			height: 22px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 3px solid $color-main;
+			border-radius: 50%;
+			transition: $duration / 2 ease;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 2px;
+			position: absolute;
+			top: 22px;
+			left: 10px;
+			bottom: 0;
+			background: repeating-linear-gradient(to bottom, transparent, transparent 1px, $color-main 1px, $color-main 4px);
+			transition: $duration / 2 ease;
+		}
+
+		&:hover {
+
+			&::before {
+				border-color: $red;
+			}
+		}
+
+		&_opened {
+
+			&::before {
+				background: $red;
+				border-color: $red;
+			}
+
+			&::after {
+				background: linear-gradient(to bottom, $red, transparent), repeating-linear-gradient(to bottom, transparent, transparent 1px, $color-main 1px, $color-main 4px);
+			}
+		}
+	}
+
 	&__head {
-		padding: 15px;
+		padding: 0 15px 15px 5em;
 		outline: none;
 		cursor: pointer;
 	}
 
 	&__title {
 		margin: 0 0 10px;
+		font-weight: 500;
 	}
 
 	&__desc {
@@ -19,7 +68,8 @@
 	}
 
 	&__body {
-		padding: 15px;
+		padding: 15px 15px 15px 5em;
+		display: none;
 	}
 
 	&__radio-wrap {
@@ -47,8 +97,8 @@
 		&::before {
 			content: '';
 			display: block;
-			width: 13px;
-			height: 13px;
+			width: 17px;
+			height: 17px;
 			position: absolute;
 			left: 0;
 			border: 2px solid $color-main;
