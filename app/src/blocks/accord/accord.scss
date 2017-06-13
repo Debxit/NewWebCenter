@@ -1,37 +1,58 @@
 .accord {
 
+	&__num {
+		position: absolute;
+		left: -2em;
+		font-family: $font-days;
+		font-size: 48px;
+		line-height: 0;
+		color: $color-main;
+		opacity: .5;
+		transform: scaleY(1.2);
+		pointer-events: none;
+	}
+
 	&__panel {
 		position: relative;
+		margin: 0 0 30px 5em;
 
-		&::before {
+		&::before,
+		&::after {
 			content: '';
 			display: block;
-			width: 22px;
-			height: 22px;
 			position: absolute;
+			transition: $duration / 2 ease;
+			z-index: -1;
+		}
+
+		&::before {
+			width: 20px;
+			height: 20px;
 			top: 0;
 			left: 0;
 			border: 3px solid $color-main;
 			border-radius: 50%;
-			transition: $duration / 2 ease;
 		}
 
 		&::after {
-			content: '';
-			display: block;
 			width: 2px;
-			position: absolute;
-			top: 22px;
-			left: 10px;
-			bottom: 0;
+			top: 20px;
+			left: 9px;
+			bottom: -30px;
 			background: repeating-linear-gradient(to bottom, transparent, transparent 1px, $color-main 1px, $color-main 4px);
-			transition: $duration / 2 ease;
 		}
 
 		&:hover {
 
 			&::before {
 				border-color: $red;
+			}
+		}
+
+		&:last-child {
+
+			&::after {
+				display: none;
 			}
 		}
 
@@ -49,7 +70,7 @@
 	}
 
 	&__head {
-		padding: 0 15px 15px 5em;
+		padding: 0 15px 0 4em;
 		outline: none;
 		cursor: pointer;
 	}
@@ -68,12 +89,12 @@
 	}
 
 	&__body {
-		padding: 15px 15px 15px 5em;
+		padding: 37px 15px 8px 4em;
 		display: none;
 	}
 
 	&__radio-wrap {
-		margin-bottom: 15px;
+
 	}
 
 	&__radio {
@@ -90,17 +111,18 @@
 
 	&__label {
 		display: block;
-		padding-left: 5em;
+		padding: 7px 0 7px 4em;
 		position: relative;
 		cursor: pointer;
 
 		&::before {
 			content: '';
 			display: block;
-			width: 17px;
-			height: 17px;
+			width: 14px;
+			height: 14px;
 			position: absolute;
 			left: 0;
+			top: 9px;
 			border: 2px solid $color-main;
 			border-radius: 50%;
 			transition: $duration / 2 ease;
