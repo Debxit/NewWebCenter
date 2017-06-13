@@ -5,6 +5,22 @@
 		flex-wrap: wrap;
 	}
 
+	&__md-2 {
+		padding: 0 15px;
+
+		@include screen-md(min) {
+			width: 16.666666%;
+		}
+	}
+
+	&__md-3 {
+		padding: 0 15px;
+
+		@include screen-md(min) {
+			width: 25%;
+		}
+	}
+
 	&__md-6 {
 		padding: 0 15px;
 
@@ -13,7 +29,22 @@
 		}
 	}
 
+	&__md-8 {
+		padding: 0 15px;
+
+		@include screen-md(min) {
+			width: 66.666666%;
+		}
+	}
+
 	&_neg {
 		margin: 0 -15px;
+	}
+
+	&_md-between {
+
+		@include screen-md(min) {
+			justify-content: space-between;
+		}
 	}
 }

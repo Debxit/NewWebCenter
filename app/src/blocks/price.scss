@@ -1,0 +1,46 @@
+.price {
+	font-weight: 500;
+
+	&__title {
+		font-size: 24px;
+		margin: 0;
+		display: inline-block;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background: $red;
+		}
+
+		&::before {
+			height: 43px;
+			width: 8px;
+			right: -24px;
+			top: -11px;
+		}
+
+		&::after {
+			width: 43px;
+			height: 8px;
+			right: -24px;
+			top: -11px;
+		}
+	}
+
+	&__cost-wrap {
+		font-size: 37px;
+		margin: 0;
+	}
+
+	&__cost {
+		font-family: $font-days;
+		transform: scaleY(1.2);
+		display: inline-block;
+	}
+
+	&__currency {
+		display: inline-block;
+	}
+}
