@@ -8,6 +8,7 @@ var
 	$mainCostWrap = $('.price__cost'), // Фиксированный блок стоимости
 	$bottomCostWrap= $('.main__total-cost'); // Блок стоимости снизу
 
+// Работа аккордеона
 $accordHead.on('click', function() {
 	var
 		$this = $(this),
@@ -22,7 +23,9 @@ $accordHead.on('click', function() {
 		$next.slideDown(300);
 	}
 });
+// ==========
 
+// Работа чекбоксов
 $accordRadio.on('click', function() {
 	var
 		$this = $(this),
@@ -35,12 +38,15 @@ $accordRadio.on('click', function() {
 
 		cost -= +$this.val();
 	} else {
-		var $prev = $this.parent().parent().find('.' + accordRadio);
+		var $prev = $this.parent().parent().find('.' + accordRadioChecked); // Чекбокс, уже выбранный на момент клика
 
-		if ($prev.filter('.' + accordRadioChecked).length) {
-			cost -= +$prev.filter('.' + accordRadioChecked).val();
+		if ($prev.length) {
+			$prev
+				.removeClass(accordRadioChecked)
+				.prop('checked', false);
+
+			cost -= +$prev.val();
 		}
-		$prev.removeClass(accordRadioChecked);
 
 		$this
 			.addClass(accordRadioChecked)
@@ -52,4 +58,34 @@ $accordRadio.on('click', function() {
 	$mainCostWrap.text(cost);
 	$bottomCostWrap.text(cost);
 });
+// ==========
+
+// Появление и скрытие фиксированного блока стоимости
+toggleMobilePrice();
+
+$(window).on('scroll resize', function() {
+	toggleMobilePrice();
+});
+// ==========
+
+function toggleMobilePrice() {
+	var
+		$mainCostOuter = $mainCostWrap.parent().parent(), // Внешний контейнер главной стоимости
+		$bottomCostOuter = $bottomCostWrap.parent().parent(), // Внешний контейнер нижней стоимости
+		mainCostPos = $mainCostOuter.offset().top, // Верхняя позиция главной стоимости
+		bottomCostPos = $bottomCostOuter.offset().top, // Верхняя позиция нижней стоимости
+		mainCostHidden = 'price_hidden'; // Класс, скрывающий блок стоимости
+
+	if (window.innerWidth > 991) {
+		$mainCostOuter.removeClass(mainCostHidden);
+		return;
+	}
+
+	//TODO Допилить плавное появление блока стоимости
+	if (mainCostPos > bottomCostPos) {
+		$mainCostOuter.addClass(mainCostHidden);
+	} else {
+		$mainCostOuter.removeClass(mainCostHidden);
+	}
+}
 /* ========== */

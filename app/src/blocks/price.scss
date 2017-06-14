@@ -1,15 +1,22 @@
 .price {
 	font-weight: 500;
 	font-size: 16px;
+	transition: $duration ease opacity, $duration ease visibility $duration;
+	opacity: 1;
+	visibility: visible;
 
 	@include screen-md(min) {
 		font-size: 24px;
 	}
 
 	&__title {
-		margin: 0;
+		margin: 0 25px 0 0;
 		display: inline-block;
 		position: relative;
+
+		@include screen-md(min) {
+			margin-right: 0;
+		}
 
 		&::before,
 		&::after {
@@ -59,5 +66,10 @@
 
 	&__currency {
 		display: inline-block;
+	}
+
+	&_hidden {
+		opacity: 0;
+		visibility: hidden;
 	}
 }
