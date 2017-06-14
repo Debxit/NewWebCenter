@@ -2,6 +2,7 @@
 var
 	$accordHead = $('.accord__head'), // Шапки панелей
 	accordOpened = 'accord__panel_opened', // Класс открытой панели
+	accordOpenedFull = 'accord__panel_opened-full', // Класс открытой панели
 	accordRadio = 'accord__radio', // Класс чекбокса
 	accordRadioChecked = 'accord__radio_checked', // Класс активного чекбокса
 	$accordRadio = $('.' + accordRadio), // Чекбоксы
@@ -12,15 +13,44 @@ var
 $accordHead.on('click', function() {
 	var
 		$this = $(this),
+		$next = $this.next(), // Тело панели
 		$parent = $this.parent(), // Контейнер текущей шапки
-		$next = $this.next(); // Тело панели
+		$parentNext = $parent.next(), // Контейнер соседа снизу
+		$parentPrev = $parent.prev(); // Контейнер соседа сверху
 
 	if ($parent.hasClass(accordOpened)) {
 		$parent.removeClass(accordOpened);
 		$next.slideUp(300);
+
+		if ($parentPrev.hasClass(accordOpenedFull)) {
+			$parentPrev
+				.removeClass(accordOpenedFull)
+				.addClass(accordOpened);
+		}
+	} else if ($parent.hasClass(accordOpenedFull)) {
+		$parent.removeClass(accordOpenedFull);
+		$next.slideUp(300);
+
+		if ($parentPrev.hasClass(accordOpenedFull)) {
+			$parentPrev
+				.removeClass(accordOpenedFull)
+				.addClass(accordOpened);
+		}
 	} else {
 		$parent.addClass(accordOpened);
 		$next.slideDown(300);
+
+		if ($parentPrev.hasClass(accordOpened)) {
+			$parentPrev
+				.removeClass(accordOpened)
+				.addClass(accordOpenedFull);
+		}
+
+		if ($parentNext.hasClass(accordOpened) || $parentNext.hasClass(accordOpenedFull)) {
+			$parent
+				.removeClass(accordOpened)
+				.addClass(accordOpenedFull);
+		}
 	}
 });
 // ==========

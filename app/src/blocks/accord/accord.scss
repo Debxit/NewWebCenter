@@ -83,6 +83,18 @@
 				background: linear-gradient(to bottom, $red, transparent), repeating-linear-gradient(to bottom, transparent, transparent 1px, $color-main 1px, $color-main 4px);
 			}
 		}
+
+		&_opened-full {
+
+			&::before {
+				background: $red;
+				border-color: $red;
+			}
+
+			&::after {
+				background: $red;
+			}
+		}
 	}
 
 	&__head {
