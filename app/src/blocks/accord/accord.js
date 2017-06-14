@@ -6,7 +6,7 @@ var
 	accordRadio = 'accord__radio', // Класс чекбокса
 	accordRadioChecked = 'accord__radio_checked', // Класс активного чекбокса
 	$accordRadio = $('.' + accordRadio), // Чекбоксы
-	$mainCostWrap = $('.price__cost'), // Фиксированный блок стоимости
+	$mainCostWrap = $('.main__price .price__cost'), // Фиксированный блок стоимости
 	$bottomCostWrap= $('.main__total-cost'); // Блок стоимости снизу
 
 // Работа аккордеона

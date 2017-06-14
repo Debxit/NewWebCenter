@@ -3,7 +3,7 @@
 	&__title {
 		font-size: 18px;
 		font-weight: 500;
-		margin-bottom: 15px;
+		margin: 0 0 15px;
 
 		@include screen-xs() {
 			text-align: center;
@@ -27,7 +27,7 @@
 			height: auto;
 			display: block;
 			width: 100%;
-			margin: 0 auto 10px;
+			margin: 0 auto 3%;
 		}
 
 		&_half-1 {
@@ -42,6 +42,21 @@
 
 			@include screen-xs() {
 				width: 52.8%;
+			}
+		}
+
+		&_half-3 {
+
+			@include screen-xs() {
+				width: 48%;
+				margin-right: 3%;
+			}
+		}
+
+		&_half-4 {
+
+			@include screen-xs() {
+				width: 49%;
 			}
 		}
 	}

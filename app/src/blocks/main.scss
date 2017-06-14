@@ -62,16 +62,23 @@
 		  position: fixed;
 		  bottom: 0;
 		  right: 0;
-		  background: white;
-		  box-shadow: 0 0 10px 5px white;
 		  margin: 0;
-		  padding: 15px;
 		  z-index: 1;
     }
 
 	  @include screen-xs() {
 		  left: 0;
 		  text-align: center;
+	  }
+
+	  &_fixed {
+		  position: fixed;
+		  top: auto;
+
+		  @include screen-md(min) {
+			  top: 15px;
+			  min-width: 6.7em;
+		  }
 	  }
   }
 

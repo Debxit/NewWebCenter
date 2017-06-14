@@ -4,9 +4,12 @@
 	transition: $duration ease opacity, $duration ease visibility $duration;
 	opacity: 1;
 	visibility: visible;
+	background: white;
+	padding: 15px;
 
 	@include screen-md(min) {
 		font-size: 24px;
+		padding: 15px 0 0 0;
 	}
 
 	&__title {
