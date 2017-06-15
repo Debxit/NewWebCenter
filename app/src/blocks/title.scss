@@ -23,6 +23,7 @@
 		width: 1.5em;
 		border-left: .26em solid $red;
 		transform: scaleY(0.85);
+		z-index: -1;
 	}
 
 	&_lower {
