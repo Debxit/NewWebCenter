@@ -115,6 +115,13 @@
   &__total-currency {
     font-weight: 500;
   }
+
+	&__profit {
+
+		@include screen-sm() {
+			margin-bottom: 70px;
+		}
+	}
 }
 
 .left {

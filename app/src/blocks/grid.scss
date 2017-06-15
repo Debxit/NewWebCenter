@@ -1,12 +1,8 @@
 .grid {
-
-	@include screen-md(min) {
-		display: flex;
-		flex-wrap: wrap;
-	}
+	display: flex;
+	flex-wrap: wrap;
 
 	&__md-2 {
-		padding: 0 15px;
 
 		@include screen-md(min) {
 			width: 16.666666%;
@@ -14,15 +10,41 @@
 	}
 
 	&__md-3 {
-		padding: 0 15px;
 
 		@include screen-md(min) {
 			width: 25%;
 		}
 	}
 
+	&__md-4 {
+
+		@include screen-md(min) {
+			width: 33.333333%;
+		}
+	}
+
+	&__md-5 {
+
+		@include screen-md(min) {
+			width: 41.666666%;
+		}
+	}
+
+	&__lg-5 {
+
+		@include screen-lg(min) {
+			width: 41.666666%;
+		}
+	}
+
+	&__sm-6 {
+
+		@include screen-sm(min) {
+			width: 50%;
+		}
+	}
+
 	&__md-6 {
-		padding: 0 15px;
 
 		@include screen-md(min) {
 			width: 50%;
@@ -30,7 +52,6 @@
 	}
 
 	&__md-8 {
-		padding: 0 15px;
 
 		@include screen-md(min) {
 			width: 66.666666%;
@@ -47,4 +68,19 @@
 			justify-content: space-between;
 		}
 	}
+
+	&_md-center {
+
+		@include screen-md(min) {
+			justify-content: center;
+		}
+	}
+}
+
+[class^='grid__xs'],
+[class^='grid__sm'],
+[class^='grid__md'],
+[class^='grid__lg'] {
+	padding: 0 15px;
+	width: 100%;
 }

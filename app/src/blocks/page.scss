@@ -34,4 +34,17 @@
 			flex-wrap: wrap;
 		}
 	}
+
+	&__profit {
+		width: 20%;
+
+		@include screen-sm() {
+			width: 30%;
+		}
+
+		@include screen-xs() {
+			width: 80%;
+			margin-bottom: 20px;
+		}
+	}
 }
