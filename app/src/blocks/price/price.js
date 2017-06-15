@@ -12,6 +12,8 @@ $(window).on('scroll resize', function() {
 });
 
 function setPricePos() {
+	if (!$price.length) return;
+
 	if (window.innerWidth <= 991) {
 		setNextPos(false);
 		return;

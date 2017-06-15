@@ -23,6 +23,7 @@ $('.page-slider').slick({
 });
 
 
+//TODO В первый раз слайдер скроллится без задержки
 $('.page-slider').mousewheel(function (e) {
     e.preventDefault();
 

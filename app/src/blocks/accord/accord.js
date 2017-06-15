@@ -99,6 +99,8 @@ $(window).on('scroll resize', function() {
 // ==========
 
 function toggleMobilePrice() {
+	if (!$accordHead.length) return;
+
 	var
 		$mainCostOuter = $mainCostWrap.parent().parent(), // Внешний контейнер главной стоимости
 		$bottomCostOuter = $bottomCostWrap.parent().parent(), // Внешний контейнер нижней стоимости
