@@ -64,6 +64,14 @@
 		font-weight: 300;
 		font-size: 2rem;
 
+		@include screen-xl() {
+			font-size: 1.8rem;
+		}
+
+		@include screen-xs() {
+			font-size: 1.6rem;
+		}
+
 		&::before {
 			content: '- ';
 		}

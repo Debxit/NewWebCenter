@@ -53,6 +53,14 @@
 	  @include screen-sm() {
 		  margin-bottom: 70px;
 	  }
+
+	  &_sm {
+		  margin-bottom: 60px;
+
+		  @include screen-sm() {
+			  margin-bottom: 40px;
+		  }
+	  }
   }
 
   &__price {
@@ -117,9 +125,10 @@
   }
 
 	&__profit {
+		margin-bottom: 20px;
 
 		@include screen-sm() {
-			margin-bottom: 70px;
+			margin-bottom: 40px;
 		}
 	}
 }
