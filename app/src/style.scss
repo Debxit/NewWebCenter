@@ -4,9 +4,9 @@
 
 @import url('blocks/btn.scss');
 @import url('blocks/cursor.scss');
-@import url('blocks/first-page.scss');
 @import url('blocks/flamp.scss');
-@import url('blocks/logo.scss');
+@import url('blocks/logo/logo.scss');
+@import url('blocks/big-logo/big-logo.scss'); // Большой логотип на главной
 @import url('blocks/menu-icon.scss');
 @import url('blocks/page.scss');
 @import url('blocks/page-slider/page-slider.scss');
@@ -17,7 +17,7 @@
 @import url('blocks/side-menu/side-menu.scss');
 @import url('blocks/portfolio-filter.scss');
 @import url('blocks/portfolio-element.scss');
-@import url('blocks/portfolio-slider.scss');
+@import url('blocks/portfolio-slider/portfolio-slider.scss');
 @import url('blocks/profit.scss');
 @import url('blocks/socials.scss');
 @import url('blocks/svg-wrap/svg-wrap.scss');

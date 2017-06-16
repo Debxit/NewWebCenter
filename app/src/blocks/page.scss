@@ -47,4 +47,26 @@
 			margin-bottom: 20px;
 		}
 	}
+
+	&__small-line {
+		font-size: 19px;
+		transform: scaleY(1.2);
+
+		@include screen-xs() {
+			font-size: 16px;
+		}
+	}
+
+	&_first {
+		font-family: $font-days;
+		padding: 1.8% 0;
+
+		@include screen-xl() {
+			padding: 1% 0;
+		}
+
+		@include screen-sm() {
+			padding-top: 4%;
+		}
+	}
 }

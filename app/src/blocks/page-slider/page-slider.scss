@@ -160,12 +160,9 @@
 					&:after {
 						right: -23px;
 					}
-
 				}
 			}
-
 		}
-
 	}
 
 	//.slick-slide {
@@ -176,8 +173,9 @@
 	//  }
 	//}
 
-	.first-page {
-		&>div {
+	.page_first {
+
+		& > div {
 			opacity: 1;
 			transform: translateZ(0) scale(1);
 		}
