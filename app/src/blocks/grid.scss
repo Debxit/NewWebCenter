@@ -64,6 +64,13 @@
 		}
 	}
 
+	&__md-9 {
+
+		@include screen-md(min) {
+			width: 75%;
+		}
+	}
+
 	&__offset-1{
 		margin-left: 8.333333%;
 	}

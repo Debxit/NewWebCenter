@@ -1,0 +1,118 @@
+.tab {
+	font-size: 18px;
+	text-align: center;
+
+	&__svg-wrap {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		bottom: -100px;
+		left: 50%;
+		transform: translateX(-25px);
+	}
+
+	&__svg {
+
+		.cls-1 {
+			fill: $color-main;
+			transition: $duration ease fill;
+		}
+	}
+
+	&__head {
+		margin: 0 0 40px;
+		position: relative;
+		display: inline-block;
+	}
+
+	&__head-i {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+	}
+
+	&__title {
+		display: block;
+		float: left;
+		margin-right: 30px;
+		margin-bottom: 100px;
+		position: relative;
+
+		&::after {
+			content: '';
+			right: -18px;
+			width: 6px;
+			height: 6px;
+			background: $red;
+			position: absolute;
+			top: 50%;
+			margin-top: -3px;
+			border-radius: 50%;
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&_active {
+
+			.tab {
+				//=====
+
+				&__link {
+					color: $red;
+				}
+			}
+
+			.cls-1 {
+				fill: $red;
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 400;
+		transition: $duration ease;
+		line-height: 3;
+		display: inline-block;
+	}
+
+	&__line-wrap {
+		position: absolute;
+		bottom: 95px;
+		left: 0;
+		width: 100%;
+	}
+
+	&__line-rail {
+		height: 1px;
+		margin: 2px 30px;
+		background: $color-main;
+	}
+
+	&__line {
+		width: 100px;
+		height: 5px;
+		background: $red;
+		position: relative;
+		bottom: 2px;
+		transition: $duration ease;
+	}
+
+	&__body {
+		font-weight: 300;
+	}
+
+	&__item {
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+}

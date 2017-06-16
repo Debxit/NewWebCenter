@@ -12,4 +12,5 @@ $(document).ready(function () {
 	@@include('blocks/accord/accord.js')
 	@@include('blocks/price/price.js')
 	@@include('blocks/customer/customer.js')
+	@@include('blocks/tab/tab.js')
 });
