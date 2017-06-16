@@ -1,0 +1,21 @@
+.one-hour-work{
+	display: flex;
+	justify-content: space-around;
+	width: 83.66666%;
+	margin: 0 auto;
+
+	&__profit{
+		width: 25%;
+		padding: 0 15px;
+
+		.profit__name{
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+		.profit__list-item{
+			font-size: 14px;
+			margin-bottom: 10px;
+			font-weight: 400;
+		}
+	}
+}

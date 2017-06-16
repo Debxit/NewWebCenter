@@ -1,128 +1,128 @@
 .main {
-  position: relative;
+	position: relative;
 
-  &__subtitle {
-    font-size: 2.2rem;
-    margin: 1.5em 0 .5em;
-    font-weight: 500;
+	&__subtitle {
+		font-size: 2.2rem;
+		margin: 1.5em 0 .5em;
+		font-weight: 500;
 
-    @include screen-xl() {
-      font-size: 2rem;
-    }
+		@include screen-xl() {
+			font-size: 2rem;
+		}
 
-    @include screen-xs() {
-      font-size: 1.7rem;
-    }
-  }
+		@include screen-xs() {
+			font-size: 1.7rem;
+		}
+	}
 
-  &__desc {
-    font-weight: 300;
-    font-size: 2rem;
-    margin: .5em 0;
+	&__desc {
+		font-weight: 300;
+		font-size: 2rem;
+		margin: .5em 0;
 
-    @include screen-xl() {
-      font-size: 1.8rem;
-    }
+		@include screen-xl() {
+			font-size: 1.8rem;
+		}
 
-    @include screen-xs() {
-      font-size: 1.6rem;
-    }
+		@include screen-xs() {
+			font-size: 1.6rem;
+		}
 
-    &_strong {
-      font-weight: 500;
-      font-size: 2.4rem;
-    }
-  }
+		&_strong {
+			font-weight: 500;
+			font-size: 2.4rem;
+		}
+	}
 
-  &__link {
-    color: $red;
-    font-weight: 600;
-    border-bottom: 1px solid transparent;
-    transition: $duration ease;
+	&__link {
+		color: $red;
+		font-weight: 600;
+		border-bottom: 1px solid transparent;
+		transition: $duration ease;
 
-    &:hover,
-    &:focus {
-      border-bottom-color: $red;
-    }
-  }
+		&:hover,
+		&:focus {
+			border-bottom-color: $red;
+		}
+	}
 
-  &__head-wrap {
-    text-align: center;
-    margin-bottom: 100px;
+	&__head-wrap {
+		text-align: center;
+		margin-bottom: 100px;
 
-	  @include screen-sm() {
-		  margin-bottom: 70px;
-	  }
+		@include screen-sm() {
+			margin-bottom: 70px;
+		}
 
-	  &_sm {
-		  margin-bottom: 60px;
+		&_sm {
+			margin-bottom: 60px;
 
-		  @include screen-sm() {
-			  margin-bottom: 40px;
-		  }
-	  }
-  }
+			@include screen-sm() {
+				margin-bottom: 40px;
+			}
+		}
+	}
 
-  &__price {
-    margin-bottom: 60px;
+	&__price {
+		margin-bottom: 60px;
 
-	  @include screen-md() {
-		  position: fixed;
-		  bottom: 0;
-		  right: 0;
-		  margin: 0;
-		  z-index: 1;
-    }
+		@include screen-md() {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			margin: 0;
+			z-index: 1;
+		}
 
-	  @include screen-xs() {
-		  left: 0;
-		  text-align: center;
-	  }
+		@include screen-xs() {
+			left: 0;
+			text-align: center;
+		}
 
-	  &_fixed {
-		  position: fixed;
-		  top: auto;
+		&_fixed {
+			position: fixed;
+			top: auto;
 
-		  @include screen-md(min) {
-			  top: 15px;
-			  min-width: 6.7em;
-		  }
-	  }
-  }
+			@include screen-md(min) {
+				top: 15px;
+				min-width: 6.7em;
+			}
+		}
+	}
 
-  &__total-wrap {
-    font-size: 16px;
-	 margin-left: 9em;
+	&__total-wrap {
+		font-size: 16px;
+		margin-left: 9em;
 
-	  @include screen-md() {
-		  margin-bottom: 45px;
-	  }
+		@include screen-md() {
+			margin-bottom: 45px;
+		}
 
-	  @include screen-sm() {
-		  margin-left: 0;
-		  text-align: center;
-	  }
-  }
+		@include screen-sm() {
+			margin-left: 0;
+			text-align: center;
+		}
+	}
 
-  &__total {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 24px;
-    margin-right: 30px;
+	&__total {
+		display: inline-block;
+		font-weight: bold;
+		font-size: 24px;
+		margin-right: 30px;
 
-	  @include screen-xs() {
-		  margin-right: 0;
-		  width: 100%;
-	  }
-  }
+		@include screen-xs() {
+			margin-right: 0;
+			width: 100%;
+		}
+	}
 
-  &__total-cost {
-    font-weight: 500;
-  }
+	&__total-cost {
+		font-weight: 500;
+	}
 
-  &__total-currency {
-    font-weight: 500;
-  }
+	&__total-currency {
+		font-weight: 500;
+	}
 
 	&__profit {
 		margin-bottom: 20px;
@@ -139,11 +139,19 @@
 		top: 0;
 		right: 15%;
 	}
+
+	&_support-page {
+
+		.title_angle-top {
+			margin-top: 140px;
+			max-width: 60%;
+		}
+	}
 }
 
 .left {
-  transition: transform .3s ease;
-  transform: translateX(20px);
+	transition: transform .3s ease;
+	transform: translateX(20px);
 }
 
 /*simple slide animation*/
@@ -157,24 +165,24 @@
 //  transform: translateZ(0) scale(1);
 //}
 
-@keyframes fade_from{
-  0% {
-    opacity: 0;
-    transform: translateZ(-1500px) scale(0.3);
-  }
-  100% {
-    opacity: 1;
-    transform: translateZ(0) scale(1);
-  }
+@keyframes fade_from {
+	0% {
+		opacity: 0;
+		transform: translateZ(-1500px) scale(0.3);
+	}
+	100% {
+		opacity: 1;
+		transform: translateZ(0) scale(1);
+	}
 }
 
-@keyframes fade_to{
-  0% {
-    opacity: 1;
-    transform: translateZ(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateZ(1500px) scale(2);
-  }
+@keyframes fade_to {
+	0% {
+		opacity: 1;
+		transform: translateZ(0) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translateZ(1500px) scale(2);
+	}
 }

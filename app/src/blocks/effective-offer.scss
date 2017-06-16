@@ -1,0 +1,21 @@
+.effective-offer {
+	margin-top: 200px;
+
+	&__title {
+		max-width: 350px;
+	}
+	&__profits {
+		width: 45%;
+		margin-left: 8%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__descr {
+		width: 40%;
+		h3{
+			margin-top: 7.5px;
+			font-size: 20px;
+		}
+	}
+}
