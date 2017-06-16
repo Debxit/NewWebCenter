@@ -101,7 +101,9 @@
 		background: $red;
 		position: relative;
 		bottom: 2px;
+		left: 0;
 		transition: $duration ease;
+		float: left;
 	}
 
 	&__body {
