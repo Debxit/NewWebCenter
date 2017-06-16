@@ -1,0 +1,88 @@
+.discount {
+	width: 66.666666%;
+	display: flex;
+	margin: 0 auto;
+
+}
+
+.discount-item {
+	width: 33%;
+	text-align: center;
+
+
+	&__hour {
+		position: relative;
+		color: $color-main;
+		font-size: 24px;
+	}
+
+	&__hour-circle {
+		content: '';
+		width: 65px;
+		height: 65px;
+		border: 2px solid $red;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	&__hour-count{
+		position: absolute;
+		top: -22px;
+		left: 32%;
+	}
+	&__hour-from, &__hour-num {
+		color: $color-main;
+		font-family: $font-days;
+		display: inline-block;
+		transform: scaleY(1.2);
+	}
+
+	&__hour-from {
+		font-size: 33px;
+	}
+
+	&__hour-num {
+		font-size: 60px;
+		position: relative;
+		&:after{
+			content: '';
+			width: 50%;
+			height: 50%;
+			top: 20%;
+			left: 3px;
+			background: #fff;
+			z-index: -1;
+			position: absolute;
+			box-shadow: 4px 0 0 5px #fff;
+		}
+	}
+
+	&__price{
+		display: inline-block;
+		position: relative;
+		margin-top: 10px;
+		padding: 10px;
+		font-size: 30px;
+		color: $red;
+		font-weight: 700;
+
+
+		&:before,&:after {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			border-bottom: solid 2px $color-main;
+			bottom: 0;
+		}
+		&:before{
+			border-left: solid 2px $color-main;
+			left: 0;
+		}
+		&:after {
+			border-right: solid 2px $color-main;
+			right: 0;
+		}
+	}
+
+
+}

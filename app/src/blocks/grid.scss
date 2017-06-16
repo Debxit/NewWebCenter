@@ -63,6 +63,18 @@
 			width: 66.666666%;
 		}
 	}
+	&__md-9 {
+
+		@include screen-md(min) {
+			width: 75%;
+		}
+	}
+	&__md-10 {
+
+		@include screen-md(min) {
+			width: 83.333333%;
+		}
+	}
 
 	&__offset-1{
 		margin-left: 8.333333%;
@@ -71,7 +83,10 @@
 	&_neg {
 		margin: 0 -15px;
 	}
-
+	&_cut{
+		width: 83.33333%;
+		margin: 0 auto;
+	}
 
 	&_md-between {
 

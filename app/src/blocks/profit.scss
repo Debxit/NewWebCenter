@@ -12,13 +12,25 @@
 
 		img {
 			position: absolute;
-			height: 40px;
+			max-height: 40px;
 			top: 5px;
 			right: -17px;
 		}
 
 		&_bg{
 			background: #fff;
+		}
+		&_xl{
+			width: 70px;
+			height: 70px;
+
+			img {
+				max-height: 65px;
+				max-width: 65px;
+				right: -25px;
+				top: -15px;
+			}
+
 		}
 
 		&_big {
@@ -79,6 +91,23 @@
 
 		&::before {
 			content: '- ';
+		}
+
+		&_sm{
+			font-size: 1.4rem;
+
+			@include screen-xl() {
+				font-size: 1.8rem;
+			}
+
+			@include screen-xs() {
+				font-size: 1.6rem;
+			}
+		}
+		&_red{
+			&::before {
+				color: $red;
+			}
 		}
 	}
 
