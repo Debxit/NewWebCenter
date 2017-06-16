@@ -16,7 +16,7 @@
       height: 70vh;
     }
     @include screen-md() {
-      height: 90vh;
+      height: 100vh;
     }
     @include screen-sm() {
       height: 100%;
@@ -41,6 +41,11 @@
     height: 5px;
     border-radius: 5px;
     background: $color-main;
+    transition: background .2s ease;
+    &:hover{
+
+      background: $red;
+    }
   }
 
   .slick-active {
@@ -50,7 +55,7 @@
   }
   .slick-dots {
     position: absolute;
-    top: 20%;
+    top: 45%;
     right: 0;
   }
   .slick-dots li {

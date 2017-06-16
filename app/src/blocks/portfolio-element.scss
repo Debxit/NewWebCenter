@@ -1,225 +1,241 @@
 .portfolio-element {
-  display: inline-block;
-  padding: 7.5px;
-  position: relative;
-  transition: all .2s ease;
-  outline: 0;
-  @include screen-sm() {
-    height: 200px;
-    width: 80%;
-    margin: 0 auto;
-  }
-  @include screen-xs() {
-    width: 100%;
-  }
+	display: inline-block;
+	padding: 7.5px;
+	position: relative;
+	transition: all .2s ease;
+	outline: 0;
+	@include screen-sm() {
+		height: 200px;
+		width: 80%;
+		margin: 0 auto;
+	}
+	@include screen-xs() {
+		width: 100%;
+	}
 
-  &:hover {
-    .portfolio-element__hov {
-      visibility: visible;
+	&:hover {
+		.portfolio-element__hov {
+			visibility: visible;
 
-      &:after {
-        width: 100%;
-      }
-    }
-  }
+			&:after {
+				width: 100%;
+			}
+		}
+	}
 
-  &__vis {
-    height: 100%;
-    color: #fff;
-    padding: 30px;
-    position: relative;
-    z-index: 0;
-    font-size: 0;
-    vertical-align: middle;
-    text-align: left;
+	&__vis {
+		height: 100%;
+		color: #fff;
+		padding: 30px;
+		position: relative;
+		z-index: 0;
+		font-size: 0;
+		vertical-align: middle;
+		text-align: left;
 
-    @include screen-xl() {
-      padding: 20px;
-    }
+		@include screen-xl() {
+			padding: 20px;
+		}
 
-    &-logo {
-      max-width: 100%;
-    }
-    &-title {
-      font-weight: bold;
-      font-size: 36px;
+		&-logo {
+			max-width: 100%;
+		}
+		&-title {
+			font-weight: bold;
+			font-size: 36px;
 
-      @include screen-xl() {
-        font-size: 33px;
-      }
-      @include screen-lg() {
-        font-size: 30px;
-      }
-      @include screen-md() {
-        font-size: 27px;
-      }
+			@include screen-xl() {
+				font-size: 33px;
+			}
+			@include screen-lg() {
+				font-size: 30px;
+			}
+			@include screen-md() {
+				font-size: 27px;
+			}
 
-      &_small {
-        font-size: 25px;
+			&_small {
+				font-size: 25px;
 
-        @include screen-md() {
-          font-size: 27px;
-        }
+				@include screen-md() {
+					font-size: 27px;
+				}
 
-      }
-    }
-    &-descr {
-      font-size: 16px;
-      @include screen-md() {
-        font-size: 14px;
-      }
-    }
-    &-img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      max-height: 100%;
-      max-width: 100%;
-    }
-  }
+			}
+		}
+		&-descr {
+			font-size: 16px;
+			@include screen-md() {
+				font-size: 14px;
+			}
+		}
+		&-img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
 
-  &__hov {
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(62, 72, 96, 0.95);
-    text-align: center;
-    padding: 5%;
+	&__hov {
+		visibility: hidden;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(62, 72, 96, 0.95);
+		text-align: center;
+		padding: 5%;
 
-    @include screen-xl() {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-    }
-    @include screen-sm() {
-      padding: 15px;
-    }
+		@include screen-xl() {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+		}
+		@include screen-sm() {
+			padding: 15px;
+		}
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 8px;
-      background: $red;
-      transition: width .5s ease;
-      transition-delay: 0.1s;
-    }
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 8px;
+			background: $red;
+			transition: width .5s ease;
+			transition-delay: 0.1s;
+		}
 
-    &-icon {
-      max-height: 85px;
-      margin-bottom: 5px;
-      margin-top: 15px;
+		&-icon {
+			max-height: 85px;
+			margin-bottom: 5px;
+			margin-top: 15px;
 
-      @include screen-xl() {
-        max-height: 45px;
-        max-width: 50px;
-        margin: 0 auto;
-      }
-    }
-    &-title {
-      font-size: 30px;
-      font-weight: bold;
+			@include screen-xl() {
+				max-height: 45px;
+				max-width: 50px;
+				margin: 0 auto;
+			}
+			@include screen-xs() {
+				display: none;
+			}
+		}
+		&-title {
+			font-size: 30px;
+			font-weight: bold;
 
-      @include screen-xl(min) {
-        margin-bottom: 1em;
-      }
-      @include screen-xl() {
-        font-size: 25px;
-      }
-    }
-    &-descr {
-      font-size: 14px;
-    }
-  }
+			@include screen-xl(min) {
+				margin-bottom: 1em;
+			}
+			@include screen-xl() {
+				font-size: 25px;
+			}
+		}
+		&-descr {
+			font-size: 14px;
+		}
+	}
 }
 
 /* portfolio grid*/
 
 @include screen-sm(min) {
-  .md {
-    &_w4-h2 {
-      width: 100%;
-      height: 33.33%;
-    }
-    &_w2-h2 {
-      width: 50%;
-      height: 33.33%;
-    }
-    &_w1-h1 {
-      width: 50%;
-      height: 100%;
-    }
-  }
+	.md {
+		&_w4-h2 {
+			width: 100%;
+			height: 33.33%;
+		}
+		&_w2-h2 {
+			width: 50%;
+			height: 33.33%;
+		}
+		&_w1-h1 {
+			width: 50%;
+			height: 100%;
+		}
+	}
 
 }
 
 @include screen-md(min) {
-  .lg {
-    &_w2-h1 {
-      width: 50%;
-      height: 50%;
-      font-size: 0;
-    }
-    &_w1-h1 {
-      width: 25%;
-      height: 50%;
-    }
-    &_w1-h2 {
-      width: 50%;
-      height: 100%;
-    }
-  }
+	.lg {
+		&_w2-h1 {
+			width: 50%;
+			height: 50%;
+			font-size: 0;
+
+		}
+		&_w1-h1 {
+			width: 25%;
+			height: 50%;
+		}
+		&_w1-h2 {
+			width: 50%;
+			height: 100%;
+		}
+	}
 
 }
 
 @include screen-xl(min) {
-  .xl {
-    &_w2-h3 {
-      width: 50%;
-      height: 66.66%;
-      .portfolio-element__hov-icon {
-        max-height: 85px;
-      }
-    }
-    &_w2-h1 {
-      width: 50%;
-      height: 33.33%;
+	.xl {
+		&_w2-h3 {
+			width: 50%;
+			height: 66.66%;
+			.portfolio-element__hov-icon {
+				max-height: 85px;
+			}
+		}
+		&_w2-h1 {
+			width: 50%;
+			height: 33.33%;
 
-      .portfolio-element__hov-icon {
-        max-height: 40px;
-        margin-top: 5px;
-      }
-      .portfolio-element__hov-title {
-        margin-bottom: 0.5em;
-        font-size: 23px;
-      }
-    }
-    &_w1-h3 {
-      width: 25%;
-      height: 66.66%;
+			.portfolio-element__hov-icon {
+				max-height: 40px;
+				margin-top: 5px;
+			}
+			.portfolio-element__hov-title {
+				margin-bottom: 0.5em;
+				font-size: 23px;
+			}
+			.portfolio-element__vis{
+				padding-left: 12px;
+				&-img{
+					max-height: 90%;
+				}
+			}
+		}
+		&_w1-h3 {
+			width: 25%;
+			height: 66.66%;
 
-      .portfolio-element__hov-icon {
-        max-height: 85px;
-      }
-    }
-    &_w1-h1 {
-      width: 100%;
-      height: 50%;
-      .portfolio-element__hov-icon {
-        max-height: 40px;
-      }
-      .portfolio-element__hov-title {
-        margin-bottom: 0.5em;
-      }
-    }
-  }
+			.portfolio-element__hov-icon {
+				max-height: 85px;
+			}
+		}
+		&_w1-h1 {
+			width: 100%;
+			height: 50%;
+			.portfolio-element__hov-icon {
+				max-height: 40px;
+			}
+			.portfolio-element__hov-title {
+				margin-bottom: 0.5em;
+			}
+		}
+	}
+}
+
+@include screen-lg(){
+	.portfolio-element__vis-img{
+		max-width: 60%;
+	}
 }
 

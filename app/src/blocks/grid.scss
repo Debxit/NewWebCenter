@@ -50,6 +50,12 @@
 			width: 50%;
 		}
 	}
+	&__md-7 {
+
+		@include screen-md(min) {
+			width: 58.333333%;
+		}
+	}
 
 	&__md-8 {
 
@@ -58,9 +64,14 @@
 		}
 	}
 
+	&__offset-1{
+		margin-left: 8.333333%;
+	}
+
 	&_neg {
 		margin: 0 -15px;
 	}
+
 
 	&_md-between {
 

@@ -8,6 +8,7 @@
   }
 
   &__btn {
+    height: 30px;
     @include screen-sm() {
       display: none;
     }

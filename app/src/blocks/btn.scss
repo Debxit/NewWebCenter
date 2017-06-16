@@ -7,15 +7,9 @@
     display: inline-flex;
 	background: transparent;
 	transition: all .3s ease;
-	text-align: center;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
-	div{
-		align-items: center;
-		display:flex; //if you have items within the child you'll need to make it display flex
-		justify-content: center;
-		flex-direction: column;
-		min-height: 26px;
-	}
 
 	&:hover,
 	&:focus {
