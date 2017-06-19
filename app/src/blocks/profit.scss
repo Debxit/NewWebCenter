@@ -50,9 +50,11 @@
 			}
 
 			&.profit__img_spot {
-				right: 0px;
-				width: 15px;
-				height: 25px;
+				&::before {
+					right: 0px;
+					width: 15px;
+					height: 18px;
+				}
 			}
 		}
 

@@ -14,5 +14,9 @@
 	font-family: 'Days';
 	src: url($path + 'fonts/Days.ttf');
 }
+@font-face {
+	font-family: 'rub';
+	src: url($path + 'fonts/RUBSN.otf');
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');

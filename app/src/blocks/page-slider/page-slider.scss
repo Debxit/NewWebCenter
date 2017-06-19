@@ -165,19 +165,5 @@
 		}
 	}
 
-	//.slick-slide {
-	//  &>div {
-	//    transition: transform .5s ease-out;
-	//    opacity: 0;
-	//    transform: translateZ(1000px) scale(1.5);
-	//  }
-	//}
 
-	.page_first {
-
-		& > div {
-			opacity: 1;
-			transform: translateZ(0) scale(1);
-		}
-	}
 }
