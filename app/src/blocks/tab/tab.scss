@@ -129,8 +129,8 @@
 			background: $color-main;
 			position: absolute;
 			bottom: 95px;
-			left: 30px;
-			right: 30px;
+			left: 0;
+			right: 0;
 		}
 	}
 
@@ -159,6 +159,14 @@
 
 		&_active {
 			display: block;
+		}
+	}
+
+	&_new {
+
+		.tab__line-rail {
+			left: 30px;
+			right: 30px;
 		}
 	}
 }

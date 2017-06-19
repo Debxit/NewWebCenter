@@ -5,6 +5,7 @@ var
 	tabBodyClass = 'tab__body', // Класс тела табов
 	$tabItem = $('.tab__item'), // Табы
 	tabItemAct = 'tab__item_active', // Класс активного таба
+	$line = $('.tab__line'), // Ползунок
 	tabToggle = false, // Заглушка
 	tabPoint = 768; // Брейкпоинт на мобильную версию
 
@@ -12,10 +13,17 @@ $('.' + tabItemAct).css('display', 'block');
 
 if (window.innerWidth < tabPoint) {
 	moveTabs(true);
+} else {
+	moveLine($('.' + tabLinkAct));
 }
 
 $(window).on('resize', function() {
-	(window.innerWidth < tabPoint) ? moveTabs(true) : moveTabs(false);
+	if (window.innerWidth < tabPoint) {
+		moveTabs(true);
+	} else {
+		moveTabs(false);
+		moveLine($('.' + tabLinkAct));
+	}
 });
 
 $tabLink.on('click', function(event) {
@@ -75,7 +83,7 @@ $tabLink.on('click', function(event) {
 	// =====
 
 	if (window.innerWidth >= tabPoint){
-		moveLine($this);
+		moveLine($this.parent());
 	}
 });
 
@@ -100,35 +108,28 @@ function moveTabs(toggle) {
 			$item.appendTo($('.' + tabBodyClass));
 		}
 	});
-
-
 }
 
 //TODO Сделать перетаскивание ползунка мышкой
 //TODO Сделать переключение слайдов по таймеру
 //TODO Сделать поддержку быстрого переключения
-function moveLine(tabTitle) {
-
+function moveLine(tabTitle, inner) {
 	var
 		$this = tabTitle,
-		$line = $('.tab__line'), // Ползунок
-		$lineRail = $('.tab__line-rail'), // Контейнер ползунка
-		lineRailSpace = parseInt($lineRail.css('left')), // Расстояние контейнера ползунка от края
-		tabCenter = $this.parent().position().left + Math.round($this.width() / 2), // Положение центра текущего заголовка
-		lineCenter = Math.round($line.width() / 2); // Положение центра ползунка
+		tabWidth = $this.width(), // Ширина текущего заголовка
+		tabLeft = $this.position().left; // Положение левого края текущего заголовка
 
-	if (!$this.parent().prev().length) { // Первый заголовок
+	if (parseInt($line.css('left')) != (tabLeft ^ 0)) {
 		$line.css({
-			'left': 0
-		});
-	} else if (!$this.parent().next().length) { // Последний заголовок
-		$line.css({
-			'left': $lineRail.width() - $line.width() + 1
-		});
-	} else {
-		$line.css({
-			'left': tabCenter - lineCenter - lineRailSpace
-		});
+			'left': tabLeft,
+			'width': tabWidth
+		})
 	}
+
+	if (inner) return;
+
+	setTimeout(function() {
+		moveLine($this, true);
+	}, 300);
 }
 /* ========== */
