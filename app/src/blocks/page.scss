@@ -49,6 +49,7 @@
 	}
 
 	&__small-line {
+		font-family: $font-days;
 		font-size: 19px;
 		transform: scaleY(1.2);
 
@@ -57,8 +58,24 @@
 		}
 	}
 
+	&__logo {
+		max-width: 60%;
+		margin: 0 auto 25px;
+
+		@include screen-xl() {
+			max-width: 40%;
+		}
+
+		@include screen-sm() {
+			max-width: 80%;
+		}
+
+		@include screen-xs() {
+			margin: 15px auto;
+		}
+	}
+
 	&_first {
-		font-family: $font-days;
 		padding: 1.8% 0;
 
 		@include screen-xl() {

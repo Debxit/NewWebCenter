@@ -177,6 +177,26 @@
 		}
 	}
 
+	&__int-circle {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto 50px;
+		width: 500px;
+		height: 500px;
+
+		@include screen-sm(){
+			width: 320px;
+			height: 320px;
+		}
+
+		@include screen-xs() {
+			width: 270px;
+			height: 270px;
+		}
+	}
+
 	&_support-page {
 
 		.title_angle-top {

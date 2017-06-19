@@ -69,8 +69,27 @@
 		}
 	}
 
-	&__title-wrap {
+	&__another-profit {
+		position: absolute;
+		top: 50%;
+		left: 50%;
 
+		$items: 8; // Количество объектов
+		$angle: 300 / $items; // Отклонение в градусах одного объекта
+		@for $i from 1 through $items {
+			$cnt: $angle * ($i - 2.098);
+
+			@if $cnt < 0 {
+				$cnt: $cnt + 360;
+			}
+			@if $cnt >= 360 {
+				$cnt: $cnt - 360;
+			}
+
+			&:nth-child(#{$i}) {
+				transform: translate(-50%, -50%) rotate(-#{$cnt}deg) translateX(-250px) rotate(#{$cnt}deg);
+			}
+		}
 	}
 
 	&__title {
@@ -82,6 +101,29 @@
 
 		@include screen-xs() {
 			margin: 0;
+		}
+	}
+
+	&__logo {
+
+		.big-logo {
+			// =====
+
+			&__web {
+				font-size: 70px;
+				line-height: 1.6;
+			}
+
+			&__center {
+				font-size: 35px;
+			}
+
+			&__left,
+			&__right {
+				max-width: 6.9%;
+				position: relative;
+				bottom: 9px;
+			}
 		}
 	}
 }

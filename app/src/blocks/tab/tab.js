@@ -114,6 +114,8 @@ function moveTabs(toggle) {
 //TODO Сделать переключение слайдов по таймеру
 //TODO Сделать поддержку быстрого переключения
 function moveLine(tabTitle, inner) {
+	if (!tabTitle.length) return;
+
 	var
 		$this = tabTitle,
 		tabWidth = Math.ceil($this.width()), // Ширина текущего заголовка

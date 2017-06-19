@@ -1,21 +1,8 @@
 .big-logo {
-	max-width: 60%;
-	margin: 0 auto 25px;
+	font-family: $font-days;
 	opacity: 0;
 	transform: scale(0.1);
 	transition: all 1s ease;
-
-	@include screen-xl() {
-		max-width: 40%;
-	}
-
-	@include screen-sm() {
-		max-width: 80%;
-	}
-
-	@include screen-xs() {
-		margin: 15px auto;
-	}
 
 	&__left,
 	&__right {
