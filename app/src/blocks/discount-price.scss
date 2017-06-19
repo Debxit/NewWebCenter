@@ -3,12 +3,28 @@
 	display: flex;
 	margin: 0 auto;
 
+	@include screen-lg(){
+		width: 100%;
+	}
+	@include screen-sm(){
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 .discount-item {
 	width: 33%;
 	text-align: center;
 
+		@include screen-sm(){
+			width: 50%;
+			margin: 30px auto;
+
+		}
+		@include screen-xs(){
+			width: 100%;
+
+		}
 
 	&__hour {
 		position: relative;

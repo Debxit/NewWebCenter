@@ -31,18 +31,40 @@
 		position: absolute;
 
 		&:nth-child(1){
-			top: 5%;
-			right: 3%;
+			top: 23%;
+			right: -10%;
+
+			@include screen-sm(){
+				top: 40%;
+				right: -22%;
+			}
+			@include screen-xs(){
+				top: 40%;
+				right: 0%;
+			}
 		}
 
 		&:nth-child(2){
-			top: 46%;
-			left: 12%;
+			top: 55%;
+			left: 16%;
+
+			@include screen-sm(){
+				top: 50%;
+				left: 6%;
+			}
+			@include screen-xs(){
+				top: 50%;
+				left: -5%;
+			}
 		}
 
 		&:nth-child(3){
 			top: 70%;
 			right: 13%;
+			@include screen-xs(){
+				top: 83%;
+				right: 13%;
+			}
 		}
 	}
 }

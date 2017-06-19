@@ -1,5 +1,6 @@
 .title {
 	font-size: 30px;
+	line-height: 1.1em;
 	font-family: $font-days;
 	transform: scaleY(1.2);
 	margin: 50px 0;
@@ -18,7 +19,7 @@
 
 	&::before {
 		position: absolute;
-		left: -.7em;
+		left: -.5em;
 		height: 1.5em;
 		width: 1.5em;
 		border-left: .26em solid $red;
@@ -54,7 +55,7 @@
 			@include screen-sm(min) {
 				content: '';
 				top: auto;
-				bottom: -0.3em;
+				bottom: -0.5em;
 				border-top: none;
 				border-bottom: .26em solid $red;
 			}
@@ -72,7 +73,7 @@
 			@include screen-sm(min) {
 				content: '';
 				bottom: auto;
-				top: -0.3em;
+				top: -0.4em;
 				border-bottom: none;
 				border-top: .26em solid $red;
 			}

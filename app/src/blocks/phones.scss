@@ -2,6 +2,7 @@
 
 	@include screen-lg() {
 		font-size: 14px;
+		display: inline-block;
 	}
 
 	@include screen-xs() {

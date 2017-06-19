@@ -76,10 +76,9 @@
 		}
 	}
 
-	&__md-9 {
-
-		@include screen-md(min) {
-			width: 75%;
+	&__sm-5{
+		@include screen-sm(min) {
+			width: 50%;
 		}
 	}
 

@@ -138,6 +138,20 @@
 		position: absolute;
 		top: 0;
 		right: 15%;
+
+		@include screen-sm(){
+			width: 320px;
+			height: 320px;
+			right: 25%;
+		}
+		@include screen-xs(){
+			width: 270px;
+			height: 270px;
+			margin: 0 auto;
+			top: 45px;
+			left: 0;
+			right: 0;
+		}
 	}
 
 	&_support-page {
@@ -145,6 +159,13 @@
 		.title_angle-top {
 			margin-top: 140px;
 			max-width: 60%;
+			@include screen-sm(){
+				max-width: 100%;
+				margin-top: 70px;
+			}
+			@include screen-xs(){
+				margin-top: 55px;
+			}
 		}
 	}
 }
