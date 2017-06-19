@@ -23,11 +23,15 @@
     }
     & > div {
       font-size: 0;
+      padding: 7.5px;
       a {
         vertical-align: top;
       }
-      @include screen-md() {
-        order: -1;
+       &.md_w4-h2{
+         @include screen-md() {
+
+          order: -1;
+        }
       }
       @include screen-sm() {
         width: 100%;

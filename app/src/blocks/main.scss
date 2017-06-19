@@ -139,12 +139,12 @@
 		top: 0;
 		right: 15%;
 
-		@include screen-sm(){
+		@include screen-sm() {
 			width: 320px;
 			height: 320px;
 			right: 25%;
 		}
-		@include screen-xs(){
+		@include screen-xs() {
 			width: 270px;
 			height: 270px;
 			margin: 0 auto;
@@ -216,37 +216,4 @@
 .left {
 	transition: transform .3s ease;
 	transform: translateX(20px);
-}
-
-/*simple slide animation*/
-//.slick-slide{
-//  transition: all .6s ease-out;
-//  opacity: 0;
-//  transform: translateZ(1000px) scale(0.2);
-//}
-//.slick-active{
-//  opacity: 1;
-//  transform: translateZ(0) scale(1);
-//}
-
-@keyframes fade_from {
-	0% {
-		opacity: 0;
-		transform: translateZ(-1500px) scale(0.3);
-	}
-	100% {
-		opacity: 1;
-		transform: translateZ(0) scale(1);
-	}
-}
-
-@keyframes fade_to {
-	0% {
-		opacity: 1;
-		transform: translateZ(0) scale(1);
-	}
-	100% {
-		opacity: 0;
-		transform: translateZ(1500px) scale(2);
-	}
 }

@@ -1,250 +1,304 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    @@include('partials/head.html')
-    <title>Document</title>
+	@@include('partials/head.html')
+	<title>Document</title>
 </head>
 <body>
 <div class="wrapper">
 
-    @@include('partials/header.html')
+	@@include('partials/header.html')
 
-    <main class="main">
-        <div class="container">
-            <div class="map-bg">
-                <ul class="portfolio-filter">
-                    <li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Все </a></li>
-                    <li class="portfolio-filter__item active"><a href="" class="portfolio-filter__link">Интернет
-                        магазин</a>
-                    </li>
-                    <li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Корпоративный сайт </a>
-                    </li>
-                    <li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Сложные системы</a>
-                    </li>
-                    <li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Каталог</a></li>
-                </ul>
-                <!--TODO Если возможно, обернуть плитки в дивы, дабы пустое пространство между ними не было кликабельным  -->
-                <div class="portfolio-slider">
-                    <div class="portfolio-slider__item">
-                        <div class="portfolio-slider__wrap">
-                            <a href="" class="portfolio-element xl_w2-h3 lg_w2-h1 md_w2-h2">
-                                <div class="portfolio-element__vis" style="background:#fe003a ">
-                                    <div class="portfolio-element__vis-title">Knight <br> Frank</div>
-                                    <div class="portfolio-element__vis-descr">Корпоративный сайт</div>
-                                    <img src="img/frank.png" class="portfolio-element__vis-img"/>
+	<main class="main">
+		<div class="container">
+			<div class="map-bg">
+				<ul class="portfolio-filter">
+					<li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Все </a></li>
+					<li class="portfolio-filter__item active"><a href="" class="portfolio-filter__link">Интернет
+						магазин</a>
+					</li>
+					<li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Корпоративный сайт </a>
+					</li>
+					<li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Сложные системы</a>
+					</li>
+					<li class="portfolio-filter__item"><a href="" class="portfolio-filter__link">Каталог</a></li>
+				</ul>
 
-                                    <div class="portfolio-element__hov">
-                                        <img src="img/icons/skyscrapers.svg" alt="" class="portfolio-element__hov-icon">
+				<div class="portfolio-slider">
+					<div class="portfolio-slider__item">
+						<div class="portfolio-slider__wrap">
+							<div class="xl_w2-h3 lg_w2-h1 md_w2-h2">
+								<a href="" class="portfolio-element ">
+									<div class="portfolio-element__vis" style="background:#fe003a ">
+										<div class="portfolio-element__vis-title">Knight <br> Frank</div>
+										<div class="portfolio-element__vis-descr">Корпоративный сайт</div>
+										<img src="img/frank.png" class="portfolio-element__vis-img"/>
 
-                                        <div class="portfolio-element__hov-title">Knight Frank</div>
-                                        <div class="portfolio-element__hov-descr">Международная консалтинговая компания
-                                            Knight Frank
-                                            является одним из лидеров мирового рынка
-                                            коммерческой и жилой недвижимости.
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="xl_w1-h3 lg_w2-h1 md_w4-h2">
-                                <a href="" class="portfolio-element xl_w1-h1 lg_w1-h2 md_w1-h1">
-                                    <div class="portfolio-element__vis" style="background:#1294b5">
-                                        <div class="portfolio-element__vis-title portfolio-element__vis-title_small">
-                                            Printer
-                                            Copir
-                                        </div>
-                                        <div class="portfolio-element__vis-descr">Корпоративный сайт</div>
-                                        <img src="img/Printer.png" class="portfolio-element__vis-img"/>
-                                        <div class="portfolio-element__hov">
+										<div class="portfolio-element__hov">
+											<div class=" mountains">
+												<img src="img/icons/skyscrapers.svg"
+													 class="portfolio-element__hov-icon " alt="">
+											</div>
+											<div class="portfolio-element__hov-title">Knight Frank</div>
+											<div class="portfolio-element__hov-descr">Международная консалтинговая
+												компания
+												Knight Frank
+												является одним из лидеров мирового рынка
+												коммерческой и жилой недвижимости.
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="xl_w1-h3 lg_w2-h1 md_w4-h2">
+								<div class="xl_w1-h1 lg_w1-h2 md_w1-h1">
+									<a href="" class="portfolio-element ">
+										<div class="portfolio-element__vis" style="background:#1294b5">
+											<div class="portfolio-element__vis-title portfolio-element__vis-title_small">
+												Printer
+												Copir
+											</div>
+											<div class="portfolio-element__vis-descr">Корпоративный сайт</div>
+											<img src="img/Printer.png" class="portfolio-element__vis-img"/>
+											<div class="portfolio-element__hov">
 
-                                            <img src="img/icons/printer.svg" alt="" class="portfolio-element__hov-icon">
+												<img src="img/icons/printer.svg" alt=""
+													 class="portfolio-element__hov-icon">
 
-                                            <div class="portfolio-element__hov-title">Printer-copir</div>
-                                            <div class="portfolio-element__hov-descr">Печатная техника</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="" class="portfolio-element xl_w1-h1 lg_w1-h2 md_w1-h1">
-                                    <div class="portfolio-element__vis "
-                                         style="background: url('img/rimi.png') center/cover no-repeat">
-                                        <img src="img/rimi-logo.png" class="portfolio-element__vis-logo"/>
-                                        <div class="portfolio-element__hov">
+												<div class="portfolio-element__hov-title">Printer-copir</div>
+												<div class="portfolio-element__hov-descr">Печатная техника</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="xl_w1-h1 lg_w1-h2 md_w1-h1">
+									<a href="" class="portfolio-element ">
+										<div class="portfolio-element__vis "
+											 style="background: url('img/rimi.png') center/cover no-repeat">
+											<img src="img/rimi-logo.png" class="portfolio-element__vis-logo"/>
+											<div class="portfolio-element__hov">
 
-                                            <img src="img/icons/elegant.svg" alt="" class="portfolio-element__hov-icon">
+												<img src="img/icons/elegant.svg" alt=""
+													 class="portfolio-element__hov-icon">
+												<!--<svg id="rimi-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320"-->
+												<!--fill="#ff141f">-->
+												<!--<path d="M405.33,138.67a10.67,10.67,0,0,0,0-21.33H106.67a10.67,10.67,0,0,0,0,21.33H245.33V309.33a10.67,10.67,0,0,0,21.33,0V138.67Z"/>-->
+												<!--<path  id="chair-1"  d="M128,170.67H21.33v-160A10.67,10.67,0,0,0,0,10.67V309.33a10.67,10.67,0,0,0,21.33,0V256h96v53.33a10.67,10.67,0,0,0,21.33,0v-128A10.7,10.7,0,0,0,128,170.67Zm-106.67,64V192h96v42.67Z"/>-->
+												<!--<path id="chair-2" d="M501.33,0a10.7,10.7,0,0,0-10.67,10.67v160H384a10.7,10.7,0,0,0-10.67,10.67v128a10.67,10.67,0,0,0,21.33,0V256h96v53.33a10.67,10.67,0,0,0,21.33,0V10.67A10.7,10.7,0,0,0,501.33,0ZM394.67,234.67V192h96v42.67Z"/>-->
 
-                                            <div class="portfolio-element__hov-title">Rimi studio</div>
-                                            <div class="portfolio-element__hov-descr">Итальянские кухни</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <a href="" class="portfolio-element xl_w1-h3 lg_w1-h1 md_w2-h2">
-                                <div class="portfolio-element__vis" style="background:#e2c696">
-                                    <div class="portfolio-element__vis-title ">Reks <br> Shop</div>
-                                    <div class="portfolio-element__vis-descr">Интернет магазин</div>
-                                    <img src="img/reksshop.png" class="portfolio-element__vis-img"/>
-                                    <div class="portfolio-element__hov">
-                                        <img src="img/icons/bone.svg" alt="" class="portfolio-element__hov-icon">
+												<!--</svg>-->
 
-                                        <div class="portfolio-element__hov-title">Reks Shop</div>
-                                        <div class="portfolio-element__hov-descr">В интернет-магазине
-                                            представлены лучшие
-                                            товары, для счастливой
-                                            жизни домашних животных.
-                                        </div>
-                                    </div>
-                                </div>
+												<div class="portfolio-element__hov-title">Rimi studio</div>
+												<div class="portfolio-element__hov-descr">Итальянские кухни</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
 
-                            </a>
-                            <a href="" class="portfolio-element xl_w2-h1 lg_w1-h1 md_w2-h2">
-                                <div class="portfolio-element__vis"
-                                     style="background: url('img/markiza.png') center/cover no-repeat">
-                                    <img src="img/markiza-logo.png" class="portfolio-element__vis-logo"/>
-                                    <div class="portfolio-element__hov">
-                                        <img src="img/icons/markiza.svg" alt="" class="portfolio-element__hov-icon">
+							<div class=" xl_w1-h3 lg_w1-h1 md_w2-h2">
+								<a href="" class="portfolio-element">
+									<div class="portfolio-element__vis" style="background:#e2c696">
+										<div class="portfolio-element__vis-title ">Reks <br> Shop</div>
+										<div class="portfolio-element__vis-descr">Интернет магазин</div>
+										<img src="img/reksshop.png" class="portfolio-element__vis-img"/>
+										<div class="portfolio-element__hov">
+											<img src="img/icons/bone.svg" alt="" class="portfolio-element__hov-icon">
 
-                                        <div class="portfolio-element__hov-title">Markiza</div>
-                                        <div class="portfolio-element__hov-descr">Это 14 лет безупречной работы на рынке
-                                            солнцезащиты
-                                            и строительства сезонных коммерческих объектов
-                                        </div>
-                                    </div>
-                                </div>
+											<div class="portfolio-element__hov-title">Reks Shop</div>
+											<div class="portfolio-element__hov-descr">В интернет-магазине
+												представлены лучшие
+												товары, для счастливой
+												жизни домашних животных.
+											</div>
+										</div>
+									</div>
 
-                            </a>
-                            <a href="" class="portfolio-element xl_w2-h1 lg_w2-h1 md_w2-h2">
-                                <div class="portfolio-element__vis" style="background:#ff7900">
-                                    <div class="portfolio-element__vis-title">Сканд-Мебель</div>
-                                    <div class="portfolio-element__vis-descr">Интернет магазин</div>
-                                    <img src="img/skandm.png" class="portfolio-element__vis-img"/>
-                                    <div class="portfolio-element__hov">
+								</a>
+							</div>
+							<div class=" xl_w2-h1 lg_w1-h1 md_w2-h2">
+								<a href="" class="portfolio-element">
+									<div class="portfolio-element__vis"
+										 style="background: url('img/markiza.png') center/cover no-repeat">
+										<img src="img/markiza-logo.png" class="portfolio-element__vis-logo"/>
+										<div class="portfolio-element__hov">
+											<img src="img/icons/markiza.svg" alt="" class="portfolio-element__hov-icon">
 
-                                        <img src="img/icons/sofa.svg" alt="" class="portfolio-element__hov-icon">
+											<div class="portfolio-element__hov-title">Markiza</div>
+											<div class="portfolio-element__hov-descr">Это 14 лет безупречной работы на
+												рынке
+												солнцезащиты
+												и строительства сезонных коммерческих объектов
+											</div>
+										</div>
+									</div>
 
-                                        <div class="portfolio-element__hov-title">Сканд-Мебель</div>
-                                        <div class="portfolio-element__hov-descr">фабрика уникальной мебели для детей,
-                                            призванной
-                                            оставлять яркие воспоминания о беззаботном детстве.
-                                        </div>
-                                    </div>
-                                </div>
+								</a>
+							</div>
+							<div class="xl_w2-h1 lg_w2-h1 md_w2-h2">
+								<a href="" class="portfolio-element ">
+									<div class="portfolio-element__vis" style="background:#ff7900">
+										<div class="portfolio-element__vis-title">Сканд-Мебель</div>
+										<div class="portfolio-element__vis-descr">Интернет магазин</div>
+										<img src="img/skandm.png" class="portfolio-element__vis-img"/>
+										<div class="portfolio-element__hov">
 
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio-slider__item">
-                        <div class="portfolio-slider__wrap">
-                            <a href="" class="portfolio-element xl_w2-h1 lg_w1-h1 md_w2-h2">
-                                <div class="portfolio-element__vis"
-                                     style="background: url('img/markiza.png') center/cover no-repeat">
-                                    <img src="img/markiza-logo.png" class="portfolio-element__vis-logo"/>
-                                    <div class="portfolio-element__hov">
-                                        <img src="img/icons/markiza.svg" alt="" class="portfolio-element__hov-icon">
+											<img src="img/icons/sofa.svg" alt="" class="portfolio-element__hov-icon">
 
-                                        <div class="portfolio-element__hov-title">Markiza</div>
-                                        <div class="portfolio-element__hov-descr">Это 14 лет безупречной работы на рынке
-                                            солнцезащиты
-                                            и строительства сезонных коммерческих объектов
-                                        </div>
-                                    </div>
-                                </div>
+											<div class="portfolio-element__hov-title">Сканд-Мебель</div>
+											<div class="portfolio-element__hov-descr">фабрика уникальной мебели для
+												детей,
+												призванной
+												оставлять яркие воспоминания о беззаботном детстве.
+											</div>
+										</div>
+									</div>
 
-                            </a>
-                            <a href="" class="portfolio-element xl_w2-h1 lg_w2-h1 md_w2-h2">
-                                <div class="portfolio-element__vis" style="background:#ff7900">
-                                    <div class="portfolio-element__vis-title">Сканд-Мебель</div>
-                                    <div class="portfolio-element__vis-descr">Интернет магазин</div>
-                                    <img src="img/skandm.png" class="portfolio-element__vis-img"/>
-                                    <div class="portfolio-element__hov">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-slider__item">
+						<div class="portfolio-slider__wrap">
+							<div class=" xl_w2-h1 lg_w1-h1 md_w2-h2">
+								<a href="" class="portfolio-element">
+									<div class="portfolio-element__vis"
+										 style="background: url('img/markiza.png') center/cover no-repeat">
+										<img src="img/markiza-logo.png" class="portfolio-element__vis-logo"/>
+										<div class="portfolio-element__hov">
+											<img src="img/icons/markiza.svg" alt="" class="portfolio-element__hov-icon">
 
-                                        <img src="img/icons/sofa.svg" alt="" class="portfolio-element__hov-icon">
+											<div class="portfolio-element__hov-title">Markiza</div>
+											<div class="portfolio-element__hov-descr">Это 14 лет безупречной работы на
+												рынке
+												солнцезащиты
+												и строительства сезонных коммерческих объектов
+											</div>
+										</div>
+									</div>
 
-                                        <div class="portfolio-element__hov-title">Сканд-Мебель</div>
-                                        <div class="portfolio-element__hov-descr">фабрика уникальной мебели для детей,
-                                            призванной
-                                            оставлять яркие воспоминания о беззаботном детстве.
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+								</a>
+							</div>
+							<div class="xl_w2-h1 lg_w2-h1 md_w2-h2">
+								<a href="" class="portfolio-element ">
+									<div class="portfolio-element__vis" style="background:#ff7900">
+										<div class="portfolio-element__vis-title">Сканд-Мебель</div>
+										<div class="portfolio-element__vis-descr">Интернет магазин</div>
+										<img src="img/skandm.png" class="portfolio-element__vis-img"/>
+										<div class="portfolio-element__hov">
 
-                            <a href="" class="portfolio-element xl_w1-h3 lg_w1-h1 md_w2-h2">
-                                <div class="portfolio-element__vis" style="background:#e2c696">
-                                    <div class="portfolio-element__vis-title ">Reks Shop</div>
-                                    <div class="portfolio-element__vis-descr">Интернет магазин</div>
-                                    <img src="img/reksshop.png" class="portfolio-element__vis-img"/>
-                                    <div class="portfolio-element__hov">
-                                        <img src="img/icons/bone.svg" alt="" class="portfolio-element__hov-icon">
+											<img src="img/icons/sofa.svg" alt="" class="portfolio-element__hov-icon">
 
-                                        <div class="portfolio-element__hov-title">Reks <br> Shop</div>
-                                        <div class="portfolio-element__hov-descr">В интернет-магазине
-                                            представлены лучшие
-                                            товары, для счастливой
-                                            жизни домашних животных.
-                                        </div>
-                                    </div>
-                                </div>
+											<div class="portfolio-element__hov-title">Сканд-Мебель</div>
+											<div class="portfolio-element__hov-descr">фабрика уникальной мебели для
+												детей,
+												призванной
+												оставлять яркие воспоминания о беззаботном детстве.
+											</div>
+										</div>
+									</div>
 
-                            </a>
-                            <div class="xl_w1-h3 lg_w2-h1 md_w4-h2">
-                                <a href="" class="portfolio-element xl_w1-h1 lg_w1-h2 md_w1-h1">
-                                    <div class="portfolio-element__vis" style="background:#1294b5">
-                                        <div class="portfolio-element__vis-title portfolio-element__vis-title_small">
-                                            Printer
-                                            Copir
-                                        </div>
-                                        <div class="portfolio-element__vis-descr">Корпоративный сайт</div>
-                                        <img src="img/Printer.png" class="portfolio-element__vis-img"/>
-                                        <div class="portfolio-element__hov">
-
-                                            <img src="img/icons/printer.svg" alt="" class="portfolio-element__hov-icon">
-
-                                            <div class="portfolio-element__hov-title">Printer-copir</div>
-                                            <div class="portfolio-element__hov-descr">Печатная техника</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="" class="portfolio-element xl_w1-h1 lg_w1-h2 md_w1-h1">
-                                    <div class="portfolio-element__vis "
-                                         style="background: url('img/rimi.png') center/cover no-repeat">
-                                        <img src="img/rimi-logo.png" class="portfolio-element__vis-logo"/>
-                                        <div class="portfolio-element__hov">
-
-                                            <img src="img/icons/elegant.svg" alt="" class="portfolio-element__hov-icon">
-
-                                            <div class="portfolio-element__hov-title">Rimi studio</div>
-                                            <div class="portfolio-element__hov-descr">Итальянские кухни</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <a href="" class="portfolio-element xl_w2-h3 lg_w2-h1 md_w2-h2">
-                                <div class="portfolio-element__vis" style="background:#fe003a ">
-                                    <div class="portfolio-element__vis-title">Knight <br> Frank</div>
-                                    <div class="portfolio-element__vis-descr">Корпоративный сайт</div>
-                                    <img src="img/frank.png" class="portfolio-element__vis-img"/>
-
-                                    <div class="portfolio-element__hov">
-                                        <img src="img/icons/skyscrapers.svg" alt="" class="portfolio-element__hov-icon">
-
-                                        <div class="portfolio-element__hov-title">Knight Frank</div>
-                                        <div class="portfolio-element__hov-descr">Международная консалтинговая компания
-                                            Knight Frank
-                                            является одним из лидеров мирового рынка
-                                            коммерческой и жилой недвижимости.
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+								</a>
+							</div>
 
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+							<div class=" xl_w1-h3 lg_w1-h1 md_w2-h2">
+								<a href="" class="portfolio-element">
+									<div class="portfolio-element__vis" style="background:#e2c696">
+										<div class="portfolio-element__vis-title ">Reks <br> Shop</div>
+										<div class="portfolio-element__vis-descr">Интернет магазин</div>
+										<img src="img/reksshop.png" class="portfolio-element__vis-img"/>
+										<div class="portfolio-element__hov">
+											<img src="img/icons/bone.svg" alt="" class="portfolio-element__hov-icon">
 
-    @@include('partials/footer.html')
+											<div class="portfolio-element__hov-title">Reks Shop</div>
+											<div class="portfolio-element__hov-descr">В интернет-магазине
+												представлены лучшие
+												товары, для счастливой
+												жизни домашних животных.
+											</div>
+										</div>
+									</div>
+
+								</a>
+							</div>
+							<div class="xl_w1-h3 lg_w2-h1 md_w4-h2">
+								<div class="xl_w1-h1 lg_w1-h2 md_w1-h1">
+									<a href="" class="portfolio-element ">
+										<div class="portfolio-element__vis" style="background:#1294b5">
+											<div class="portfolio-element__vis-title portfolio-element__vis-title_small">
+												Printer
+												Copir
+											</div>
+											<div class="portfolio-element__vis-descr">Корпоративный сайт</div>
+											<img src="img/Printer.png" class="portfolio-element__vis-img"/>
+											<div class="portfolio-element__hov">
+
+												<img src="img/icons/printer.svg" alt=""
+													 class="portfolio-element__hov-icon">
+
+												<div class="portfolio-element__hov-title">Printer-copir</div>
+												<div class="portfolio-element__hov-descr">Печатная техника</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="xl_w1-h1 lg_w1-h2 md_w1-h1">
+									<a href="" class="portfolio-element ">
+										<div class="portfolio-element__vis "
+											 style="background: url('img/rimi.png') center/cover no-repeat">
+											<img src="img/rimi-logo.png" class="portfolio-element__vis-logo"/>
+											<div class="portfolio-element__hov">
+
+												<img src="img/icons/elegant.svg" alt=""
+													 class="portfolio-element__hov-icon">
+												<!--<svg id="rimi-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320"-->
+												<!--fill="#ff141f">-->
+												<!--<path d="M405.33,138.67a10.67,10.67,0,0,0,0-21.33H106.67a10.67,10.67,0,0,0,0,21.33H245.33V309.33a10.67,10.67,0,0,0,21.33,0V138.67Z"/>-->
+												<!--<path  id="chair-1"  d="M128,170.67H21.33v-160A10.67,10.67,0,0,0,0,10.67V309.33a10.67,10.67,0,0,0,21.33,0V256h96v53.33a10.67,10.67,0,0,0,21.33,0v-128A10.7,10.7,0,0,0,128,170.67Zm-106.67,64V192h96v42.67Z"/>-->
+												<!--<path id="chair-2" d="M501.33,0a10.7,10.7,0,0,0-10.67,10.67v160H384a10.7,10.7,0,0,0-10.67,10.67v128a10.67,10.67,0,0,0,21.33,0V256h96v53.33a10.67,10.67,0,0,0,21.33,0V10.67A10.7,10.7,0,0,0,501.33,0ZM394.67,234.67V192h96v42.67Z"/>-->
+
+												<!--</svg>-->
+
+												<div class="portfolio-element__hov-title">Rimi studio</div>
+												<div class="portfolio-element__hov-descr">Итальянские кухни</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="xl_w2-h3 lg_w2-h1 md_w2-h2">
+								<a href="" class="portfolio-element ">
+									<div class="portfolio-element__vis" style="background:#fe003a ">
+										<div class="portfolio-element__vis-title">Knight <br> Frank</div>
+										<div class="portfolio-element__vis-descr">Корпоративный сайт</div>
+										<img src="img/frank.png" class="portfolio-element__vis-img"/>
+
+										<div class="portfolio-element__hov">
+											<div class=" mountains">
+												<img src="img/icons/skyscrapers.svg"
+													 class="portfolio-element__hov-icon " alt="">
+											</div>
+											<div class="portfolio-element__hov-title">Knight Frank</div>
+											<div class="portfolio-element__hov-descr">Международная консалтинговая
+												компания
+												Knight Frank
+												является одним из лидеров мирового рынка
+												коммерческой и жилой недвижимости.
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	@@include('partials/footer.html')
 
 </div>
 </body>

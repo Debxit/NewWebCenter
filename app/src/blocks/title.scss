@@ -82,4 +82,23 @@
 			}
 		}
 	}
+
+	&_support {
+		margin-top: 140px;
+		max-width: 65%;
+
+		@include screen-xl() {
+			margin-top: 140px;
+			max-width: 65%;
+		}
+
+		@include screen-sm() {
+
+			max-width: 100%;
+			margin-top: 70px;
+		}
+		@include screen-xs() {
+			margin-top: 55px;
+		}
+	}
 }
