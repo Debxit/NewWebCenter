@@ -2,9 +2,21 @@
 var
 	$tabLink = $('.tab__link'), // Заголовки табов
 	tabLinkAct = 'tab__title_active', // Класс активного заголовка
+	tabBodyClass = 'tab__body', // Класс тела табов
 	$tabItem = $('.tab__item'), // Табы
 	tabItemAct = 'tab__item_active', // Класс активного таба
-	tabToggle = false; // Заглушка
+	tabToggle = false, // Заглушка
+	tabPoint = 768; // Брейкпоинт на мобильную версию
+
+$('.' + tabItemAct).css('display', 'block');
+
+if (window.innerWidth < tabPoint) {
+	moveTabs(true);
+}
+
+$(window).on('resize', function() {
+	(window.innerWidth < tabPoint) ? moveTabs(true) : moveTabs(false);
+});
 
 $tabLink.on('click', function(event) {
 	event.preventDefault();
@@ -14,9 +26,11 @@ $tabLink.on('click', function(event) {
 		link = $this.attr('href').slice(1), // Ссылка кликнутого заголовка
 		$item = $('#' + link); // Таб, который надо отобразить
 
-	if ($this.hasClass(tabLinkAct) || tabToggle) return;
+	if ($this.parent().hasClass(tabLinkAct) || tabToggle) return;
 
-	tabToggle = true;
+	if (window.innerWidth >= tabPoint) {
+		tabToggle = true;
+	}
 
 	// Обработка заголовков
 	$tabLink.each(function() {
@@ -35,9 +49,20 @@ $tabLink.on('click', function(event) {
 	// =====
 
 	// Обработка табов
-	$tabItem.each(function() {
-		$(this).fadeOut(300, function() {
-			$(this).removeClass(tabItemAct);
+	if (window.innerWidth < tabPoint) {
+
+		$tabItem.slideUp(300);
+		$item.slideDown(300);
+
+		setTimeout(function() {
+			$tabItem.removeClass(tabItemAct);
+			$item.addClass(tabItemAct);
+		}, 300);
+
+	} else {
+
+		$tabItem.fadeOut(300, function() {
+			$tabItem.removeClass(tabItemAct);
 		});
 
 		setTimeout(function() {
@@ -46,17 +71,49 @@ $tabLink.on('click', function(event) {
 				tabToggle = false;
 			});
 		}, 300);
-	});
+	}
 	// =====
 
-	//TODO Сделать перетаскивание ползунка мышкой
-	//TODO Сделать переключение слайдов по таймеру
-	//TODO Сделать поддержку быстрого переключения
-	// Обработка ползунка
+	if (window.innerWidth >= tabPoint){
+		moveLine($this);
+	}
+});
+
+function moveTabs(toggle) {
+	if (!$tabItem.length) return;
+
+	if (toggle) {
+		if (!$tabItem.parent().hasClass(tabBodyClass)) return;
+	} else {
+		if ($tabItem.parent().hasClass(tabBodyClass)) return;
+	}
+
+	$tabLink.each(function() {
+		var
+			$this = $(this),
+			link = $this.attr('href').slice(1), // Ссылка заголовка
+			$item = $('#' + link); // Таб, привязанный к текущей ссылке
+
+		if (toggle) {
+			$item.insertAfter($this);
+		} else {
+			$item.appendTo($('.' + tabBodyClass));
+		}
+	});
+
+
+}
+
+//TODO Сделать перетаскивание ползунка мышкой
+//TODO Сделать переключение слайдов по таймеру
+//TODO Сделать поддержку быстрого переключения
+function moveLine(tabTitle) {
+
 	var
+		$this = tabTitle,
 		$line = $('.tab__line'), // Ползунок
 		$lineRail = $('.tab__line-rail'), // Контейнер ползунка
-		lineRailSpace = parseInt($lineRail.css('margin-left')), // Расстояние контейнера ползунка от края
+		lineRailSpace = parseInt($lineRail.css('left')), // Расстояние контейнера ползунка от края
 		tabCenter = $this.parent().position().left + Math.round($this.width() / 2), // Положение центра текущего заголовка
 		lineCenter = Math.round($line.width() / 2); // Положение центра ползунка
 
@@ -73,6 +130,5 @@ $tabLink.on('click', function(event) {
 			'left': tabCenter - lineCenter - lineRailSpace
 		});
 	}
-	// =====
-});
+}
 /* ========== */
