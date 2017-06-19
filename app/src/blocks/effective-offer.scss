@@ -1,6 +1,9 @@
 .effective-offer {
 	margin-top: 200px;
 
+	@include  screen-sm(){
+		margin-top: 225px;
+	}
 	&__title {
 		max-width: 350px;
 	}
@@ -9,10 +12,27 @@
 		margin-left: 8%;
 		display: flex;
 		flex-wrap: wrap;
+
+		@include screen-sm(){
+			width: 100%;
+			padding: 0 20px;
+			margin: 0;
+			justify-content: center;
+		}
+		@include screen-xs(){
+			padding: 0;
+		}
 	}
 
 	&__descr {
 		width: 40%;
+
+		@include screen-sm(){
+			width: 100%;
+			padding: 0 20px;
+			margin: 15px auto;
+		}
+
 		h3{
 			margin-top: 7.5px;
 			font-size: 20px;

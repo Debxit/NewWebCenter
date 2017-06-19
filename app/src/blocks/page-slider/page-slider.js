@@ -1,6 +1,16 @@
 
 //main-page slider initialize
 
+$('.page-slider').on('init', function (slick) {
+  $(this).find('.page').not(".page_first").find('>div').velocity({
+      opacity: "0",
+      scale: "1.5",
+      translateZ: "1000px"
+  }, 500);
+
+});
+
+
 $('.page-slider').slick({
     infinite: false,
     dots: true,
@@ -23,7 +33,6 @@ $('.page-slider').slick({
 });
 
 
-//TODO В первый раз слайдер скроллится без задержки
 $('.page-slider').mousewheel(function (e) {
     e.preventDefault();
 
@@ -34,7 +43,6 @@ $('.page-slider').mousewheel(function (e) {
         $(this).slick('slickPrev');
     }
 });
-
 
 
 $('.page-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -141,7 +149,7 @@ $('.page-slider').on('beforeChange', function (event, slick, currentSlide, nextS
     //end BeforeChange()
 });
 
-$('.page-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+$('.page-slider').on('afterChange', function (event, slick, currentSlide) {
 
     var $animateNext = $('.slick-slide[data-slick-index="' + currentSlide + '"]>div');
 

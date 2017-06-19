@@ -20,9 +20,6 @@ $('.portfolio-slider').slick({
 		{
 			breakpoint: 768,
 			settings: "unslick"
-			// settings: {
-			//     unslick: true
-			// }
 		}
 	]
 });

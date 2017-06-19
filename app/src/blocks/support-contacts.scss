@@ -9,5 +9,19 @@
 		font-size: 18px;
 		margin-top: 65px;
 		margin-bottom: 10px;
+
+		@include screen-xl(){
+			font-size: inherit;
+			margin-top: 50px;
+			margin-bottom: inherit;
+		}
+		@include screen-sm(){
+			margin: 35px 0;
+			font-size: 27px;
+		}
+	}
+	&__form{
+		margin: 0;
+		text-align: left;
 	}
 }

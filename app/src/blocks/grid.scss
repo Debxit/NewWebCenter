@@ -23,6 +23,13 @@
 		}
 	}
 
+	&__sm-5{
+
+		@include screen-sm(min) {
+			width: 50%;
+		}
+	}
+
 	&__md-5 {
 
 		@include screen-md(min) {

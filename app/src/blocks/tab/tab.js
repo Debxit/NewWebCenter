@@ -116,10 +116,10 @@ function moveTabs(toggle) {
 function moveLine(tabTitle, inner) {
 	var
 		$this = tabTitle,
-		tabWidth = $this.width(), // Ширина текущего заголовка
-		tabLeft = $this.position().left; // Положение левого края текущего заголовка
+		tabWidth = Math.ceil($this.width()), // Ширина текущего заголовка
+		tabLeft = Math.ceil($this.position().left); // Положение левого края текущего заголовка
 
-	if (parseInt($line.css('left')) != (tabLeft ^ 0)) {
+	if (parseInt($line.css('left')) != tabLeft || parseInt($line.css('width')) != tabWidth) {
 		$line.css({
 			'left': tabLeft,
 			'width': tabWidth
