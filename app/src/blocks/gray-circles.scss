@@ -72,6 +72,7 @@
 	&__another-profit {
 		padding: 10px;
 		width: 50%;
+		position: relative;
 
 		@include screen-xs(min) {
 			width: 33.333333%;
@@ -82,6 +83,24 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
+		}
+
+		&::after {
+			content: '\f105';
+			display: block;
+			position: absolute;
+			font-family: 'FontAwesome';
+			font-size: 25px;
+			opacity: .5;
+			top: 50%;
+			right: -4px;
+			transform: translateY(-50%);
+
+
+			@include screen-sm(min) {
+				right: auto;
+				left: 50%;
+			}
 		}
 
 		$items: 8; // Количество объектов
@@ -101,6 +120,83 @@
 				@include screen-sm(min) {
 					transform: translate(-50%, -50%) rotate(-#{$cnt}deg) translateX(-250px) rotate(#{$cnt}deg);
 				}
+			}
+		}
+
+		&:nth-child(2) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(122deg) translateX(85px);
+				}
+			}
+		}
+
+		&:nth-child(3) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(84deg) translateX(85px);
+				}
+			}
+		}
+
+		&:nth-child(4) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(44deg) translateX(100px);
+				}
+			}
+		}
+
+		&:nth-child(5) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(9deg) translateX(85px);
+				}
+			}
+		}
+
+		&:nth-child(6) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(-27deg) translateX(72px);
+				}
+			}
+		}
+
+		&:nth-child(7) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(-66deg) translateX(85px);
+				}
+			}
+		}
+
+		&:nth-child(8) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(-102deg) translateX(70px);
+				}
+			}
+		}
+
+		&:nth-child(9) {
+
+			&::after {
+				display: none;
 			}
 		}
 	}
