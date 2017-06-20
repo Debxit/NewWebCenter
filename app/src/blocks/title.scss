@@ -101,4 +101,12 @@
 			margin-top: 55px;
 		}
 	}
+
+	&_mb-half {
+		margin-bottom: 25px;
+
+		@include screen-xl() {
+			margin-bottom: 20px;
+		}
+	}
 }
