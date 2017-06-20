@@ -1,0 +1,86 @@
+.kf {
+
+	&__section {
+
+		&_first {
+			background: url($path + 'img/landing-kf/bg.jpg') no-repeat 50% 0;
+			background-size: contain;
+			height: 100vh;
+			margin-top: -91px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: linear-gradient(to bottom, white 0, transparent 40%);
+			}
+		}
+	}
+
+	&__logo {
+		width: 493px;
+		height: 184px;
+		margin-top: 20vh;
+	}
+
+	&__right-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__title {
+
+	}
+
+	&__sm-title {
+
+	}
+
+	&__list {
+
+	}
+
+	&__list-item {
+
+	}
+
+	&__gray-title {
+
+	}
+
+	&__example-title {
+
+	}
+
+	&__example-text {
+
+	}
+
+	&__rect {
+
+		&_semibold {
+
+		}
+
+		&_red {
+
+		}
+
+		&_gray {
+
+		}
+	}
+
+	&__fog-logo {
+
+	}
+
+	&__img {
+
+	}
+}
