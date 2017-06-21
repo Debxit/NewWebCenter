@@ -9,6 +9,13 @@
 		}
 	}
 
+	&__sm-3 {
+
+		@include screen-sm(min) {
+			width: 25%;
+		}
+	}
+
 	&__md-3 {
 
 		@include screen-md(min) {
