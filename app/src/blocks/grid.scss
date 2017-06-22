@@ -9,6 +9,13 @@
 		}
 	}
 
+	&__sm-3 {
+
+		@include screen-sm(min) {
+			width: 25%;
+		}
+	}
+
 	&__md-3 {
 
 		@include screen-md(min) {
@@ -41,6 +48,13 @@
 
 		@include screen-lg(min) {
 			width: 41.666666%;
+		}
+	}
+
+	&__xs-6 {
+
+		@include screen-xs(min) {
+			width: 50%;
 		}
 	}
 

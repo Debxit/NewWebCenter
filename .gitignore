@@ -5,3 +5,4 @@ npm-debug.log
 !/app/layout/.gitkeep
 /app/img/backup/
 /dist/
+/production/

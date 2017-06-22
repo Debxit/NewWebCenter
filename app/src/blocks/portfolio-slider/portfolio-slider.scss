@@ -1,71 +1,85 @@
 .portfolio-slider {
-  padding: 0 50px;
-  @include screen-sm() {
-    padding: 0 10px;
-  }
-  @include screen-xs() {
-    padding: 0;
-  }
-  &__wrap {
-    //padding-bottom:50%;
-    height: 60vh;
-    display: flex;
-    flex-wrap: wrap;
+	padding: 0 50px;
 
-    @include screen-xl() {
-      height: 70vh;
-    }
-    @include screen-md() {
-      height: 100vh;
-    }
-    @include screen-sm() {
-      height: 100%;
-    }
-    & > div {
-      font-size: 0;
-      padding: 7.5px;
-      a {
-        vertical-align: top;
-      }
-       &.md_w4-h2{
-         @include screen-md() {
+	@include screen-sm() {
+		padding: 0 10px;
+	}
 
-          order: -1;
-        }
-      }
-      @include screen-sm() {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
+	@include screen-xs() {
+		padding: 0;
+	}
 
-  .portfolio-nav-item {
-    width: 35px;
-    height: 5px;
-    border-radius: 5px;
-    background: $color-main;
-    transition: background .2s ease;
-    &:hover{
+	&__wrap {
+		//padding-bottom:50%;
+		height: 60vh;
+		display: flex;
+		flex-wrap: wrap;
 
-      background: $red;
-    }
-  }
+		@include screen-xl() {
+			height: 70vh;
+		}
 
-  .slick-active {
-    .portfolio-nav-item {
-      background: $red;
-    }
-  }
-  .slick-dots {
-    position: absolute;
-    top: 45%;
-    right: 0;
-  }
-  .slick-dots li {
-    padding: 10px 0;
-    &:hover {
-      cursor: pointer;
-    }
-  }
+		@include screen-md() {
+			height: 100vh;
+		}
+
+		@include screen-sm() {
+			height: 100%;
+		}
+
+		& > div {
+			font-size: 0;
+			padding: 7.5px;
+
+			a {
+				vertical-align: top;
+			}
+
+			&.md_w4-h2 {
+
+				@include screen-md() {
+
+					order: -1;
+				}
+			}
+
+			@include screen-sm() {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	.portfolio-nav-item {
+		width: 35px;
+		height: 5px;
+		border-radius: 5px;
+		background: $color-main;
+		transition: background .2s ease;
+	}
+
+	.slick-active {
+
+		.portfolio-nav-item {
+			background: $red;
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		top: 45%;
+		right: 0;
+
+		li {
+			padding: 10px 0;
+
+			&:hover {
+				cursor: pointer;
+
+				.portfolio-nav-item {
+					background: $red;
+				}
+			}
+		}
+	}
 }

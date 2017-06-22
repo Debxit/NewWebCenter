@@ -39,9 +39,12 @@ var err = {
 	}
 };
 
+// Переключатель сборки для работы или в продакшн (false для работы)
+var prod = gutil.env.production;
+
 // Пути
-var app = 'app/'; //Папка исходников
-var dist = 'dist/'; //Папка готового проекта
+var app = 'app/'; // Папка исходников
+var dist = prod ? 'production/' : 'dist/'; // Папка готового проекта
 
 /* ================================ */
 
@@ -52,7 +55,6 @@ gulp.task('browser-sync', function() {
 	browserSync({ // Выполняем browserSync
 		server: dist, // Директория для сервера
 		notify: false, // Отключаем уведомления
-		open: 'external', // Внешняя ссылка вместо localhost
 		ghostMode: false // Отключаем синхронизацию между устройствами
 	});
 });
@@ -60,23 +62,26 @@ gulp.task('browser-sync', function() {
 
 /* ========= ТАСК "HTML" ========== */
 gulp.task('html', function () {
-	return gulp.src(app + '*.html') //Выберем файлы по нужному пути
+	return gulp.src(app + '*.html') // Выберем файлы по нужному пути
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Прогоним через file-include
-		.pipe(gulp.dest(dist)); //Выплюнем их
+		.pipe(gulp.dest(dist)); // Выплюнем их
 });
 /* ================================ */
 
 /* ========= ТАСК "SASS" ========== */
 gulp.task('sass', function() {
-	return gulp.src(app + 'src/style.scss') // Берём источник
+	return gulp.src([ // Берём источник
+		app + 'src/style.scss',
+		app + 'src/landing/kf/kf.scss'
+	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
 		.pipe(sass({outputStyle: 'expanded'})) // Преобразуем SCSS в CSS
 		.pipe(queries()) // Объединяем медиа запросы
-		.pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8', 'ie 7'], {cascade: true})) // Создаём префиксы
+		.pipe(prod ? autoprefixer(['last 15 versions', '>1%', 'ie 8', 'ie 7'], {cascade: true}) : gutil.noop()) // Создаём префиксы
 		.pipe(gulp.dest(dist + 'css/')) // Выгружаем результат
-		.pipe(reload({stream: true})); //Перезагружаем сервер
+		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
 
@@ -85,13 +90,13 @@ gulp.task('css-libs', function() {
 	return gulp.src(app + 'src/libs.scss') // Берём источник
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
-		.pipe(sass({outputStyle: 'compressed'})) // Преобразуем SCSS в CSS
-		.pipe(strip({ // Убираем комментарии
+		.pipe(sass({outputStyle: prod ? 'compressed' : 'expanded'})) // Преобразуем SCSS в CSS
+		.pipe(prod ? strip({ // Убираем комментарии
 			preserve: false // /* */ - Такие тоже
-		}))
+		}) : gutil.noop())
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс ".min"
 		.pipe(gulp.dest(dist + 'css')) // Выгружаем
-		.pipe(reload({stream: true})); //Перезагружаем сервер
+		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
 
@@ -101,7 +106,7 @@ gulp.task('js', function() {
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
-		.pipe(reload({stream: true})); //Перезагружаем сервер
+		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
 
@@ -110,24 +115,24 @@ gulp.task('js-libs', function() {
 	return gulp.src(app + 'src/libs.js') // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
-		.pipe(uglify()) //Сжимаем
+		.pipe(prod ? uglify() : gutil.noop()) // Сжимаем
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс ".min"
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
-		.pipe(reload({stream: true})); //Перезагружаем сервер
+		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
 
 /* ========== ТАСК "IMG" ========== */
 gulp.task('img', function() {
 	return gulp.src(app + 'img/**/*') // Берём все изображения
-		.pipe(cache(imagemin({ // Сжимаем их с наилучшими настройками с учётом кэширования
+		.pipe(prod ? cache(imagemin({ // Сжимаем их с наилучшими настройками с учётом кэширования
 			interlaced: true,
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
-		})))
+		})) : gutil.noop())
 		.pipe(gulp.dest(dist + 'img')) // Выгружаем на продакшн
-		.pipe(reload({stream: true})); //Перезагружаем сервер
+		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
 
@@ -135,7 +140,7 @@ gulp.task('img', function() {
 gulp.task('fonts', function() {
 	return gulp.src(app + 'fonts/**/*') // Берём шрифты
 	.pipe(gulp.dest(dist + 'fonts')) // Выгружаем на продакшн
-	.pipe(reload({stream: true})); //Перезагружаем сервер
+	.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
 

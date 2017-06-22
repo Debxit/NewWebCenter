@@ -114,4 +114,12 @@
 
 		}
 	}
+
+	&_mb-half {
+		margin-bottom: 25px;
+
+		@include screen-xl() {
+			margin-bottom: 20px;
+		}
+	}
 }

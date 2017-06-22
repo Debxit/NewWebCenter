@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'SegoeUI';
+	src: url($path + 'fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot?v=4.7.0');
+	src: url($path + 'fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+	url($path + 'fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.woff?v=4.7.0') format('woff'),
+	url($path + 'fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.ttf?v=4.7.0') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SegoeUI';
+	src: url($path + 'fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.eot?v=4.7.0');
+	src: url($path + 'fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+	url($path + 'fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.woff?v=4.7.0') format('woff'),
+	url($path + 'fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.ttf?v=4.7.0') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}

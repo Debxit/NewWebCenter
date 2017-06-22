@@ -1,7 +1,9 @@
+//TODO Подобрать фиксированную высоту для шапки
 .header {
   font-family: $font-days;
   margin-top: 40px;
   min-height: 50px;
+  z-index: 10;
 
   @include screen-xl() {
     margin-top: 10px;

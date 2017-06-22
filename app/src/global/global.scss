@@ -141,13 +141,22 @@ hr {
 .red {
   color: $red;
 }
+
 .rub{
   font-family: 'rub';
 }
+
 .bold {
   font-weight: 400;
 }
 
 .center {
   text-align: center;
+}
+
+.center-xs {
+
+  @include screen-xs() {
+    text-align: center;
+  }
 }

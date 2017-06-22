@@ -1,5 +1,5 @@
 /* Слайдер в портфолио */
-$('.portfolio-slider').slick({
+var slickVar = {
 	infinite: false,
 	dots: true,
 	arrows: false,
@@ -16,11 +16,39 @@ $('.portfolio-slider').slick({
 			settings: {
 				slidesToShow: 1
 			}
-		},
-		{
-			breakpoint: 768,
-			settings: "unslick"
 		}
 	]
+};
+
+var slickToggle;
+
+if (window.innerWidth > 767) {
+	runSlick(true);
+	slickToggle = false;
+} else {
+	slickToggle = true;
+}
+
+$(window).on('resize', function() {
+
+	if (window.innerWidth > 767) {
+		if (slickToggle) {
+			runSlick(true);
+			slickToggle = false;
+		}
+	} else {
+		if (!slickToggle) {
+			runSlick(false);
+			slickToggle = true;
+		}
+	}
 });
+
+function runSlick(toggle) {
+	if (toggle) {
+		$('.portfolio-slider').slick(slickVar);
+	} else {
+		$('.portfolio-slider').slick('unslick');
+	}
+}
 /* ========== */
