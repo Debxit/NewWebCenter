@@ -55,7 +55,6 @@ gulp.task('browser-sync', function() {
 	browserSync({ // Выполняем browserSync
 		server: dist, // Директория для сервера
 		notify: false, // Отключаем уведомления
-		open: 'external', // Внешняя ссылка вместо localhost
 		ghostMode: false // Отключаем синхронизацию между устройствами
 	});
 });
