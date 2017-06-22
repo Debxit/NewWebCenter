@@ -1,0 +1,35 @@
+
+.share-wrap{
+	margin:30px 0;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include screen-xs(){
+		flex-wrap: wrap;
+	}
+}
+
+.share{
+	color: $red;
+	@include screen-xs(){
+		margin-top: 20px;
+	}
+	&__socials{
+		display: inline-block;
+		margin-left: 5px;
+		font-size: 0;
+	}
+	&__vk,&__google,&__fb,&__tw{
+		font-size: 18px;
+		display: inline-block;
+		margin: 0 5px;
+		font-weight: bold;
+		color: $color-main;
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}

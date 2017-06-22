@@ -138,6 +138,7 @@
 		position: absolute;
 		top: 0;
 		right: 15%;
+		z-index: -1;
 
 		@include screen-sm() {
 			width: 320px;

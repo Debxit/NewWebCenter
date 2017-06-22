@@ -26,5 +26,8 @@
     "imagemin-pngquant": "^5.0.0",
     "path": "^0.12.7",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "goodshare.js": "^4.0.6"
   }
 }

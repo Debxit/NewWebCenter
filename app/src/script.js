@@ -13,4 +13,5 @@ $(document).ready(function () {
 	@@include('blocks/price/price.js')
 	@@include('blocks/customer/customer.js')
 	@@include('blocks/tab/tab.js')
+	@@include('blocks/visitors/visitors.js')
 });

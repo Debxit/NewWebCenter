@@ -17,6 +17,7 @@
 	&:hover {
 		.portfolio-element__hov {
 			visibility: visible;
+			opacity: 1;
 
 			&:after {
 				width: 100%;
@@ -93,6 +94,8 @@
 
 	&__hov {
 		visibility: hidden;
+		opacity: 0;
+		transition: opacity .6s ease;
 		height: 100%;
 		width: 100%;
 		position: absolute;
@@ -278,7 +281,7 @@
 			height: 66.66%;
 
 			.portfolio-element__hov-icon {
-				max-height: 85px;
+				max-height: 80px;
 			}
 		}
 		&_w1-h1 {

@@ -1,0 +1,33 @@
+
+.visitors{
+	display: inline-flex;
+	align-items: center;
+
+	@include screen-xs(){
+		order: -1;
+		width: 100%;
+	}
+
+	&__like,&__viewed{
+
+	}
+	&__like{
+		margin-right: 10px;
+	}
+	&__img{
+		width: 35px;
+		max-height: 25px;
+		&:hover{
+			cursor: pointer;
+		}
+		&.clicked{
+			cursor: default;
+		}
+	}
+	&__img,&__count{
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+
+}
