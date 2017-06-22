@@ -6,6 +6,7 @@
   }
 
   &__company{
+    font-weight: 500;
     @include screen-xs(){
       max-width: 160px;
     }

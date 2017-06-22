@@ -51,4 +51,17 @@ function runSlick(toggle) {
 		$('.portfolio-slider').slick('unslick');
 	}
 }
+
+
+$('.portfolio-slider').mousewheel(function (e) {
+	e.preventDefault();
+
+	if (e.deltaY < 0) {
+		$(this).slick('slickNext');
+	}
+	else {
+		$(this).slick('slickPrev');
+	}
+});
+
 /* ========== */

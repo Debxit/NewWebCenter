@@ -20,7 +20,7 @@ body {
       top:0;
       left:0;
       position: absolute;
-      z-index: 2;
+      z-index: 15;
       background: rgba(0, 0, 0, 0.3);
     }
   }
@@ -29,9 +29,8 @@ body {
 a{
   color: inherit;
 }
-p{
-  margin: 20px 0;
-}
+
+
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -113,30 +112,6 @@ hr {
   display: none;
 }
 
-.link{
-  color: $red;
-  &:hover{
-    text-decoration: underline;
-  }
-}
-
-.list{
-
-  &__item{
-    position: relative;
-    padding-left: 15px;
-
-    &:before{
-      content: '';
-      position: absolute;
-      width: 6px;
-      height: 2px;
-      background: $red;
-      top: 9px;
-      left: 3px;
-    }
-  }
-}
 
 .red {
   color: $red;
