@@ -11,6 +11,8 @@
 
   &__btn {
     height: 30px;
+    font-weight: 500;
+
     @include screen-sm() {
       display: none;
     }
