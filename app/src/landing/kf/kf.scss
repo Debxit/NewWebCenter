@@ -1,6 +1,10 @@
-.kf {
-	font-family: $font-landing;
-	color: $color-kf-dark;
+@import url('../../global/variables.scss');
+@import url('variables.scss');
+@import url('fonts.scss');
+
+.land {
+	font-family: $font-land;
+	color: $color-land-dark;
 	font-size: 22px;
 	line-height: 1.3;
 
@@ -25,7 +29,7 @@
 		}
 
 		&_first {
-			background: url($path + 'img/landing-kf/bg.jpg') no-repeat 50% 0;
+			background: url($path + 'img/landing/kf/bg.jpg') no-repeat 50% 0;
 			background-size: contain;
 			height: 100vh;
 			margin-top: -91px;
@@ -72,7 +76,7 @@
 	&__title {
 		font-size: 67px;
 		font-weight: 700;
-		color: $color-kf;
+		color: $color-land;
 		text-align: center;
 		line-height: 1.1;
 
@@ -96,7 +100,7 @@
 			content: '';
 			width: 100px;
 			height: 4px;
-			background: $color-kf;
+			background: $color-land;
 			display: block;
 			margin: .8em auto 0;
 		}
@@ -150,7 +154,7 @@
 			display: inline-block;
 			width: 10px;
 			height: 10px;
-			background: $color-kf;
+			background: $color-land;
 			border-radius: 50%;
 			margin-right: 15px;
 			vertical-align: middle;
@@ -158,7 +162,7 @@
 	}
 
 	&__gray-title {
-		color: $color-kf-gray;
+		color: $color-land-gray;
 		font-weight: 700;
 		text-transform: uppercase;
 
@@ -170,7 +174,7 @@
 
 	&__example-title {
 		font-size: 33px;
-		color: $color-kf;
+		color: $color-land;
 		font-weight: 700;
 		text-transform: uppercase;
 
@@ -271,7 +275,7 @@
 
 			&::before,
 			&::after {
-				background: $color-kf;
+				background: $color-land;
 			}
 
 			&::after {
@@ -291,7 +295,7 @@
 
 			&::before,
 			&::after {
-				background: $color-kf-dark;
+				background: $color-land-dark;
 
 				@include screen-md() {
 					bottom: auto;

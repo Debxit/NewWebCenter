@@ -71,7 +71,10 @@ gulp.task('html', function () {
 
 /* ========= ТАСК "SASS" ========== */
 gulp.task('sass', function() {
-	return gulp.src(app + 'src/style.scss') // Берём источник
+	return gulp.src([ // Берём источник
+		app + 'src/style.scss',
+		app + 'src/landing/kf/kf.scss'
+	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
 		.pipe(sass({outputStyle: 'expanded'})) // Преобразуем SCSS в CSS
