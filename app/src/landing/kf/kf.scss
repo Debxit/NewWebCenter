@@ -30,7 +30,7 @@
 
 		&_first {
 			background: url($path + 'img/landing/kf/bg.jpg') no-repeat 50% 0;
-			background-size: contain;
+			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
 			margin-bottom: 4em;
@@ -128,6 +128,7 @@
 	&__list {
 		display: inline-block;
 		text-align: left;
+		margin-bottom: 1.5em;
 	}
 
 	&__list-item {
@@ -158,6 +159,15 @@
 			border-radius: 50%;
 			margin-right: 15px;
 			vertical-align: middle;
+		}
+	}
+
+	&__link {
+		color: $color-land;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: $color-land;
 		}
 	}
 

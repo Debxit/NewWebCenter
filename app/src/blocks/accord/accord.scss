@@ -115,6 +115,7 @@
 
 	&__desc {
 		margin: 0 0 10px;
+		line-height: 1.4;
 
 		&:last-child {
 			margin: 0;
@@ -190,11 +191,13 @@
 		font-weight: 500;
 		margin: 0;
 		transition: $duration / 2 ease;
+		line-height: 1.4;
 	}
 
 	&__sub-desc {
 		display: block;
 		margin: 0 0 10px;
+		line-height: 1.4;
 
 		&:last-child {
 			margin: 0;
