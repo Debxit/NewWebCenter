@@ -1,0 +1,120 @@
+.layout-slider {
+
+	&__item {
+		margin-bottom: 50px;
+
+		@include screen-sm() {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		box-shadow: 0 0 8px rgba(black, .2);
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 0;
+		width: 45px;
+		height: 100%;
+		z-index: 1;
+		font-size: 60px;
+		line-height: 0;
+		cursor: pointer;
+		transition: $duration ease;
+
+		&::after {
+			font-family: 'FontAwesome';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&__prev {
+		left: 0;
+
+		&::after {
+			content: '\f104';
+		}
+	}
+
+	&__next {
+		right: 0;
+
+		&::after {
+			content: '\f105';
+		}
+	}
+
+	&__dots {
+		text-align: center;
+		margin-top: 15px;
+
+		li {
+			display: inline-block;
+			margin: 5px;
+			padding: 21px 0 20px;
+			cursor: pointer;
+
+			&:hover,
+			&.slick-active {
+
+				button {
+					background: $red;
+				}
+			}
+		}
+
+		button {
+			font-size: 0;
+			outline: none;
+			border: none;
+			background: $color-main;
+			width: 45px;
+			height: 4px;
+			display: block;
+			cursor: pointer;
+			transition: $duration ease;
+		}
+	}
+
+	.slick-list {
+		margin: 0 -25px;
+
+		@include screen-sm() {
+			margin: 0 50px;
+		}
+
+		@include screen-xs() {
+			margin: 0 45px;
+		}
+	}
+
+	.slick-slide {
+		outline: none;
+		margin: 7px 25px;
+
+		@include screen-sm() {
+			margin: 7px 15px;
+		}
+
+		@include screen-xs() {
+			margin: 7px;
+		}
+
+		> div:last-child {
+
+			.layout-slider__item {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

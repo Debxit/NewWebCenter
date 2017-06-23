@@ -126,5 +126,10 @@
 	&_m-zero {
 		margin-top: 0;
 		margin-bottom: 0;
+
+		@include screen-xl() {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 }
