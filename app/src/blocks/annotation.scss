@@ -1,0 +1,14 @@
+.annotation {
+	font-weight: 400;
+	text-align: center;
+	max-width: 575px;
+	margin: 0 auto;
+
+	@include screen-xl() {
+		max-width: 520px;
+	}
+
+	&__author {
+		margin: 25px 0;
+	}
+}

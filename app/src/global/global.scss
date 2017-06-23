@@ -13,6 +13,7 @@ body {
   overflow-x:hidden;
 
   &.shadow {
+
     &:after {
       content: '';
       width: 100%;
@@ -26,18 +27,14 @@ body {
   }
 }
 
-a{
-  color: inherit;
-}
-
-
 .wrapper{
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.header, .footer {
+.header,
+.footer {
   flex-grow: 0;
   flex-shrink: 0;
   -webkit-flex: 0 0 auto;
@@ -45,12 +42,7 @@ a{
 
 .main {
   flex: 1 0 auto;
-
-  &.main_without-bg{
-
-  }
 }
-
 
 *,
 *::before,
@@ -58,28 +50,18 @@ a{
   box-sizing: border-box;
 }
 
-ul{
+ul {
   margin:0;
   padding:0;
   list-style: none;
 }
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1170px;
-  margin: 0 auto;
-  position: relative;
+li {
+  line-height: 1.4;
+}
 
-  @include screen-lg() {
-    width: 970px;
-  }
-  @include screen-md() {
-    width: 770px;
-  }
-  @include screen-sm() {
-    width: 100%;
-  }
+p {
+  line-height: 1.4;
 }
 
 a {
@@ -104,8 +86,29 @@ hr {
   margin: 0;
 }
 
-::selection {
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
 
+  @include screen-lg() {
+    width: 970px;
+  }
+
+  @include screen-md() {
+    width: 750px;
+  }
+
+  @include screen-sm() {
+    width: 100%;
+  }
+}
+
+::selection {
+  background: $red;
+  color: white;
 }
 
 .hidden {

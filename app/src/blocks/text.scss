@@ -2,7 +2,6 @@
 
 	p {
 		margin: 20px 0;
-		line-height: 1.4;
 		text-align: justify;
 	}
 
@@ -22,7 +21,8 @@
 		li {
 			position: relative;
 			line-height: 1.4;
-			padding: 4px 0 4px 1em;
+			padding-left: 1em;
+			margin-bottom: 5px;
 
 			&:before {
 				content: '';
@@ -30,7 +30,7 @@
 				width: .4em;
 				height: .15em;
 				background: $red;
-				top: .8em;
+				top: .6em;
 				left: 3px;
 			}
 		}
