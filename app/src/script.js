@@ -15,4 +15,5 @@ $(document).ready(function () {
 	@@include('blocks/tab/tab.js')
 	@@include('blocks/visitors/visitors.js')
 	@@include('blocks/portfolio-element/portfolio-element.js')
+	@@include('blocks/popup/popup.js')
 });

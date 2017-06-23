@@ -1,0 +1,78 @@
+.popup{
+	display: none;
+	position: fixed;
+	max-width: 450px;
+	top:10%;
+	width: 100%;
+	background: #fff;
+	border-radius: 15px;
+	border: 1px solid $color-main;
+	padding: 35px;
+	z-index: 25;
+
+
+	&__title{
+		margin-top:10px;
+		margin-bottom: 30px;
+	}
+	&__close{
+		position: absolute;
+		top:5px;
+		right: 5px;
+		width: 40px;
+		height: 40px;
+
+		&:before,&:after{
+			position: absolute;
+			display: block;
+			left: 0;
+			top:20px;
+			border-radius: 2px;
+			width: 35px;
+			height: 5px;
+			background-color: $color-main;
+			content: "";
+		}
+		&:before{
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
+
+		&:hover{
+			cursor: pointer;
+
+			&:before{
+				animation: rotate-left .2s linear;
+			}
+			&:after{
+				animation: rotate-right .2s linear;
+			}
+		}
+	}
+}
+
+
+@keyframes rotate-left {
+	0% {
+		transform: rotate(45deg);
+	}
+	50% {
+		transform: rotate(55deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+@keyframes rotate-right {
+	0% {
+		transform: rotate(-45deg);
+	}
+	50% {
+		transform: rotate(-55deg);
+	}
+	100% {
+		transform: rotate(-45deg);
+	}
+}

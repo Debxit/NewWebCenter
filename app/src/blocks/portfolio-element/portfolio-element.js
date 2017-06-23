@@ -33,7 +33,6 @@ var cleanLine = function(line){
 $('.portfolio-element').mouseenter(function(){
    var currSVG = $(this).find('.portfolio-element__hov-icon path');
    var length = pathLength(currSVG);
-    console.log(length);
     drawLine(currSVG,length);
 });
 $('.portfolio-element').mouseleave(function(){
