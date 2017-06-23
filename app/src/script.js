@@ -14,4 +14,5 @@ $(document).ready(function () {
 	@@include('blocks/customer/customer.js')
 	@@include('blocks/tab/tab.js')
 	@@include('blocks/visitors/visitors.js')
+	@@include('blocks/portfolio-element/portfolio-element.js')
 });

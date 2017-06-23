@@ -112,6 +112,13 @@
 			top: -50%;
 			background: radial-gradient( ellipse ,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 50%,rgba(75, 173, 210, 0) 100%);
 
+			@include screen-sm(){
+				height: 135%;
+				top: -25%;
+			}
+			@include screen-xs(){
+				top: 0;
+			}
 		}
 	}
 
