@@ -16,7 +16,7 @@
 @import url('blocks/input.scss'); // Поля ввода
 @import url('blocks/side-menu/side-menu.scss');
 @import url('blocks/portfolio-filter.scss');
-@import url('blocks/portfolio-element.scss');
+@import url('blocks/portfolio-element/portfolio-element.scss');
 @import url('blocks/portfolio-slider/portfolio-slider.scss');
 @import url('blocks/profit.scss');
 @import url('blocks/socials.scss');
@@ -49,6 +49,7 @@
 @import url('blocks/svg-ol.scss'); // Список с точками в виде svg-картинок
 @import url('blocks/platform.scss'); // Блок со списком платформ CMS
 @import url('blocks/layout-slider/layout-slider.scss'); // Слайдер со списком шаблонов сайтов
+@import url('blocks/popup/popup.scss'); // Модалка
 
 @import url('blocks/header.scss'); // Шапка
 @import url('blocks/main.scss'); // Контейнер контента

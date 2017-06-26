@@ -16,4 +16,6 @@ $(document).ready(function () {
 	@@include('blocks/visitors/visitors.js')
 	@@include('blocks/video/video.js')
 	@@include('blocks/layout-slider/layout-slider.js')
+	@@include('blocks/portfolio-element/portfolio-element.js')
+	@@include('blocks/popup/popup.js')
 });
