@@ -1,11 +1,10 @@
-var  close_popup = function(){
+var close_popup = function () {
     $('body').removeClass('shadow');
     $('.popup').fadeOut();
-    console.log('close');
+    return false;
 };
 
 $(".js-btn_pop").click(function () {
-    console.log('btn');
     var target = $(this).attr('data-target');
 
     $(target).fadeIn('slow');
@@ -14,7 +13,19 @@ $(".js-btn_pop").click(function () {
     var left_offset = ($(window).width() - $(target).outerWidth()) / 2;
     $(target).css("left", left_offset + "px");
 
-    $('.shadow').click( close_popup );
+    $('.popup__close').on('click', close_popup);
+
+    $(document).on('click', function (e) {
+        var target = e.target;
+
+        if ($(target).hasClass("popup") || $(target).hasClass("popup__title") || $(target).hasClass("form")
+            || $(target).hasClass("form__input") || $(target).hasClass("form__btn")) {
+            return false;
+        }
+      close_popup();
+
+    });
+
     return false;
 
 });

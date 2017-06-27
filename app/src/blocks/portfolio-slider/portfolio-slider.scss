@@ -65,13 +65,15 @@
 		}
 	}
 
-	.slick-dots {
+	.portfolio__dots {
 		position: absolute;
 		top: 45%;
 		right: 0;
 
 		li {
-			padding: 10px 0;
+			padding: 5px 0;
+			margin: 10px 0;
+			display: block;
 
 			&:hover {
 				cursor: pointer;

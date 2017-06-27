@@ -38,12 +38,14 @@
 @import url('blocks/tab/tab.scss'); // Табы
 @import url('blocks/blog-inner.scss'); // детальная страница блога
 @import url('blocks/share.scss'); // блок поделиться
-@import url('blocks/visitors/visitors.scss'); // блок поделиться
+@import url('blocks/visitors/visitors.scss'); // блок счетчик посетителей
 @import url('blocks/red-ol.scss'); // Нумерованный список с красной нумерацией
 @import url('blocks/int-offer.scss'); // Блок с предложением оставить заявку на странице интеграции
 @import url('blocks/hidden-title.scss'); // Скрытый заголовок
 @import url('blocks/text.scss'); // Стили для текстовых страниц
-@import url('blocks/popup/popup.scss'); // Стили для текстовых страниц
+@import url('blocks/popup/popup.scss'); //Всплывающее окно
+@import url('blocks/blog-outer.scss'); // Стили общей страницы блога
+@import url('blocks/blog-slider/blog-slider.scss'); // Стили общей страницы блога
 
 @import url('blocks/header.scss'); // Шапка
 @import url('blocks/main.scss'); // Контейнер контента
