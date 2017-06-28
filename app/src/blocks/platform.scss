@@ -1,0 +1,32 @@
+.platform {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 650px;
+
+	@include screen-sm() {
+		width: 100%;
+	}
+
+	&__cell {
+		padding: 5px 15px;
+		width: 33%;
+		text-align: left;
+
+		@include screen-sm() {
+			width: 216px;
+			text-align: center;
+		}
+
+		@include screen-xs() {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	a {
+		display: inline-block;
+	}
+}

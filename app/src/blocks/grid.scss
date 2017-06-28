@@ -79,6 +79,13 @@
 		}
 	}
 
+	&__lg-7 {
+
+		@include screen-lg(min) {
+			width: 58.333333%;
+		}
+	}
+
 	&__md-8 {
 
 		@include screen-md(min) {

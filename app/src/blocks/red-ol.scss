@@ -6,6 +6,7 @@
 
 	&__item {
 		list-style-type: none;
+		font-weight: 400;
 
 		&::before {
 			counter-increment: list;

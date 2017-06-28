@@ -36,13 +36,20 @@
 @import url('blocks/discount-price.scss'); //Блок на странице поддержки
 @import url('blocks/gray-circles.scss'); // Кружки
 @import url('blocks/tab/tab.scss'); // Табы
-@import url('blocks/blog-inner.scss'); // детальная страница блога
+@import url('blocks/annotation.scss'); // Аннотация
+@import url('blocks/quote.scss'); // Цитата
 @import url('blocks/share.scss'); // блок поделиться
 @import url('blocks/visitors/visitors.scss'); // блок счетчик посетителей
 @import url('blocks/red-ol.scss'); // Нумерованный список с красной нумерацией
 @import url('blocks/int-offer.scss'); // Блок с предложением оставить заявку на странице интеграции
 @import url('blocks/hidden-title.scss'); // Скрытый заголовок
 @import url('blocks/text.scss'); // Стили для текстовых страниц
+@import url('blocks/video/video.scss'); // Адаптивный блок видео
+@import url('blocks/disc-ol.scss'); // Список с жирными точками
+@import url('blocks/svg-ol.scss'); // Список с точками в виде svg-картинок
+@import url('blocks/platform.scss'); // Блок со списком платформ CMS
+@import url('blocks/layout-slider/layout-slider.scss'); // Слайдер со списком шаблонов сайтов
+@import url('blocks/popup/popup.scss'); // Модалка
 @import url('blocks/popup/popup.scss'); //Всплывающее окно
 @import url('blocks/blog-outer.scss'); // Стили общей страницы блога
 @import url('blocks/blog-slider/blog-slider.scss'); // Стили общей страницы блога

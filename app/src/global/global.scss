@@ -56,6 +56,36 @@ ul{
   list-style: none;
 }
 
+li {
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+hr {
+  margin: 0;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -67,11 +97,16 @@ ul{
     width: 970px;
   }
   @include screen-md() {
-    width: 770px;
+    width: 750px;
   }
   @include screen-sm() {
     width: 100%;
   }
+}
+
+::selection {
+  background: $red;
+  color: white;
 }
 
 a {
@@ -108,6 +143,7 @@ hr {
   display: none;
 }
 
+
 .red {
   color: $red;
 }
@@ -125,6 +161,7 @@ hr {
 }
 
 .center-xs {
+
   @include screen-xs() {
     text-align: center;
   }
