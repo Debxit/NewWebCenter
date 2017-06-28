@@ -132,6 +132,13 @@ hr {
   text-align: center;
 }
 
+.center-sm {
+
+  @include screen-sm() {
+    text-align: center;
+  }
+}
+
 .center-xs {
 
   @include screen-xs() {

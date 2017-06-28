@@ -18,4 +18,5 @@ $(document).ready(function () {
 	@@include('blocks/layout-slider/layout-slider.js')
 	@@include('blocks/portfolio-element/portfolio-element.js')
 	@@include('blocks/popup/popup.js')
+	@@include('blocks/select/select.js')
 });

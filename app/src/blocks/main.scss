@@ -247,6 +247,23 @@
 		margin-top: 1em;
 		margin-bottom: 1em;
 	}
+
+	&__mt-1em {
+		margin-top: 1em;
+	}
+
+	&__space-bot {
+		margin-bottom: 60px;
+	}
+
+	&__gray-desc {
+		color: $color-gray;
+		margin: 0 0 10px;
+	}
+
+	&__select-layout + .select__current {
+		margin-bottom: 15px;
+	}
 }
 
 .left {
