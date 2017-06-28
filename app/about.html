@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('partials/head.html')
+	<title>About</title>
+</head>
+<body>
+<div class="wrapper">
+
+	@@include('partials/header.html')
+
+	<main class="main">
+		<div class="container">
+			<div class="grid grid_neg grid_md-center ">
+				<div class="grid__md-10 ">
+					<div class="center">
+						<h1 class="title title_lower title_angle">О компании</h1>
+					</div>
+					<div class="text about-text">
+						<div class="bold">
+							Тщательный анализ рынка ваших товаров и услуг позволяет разрабатывать профессиональные сайты
+							и интернет-магазины, которые приносят реальный рост продаж и узнаваемость бренда.
+						</div>
+						<ul>
+							<li>Мы не просто делаем сайты, а разрабатываем инструменты для эффективного
+								интернет-маркетинга.
+							</li>
+							<li>В нашей команде работают только опытные профессионалы и никаких фриллансеров</li>
+							<li>Мы небольшая компания, а значит очень дорожим клиентами</li>
+						</ul>
+					</div>
+					<h3 class="title title_center title_sm ">Сертификаты</h3>
+					<div class="sertificate">
+
+						<a class="fancybox sertificate__item" rel="group" href="/img/about/sertificate1.jpg" title="">
+							<img class="sertificate__img" src="/img/about/sertificate1.jpg" alt=""> </a>
+
+						<a class="fancybox sertificate__item" rel="group" href="/img/about/integration1C.jpg" title="">
+							<img class="sertificate__img" src="/img/about/integration1C.jpg" alt=""> </a>
+
+						<a class="fancybox sertificate__item" rel="group" href="/img/about/partner_competence1.jpg"
+						   title="">
+							<img class="sertificate__img" src="/img/about/partner_competence1.jpg" alt=""> </a>
+
+						<a class="fancybox sertificate__item" rel="group" href="/img/about/akkr.jpg" title="">
+							<img class="sertificate__img" src="/img/about/akkr.jpg" alt=""> </a>
+
+						<a class="fancybox sertificate__item" rel="group" href="/img/about/authorization.jpg" title="">
+							<img class="sertificate__img" src="/img/about/authorization.jpg" alt="">
+						</a>
+
+					</div>
+					<div class="center">
+						<h3 class="title title_sm title_angle-right ">Отзывы</h3>
+					</div>
+					<div class="feedbacks">
+						<div class="feedbacks__slider">
+							<div class="feedback">
+								<div class="feedback__item">
+									<div class="feedback__img">
+										<img src="img/about/kf-mac.png" alt="">
+									</div>
+									<div class="feedback__descr">
+										<div class="feedback__title">
+											Knight Frank
+										</div>
+										<div class="feedback__subtitle">
+											Элитная недвижимость KF-Elita
+										</div>
+
+										«Работаем с компанией Вебцентр больше трех лет.
+										За это время только положительные эмоции.
+										Ребята взяли наш сайт в умирающем состоянии
+										и в короткий срок сделали из него полноценный
+										инструмент бизнеса. Ребята взяли наш сайт в
+										умирающем состоянии и в короткий срок сделали из
+										него полноценный инструмент бизнеса.Рекомендуем
+										всем и желаем им успеха и процветания!»
+
+										<a href="" class="feedback__link">kf-elita.ru</a>
+									</div>
+								</div>
+							</div>
+							<div class="feedback">
+								<div class="feedback__item">
+									<div class="feedback__img">
+										<img src="img/about/kf-mac.png" alt="">
+									</div>
+									<div class="feedback__descr">
+										<div class="feedback__title">
+											Knight Frank
+										</div>
+										<div class="feedback__subtitle">
+											Элитная недвижимость KF-Elita
+										</div>
+
+										«Работаем с компанией Вебцентр больше трех лет.
+										За это время только положительные эмоции.
+										Ребята взяли наш сайт в умирающем состоянии
+										и в короткий срок сделали из него полноценный
+										инструмент бизнеса. Ребята взяли наш сайт в
+										умирающем состоянии и в короткий срок сделали из
+										него полноценный инструмент бизнеса.Рекомендуем
+										всем и желаем им успеха и процветания!»
+
+										<a href="" class="feedback__link">kf-elita.ru</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pages feedbacks__pages">
+							<span class="pages__current">01</span>
+							/
+							<span class="pages__all"></span>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="grid grid_neg grid_md-center ">
+				<div class="grid__md-8">
+					<h3 class="title title_center title_sm ">Партнеры</h3>
+
+					<div class="partners">
+						<div class="partners__item">
+							<div class="partners__img" style="background-image: url('img/markiza-logo.png')"></div>
+						</div>
+						<div class="partners__item">
+							<div class="partners__img" style="background-image: url('img/rimi-logo.png')"></div>
+						</div>
+						<div class="partners__item">
+							<div class="partners__img" style="background-image: url('img/markiza-logo.png')"></div>
+						</div>
+						<div class="partners__item">
+							<div class="partners__img" style="background-image: url('img/rimi-logo.png')"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	@@include('partials/footer.html')
+
+
+	<script>
+		$("a.fancybox").fancybox({
+//			'hideOnContentClick': true
+		});
+	</script>
+</div>
+</body>
+</html>

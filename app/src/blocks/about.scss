@@ -1,0 +1,25 @@
+.about-text {
+
+	.bold {
+		font-size: 19px;
+		margin-top: 15px;
+		margin-bottom: 35px;
+
+		@include screen-sm() {
+			font-size: 16px;
+		}
+	}
+	ul {
+		font-size: 17px;
+		padding-left: 25px;
+		font-weight: 400;
+
+		@include screen-sm() {
+			font-size: 15px;
+		}
+
+		li {
+			margin: 7px 0;
+		}
+	}
+}

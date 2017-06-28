@@ -13,8 +13,7 @@ body {
   overflow-x:hidden;
 
   &.shadow {
-
-    &:after {
+    &:before {
       content: '';
       width: 100%;
       height: 100%;
@@ -27,14 +26,14 @@ body {
   }
 }
 
+
 .wrapper{
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.header,
-.footer {
+.header, .footer {
   flex-grow: 0;
   flex-shrink: 0;
   -webkit-flex: 0 0 auto;
@@ -44,13 +43,14 @@ body {
   flex: 1 0 auto;
 }
 
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-ul {
+ul{
   margin:0;
   padding:0;
   list-style: none;
@@ -96,11 +96,9 @@ hr {
   @include screen-lg() {
     width: 970px;
   }
-
   @include screen-md() {
     width: 750px;
   }
-
   @include screen-sm() {
     width: 100%;
   }
@@ -109,6 +107,36 @@ hr {
 ::selection {
   background: $red;
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:focus,&:active{
+    outline: none;
+  }
+}
+
+input,
+textarea {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+div{
+  &:focus,&:active{
+    outline: none;
+  }
+}
+textarea {
+  resize: none;
+}
+
+hr {
+  margin: 0;
 }
 
 .hidden {

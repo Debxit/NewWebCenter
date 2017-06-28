@@ -3,11 +3,13 @@ var slickVar = {
 	infinite: false,
 	dots: true,
 	arrows: false,
+	dotsClass: 'portfolio__dots',
 	fade: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	customPaging: function (slider, i) {
-		//  var thumb = $(slider.$slides[i]).data('thumb');
+		//   var thumb = $(slider.$slides[i]).data('thumb');
+		//   return '<a><img src="'+thumb+'"></a>';
 		return '<div class="portfolio-nav-item"> </div>';
 	},
 	responsive: [

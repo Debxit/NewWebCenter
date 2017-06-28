@@ -148,6 +148,7 @@
 		margin: 0 auto;
 	}
 
+
 	&_md-between {
 
 		@include screen-md(min) {
@@ -204,4 +205,10 @@
 [class^='grid__lg'] {
 	padding: 0 15px;
 	width: 100%;
+}
+
+
+
+.grid_wp{
+	padding: 0;
 }

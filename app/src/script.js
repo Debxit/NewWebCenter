@@ -19,4 +19,7 @@ $(document).ready(function () {
 	@@include('blocks/portfolio-element/portfolio-element.js')
 	@@include('blocks/popup/popup.js')
 	@@include('blocks/select/select.js')
+	@@include('blocks/blog-slider/blog-slider.js')
+	@@include('blocks/feedback/feedback.js')
+	@@include('blocks/partners/partners.js')
 });

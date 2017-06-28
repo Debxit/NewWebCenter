@@ -1,0 +1,14 @@
+.pages{
+	font-family: $font-days;
+	color: rgba(62, 72, 96, 0.5);
+	font-size: 36px;
+	background: #fff;
+
+	&__current{
+		color: $color-main;
+	}
+
+	&__all{
+		font-size: 23px;
+	}
+}
