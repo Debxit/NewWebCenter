@@ -26,10 +26,6 @@ body {
   }
 }
 
-a{
-  color: inherit;
-}
-
 
 .wrapper{
   display: flex;
@@ -45,10 +41,6 @@ a{
 
 .main {
   flex: 1 0 auto;
-
-  &.main_without-bg{
-
-  }
 }
 
 
@@ -84,11 +76,14 @@ ul{
 
 a {
   text-decoration: none;
+  color: inherit;
+  &:focus,&:active{
+    outline: none;
+  }
 }
 
 input,
 textarea {
-
   &:hover,
   &:focus,
   &:active {
@@ -96,6 +91,11 @@ textarea {
   }
 }
 
+div{
+  &:focus,&:active{
+    outline: none;
+  }
+}
 textarea {
   resize: none;
 }
@@ -104,14 +104,9 @@ hr {
   margin: 0;
 }
 
-::selection {
-
-}
-
 .hidden {
   display: none;
 }
-
 
 .red {
   color: $red;
@@ -130,7 +125,6 @@ hr {
 }
 
 .center-xs {
-
   @include screen-xs() {
     text-align: center;
   }

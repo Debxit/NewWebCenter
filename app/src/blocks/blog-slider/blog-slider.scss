@@ -186,39 +186,7 @@
 	}
 
 	&__dots {
-		text-align: center;
-		margin-top: 15px;
 
-		li {
-			display: inline-block;
-			margin: 5px;
-			padding: 21px 0 20px;
-			cursor: pointer;
-
-			@include screen-xl() {
-				padding: 13px 0;
-			}
-
-			&:hover,
-			&.slick-active {
-
-				button {
-					background: $red;
-				}
-			}
-		}
-
-		button {
-			font-size: 0;
-			outline: none;
-			border: none;
-			background: $color-main;
-			width: 45px;
-			height: 4px;
-			display: block;
-			cursor: pointer;
-			transition: $duration ease;
-		}
 	}
 
 	.slick-list {

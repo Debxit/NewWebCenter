@@ -1,6 +1,6 @@
 /* Слайдер блога */
 $('.blog-slider').slick({
-    dotsClass: 'blog-slider__dots',
+    dotsClass: 'blog-slider__dots slick-custom-dots',
     prevArrow: '<div class="blog-slider__prev"></div>',
     nextArrow: '<div class="blog-slider__next"></div>',
     arrows: true,

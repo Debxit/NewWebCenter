@@ -2,7 +2,7 @@
 $('.customer').slick({
 	autoplay: true,
 	autoplaySpeed: 10000,
-	dotsClass: 'customer__dots',
+	dotsClass: 'customer__dots slick-custom-dots',
 	mobileFirst: true,
 	prevArrow: '<div class="customer__prev"></div>',
 	nextArrow: '<div class="customer__next"></div>',
