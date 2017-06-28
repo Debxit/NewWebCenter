@@ -5,6 +5,9 @@
 
 	@include screen-sm(min) {
 		text-align: left;
+	}
+
+	@include screen-md(min) {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -15,7 +18,7 @@
 
 	&::after {
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -28,7 +31,7 @@
 
 	&__left {
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			width: 70%;
 			height: 100%;
 			background: white;
@@ -39,7 +42,7 @@
 	&__wrap {
 		padding: 0 0 40px;
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			padding: 0;
 			position: absolute;
 			top: 0;
@@ -51,7 +54,7 @@
 
 	&__i {
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			position: absolute;
 			width: 65%;
 			top: 0;
@@ -60,6 +63,8 @@
 			right: 0;
 			overflow-y: auto;
 			padding-right: 15px;
+			display: flex;
+			align-items: center;
 		}
 
 		@include screen-xl(min) {
@@ -133,7 +138,7 @@
 		white-space: nowrap;
 		z-index: 1;
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			width: 30%;
 			height: 100%;
 			top: 50%;
@@ -157,7 +162,7 @@
 			border-left: 17px solid transparent;
 			border-right: 17px solid transparent;
 
-			@include screen-sm(min) {
+			@include screen-md(min) {
 				bottom: auto;
 				left: auto;
 				right: 100%;
@@ -176,7 +181,7 @@
 			&::before {
 				border-top-color: $red;
 
-				@include screen-sm(min) {
+				@include screen-md(min) {
 					border-right-color: $red;
 					border-top-color: transparent;
 				}
@@ -192,7 +197,7 @@
 
 	&_closed {
 
-		@include screen-sm(min) {
+		@include screen-md(min) {
 			transform: translateX(-100%);
 		}
 
@@ -204,7 +209,7 @@
 				height: auto;
 				width: auto;
 
-				@include screen-sm(min) {
+				@include screen-md(min) {
 					left: 100%;
 					height: 100px;
 					padding: 0 10px 0 30px;
@@ -214,7 +219,7 @@
 					transform: translateX(-50%) rotate(180deg);
 					margin: 0 0 -20px;
 
-					@include screen-sm(min) {
+					@include screen-md(min) {
 						transform: translateY(-50%) rotate(180deg);
 						margin: 0 -20px 0 0;
 					}

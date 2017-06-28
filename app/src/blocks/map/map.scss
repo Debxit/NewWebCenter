@@ -3,7 +3,7 @@
 	height: 80vh;
 	position: relative;
 
-	@include screen-sm(min) {
+	@include screen-md(min) {
 		height: auto;
 		position: absolute;
 		top: 0;
@@ -49,7 +49,7 @@
 
 			&__wrap {
 
-				@include screen-sm(min) {
+				@include screen-md(min) {
 					width: 30%;
 				}
 			}
