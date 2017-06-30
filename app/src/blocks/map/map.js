@@ -34,7 +34,7 @@ function initMap() {
 		/* Центрирование карты при ресайзе */
 		var lastSize = 0; // Предыдущая ширина экрана
 		google.maps.event.addDomListener(window, "resize", function() {
-			if ((window.innerWidth == 768) && (lastSize == 767)) {
+			if ((window.innerWidth == 992) && (lastSize == 991)) {
 				setTimeout(function() {
 					google.maps.event.trigger(map1, "resize");
 					map1.panTo(dot1);

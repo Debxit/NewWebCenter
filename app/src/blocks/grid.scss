@@ -2,115 +2,47 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	&__md-2 {
+	$cols: 12;
+	@for $i from 1 through $cols {
+		$result: percentage($i / $cols);
 
-		@include screen-md(min) {
-			width: 16.666666%;
+		&__#{$i} {
+			width: $result;
 		}
-	}
 
-	&__sm-3 {
+		&__xs-#{$i} {
 
-		@include screen-sm(min) {
-			width: 25%;
+			@include screen-xs(min) {
+				width: $result;
+			}
 		}
-	}
 
-	&__md-3 {
+		&__sm-#{$i} {
 
-		@include screen-md(min) {
-			width: 25%;
+			@include screen-sm(min) {
+				width: $result;
+			}
 		}
-	}
 
-	&__md-4 {
+		&__md-#{$i} {
 
-		@include screen-md(min) {
-			width: 33.333333%;
+			@include screen-md(min) {
+				width: $result;
+			}
 		}
-	}
 
-	&__sm-5{
+		&__lg-#{$i} {
 
-		@include screen-sm(min) {
-			width: 50%;
+			@include screen-lg(min) {
+				width: $result;
+			}
 		}
-	}
 
-	&__md-5 {
+		&__xl-#{$i} {
 
-		@include screen-md(min) {
-			width: 41.666666%;
-		}
-	}
-
-	&__lg-5 {
-
-		@include screen-lg(min) {
-			width: 41.666666%;
-		}
-	}
-
-	&__xs-6 {
-
-		@include screen-xs(min) {
-			width: 50%;
-		}
-	}
-
-	&__sm-6 {
-
-		@include screen-sm(min) {
-			width: 50%;
-		}
-	}
-
-	&__md-6 {
-
-		@include screen-md(min) {
-			width: 50%;
-		}
-	}
-
-	&__md-7 {
-
-		@include screen-md(min) {
-			width: 58.333333%;
-		}
-	}
-
-	&__lg-7 {
-
-		@include screen-lg(min) {
-			width: 58.333333%;
-		}
-	}
-
-	&__md-8 {
-
-		@include screen-md(min) {
-			width: 66.666666%;
-		}
-	}
-
-	&__md-9 {
-
-		@include screen-md(min) {
-			width: 75%;
-		}
-	}
-
-	&__lg-9 {
-
-		@include screen-lg(min) {
-			width: 75%;
-		}
-	}
-
-	&__md-10 {
-
-		@include screen-md(min) {
-			width: 83.333333%;
+			@include screen-xl(min) {
+				width: $result;
+			}
 		}
 	}
 
@@ -135,10 +67,45 @@
 		}
 	}
 
+	&_xs-center {
+
+		@include screen-xs(min) {
+			justify-content: center;
+		}
+	}
+
+	&_sm-center {
+
+		@include screen-sm(min) {
+			justify-content: center;
+		}
+	}
+
 	&_md-center {
 
 		@include screen-md(min) {
 			justify-content: center;
+		}
+	}
+
+	&_xs-bottom {
+
+		@include screen-xs(min) {
+			align-items: flex-end;
+		}
+	}
+
+	&_sm-bottom {
+
+		@include screen-sm(min) {
+			align-items: flex-end;
+		}
+	}
+
+	&_md-bottom {
+
+		@include screen-md(min) {
+			align-items: flex-end;
 		}
 	}
 }
