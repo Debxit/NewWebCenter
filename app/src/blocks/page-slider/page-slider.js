@@ -136,15 +136,15 @@ $('.page-slider').on('beforeChange', function (event, slick, currentSlide, nextS
         $animateCurrent.velocity({
             opacity: "0",
             scale: "0.5",
-            translateZ: "-1000px"
-        }, 500);
+            translateZ: "-600px"
+        }, 400);
     }
     else{
         $animateCurrent.velocity({
             opacity: "0",
-            scale: "1.5",
-            translateZ: "1000px"
-        }, 500);
+            scale: "1.3",
+            translateZ: "600px"
+        }, 400);
     }
     //end BeforeChange()
 });
@@ -157,6 +157,6 @@ $('.page-slider').on('afterChange', function (event, slick, currentSlide) {
         opacity: "1",
         scale: "1",
         translateZ: "0"
-    }, 500, function () {
+    }, 400, function () {
     })
 });

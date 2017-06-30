@@ -18,8 +18,7 @@ $(".js-btn_pop").click(function () {
     $(document).on('click', function (e) {
         var target = e.target;
 
-        if ($(target).hasClass("popup") || $(target).hasClass("popup__title") || $(target).hasClass("form")
-            || $(target).hasClass("form__input") || $(target).hasClass("form__btn")) {
+        if ($(target).hasClass("popup") || $(target).parents('.popup').length) {
             return false;
         }
       close_popup();

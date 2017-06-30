@@ -11,9 +11,21 @@
 }
 
 @font-face {
+	font-family: 'support';
+	src: url($path + 'fonts/support/support.eot?35911331');
+	src: url($path + 'fonts/support/support.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+	url($path + 'fonts/support/support.woff?35911331') format('woff'),
+	url($path + 'fonts/support/support.ttf?35911331') format('truetype'),
+	url($path + 'fonts/support/support.svg?35911331#support') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Days';
 	src: url($path + 'fonts/Days.ttf');
 }
+
 @font-face {
 	font-family: 'rub';
 	src: url($path + 'fonts/RUBSN.otf');

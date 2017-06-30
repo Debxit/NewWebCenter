@@ -81,19 +81,20 @@
 									</div>
 								</div>
 							</div>
-							<div class="feedback">
+							<div class="feedback" itemscope itemtype="http://schema.org/Review">
 								<div class="feedback__item">
 									<div class="feedback__img">
 										<img src="img/about/kf-mac.png" alt="">
 									</div>
 									<div class="feedback__descr">
-										<div class="feedback__title">
+										<div class="feedback__title" itemprop="author" itemscope
+											 itemtype="http://schema.org/Person">
 											Knight Frank
 										</div>
 										<div class="feedback__subtitle">
 											Элитная недвижимость KF-Elita
 										</div>
-
+										<span itemprop="reviewBody">
 										«Работаем с компанией Вебцентр больше трех лет.
 										За это время только положительные эмоции.
 										Ребята взяли наш сайт в умирающем состоянии
@@ -102,8 +103,8 @@
 										умирающем состоянии и в короткий срок сделали из
 										него полноценный инструмент бизнеса.Рекомендуем
 										всем и желаем им успеха и процветания!»
-
-										<a href="" class="feedback__link">kf-elita.ru</a>
+										</span>
+										<a href="" class="feedback__link" itemprop="url">kf-elita.ru</a>
 									</div>
 								</div>
 							</div>
@@ -147,6 +148,7 @@
 
 
 	<script>
+		//todo почему-то при скрытии происходят подергивания
 		$("a.fancybox").fancybox({
 //			'hideOnContentClick': true
 		});
