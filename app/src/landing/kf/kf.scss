@@ -24,10 +24,6 @@
 		position: relative;
 		margin-bottom: 4em;
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-
 		&_first {
 			background: url($path + 'img/landing/kf/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
