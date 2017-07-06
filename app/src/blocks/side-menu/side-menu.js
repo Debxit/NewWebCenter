@@ -11,7 +11,8 @@ $(".menu-icon").click(function () {
     $(document).on('click', function (e) {
         var target = e.target;
 
-        if ($(target).hasClass("side-menu") || $(target).hasClass("bar") || $(target).hasClass(".menu-icon") || $(target).hasClass("nav") || $(target).hasClass("nav__item")) {
+        if ($(target).hasClass("side-menu") || $(target).hasClass("bar") ||
+            $(target).hasClass(".menu-icon") || $(target).hasClass("nav") || $(target).hasClass("nav__item")) {
             return false;
         }
         $('.menu-icon').removeClass("active");

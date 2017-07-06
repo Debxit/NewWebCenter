@@ -2,7 +2,7 @@
 $('.layout-slider').slick({
 	autoplay: true,
 	autoplaySpeed: 20000,
-	dotsClass: 'layout-slider__dots',
+	dotsClass: 'layout-slider__dots slick-custom-dots',
 	mobileFirst: true,
 	prevArrow: '<div class="layout-slider__prev"></div>',
 	nextArrow: '<div class="layout-slider__next"></div>',

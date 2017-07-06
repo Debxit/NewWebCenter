@@ -22,4 +22,5 @@ $(document).ready(function () {
 	@@include('blocks/blog-slider/blog-slider.js')
 	@@include('blocks/feedback/feedback.js')
 	@@include('blocks/partners/partners.js')
+	@@include('blocks/effective-offer/effective-offer.js')
 });

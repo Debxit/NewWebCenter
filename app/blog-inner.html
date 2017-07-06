@@ -12,20 +12,21 @@
 
 	<main class="main">
 		<div class="container">
-			<div class="grid grid_neg grid_md-center text">
+			<div class="grid grid_neg grid_md-center text" itemscope itemtype="http://schema.org/NewsArticle">
+				<meta itemprop="genre" content="web-разработка">
 				<div class="grid__md-10">
 					<div class="center">
-						<h1 class="title title_lower title_center title_angle">Как продвинуть интернет магазин</h1>
+						<h1 class="title title_lower title_center title_angle" itemprop="headline">Как продвинуть интернет магазин</h1>
 						<div class="annotation">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 							do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							<div class="annotation__author">
-								от <strong>Шавкат Усманов</strong>, Июнь 9, 2017
+							<div class="annotation__author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+								от <strong itemprop="name">Шавкат Усманов</strong>, Июнь 9, 2017
 							</div>
 						</div>
 					</div>
 
-					<div class="quote">
+					<div class="quote" itemprop="description">
 						<strong>Lorem ipsum dolor sit amet:</strong> As a community, we can learn so much from
 						discovering
 						what other developers are doing around the world. We encourage everyone to participate
