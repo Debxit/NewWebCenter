@@ -1,7 +1,6 @@
 var close_popup = function () {
     $('body').removeClass('shadow');
     $('.popup').fadeOut();
-    return false;
 };
 
 $(".js-btn_pop").click(function () {
@@ -22,7 +21,6 @@ $(".js-btn_pop").click(function () {
             return false;
         }
       close_popup();
-
     });
 
     return false;

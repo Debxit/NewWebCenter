@@ -27,6 +27,7 @@
 
 		li {
 			text-align: center;
+			display: inline-block;
 			transition: color ease .3s;
 
 			&.slick-active {

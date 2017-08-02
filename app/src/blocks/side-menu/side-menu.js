@@ -7,6 +7,12 @@ $(".menu-icon").click(function () {
     $(".menu-icon").toggleClass('active');
     $('body').toggleClass('shadow');
 
+
+    $('.nav__item_toggle>a').on('click',function(){
+        $(this).parent().toggleClass('open').find('.nav').slideToggle();
+        return false;
+    });
+
     //close menu on body click
     $(document).on('click', function (e) {
         var target = e.target;
