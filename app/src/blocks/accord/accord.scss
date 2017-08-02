@@ -145,6 +145,28 @@
 				border-color: $red;
 			}
 		}
+
+		&[type="checkbox"] {
+
+			+ label {
+
+				&::before {
+					content: '\2714';
+					line-height: 0.2;
+					background: white;
+					border-radius: 3px;
+					color: transparent;
+					font-size: 20px;
+				}
+			}
+
+			&:checked + label {
+
+				&::before {
+					color: $color-main;
+				}
+			}
+		}
 	}
 
 	&__label {
@@ -167,7 +189,7 @@
 			top: 9px;
 			border: 2px solid $color-main;
 			border-radius: 50%;
-			transition: $duration / 2 ease;
+			transition: $duration / 2 ease background, $duration / 2 ease border, $duration / 2 ease;
 		}
 
 		&:hover {

@@ -68,14 +68,17 @@ $accordRadio.on('click', function() {
 
 		cost -= +$this.val();
 	} else {
-		var $prev = $this.parent().parent().find('.' + accordRadioChecked); // Чекбокс, уже выбранный на момент клика
 
-		if ($prev.length) {
-			$prev
-				.removeClass(accordRadioChecked)
-				.prop('checked', false);
+		if ($this.attr('type') == 'radio') {
+			var $prev = $this.parent().parent().find('.' + accordRadioChecked); // Чекбокс, уже выбранный на момент клика
 
-			cost -= +$prev.val();
+			if ($prev.length) {
+				$prev
+					.removeClass(accordRadioChecked)
+					.prop('checked', false);
+
+				cost -= +$prev.val();
+			}
 		}
 
 		$this
