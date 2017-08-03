@@ -1,6 +1,6 @@
 /* Табы */
 var
-	$tabLink = $('.tab__link'), // Заголовки табов
+	$tabLink = $('.tab__title'), // Заголовки табов
 	tabLinkAct = 'tab__title_active', // Класс активного заголовка
 	tabBodyClass = 'tab__body', // Класс тела табов
 	$tabItem = $('.tab__item'), // Табы
@@ -31,10 +31,11 @@ $tabLink.on('click', function(event) {
 
 	var
 		$this = $(this), // Текущий заголовок
-		link = $this.attr('href').slice(1), // Ссылка кликнутого заголовка
-		$item = $('#' + link); // Таб, который надо отобразить
+		link = $this.find(".tab__link").attr('href');// Ссылка кликнутого заголовка
+		$item = $(link);// Таб, который надо отобразить
 
-	if ($this.parent().hasClass(tabLinkAct) || tabToggle) return;
+
+	if ($this.hasClass(tabLinkAct) || tabToggle) return;
 
 	if (window.innerWidth >= tabPoint) {
 		tabToggle = true;
@@ -43,15 +44,10 @@ $tabLink.on('click', function(event) {
 	// Обработка заголовков
 	$tabLink.each(function() {
 		var $thisLink = $(this);
-
-		if ($thisLink.attr('href') == $this.attr('href')) {
-			$thisLink
-				.parent()
-				.addClass(tabLinkAct);
+		if ($thisLink.find(".tab__link").attr('href') == link) {
+			$thisLink.addClass(tabLinkAct);
 		} else {
-			$thisLink
-				.parent()
-				.removeClass(tabLinkAct);
+			$thisLink.removeClass(tabLinkAct);
 		}
 	});
 	// =====
@@ -80,10 +76,10 @@ $tabLink.on('click', function(event) {
 			});
 		}, 300);
 	}
-	// =====
+	// ==============
 
 	if (window.innerWidth >= tabPoint){
-		moveLine($this.parent());
+		moveLine($this);
 	}
 });
 
@@ -99,7 +95,7 @@ function moveTabs(toggle) {
 	$tabLink.each(function() {
 		var
 			$this = $(this),
-			link = $this.attr('href').slice(1), // Ссылка заголовка
+			link = $this.find(".tab__link").attr('href').slice(1), // Ссылка заголовка
 			$item = $('#' + link); // Таб, привязанный к текущей ссылке
 
 		if (toggle) {

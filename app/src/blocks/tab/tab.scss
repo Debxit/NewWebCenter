@@ -66,6 +66,9 @@
 			margin-bottom: 100px;
 		}
 
+		&:hover{
+			cursor: pointer;
+		}
 		&::after {
 
 			@include screen-sm(min) {
