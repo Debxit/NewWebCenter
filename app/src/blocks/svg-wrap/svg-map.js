@@ -17,6 +17,4 @@ function animate_map() {
 
 setInterval(function () {
     animate_map();
-}, 2500);/**
- * Created by Vasiliy Tsvetkov on 06.06.2017.
- */
+}, 2500);

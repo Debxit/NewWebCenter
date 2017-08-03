@@ -1,6 +1,3 @@
-/**
- * Created by Vasiliy Tsvetkov on 06.06.2017.
- */
 // open and close side menu
 $(".menu-icon").click(function () {
     $('.side-menu').toggleClass('open');

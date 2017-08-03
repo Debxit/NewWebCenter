@@ -11,7 +11,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-
+	transition: $duration / 2 ease;
 
 	&:hover{
 		cursor: pointer;
@@ -34,7 +34,7 @@
 	}
 	
 	&.active{
-		border-bottom: solid 2px $red;
+		border: solid 2px $red;
 		color: $red;
 	}
 
