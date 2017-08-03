@@ -1,6 +1,10 @@
 .logo {
 	transform: scaleY(1.2);
 
+	&_full{
+		background: url("../img/webCenter-logo.svg") center/contain no-repeat;
+		transform: scaleY(0.8);
+	}
 	a {
 		color: $color-main;
 		text-align: center;
