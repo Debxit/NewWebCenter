@@ -1,54 +1,60 @@
 <div class="popup" id="callback">
-	<div class="popup__close">
+	<div class="popup__wrap">
+		<div class="popup__close">
 
+		</div>
+		<h2 class="popup__title title title_lower">Связаться с нами</h2>
+
+		<form class="form cont-panel__form">
+			<input class="input form__input" type="text" placeholder="Ваше имя" required>
+			<input class="input form__input" type="email" placeholder="Электронная почта" required>
+			<input class="input form__input" type="tel" placeholder="Телефон" required>
+			<input class="input form__input" type="text" placeholder="Компания">
+			<textarea class="input form__input" placeholder="Комментарии"></textarea>
+
+			<input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
+		</form>
 	</div>
-	<h2 class="popup__title title title_lower">Связаться с нами</h2>
-
-	<form class="form cont-panel__form">
-		<input class="input form__input" type="text" placeholder="Ваше имя" required>
-		<input class="input form__input" type="email" placeholder="Электронная почта" required>
-		<input class="input form__input" type="tel" placeholder="Телефон" required>
-		<input class="input form__input" type="text" placeholder="Компания">
-		<textarea class="input form__input" placeholder="Комментарии"></textarea>
-
-		<input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
-	</form>
 </div>
 
 <div class="popup" id="seo">
-	<div class="popup__close">
+	<div class="popup__wrap">
+		<div class="popup__close">
 
+		</div>
+		<h2 class="popup__title title title_lower">Заявка</h2>
+		<h3 class="popup__subtitle title_sm title_lower">на seo-аудит сайта</h3>
+
+		<form class="form cont-panel__form">
+			<input class="input form__input" type="text" placeholder="Ваше имя" required>
+			<input class="input form__input" type="text" placeholder="Сайт" required>
+			<input class="input form__input" type="email" placeholder="Электронная почта" required>
+			<textarea class="input form__input" placeholder="Комментарии"></textarea>
+
+			<input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
+		</form>
 	</div>
-	<h2 class="popup__title title title_lower">Заявка</h2>
-	<h3 class="popup__subtitle title_sm title_lower">на seo-аудит сайта</h3>
-
-	<form class="form cont-panel__form">
-		<input class="input form__input" type="text" placeholder="Ваше имя" required>
-		<input class="input form__input" type="text" placeholder="Сайт" required>
-		<input class="input form__input" type="email" placeholder="Электронная почта" required>
-		<textarea class="input form__input" placeholder="Комментарии"></textarea>
-
-		<input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
-	</form>
 </div>
 
 <div class="popup" id="calcPopup">
-	<div class="popup__close">
+	<div class="popup__wrap">
+		<div class="popup__close">
 
+		</div>
+		<h2 class="popup__title title title_lower">Заявка</h2>
+		<h3 class="popup__subtitle title_sm title_lower">на разработку интернет-магазина</h3>
+
+		<form class="form cont-panel__form">
+			<input class="input form__input" type="text" placeholder="Ваше имя" required>
+			<input class="input form__input" type="email" placeholder="Электронная почта" required>
+			<input class="input form__input" type="tel" placeholder="Телефон" required>
+			<input class="input form__input" type="text" placeholder="Компания" required>
+			<textarea class="input form__input" placeholder="Комментарии"></textarea>
+			<input type="hidden" id="priceCalc">
+			<input type="hidden" id="valuesCalc">
+			<input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
+		</form>
 	</div>
-	<h2 class="popup__title title title_lower">Заявка</h2>
-	<h3 class="popup__subtitle title_sm title_lower">на разработку интернет-магазина</h3>
-
-	<form class="form cont-panel__form">
-		<input class="input form__input" type="text" placeholder="Ваше имя" required>
-		<input class="input form__input" type="email" placeholder="Электронная почта" required>
-		<input class="input form__input" type="tel" placeholder="Телефон" required>
-		<input class="input form__input" type="text" placeholder="Компания" required>
-		<textarea class="input form__input" placeholder="Комментарии"></textarea>
-		<input type="hidden" id="priceCalc">
-		<input type="hidden" id="valuesCalc">
-		<input class="btn btn_fill form__btn" type="submit" value="Оставить заявку">
-	</form>
 </div>
 
 <!--TODO js-валидация форм?
