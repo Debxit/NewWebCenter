@@ -19,7 +19,8 @@ var
    cssImport    = require('gulp-cssimport'),               // Работа @import
    strip        = require('gulp-strip-css-comments'),      // Убирает комментарии
    path         = require('path'),                         // Для работы с путями
-   runSequence  = require('run-sequence')                  // Для синхронного выполнения задач
+   runSequence  = require('run-sequence'),                 // Для синхронного выполнения задач
+	prettify     = require('gulp-jsbeautifier')             // Форматирование JS и HTML
 ;
 /* ================================ */
 
@@ -105,6 +106,10 @@ gulp.task('js', function() {
 	return gulp.src(app + 'src/script.js') // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
+		.pipe(prod ? prettify({ // Форматируем код
+				indent_char: '\t',
+				indent_size: 1
+			}) : gutil.noop())
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
 		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
