@@ -9,9 +9,10 @@
 	}
 
 	&__img {
-		width: 100%;
+		width: calc(100% - 30px);
 		height: 60px;
-		background: no-repeat 50% 100%;
+		margin: 0 15px;
+		background: no-repeat center;
 		background-size: contain;
 		filter: grayscale(100%);
 		opacity: .4;

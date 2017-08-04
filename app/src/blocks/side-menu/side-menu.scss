@@ -38,25 +38,28 @@
 					position: relative;
 					&:after {
 
-						font-family: 'fontawesome';
-						content: '\f063';
-						font-size: 15px;
+						content: '';
+						width:15px;
+						height:15px;
+						background: url(../img/arrow-down.svg) center/contain no-repeat;
 						position: absolute;
 						left: 65px;
+						top:12px;
+						transform: rotate(0deg);
 						transition: transform .3s ease;
 					}
 
 					&:hover {
 						padding-left: 0px;
 						&:after {
-							animation: trig .4s linear;
+							transform: rotate(-15deg);
 						}
 					}
 				}
 				&.open{
 					& > a {
 						&:after {
-							transform: rotate(180deg);
+							transform: rotate(-180deg);
 						}
 
 						&:hover {
@@ -115,16 +118,4 @@
 		transform: translateX(0px);
 	}
 
-}
-
-@keyframes trig {
-	0% {
-
-	}
-	50% {
-		transform: rotate(-30deg);
-	}
-	100% {
-
-	}
 }
