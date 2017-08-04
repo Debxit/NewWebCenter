@@ -11,11 +11,11 @@
 			display: block;
 			margin-right: 0;
 			position: absolute;
-			bottom: -100px;
-			left: 50%;
-			transform: translateX(-25px);
+			top: 100%;
+			padding-top: 37px;
+			left: 0;
+			right: 0;
 		}
-
 	}
 
 	&__icon{
@@ -25,13 +25,13 @@
 		speak: none;
 		display: block;
 		width: 1em;
-		font-size: 45px;
+		font-size: 35px;
 		color: inherit;
-		text-align: center;
+		margin: 0 auto;
 		transition: color .2s ease;
 
-		@include screen-sm(){
-			font-size: 35px;
+		@include screen-sm(min){
+			font-size: 45px;
 		}
 	}
 
@@ -58,6 +58,7 @@
 	}
 
 	&__title {
+		cursor: pointer;
 
 		@include screen-sm(min) {
 			position: relative;
@@ -66,9 +67,6 @@
 			margin-bottom: 100px;
 		}
 
-		&:hover{
-			cursor: pointer;
-		}
 		&::after {
 
 			@include screen-sm(min) {
@@ -98,7 +96,8 @@
 			}
 		}
 
-		&_active{
+		&:hover,
+		&_active {
 
 			.tab {
 				//=====
@@ -123,10 +122,6 @@
 		@include screen-md() {
 			font-size: 16px;
 		}
-
-		&:hover {
-			color: $red;
-		}
 	}
 
 	&__line-rail {
@@ -141,6 +136,8 @@
 			bottom: 95px;
 			left: 0;
 			right: 0;
+			cursor: pointer;
+			pointer-events: none;
 		}
 	}
 

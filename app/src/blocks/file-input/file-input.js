@@ -1,7 +1,7 @@
 /* Поле ввода типа "файл" */
 var
 	$fInput = $('.file-input__input'), // Выборка всех инпутов типа файл
-	$fInputClass = 'file-input__input', // Класс инпута типа файл
+	fInputClass = 'file-input__input', // Класс инпута типа файл
 	classFocusInput = 'file-input__label_focus', // Класс, добавляющий стили при фокусе (для FF)
 	fHidden = 'file-input_hidden', // Класс, скрывающий инпут
 	fSelected = 'file-input_selected', // Класс инпута с выбранным файлом
@@ -15,7 +15,7 @@ $fInput.on('change', function() {
 		$fLabel = $('label[for=' + fId + ']'), // Label, привязанный к текущему input
 		value = $this.val(), // Путь добавленного файла
 		$nextHid = $($this.parent().nextAll('.' + fHidden)).first(), // Выборка скрытого инпута ниже текущего
-		$hidPrev = $nextHid.prev().find('.' + $fInputClass); // Выборка инпута перед первым скрытым
+		$hidPrev = $nextHid.prev().find('.' + fInputClass); // Выборка инпута перед первым скрытым
 
 	if (!value) return; // Если нажали "отмена"
 
@@ -34,7 +34,7 @@ $fReset.on('click', function() {
 		$this = $(this),
 		$inpWrap = $this.parent(), // Текущий контейнер инпута
 		$nextAll = $inpWrap.nextAll('.file-input'), // Инпуты после текущего
-		$input = $inpWrap.find('.' + $fInputClass), // Текущий инпут
+		$input = $inpWrap.find('.' + fInputClass), // Текущий инпут
 		fId = $input.attr('id'), // ID текущего инпута
 		$fLabel = $('label[for=' + fId + ']'); // Label, привязанный к текущему инпуту
 
@@ -46,7 +46,7 @@ $fReset.on('click', function() {
 		.removeClass(fSelected)
 		.insertAfter($nextAll.last());
 
-	if ($nextAll.length && !$nextAll.last().find('.' + $fInputClass).val()) { // Если текущий - не последний и последний - пустой
+	if ($nextAll.length && !$nextAll.last().find('.' + fInputClass).val()) { // Если текущий - не последний и последний - пустой
 		$inpWrap.addClass(fHidden);
 	}
 
