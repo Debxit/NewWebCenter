@@ -6,6 +6,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 15px;
+		user-select: none;
 
 		@include screen-sm(min) {
 			display: block;
@@ -39,6 +40,7 @@
 	&__head {
 		margin: 0 0 30px;
 		position: relative;
+		user-select: none;
 
 		@include screen-sm(min) {
 			display: inline-block;
@@ -152,6 +154,11 @@
 			left: 0;
 			transition: $duration ease;
 			float: left;
+			pointer-events: auto;
+		}
+
+		&.ui-draggable-dragging {
+			transition: none;
 		}
 	}
 

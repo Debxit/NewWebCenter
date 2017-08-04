@@ -83,6 +83,80 @@ $tabLink.on('click', function(event) {
 	}
 });
 
+$line.draggable({
+	axis: 'x',
+	containment: 'parent',
+	stop: function() {
+
+		var
+			$line = $(this),
+			lineCenter = parseInt($line.css('left')) + (parseInt($line.css('width')) / 2), // Середина ползунка
+			leftTitle = 0,
+			rightTitle = 0,
+			leftIndex = 0,
+			$thisTitle = null;
+
+		$tabLink.each(function(i) {
+			var
+				$title = $(this),
+				titleCenter = Math.ceil($title.position().left) + (Math.ceil($title.width()) / 2); // Середина текущего заголовка
+
+			if (titleCenter < lineCenter) {
+				leftTitle = titleCenter;
+			}
+
+			if (titleCenter >= lineCenter) {
+				rightTitle = titleCenter;
+				leftIndex = i;
+				return false;
+			}
+		});
+
+		if ((lineCenter - leftTitle) > (rightTitle - lineCenter)) {
+			$thisTitle = $tabLink.eq(leftIndex);
+		} else {
+			$thisTitle = $tabLink.eq(leftIndex - 1);
+		}
+
+		var
+			tabWidth = Math.ceil($thisTitle.width()), // Ширина текущего заголовка
+			tabLeft = Math.ceil($thisTitle.position().left), // Положение левого края текущего заголовка
+			thisLink = $thisTitle.find(".tab__link").attr('href'), // Ссылка кликнутого заголовка
+			$item = $(thisLink);// Таб, который надо отобразить
+
+		if (parseInt($line.css('left')) != tabLeft || parseInt($line.css('width')) != tabWidth) {
+			$line.css({
+				'left': tabLeft,
+				'width': tabWidth
+			})
+		}
+
+		// Обработка заголовков
+		$tabLink.each(function() {
+			if ($(this).find(".tab__link").attr('href') == thisLink) {
+				$(this).addClass(tabLinkAct);
+			} else {
+				$(this).removeClass(tabLinkAct);
+			}
+		});
+		// =====
+
+		// Обработка табов
+		setTimeout(function() {
+			$tabItem.fadeOut(300, function() {
+				$tabItem.removeClass(tabItemAct);
+			});
+		}, 0);
+
+		setTimeout(function() {
+			$item.fadeIn(300, function() {
+				$item.addClass(tabItemAct);
+			});
+		}, 300);
+		// ==============
+	}
+});
+
 function moveTabs(toggle) {
 	if (!$tabItem.length) return;
 

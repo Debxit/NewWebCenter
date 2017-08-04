@@ -16,8 +16,15 @@
 @@include('../libs/jquery-ui/ui/keycode.js')
 @@include('../libs/jquery-ui/ui/labels.js')
 @@include('../libs/jquery-ui/ui/unique-id.js')
+@@include('../libs/jquery-ui/ui/ie.js')
+@@include('../libs/jquery-ui/ui/data.js')
+@@include('../libs/jquery-ui/ui/plugin.js')
+@@include('../libs/jquery-ui/ui/safe-blur.js')
+@@include('../libs/jquery-ui/ui/scroll-parent.js')
 @@include('../libs/jquery-ui/ui/widgets/menu.js')
 @@include('../libs/jquery-ui/ui/widgets/selectmenu.js')
+@@include('../libs/jquery-ui/ui/widgets/mouse.js')
+@@include('../libs/jquery-ui/ui/widgets/draggable.js')
 /* ========= */
 
 $(document).ready(function () {
