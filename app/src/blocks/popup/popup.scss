@@ -114,18 +114,6 @@
 		}
 	}
 
-	&__fog {
-		display: none;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: black;
-		z-index: 20;
-		opacity: .3;
-	}
-
 	&_visible {
 		display: flex;
 	}
@@ -134,7 +122,6 @@
 		text-align: center;
 	}
 }
-
 
 @keyframes rotate-left {
 	0% {

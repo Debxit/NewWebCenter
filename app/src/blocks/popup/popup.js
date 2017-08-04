@@ -6,6 +6,7 @@
 		bodyNoScrollClass = 'noscroll',
 		popupVisClass = 'popup_visible',
 		wrapVisClass = 'popup__wrap_visible',
+		fogClass = 'fog',
 		delay = 150;
 
 	if (!$links.length) return;
@@ -78,9 +79,9 @@
 			if (hasScroll('Height')) {
 				$body.addClass(bodyNoScrollClass);
 			}
-			$body.append('<div class="popup__fog"></div>');
 
-			$('.popup__fog').fadeIn(delay * 2);
+			$body.append('<div class="' + fogClass + '"></div>');
+			$('.' + fogClass).fadeIn(delay * 2);
 
 			$(document).on('keydown', closeOnEsc);
 
@@ -98,12 +99,12 @@
 
 			$inputs.val('');
 			$wrap.removeClass(wrapVisClass);
-			$('.popup__fog').fadeOut(delay);
+			$('.' + fogClass).fadeOut(delay);
 
 			setTimeout(function() {
 				$popup.removeClass(popupVisClass);
 				$body.removeClass(bodyNoScrollClass);
-				$('.popup__fog').remove();
+				$('.' + fogClass).remove();
 			}, delay);
 		}
 	}

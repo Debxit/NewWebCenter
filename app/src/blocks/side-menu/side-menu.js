@@ -1,33 +1,95 @@
-// open and close side menu
-$(".menu-icon").click(function () {
-    $('.side-menu').toggleClass('open');
-    $(".menu-icon").toggleClass('active');
-    $('body').toggleClass('shadow');
+/* Боковое меню */
+(function() {
+	var
+		$sideMenu = $('.side-menu'),
+		$headerToggle = $(".header__menu-icon"),
+		$sideToggle = $(".side-menu__menu-icon"),
+		$subItems = $('.nav__item_toggle'),
+		$body = $('body'),
+		fogClass = 'fog',
+		delay = 200;
 
-    //close menu on body click
-    $(document).on('click', function (e) {
-        var target = e.target;
+	// Работа гамбургеров
+	$headerToggle.on('click', function() {
+		toggleSideMenu('open');
+		return false;
+	});
+	$sideToggle.on('click', function() {
+		toggleSideMenu('close');
+		toggleSubMenu('close', $subItems);
+		return false;
+	});
+	// =====
 
-        if ($(target).hasClass("side-menu") || $(target).hasClass("bar") ||
-            $(target).hasClass(".menu-icon") || $(target).hasClass("nav") ||
-            $(target).hasClass("nav__item")|| $(target).hasClass("nav__item a")) {
-            return false;
-        }
-        $('.menu-icon').removeClass("active");
-        $('.side-menu').removeClass('open');
-        $('body').removeClass("shadow");
+	// Закрывание меню
+	$(document).on('click', function(e) {
+		var target = e.target;
 
-        $('.nav__item_toggle').removeClass('open').find('.nav').slideUp();
+		if (!$sideMenu.hasClass('open') || !$(target).hasClass('fog')) return;
 
-    });
+		toggleSideMenu('close');
+		toggleSubMenu('close', $subItems);
+	});
+	// =====
 
-    return false;
-});
+	// Работа подменю
+	$subItems.children('a').on('click', function() {
+		var $item = $(this).parent();
 
-// open and close submenu
+		if ($item.hasClass('open')) {
+			toggleSubMenu('close', $item);
+		} else {
+			toggleSubMenu('open', $item);
+		}
 
-$('.nav__item_toggle>a').on('click',function(){
-    $(this).parent().toggleClass('open').find('.nav').slideToggle();
-    return false;
-});
+		return false;
+	});
+	// =====
 
+	function toggleSideMenu(action) {
+
+		if (action == 'open') {
+			$sideMenu.addClass('open');
+			$headerToggle.addClass('active');
+			$sideToggle.addClass('active');
+			$body.addClass('noscroll');
+
+			$body.append('<div class="' + fogClass + '"></div>');
+			$('.' + fogClass).fadeIn(delay * 2);
+		}
+
+		if (action == 'close') {
+			$sideMenu.removeClass('open');
+			$headerToggle.removeClass('active');
+			$sideToggle.removeClass('active');
+
+			$('.' + fogClass).fadeOut(delay);
+			setTimeout(function() {
+				$('.' + fogClass).remove();
+				$body.removeClass('noscroll');
+			}, delay);
+		}
+	}
+	function toggleSubMenu(action, object) {
+
+		object.each(function() {
+			var $this = $(this);
+
+			if (action == 'open') {
+				$this
+					.addClass('open')
+					.find('.nav')
+					.slideDown();
+			}
+
+			if (action == 'close') {
+				$this
+					.removeClass('open')
+					.find('.nav')
+					.slideUp();
+			}
+		});
+	}
+}());
+
+/* ===== */

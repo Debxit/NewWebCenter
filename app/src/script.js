@@ -23,4 +23,5 @@ $(document).ready(function () {
 	@@include('blocks/feedback/feedback.js')
 	@@include('blocks/partners/partners.js')
 	@@include('blocks/effective-offer/effective-offer.js')
+	@@include('blocks/fancybox.js')
 });

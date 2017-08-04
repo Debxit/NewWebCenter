@@ -12,21 +12,6 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 
-	&.shadow {
-		.header, .footer, .main {
-			&:before {
-				content: '';
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				position: absolute;
-				z-index: 15;
-				background: rgba(0, 0, 0, 0.3);
-			}
-		}
-	}
-
 	&.noscroll {
 		overflow: hidden;
 		padding-right: 17px;
