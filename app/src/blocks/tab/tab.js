@@ -180,7 +180,6 @@ function moveTabs(toggle) {
 	});
 }
 
-//TODO Сделать перетаскивание ползунка мышкой
 //TODO Сделать переключение слайдов по таймеру
 //TODO Сделать поддержку быстрого переключения
 function moveLine(tabTitle, inner) {

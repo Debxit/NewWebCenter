@@ -11,6 +11,8 @@ $(window).on('scroll resize', function() {
 	setPricePos();
 });
 
+$priceNext.perfectScrollbar();
+
 function setPricePos() {
 	if (!$price.length) return;
 
@@ -27,9 +29,7 @@ function setPricePos() {
 		priceHeight = $price.outerHeight(true) + 15; // Высота блока стоимости, включая margin
 
 	if (priceTop < docTop) { // Если блок стоимости ВЫШЕ верха окна
-		if (!$price.hasClass(priceFixed)) {
-			$price.addClass(priceFixed);
-		}
+		$price.addClass(priceFixed);
 		setNextPos(true);
 	} else {
 		if (priceTop <= priceParentTop) {
@@ -39,18 +39,22 @@ function setPricePos() {
 			setNextPos(true);
 		}
 	}
+
+	$priceNext.perfectScrollbar('update');
 	
 	function setNextPos(toggle) {
 		if (toggle) {
 			$priceNext.css({
 				'position': 'fixed',
 				'width': priceParentWidth,
+				'height': window.innerHeight - priceHeight - $('.footer').outerHeight(),
 				'top': priceHeight
 			});
 		} else {
 			$priceNext.css({
 				'position': '',
 				'width': '',
+				'height': '',
 				'top': ''
 			});
 		}
