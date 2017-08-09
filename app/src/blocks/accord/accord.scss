@@ -9,7 +9,8 @@
 		color: $color-main;
 		opacity: .5;
 		transform: scaleY(1.2);
-		pointer-events: none;
+		user-select: none;
+		cursor: default;
 
 		@include screen-sm() {
 			display: none;
@@ -114,7 +115,7 @@
 	}
 
 	&__desc {
-		margin: 0 0 10px;
+		margin: 0 0 5px;
 		line-height: 1.4;
 
 		&:last-child {
@@ -211,14 +212,14 @@
 	&__sub-title {
 		display: block;
 		font-weight: 500;
-		margin: 0;
+		margin: 0 0 5px;
 		transition: $duration / 2 ease;
 		line-height: 1.4;
 	}
 
 	&__sub-desc {
 		display: block;
-		margin: 0 0 10px;
+		margin: 0 0 5px;
 		line-height: 1.4;
 
 		&:last-child {
