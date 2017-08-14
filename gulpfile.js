@@ -74,7 +74,10 @@ gulp.task('html', function () {
 gulp.task('sass', function() {
 	return gulp.src([ // Берём источник
 		app + 'src/style.scss',
-		app + 'src/landing/kf/kf.scss'
+		app + 'src/landing/kf-sklad/kf-sklad.scss',
+		app + 'src/landing/kf-elite/kf-elita.scss',
+		app + 'src/landing/kf-street-retail/kf-street-retail.scss',
+		app + 'src/landing/kf-office-rent/kf-office-rent.scss'
 	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import

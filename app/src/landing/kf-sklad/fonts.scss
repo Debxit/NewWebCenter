@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "GothamPro";
+	src: url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.eot");
+	src: url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.woff") format("woff"),
+	url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "GothamPro";
+	src: url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.eot");
+	src: url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.woff") format("woff"),
+	url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "GothamPro";
+	src: url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.eot");
+	src: url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.woff") format("woff"),
+	url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}

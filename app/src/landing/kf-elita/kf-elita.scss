@@ -2,6 +2,11 @@
 @import url('variables.scss');
 @import url('fonts.scss');
 
+::selection {
+	background-color: $color-land-dark;
+	color: white;
+}
+
 .land {
 	font-family: $font-land;
 	color: $color-land-dark;
@@ -25,7 +30,7 @@
 		margin-bottom: 4em;
 
 		&_first {
-			background: url($path + 'img/landing/kf/bg.jpg') no-repeat 50% 0;
+			background: url($path + 'img/landing/kf-sklad/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
@@ -70,26 +75,26 @@
 	}
 
 	&__title {
-		font-size: 67px;
-		font-weight: 700;
+		font-size: 60px;
+		font-weight: 600;
 		color: $color-land;
 		text-align: center;
 		line-height: 1.1;
 
 		@include screen-lg() {
-			font-size: 60px;
-		}
-
-		@include screen-md() {
 			font-size: 54px;
 		}
 
-		@include screen-sm() {
+		@include screen-md() {
 			font-size: 47px;
 		}
 
-		@include screen-xs() {
+		@include screen-sm() {
 			font-size: 35px;
+		}
+
+		@include screen-xs() {
+			font-size: 30px;
 		}
 
 		&::after {
@@ -158,8 +163,27 @@
 		}
 	}
 
+	&__link-wrap {
+		font-size: 24px;
+		text-align: center;
+		margin: 0;
+
+		@include screen-lg() {
+			font-size: 22px;
+		}
+
+		@include screen-md() {
+			font-size: 19px;
+		}
+
+		@include screen-sm() {
+			font-size: 17px;
+		}
+	}
+
 	&__link {
 		color: $color-land;
+		display: inline-block;
 
 		&:hover,
 		&:focus {
@@ -169,7 +193,7 @@
 
 	&__gray-title {
 		color: $color-land-gray;
-		font-weight: 700;
+		font-weight: 600;
 		text-transform: uppercase;
 
 		&_fog {
@@ -236,7 +260,7 @@
 			margin-bottom: 1em;
 		}
 
-		&_semibold {
+		&_bold {
 			font-weight: 700;
 		}
 
