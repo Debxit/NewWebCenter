@@ -4,6 +4,7 @@
 @@include('../libs/velocity/velocity.js')
 @@include('../libs/perfect-scrollbar/js/perfect-scrollbar.jquery.js')
 @@include('../libs/fancybox/dist/jquery.fancybox.js')
+@@include('../libs/jquery.maskedinput/dist/jquery.maskedinput.js')
 
 /* jQuery UI */
 @@include('../libs/jquery-ui/ui/version.js')
