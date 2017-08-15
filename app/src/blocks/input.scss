@@ -8,20 +8,19 @@
 	padding: 5px 0;
 	-webkit-appearance: none;
 	border-radius: 0;
+	opacity: 1;
+
+	@include input-autofill($color-main);
 
 	@include input-placeholder {
 		color: $color-main;
-		transition: text-indent $duration ease, opacity $duration ease;
+		transition: $duration ease all;
 	}
-
-	@include input-autofill($color-main);
 
 	&:focus {
 
 		@include input-placeholder {
 			text-indent: 20px;
-			opacity: 0;
-			transition: text-indent $duration ease, opacity $duration ease $duration;
 		}
 	}
 
