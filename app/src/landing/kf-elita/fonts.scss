@@ -1,29 +1,35 @@
 @font-face {
-	font-family: "GothamPro";
-	src: url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.eot");
-	src: url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
-	url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.woff") format("woff"),
-	url($path + "fonts/landings/gothampro/GothamProRegular/GothamProRegular.ttf") format("truetype");
-	font-style: normal;
+	font-family: 'Ubuntu';
+	src: url($path + 'fonts/landings/ubuntu/ubuntu-c.eot');
+	src: url($path + 'fonts/landings/ubuntu/ubuntu-c.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landings/ubuntu/ubuntu-c.woff2') format('woff2'),
+	url($path + 'fonts/landings/ubuntu/ubuntu-c.woff') format('woff'),
+	url($path + 'fonts/landings/ubuntu/ubuntu-c.ttf') format('truetype'),
+	url($path + 'fonts/landings/ubuntu/ubuntu-c.svg#ubuntu_condensedregular') format('svg');
 	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: "GothamPro";
-	src: url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.eot");
-	src: url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
-	url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.woff") format("woff"),
-	url($path + "fonts/landings/gothampro/GothamProMedium/GothamProMedium.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 600;
-}
-
-@font-face {
-	font-family: "GothamPro";
-	src: url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.eot");
-	src: url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
-	url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.woff") format("woff"),
-	url($path + "fonts/landings/gothampro/GothamProBold/GothamProBold.ttf") format("truetype");
-	font-style: normal;
+	font-family: 'Museo';
+	src: url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.eot');
+	src: url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.woff2') format('woff2'),
+	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.woff') format('woff'),
+	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.ttf') format('truetype'),
+	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.svg#museo_cyrl700') format('svg');
 	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Philosopher';
+	src: url($path + 'fonts/landings/philosopher/philosopher-regular.eot');
+	src: url($path + 'fonts/landings/philosopher/philosopher-regular.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landings/philosopher/philosopher-regular.woff2') format('woff2'),
+	url($path + 'fonts/landings/philosopher/philosopher-regular.woff') format('woff'),
+	url($path + 'fonts/landings/philosopher/philosopher-regular.ttf') format('truetype'),
+	url($path + 'fonts/landings/philosopher/philosopher-regular.svg#philosopher-regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }

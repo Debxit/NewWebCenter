@@ -3,8 +3,8 @@
 @import url('fonts.scss');
 
 ::selection {
-	background-color: $color-land-dark;
-	color: white;
+	background-color: $color-land-gray;
+	color: $color-land-dark;
 }
 
 .land {
@@ -30,7 +30,7 @@
 		margin-bottom: 4em;
 
 		&_first {
-			background: url($path + 'img/landing/kf-sklad/bg.jpg') no-repeat 50% 0;
+			background: url($path + 'img/landing/kf-elita/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
@@ -62,6 +62,42 @@
 		margin-top: 20vh;
 	}
 
+	&__main-title {
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+		color: white;
+		margin: 1em 0;
+		font-weight: 700;
+		font-size: 44px;
+		font-family: $font-land-second;
+
+		@include screen-lg() {
+			font-size: 37px;
+		}
+
+		@include screen-md() {
+			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 25px;
+		}
+
+		@include screen-xs() {
+			font-size: 20px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 4px;
+			margin-top: 10px;
+			background-color: $color-land;
+		}
+	}
+
 	&__right-img {
 		position: absolute;
 		bottom: 0;
@@ -74,12 +110,21 @@
 		}
 	}
 
+	&__title-wrap {
+		text-align: center;
+	}
+
 	&__title {
 		font-size: 60px;
-		font-weight: 600;
-		color: $color-land;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $color-land-dark;
 		text-align: center;
 		line-height: 1.1;
+		font-family: $font-land-third;
+		position: relative;
+		display: inline-block;
+		margin-right: 50px;
 
 		@include screen-lg() {
 			font-size: 54px;
@@ -95,15 +140,30 @@
 
 		@include screen-xs() {
 			font-size: 30px;
+			margin-right: 30px;
 		}
 
 		&::after {
 			content: '';
-			width: 100px;
-			height: 4px;
-			background: $color-land;
-			display: block;
-			margin: .8em auto 0;
+			display: inline-block;
+			width: 33px;
+			height: 95px;
+			background: url($path + 'img/landing/kf-elita/line.png');
+			background-size: cover;
+			position: absolute;
+			top: 50%;
+			right: -50px;
+			transform: translateY(-50%);
+
+			@include screen-sm() {
+				height: 65px;
+				right: -40px;
+			}
+
+			@include screen-xs() {
+				height: 55px;
+				right: -30px;
+			}
 		}
 	}
 
@@ -193,7 +253,7 @@
 
 	&__gray-title {
 		color: $color-land-gray;
-		font-weight: 600;
+		font-weight: 500;
 		text-transform: uppercase;
 
 		&_fog {
@@ -204,9 +264,10 @@
 
 	&__example-title {
 		font-size: 33px;
-		color: $color-land;
+		color: $color-land-dark;
 		font-weight: 700;
 		text-transform: uppercase;
+		font-family: $font-land-second;
 
 		@include screen-lg() {
 			font-size: 30px;
@@ -224,6 +285,7 @@
 
 	&__example-text {
 		text-align: justify;
+		text-transform: uppercase;
 	}
 
 	&__font-name {
@@ -243,6 +305,7 @@
 		position: relative;
 		background: white;
 		display: inline-block;
+		font-family: $font-land-second;
 
 		@include screen-lg() {
 			font-size: 46px;
@@ -260,8 +323,8 @@
 			margin-bottom: 1em;
 		}
 
-		&_bold {
-			font-weight: 700;
+		&_second {
+			font-family: $font-land-third;
 		}
 
 		&_line_red,
