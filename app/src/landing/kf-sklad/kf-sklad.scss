@@ -308,8 +308,8 @@
 			font-weight: 700;
 		}
 
-		&_line_red,
-		&_line_gray {
+		&_line_first,
+		&_line_second {
 
 			&::before,
 			&::after {
@@ -345,7 +345,7 @@
 			}
 		}
 
-		&_line_red {
+		&_line_first {
 
 			&::before,
 			&::after {
@@ -365,7 +365,7 @@
 			}
 		}
 
-		&_line_gray {
+		&_line_second {
 
 			&::before,
 			&::after {
