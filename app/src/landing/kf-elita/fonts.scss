@@ -1,35 +1,35 @@
 @font-face {
 	font-family: 'Ubuntu';
-	src: url($path + 'fonts/landings/ubuntu/ubuntu-c.eot');
-	src: url($path + 'fonts/landings/ubuntu/ubuntu-c.eot?#iefix') format('embedded-opentype'),
-	url($path + 'fonts/landings/ubuntu/ubuntu-c.woff2') format('woff2'),
-	url($path + 'fonts/landings/ubuntu/ubuntu-c.woff') format('woff'),
-	url($path + 'fonts/landings/ubuntu/ubuntu-c.ttf') format('truetype'),
-	url($path + 'fonts/landings/ubuntu/ubuntu-c.svg#ubuntu_condensedregular') format('svg');
+	src: url($path + 'fonts/landing/ubuntu/ubuntu-c.eot');
+	src: url($path + 'fonts/landing/ubuntu/ubuntu-c.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landing/ubuntu/ubuntu-c.woff2') format('woff2'),
+	url($path + 'fonts/landing/ubuntu/ubuntu-c.woff') format('woff'),
+	url($path + 'fonts/landing/ubuntu/ubuntu-c.ttf') format('truetype'),
+	url($path + 'fonts/landing/ubuntu/ubuntu-c.svg#ubuntu_condensedregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Museo';
-	src: url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.eot');
-	src: url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.eot?#iefix') format('embedded-opentype'),
-	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.woff2') format('woff2'),
-	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.woff') format('woff'),
-	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.ttf') format('truetype'),
-	url($path + 'fonts/landings/museo/exljbris_-_museo_cyrl_700.svg#museo_cyrl700') format('svg');
+	src: url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.eot');
+	src: url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.woff2') format('woff2'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.woff') format('woff'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.ttf') format('truetype'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.svg#museo_cyrl700') format('svg');
 	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Philosopher';
-	src: url($path + 'fonts/landings/philosopher/philosopher-regular.eot');
-	src: url($path + 'fonts/landings/philosopher/philosopher-regular.eot?#iefix') format('embedded-opentype'),
-	url($path + 'fonts/landings/philosopher/philosopher-regular.woff2') format('woff2'),
-	url($path + 'fonts/landings/philosopher/philosopher-regular.woff') format('woff'),
-	url($path + 'fonts/landings/philosopher/philosopher-regular.ttf') format('truetype'),
-	url($path + 'fonts/landings/philosopher/philosopher-regular.svg#philosopher-regular') format('svg');
+	src: url($path + 'fonts/landing/philosopher/philosopher-regular.eot');
+	src: url($path + 'fonts/landing/philosopher/philosopher-regular.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landing/philosopher/philosopher-regular.woff2') format('woff2'),
+	url($path + 'fonts/landing/philosopher/philosopher-regular.woff') format('woff'),
+	url($path + 'fonts/landing/philosopher/philosopher-regular.ttf') format('truetype'),
+	url($path + 'fonts/landing/philosopher/philosopher-regular.svg#philosopher-regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

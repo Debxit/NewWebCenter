@@ -6,3 +6,4 @@ npm-debug.log
 /app/img/backup/
 /dist/
 /production/
+/ftp/
