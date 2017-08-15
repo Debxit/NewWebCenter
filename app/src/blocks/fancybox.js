@@ -1,5 +1,3 @@
 /* Fancybox */
-$("a.fancybox").fancybox({
-	// 'hideOnContentClick': true
-});
+$("a.fancybox").fancybox();
 /* ===== */

@@ -1,12 +1,6 @@
-
 /* set pages counter*/
 $('.feedbacks__slider').on('init', function (event,slick) {
     var all = slick.slideCount;
-    // if (all < 10) {
-    //     all = '0' + all;
-    // }
-    console.log('init');
-    console.log(all);
     $('.feedbacks__pages .pages__all').html(all);
 });
 
