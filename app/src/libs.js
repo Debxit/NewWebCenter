@@ -29,5 +29,5 @@
 /* ========= */
 
 $(document).ready(function () {
-    @@include('../libs/goodshare.js/goodshare.min.js')
+    @@include('../libs/goodshare/goodshare.min.js')
 });
