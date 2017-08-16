@@ -9,14 +9,38 @@
 		display: none;
 	}
 
-	&__spb,
-	&__msc {
+	&__item {
 		display: inline-block;
 		padding: 15px;
-		transform: scaleY(1.2);
+
 		@include screen-md() {
 			padding: 4px;
 			display: block;
 		}
+	}
+
+	&__link {
+		display: inline-block;
+		border-bottom: 1px solid transparent;
+		transition: $duration ease;
+		line-height: 1.5;
+
+		@include screen-md() {
+			line-height: 1;
+		}
+
+		&:hover {
+			border-bottom-color: $color-main;
+		}
+	}
+
+	&__link-i {
+		transform: scaleY(1.2);
+		display: block;
+	}
+
+	&__city {
+		transform: scaleY(1.2);
+		display: inline-block;
 	}
 }
