@@ -46,13 +46,28 @@
 	});
 	// =====
 
+	// Ресайз
+	$(window).on('resize', function() {
+		if (!$sideMenu.hasClass('open')) return;
+
+		toggleBodyNoScroll(false);
+
+		if (hasScroll('Height')) {
+			toggleBodyNoScroll();
+		}
+	});
+	// =====
+
 	function toggleSideMenu(action) {
 
 		if (action == 'open') {
 			$sideMenu.addClass('open');
 			$headerToggle.addClass('active');
 			$sideToggle.addClass('active');
-			$body.addClass('noscroll');
+
+			if (hasScroll('Height')) {
+				toggleBodyNoScroll();
+			}
 
 			$body.append('<div class="' + fogClass + '"></div>');
 			$('.' + fogClass).fadeIn(delay * 2);
@@ -66,7 +81,7 @@
 			$('.' + fogClass).fadeOut(delay);
 			setTimeout(function() {
 				$('.' + fogClass).remove();
-				$body.removeClass('noscroll');
+				toggleBodyNoScroll(false);
 			}, delay);
 		}
 	}

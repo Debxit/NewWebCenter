@@ -2,8 +2,6 @@
 (function() {
 	var
 		$links = $('.js-btn_pop'),
-		$body = $('body'),
-		bodyNoScrollClass = 'noscroll',
 		popupVisClass = 'popup_visible',
 		wrapVisClass = 'popup__wrap_visible',
 		fogClass = 'fog',
@@ -47,10 +45,10 @@
 		});
 
 		if (isVisible) {
-			$body.removeClass(bodyNoScrollClass);
+			toggleBodyNoScroll(false);
 
 			if (hasScroll('Height')) {
-				$body.addClass(bodyNoScrollClass);
+				toggleBodyNoScroll();
 			}
 		}
 	});
@@ -77,10 +75,10 @@
 			$popup.addClass(popupVisClass);
 
 			if (hasScroll('Height')) {
-				$body.addClass(bodyNoScrollClass);
+				toggleBodyNoScroll();
 			}
 
-			$body.append('<div class="' + fogClass + '"></div>');
+			$('body').append('<div class="' + fogClass + '"></div>');
 			$('.' + fogClass).fadeIn(delay * 2);
 
 			$(document).on('keydown', closeOnEsc);
@@ -103,19 +101,10 @@
 
 			setTimeout(function() {
 				$popup.removeClass(popupVisClass);
-				$body.removeClass(bodyNoScrollClass);
+				toggleBodyNoScroll(false);
 				$('.' + fogClass).remove();
 			}, delay);
 		}
-	}
-
-	function hasScroll(a) { // Проверка наличия скролла на странице
-		var d = document,
-			b = d.body,
-			e = d.documentElement,
-			c = "client" + a;
-		a = "scroll" + a;
-		return /CSS/.test(d.compatMode)? (e[c]< e[a]) : (b[c]< b[a])
 	}
 }());
 /* ========== */

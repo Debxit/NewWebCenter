@@ -26,3 +26,5 @@ $(document).ready(function () {
 	@@include('blocks/fancybox.js')
 	@@include('blocks/input/input.js')
 });
+
+@@include('global/functions.js')
