@@ -81,7 +81,9 @@ gulp.task('sass', function() {
 		app + 'src/landing/kf-sklad/kf-sklad.scss',
 		app + 'src/landing/kf-elita/kf-elita.scss',
 		app + 'src/landing/kf-street-retail/kf-street-retail.scss',
-		app + 'src/landing/kf-office-rent/kf-office-rent.scss'
+		app + 'src/landing/kf-office-rent/kf-office-rent.scss',
+		app + 'src/landing/eva/eva.scss',
+		app + 'src/landing/markiza/markiza.scss'
 	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
