@@ -9,7 +9,7 @@
 
 .land {
 	font-family: $font-land;
-	font-weight: 300;
+	font-weight: normal;
 	color: $color-land-dark;
 	font-size: 22px;
 	line-height: 1.3;
@@ -31,7 +31,7 @@
 		margin-bottom: 4em;
 
 		&_first {
-			background: url($path + 'img/landing/kf-office-rent/bg.jpg') no-repeat 50% 0;
+			background: url($path + 'img/landing/eva/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
@@ -63,7 +63,7 @@
 	}
 
 	&__logo {
-		width: 43%;
+		width: 35%;
 		margin-top: 20vh;
 
 		@include screen-xs() {
@@ -73,28 +73,27 @@
 
 	&__main-title {
 		position: relative;
-		text-transform: uppercase;
 		z-index: 1;
 		color: white;
 		margin: 1em 0;
 		font-weight: 700;
-		font-size: 44px;
-		text-shadow: 0 0 3px #010101;
+		font-size: 50px;
+		text-shadow: 1px 1px 1px $color-land-dark;
 
 		@include screen-lg() {
-			font-size: 37px;
+			font-size: 44px;
 		}
 
 		@include screen-md() {
-			font-size: 30px;
+			font-size: 37px;
 		}
 
 		@include screen-sm() {
-			font-size: 25px;
+			font-size: 30px;
 		}
 
 		@include screen-xs() {
-			font-size: 20px;
+			font-size: 25px;
 		}
 	}
 
@@ -115,25 +114,26 @@
 	}
 
 	&__title {
-		font-weight: 300;
 		text-transform: uppercase;
 		color: $color-land-dark;
 		text-align: center;
 		line-height: 1.1;
 		position: relative;
 		display: block;
-		font-size: 50px;
+		font-size: 34px;
+		font-weight: bold;
+		margin: 4em 0 1.5em;
 
 		@include screen-lg() {
-			font-size: 44px;
-		}
-
-		@include screen-md() {
 			font-size: 37px;
 		}
 
-		@include screen-sm() {
+		@include screen-md() {
 			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 25px;
 		}
 	}
 
@@ -144,8 +144,9 @@
 	&__sm-title {
 		text-align: center;
 		font-size: 30px;
-		font-weight: 300;
+		font-weight: normal;
 		line-height: 1.2;
+		margin: 2em 0 1em;
 
 		@include screen-lg() {
 			font-size: 27px;
@@ -203,17 +204,21 @@
 	}
 
 	&__link {
-		color: $color-land;
 		display: inline-block;
+		border-bottom: 1px solid $color-land-gray;
+		color: $color-land-dark;
+		transition: none;
 
 		&:hover,
 		&:focus {
+			text-decoration: none;
+			color: $color-land;
 			border-bottom-color: $color-land;
 		}
 	}
 
 	&__gray-title {
-		font-weight: 300;
+		font-weight: normal;
 		text-transform: uppercase;
 
 		&_fog {
@@ -223,23 +228,18 @@
 	}
 
 	&__example-title {
-		font-size: 30px;
+		font-size: 23px;
 		color: $color-land-dark;
-		font-weight: 300;
+		font-weight: bold;
 		text-transform: uppercase;
-		margin: 1.2em 0;
+		margin: 1.9em 0 1.6em;
 
 		@include screen-lg() {
-			font-size: 26px;
+			margin: 1.6em 0;
 		}
 
 		@include screen-md() {
-			font-size: 23px;
-		}
-
-		@include screen-sm() {
-			font-size: 20px;
-			margin-top: 0;
+			margin: 1.4em 0 1.6em;
 		}
 	}
 
@@ -247,10 +247,15 @@
 		text-align: justify;
 		font-size: 14px;
 		margin-bottom: 10px;
-		line-height: 1.42857143;
+		line-height: 2;
 	}
 
 	&__font-name {
+		white-space: nowrap;
+
+		@include screen-sm(min) {
+			font-size: 80%;
+		}
 
 		@include screen-sm() {
 			margin-top: 0;
@@ -267,7 +272,7 @@
 		position: relative;
 		background: white;
 		display: inline-block;
-		font-weight: 300;
+		font-weight: normal;
 
 		@include screen-lg() {
 			font-size: 46px;
@@ -286,7 +291,8 @@
 		}
 
 		&_second {
-			font-weight: 700;
+			font-weight: 300;
+			font-family: $font-land-second;
 		}
 
 		&_line_first,
@@ -300,28 +306,8 @@
 				height: 170px;
 				transform-origin: 0 0;
 
-				@include screen-lg() {
-					height: 100px;
-				}
-
 				@include screen-sm() {
 					display: none;
-				}
-			}
-
-			&::before {
-				bottom: -170px;
-
-				@include screen-lg() {
-					bottom: -100px;
-				}
-			}
-
-			&::after {
-				bottom: -340px;
-
-				@include screen-lg() {
-					bottom: -200px;
 				}
 			}
 		}
@@ -330,18 +316,39 @@
 
 			&::before,
 			&::after {
-				background: $color-land-dark;
+				background: $color-land;
+				right: 0;
 			}
 
-			&::after {
-				transform: rotate(-74deg) scaleY(1.8);
+			&::before {
+				bottom: -170px;
+				transform: rotate(-45deg);
 
 				@include screen-lg() {
-					transform: rotate(-31deg) scaleY(1.8);
+
 				}
 
 				@include screen-md() {
-					transform: rotate(0deg) scaleY(0.8);
+					bottom: -50%;
+					transform: rotate(-135deg) scaleY(0.6);
+				}
+			}
+
+			&::after {
+				bottom: -290px;
+				right: -120px;
+				transform: rotate(-104deg) scaleY(4.27);
+
+				@include screen-lg() {
+					transform: rotate(-109deg) scaleY(3.10);
+				}
+
+				@include screen-md() {
+					bottom: auto;
+					left: auto;
+					top: 1px;
+					right: -72px;
+					transform: rotate(-98.4deg) scaleY(0.65);
 				}
 			}
 		}
@@ -350,11 +357,10 @@
 
 			&::before,
 			&::after {
-				background: $color-land;
-				bottom: auto;
+				background: $color-land-dark;
 
 				@include screen-md() {
-					bottom: auto;
+
 				}
 			}
 
@@ -364,34 +370,29 @@
 				transform: rotate(90deg);
 				height: 50px;
 
-				@include screen-lg() {
-					right: -100px;
-				}
-
 				@include screen-md() {
 					right: auto;
 					left: 0;
-					height: 50px;
+					top: 0;
+					transform: rotate(135deg);
 				}
 			}
 
 			&::after {
 				top: 50%;
 				right: -50px;
-				bottom: auto;
-				transform: rotate(-81deg) scaleY(1.9);
+				transform: rotate(-90deg) scaleY(2.03);
 				margin-top: 1px;
 
 				@include screen-lg() {
-					right: -100px;
-					transform: rotate(-52deg) scaleY(0.9);
-					bottom: auto;
+					transform: rotate(-87deg) scaleY(0.85);
 				}
 
 				@include screen-md() {
 					right: auto;
-					left: -50px;
-					transform: rotate(174deg) scaleY(3.9);
+					left: -35px;
+					top: -35px;
+					transform: rotate(-185.2deg) scaleY(1.83);
 				}
 			}
 		}
@@ -413,6 +414,11 @@
 		left: 50%;
 		margin-top: -31px;
 		margin-left: -31px;
+		background: $color-land;
+
+		&_second {
+			background: $color-land-dark;
+		}
 	}
 
 	&__fog-logo {
