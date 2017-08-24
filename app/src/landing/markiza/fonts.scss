@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansSemiBold/OpenSansSemiBold.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansSemiBold/OpenSansSemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: 600;
+}
