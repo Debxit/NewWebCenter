@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url($path + 'fonts/landing/playfairdisplay/playfairdisplay-regular.woff2') format('woff2'),
+	url($path + 'fonts/landing/playfairdisplay/playfairdisplay-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url($path + 'fonts/landing/playfairdisplay/playfairdisplay-italic.woff2') format('woff2'),
+	url($path + 'fonts/landing/playfairdisplay/playfairdisplay-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
