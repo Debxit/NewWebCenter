@@ -8,11 +8,19 @@ $('.blog-slider').slick({
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    appendArrows: $(".blog-slider-wrap"),
     responsive: [
         {
             breakpoint: 767,
             settings: {
-                arrows: false,
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                adaptiveHeight: true,
+                arrows: false
             }
         }
     ]
