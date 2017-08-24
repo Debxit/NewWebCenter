@@ -1,10 +1,13 @@
-.blog-slider {
-	padding: 0 6%;
 
-	@include screen-xs(){
-		padding: 0 ;
+.blog-slider-wrap {
+	padding: 0 6%;
+	position: relative;
+
+	@include screen-xs() {
+		padding: 0;
 		margin-bottom: 25px;
 	}
+
 	&:before {
 		content: '';
 		width: 170px;
@@ -15,16 +18,17 @@
 		left: 4%;
 		top: -4%;
 
-		@include screen-sm(){
+		@include screen-sm() {
 			left: 4%;
 			top: -2%;
 		}
-		@include screen-xs(){
+		@include screen-xs() {
 			display: none;
 		}
-
 	}
+}
 
+.blog-slider {
 	&__item {
 		outline: none;
 		height: 100%;
@@ -46,31 +50,33 @@
 				padding: 15px;
 			}
 		}
-
-		@include screen-sm(){
+		@include screen-md() {
 			width: 100%;
-			position: relative;
+			height: 50%;
+		}
+		@include screen-sm() {
+			width: 100%;
 			padding-bottom: 60%;
 			margin-bottom: 15px;
-
-			.preview {
-				position: absolute;
-				height: 100%;
-				width:100%;
-			}
 		}
-
-
 
 	}
 	&__small-block {
 		width: 30%;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 
-		@include screen-sm(){
-			margin-bottom: 15px;
+		@include screen-md() {
+			width: 100%;
+			height: 50%;
+			flex-direction: row;
 		}
-		@include screen-xs(){
+		@include screen-sm() {
+			margin-bottom: 15px;
+			display: block;
+		}
+		@include screen-xs() {
 			margin-bottom: 0;
 		}
 		.preview {
@@ -93,7 +99,7 @@
 			font-size: 0;
 			text-align: justify;
 
-			&:after{
+			&:after {
 				width: 100%;
 				height: 0px;
 				visibility: hidden;
@@ -104,12 +110,63 @@
 		}
 
 	}
+	&__half-block {
+		width: 50%;
+		height: 100%;
+
+		@include screen-md() {
+			width: 100%;
+			height: 50%;
+		}
+		@include screen-sm() {
+			padding-bottom: 60%;
+			margin-bottom: 15px;
+		}
+		.preview {
+			padding: 45px 30px;
+
+			&:before {
+				background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(51, 75, 97, 0), rgba(0, 0, 0, 0.6));
+			}
+			@include screen-md() {
+				padding: 30px;
+			}
+
+			@include screen-xs() {
+				padding: 15px;
+			}
+		}
+	}
+	&__block {
+		width: 100%;
+		height: 100%;
+		padding: 0 ;
+
+		@include screen-sm() {
+			padding-bottom: 60%;
+			margin-bottom: 15px;
+		}
+
+		.preview {
+			padding: 45px 30px;
+
+			&:before {
+				background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(51, 75, 97, 0), rgba(0, 0, 0, 0.6));
+			}
+			@include screen-md() {
+				padding: 30px;
+			}
+			@include screen-xs() {
+				padding: 15px;
+			}
+		}
+	}
 	&__small-block-first, &__small-block-second {
 		width: 100%;
 		height: 50%;
 		text-align: left;
 
-		@include screen-sm(){
+		@include screen-sm() {
 			width: calc(50% - 7.5px);
 			position: relative;
 			padding-bottom: 50%;
@@ -118,7 +175,7 @@
 			.preview {
 				position: absolute;
 				height: 100%;
-				width:100%;
+				width: 100%;
 			}
 
 		}
@@ -133,16 +190,23 @@
 	&__small-block-first {
 		padding-bottom: 7.5px;
 
-		@include screen-sm(){
-
+		@include screen-md() {
+			width: 50%;
+			height: 100%;
+			padding-bottom: 0;
+			padding-right: 7.5px;
 		}
 	}
 	&__small-block-second {
 		padding-top: 7.5px;
-
-		@include screen-sm(){
-		padding-top: 0;
-
+		@include screen-md() {
+			width: 50%;
+			height: 100%;
+			padding-top: 0;
+			padding-left: 7.5px;
+		}
+		@include screen-sm() {
+			padding-top: 0;
 		}
 	}
 
@@ -205,16 +269,30 @@
 		height: 60vh;
 	}
 
-	@include screen-sm(){
-		 display: block;
+	@include screen-md() {
+		display: block;
+	}
+	@include screen-sm() {
 		height: auto;
 	}
 
 	& > div:first-child {
-		padding-right: 15px;
+		@include screen-md(min) {
+			padding-right: 15px;
+		}
+		@media (max-width: 992px) and  (min-width: 768px) {
+			padding-bottom: 15px;
+		}
+	}
+	& > div{
+		position: relative;
 
 		@include screen-sm(){
-			padding-right: 0;
+			.preview {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -253,6 +331,7 @@
 	&__btn {
 		margin: 0;
 		flex-shrink: 0;
+		margin-left: 20px;
 
 		@include screen-lg() {
 			padding: 10px 15px;
@@ -278,13 +357,13 @@
 		&_big {
 			font-size: 25px;
 
-			@include screen-sm(){
+			@include screen-sm() {
 				font-size: 20px;
 			}
 
 		}
 
-		@include screen-xs(){
+		@include screen-xs() {
 			font-size: 17px;
 		}
 	}
@@ -295,7 +374,7 @@
 		font-weight: 400;
 		transform: scaleY(0.8);
 
-		@include screen-xs(){
+		@include screen-xs() {
 			display: none;
 		}
 	}
