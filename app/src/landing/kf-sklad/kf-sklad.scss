@@ -98,9 +98,15 @@
 		right: 0;
 		height: auto;
 		max-width: 50%;
+		max-height: 100%;
+		padding-top: 90px;
+
+		@include screen-xl() {
+			padding-top: 60px;
+		}
 
 		@include screen-xs() {
-			max-width: 100%;
+			max-width: 300px;
 		}
 	}
 
