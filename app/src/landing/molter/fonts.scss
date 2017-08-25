@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "Helvetica";
+	src: url($path + "fonts/landing/Helvetica/HelveticaRegular/HelveticaRegular.eot");
+	src: url($path + "fonts/landing/Helvetica/HelveticaRegular/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Helvetica/HelveticaRegular/HelveticaRegular.woff") format("woff"),
+	url($path + "fonts/landing/Helvetica/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Helvetica";
+	src: url($path + "fonts/landing/Helvetica/HelveticaBold/HelveticaBold.eot");
+	src: url($path + "fonts/landing/Helvetica/HelveticaBold/HelveticaBold.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Helvetica/HelveticaBold/HelveticaBold.woff") format("woff"),
+	url($path + "fonts/landing/Helvetica/HelveticaBold/HelveticaBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Helvetica";
+	src: url($path + "fonts/landing/Helvetica/HelveticaItalic/HelveticaItalic.eot");
+	src: url($path + "fonts/landing/Helvetica/HelveticaItalic/HelveticaItalic.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Helvetica/HelveticaItalic/HelveticaItalic.woff") format("woff"),
+	url($path + "fonts/landing/Helvetica/HelveticaItalic/HelveticaItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Helvetica";
+	src: url($path + "fonts/landing/Helvetica/HelveticaBoldItalic/HelveticaBoldItalic.eot");
+	src: url($path + "fonts/landing/Helvetica/HelveticaBoldItalic/HelveticaBoldItalic.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Helvetica/HelveticaBoldItalic/HelveticaBoldItalic.woff") format("woff"),
+	url($path + "fonts/landing/Helvetica/HelveticaBoldItalic/HelveticaBoldItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: bold;
+}
