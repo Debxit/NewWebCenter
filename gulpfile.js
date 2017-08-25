@@ -85,7 +85,8 @@ gulp.task('sass', function() {
 		app + 'src/landing/eva/eva.scss',
 		app + 'src/landing/markiza/markiza.scss',
 		app + 'src/landing/printer-copir/printer-copir.scss',
-		app + 'src/landing/rimi/rimi.scss'
+		app + 'src/landing/rimi/rimi.scss',
+		app + 'src/landing/reksshop/reksshop.scss'
 	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import

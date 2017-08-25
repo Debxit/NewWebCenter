@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegular/OpenSansRegular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansRegularItalic/OpenSansRegularItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansBold/OpenSansBold.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansBold/OpenSansBold.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansBold/OpenSansBold.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansBold/OpenSansBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url($path + 'fonts/landing/OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.eot');
+	src: url($path + 'fonts/landing/OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.eot?#iefix')format('embedded-opentype'),
+	url($path + 'fonts/landing/OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.woff') format('woff'),
+	url($path + 'fonts/landing/OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'RobotoSlab';
+	src: url($path + 'fonts/landing/robotoslab/robotoslab-regular.woff2') format('woff2'),
+	url($path + 'fonts/landing/robotoslab/robotoslab-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RobotoSlab';
+	src: url($path + 'fonts/landing/robotoslab/robotoslab-bold.woff2') format('woff2'),
+	url($path + 'fonts/landing/robotoslab/robotoslab-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
