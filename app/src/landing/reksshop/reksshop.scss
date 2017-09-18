@@ -116,7 +116,7 @@
 		bottom: 0;
 		right: 0;
 		height: auto;
-		max-width: 50%;
+		max-width: 90%;
 		max-height: 100%;
 		padding-top: 90px;
 
@@ -124,8 +124,12 @@
 			padding-top: 60px;
 		}
 
+		@include screen-sm() {
+			max-width: 80%;
+		}
+
 		@include screen-xs() {
-			max-width: 300px;
+			max-width: 100%;
 		}
 	}
 
