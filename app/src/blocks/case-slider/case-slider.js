@@ -3,14 +3,12 @@ var slickVar = {
 	infinite: false,
 	dots: true,
 	arrows: false,
-	dotsClass: 'portfolio__dots',
+	dotsClass: 'case-slider__dots',
 	fade: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	customPaging: function (slider, i) {
-		//   var thumb = $(slider.$slides[i]).data('thumb');
-		//   return '<a><img src="'+thumb+'"></a>';
-		return '<div class="portfolio-nav-item"> </div>';
+		return '<div class="case-slider__dot"> </div>';
 	},
 	responsive: [
 		{
@@ -48,20 +46,22 @@ $(window).on('resize', function() {
 
 function runSlick(toggle) {
 	if (toggle) {
-		$('.portfolio-slider').slick(slickVar);
+		$('.case-slider').slick(slickVar);
 	} else {
-		$('.portfolio-slider').slick('unslick');
+		$('.case-slider').slick('unslick');
 	}
 }
 
 
-$('.portfolio-slider').mousewheel(function (e) {
+$('.case-slider').on('mousewheel', function (e) {
+
+	if (hasScroll('Height')) return;
+
 	e.preventDefault();
 
 	if (e.deltaY < 0) {
 		$(this).slick('slickNext');
-	}
-	else {
+	} else {
 		$(this).slick('slickPrev');
 	}
 });
