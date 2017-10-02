@@ -1,5 +1,6 @@
 @import url('../../global/variables.scss');
 @import url('variables.scss');
+@import url('fonts.scss');
 
 ::selection {
 	background-color: $color-land;
@@ -7,6 +8,7 @@
 }
 
 .land {
+	font-family: $font-land;
 	color: $color-land-dark;
 	font-weight: 300;
 	font-size: 22px;
@@ -29,7 +31,7 @@
 		margin-bottom: 4em;
 
 		&_first {
-			background: url($path + 'img/landing/fas/bg.jpg') no-repeat 50% 0;
+			background: url($path + 'img/landing/printsburg/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
@@ -75,26 +77,31 @@
 		z-index: 1;
 		margin: 1.5em 0;
 		font-weight: normal;
-		font-size: 50px;
+		font-size: 45px;
 		color: $color-land;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, .75);
+		text-shadow: 1px 1px 0 $color-land-light;
 
 		@include screen-lg() {
-			font-size: 45px;
+			font-size: 38px;
 		}
 
 		@include screen-md() {
-			font-size: 40px;
+			font-size: 32px;
 		}
 
 		@include screen-sm() {
-			font-size: 35px;
+			font-size: 25px;
 			margin: 1em 0;
 		}
 
 		@include screen-xs() {
 			font-size: 25px;
 		}
+	}
+
+	&__main-title-i {
+		color: $color-land-light;
+		text-shadow: 1px 1px 0 $color-land;
 	}
 
 	&__right-img {
@@ -129,8 +136,9 @@
 		display: block;
 		font-size: 36px;
 		margin: 3em 0 1.5em;
-		font-weight: 500;
-		color: $color-land-dark;
+		text-transform: uppercase;
+		font-weight: normal;
+		color: $color-land-second;
 
 		@include screen-lg() {
 			font-size: 33px;
@@ -185,7 +193,7 @@
 			display: inline-block;
 			width: 10px;
 			height: 10px;
-			background: $color-land;
+			background: $color-land-light;
 			border-radius: 50%;
 			margin-right: 15px;
 			vertical-align: middle;
@@ -212,13 +220,13 @@
 
 	&__link {
 		display: inline-block;
-		color: $color-land;
-		border-bottom: 1px solid $color-land;
+		color: $color-land-second;
+		border-bottom: 1px solid $color-land-second;
 
 		&:hover,
 		&:focus {
-			color: $color-land;
-			border-bottom-color: transparent;
+			color: $color-land-light;
+			border-bottom-color: $color-land-light;
 		}
 	}
 
@@ -232,10 +240,11 @@
 	}
 
 	&__example-title {
-		font-size: 34px;
-		font-weight: 500;
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: normal;
 		margin: .9em 0 1em;
-		color: $color-land-dark;
+		color: $color-land-second;
 
 		@include screen-lg() {
 			font-size: 26px;
@@ -251,8 +260,8 @@
 	}
 
 	&__example-text {
-		font-size: 14px;
-		margin: 8px 0;
+		font-size: 17px;
+		margin: 15px 0;
 		font-weight: normal;
 
 		@include screen-xs() {
@@ -262,10 +271,7 @@
 
 	&__font-name {
 		white-space: nowrap;
-
-		@include screen-sm() {
-			margin-top: 0;
-		}
+		margin-top: 0;
 	}
 
 	&__rect-sm-img {
@@ -303,7 +309,7 @@
 		}
 
 		&_second {
-			font-weight: 500;
+			font-weight: bold;
 		}
 
 		&_line_first,
@@ -327,7 +333,7 @@
 
 			&::before,
 			&::after {
-				background: $color-land-dark;
+				background: $color-land-light;
 			}
 
 			&::before {
@@ -336,14 +342,14 @@
 
 			&::after {
 				bottom: -100px;
-				transform: rotate(-90deg) scaleY(9.25);
+				transform: rotate(-72.8deg) scaleY(9);
 
 				@include screen-lg() {
-					transform: rotate(-88.6deg) scaleY(5.32);
+					transform: rotate(-60.5deg) scaleY(5.42);
 				}
 
 				@include screen-md() {
-					transform: rotate(-103.6deg) scaleY(3.05);
+					transform: rotate(-61.6deg) scaleY(3);
 				}
 			}
 		}
@@ -376,18 +382,18 @@
 			&::after {
 				top: 50%;
 				right: -50px;
-				transform: rotate(-117.8deg) scaleY(4.12);
+				transform: rotate(-88.8deg) scaleY(4.52);
 				margin-top: 1px;
 
 				@include screen-lg() {
-					transform: rotate(-121.4deg) scaleY(1.85);
+					transform: rotate(-90deg) scaleY(0.6);
 				}
 
 				@include screen-md() {
 					right: auto;
 					left: -35px;
-					top: -35px;
-					transform: rotate(-177.9deg) scaleY(6.43);
+					top: -36px;
+					transform: rotate(-214.3deg) scaleY(2.27);
 				}
 			}
 		}
@@ -401,7 +407,7 @@
 		left: 50%;
 		margin-top: -31px;
 		margin-left: -31px;
-		background: $color-land-dark;
+		background: $color-land-light;
 
 		&_second {
 			background: $color-land;
@@ -409,7 +415,7 @@
 	}
 
 	&__fog-logo {
-		opacity: .05;
+		opacity: .04;
 		height: 50vh;
 		max-width: 100%;
 		position: absolute;
