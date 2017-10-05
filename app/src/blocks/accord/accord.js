@@ -10,7 +10,8 @@ var
 	$mainCostWrap = $('.main__price .price__cost'), // Фиксированный блок стоимости
 	$bottomCostWrap = $('.main__total-cost'), // Блок стоимости снизу
 	$inputHidPrice = $('#priceCalc'), // Скрытое поле ввода со значением стоимости
-	$inputHidValues = $('#valuesCalc'); // Скрытое поле ввода со значением выбранных пунктов
+	$inputHidValues = $('#valuesCalc'), // Скрытое поле ввода со значением выбранных пунктов
+	accordRunner = 'accord__runner'; // Класс бегунка
 
 // Работа аккордеона
 $accordHead.on('click', function() {
@@ -59,100 +60,140 @@ $accordHead.on('click', function() {
 // ==========
 
 // Работа чекбоксов
-$accordRadio.on('click', function() {
+$accordRadio.each(function() {
 	var
 		$this = $(this),
-		cost = +$mainCostWrap.text(); // Стоимость
+		$thisRunner = $this.next().next(),
+		runnerCost = 0; // Стоимость в бегунке
 
-	if ($this.hasClass(accordRadioChecked)) {
-		$this
-			.removeClass(accordRadioChecked)
-			.prop('checked', false);
+	$this.on('click', function() {
+		var
+			$this = $(this),
+			cost = +$mainCostWrap.text(); // Стоимость
 
-		cost -= +$this.val();
-	} else {
-
-		if ($this.attr('type') == 'radio') {
-			var $prev = $this.parent().parent().find('.' + accordRadioChecked); // Чекбокс, уже выбранный на момент клика
-
-			if ($prev.length) {
-				$prev
-					.removeClass(accordRadioChecked)
-					.prop('checked', false);
-
-				cost -= +$prev.val();
-			}
+		if ($thisRunner.hasClass('runner')) { // Если кликнули на кнопку с бегунком
+			runnerCost = parseInt($thisRunner.find('.runner__item').slider('value'));
+		} else {
+			runnerCost = 0;
 		}
 
-		$this
-			.addClass(accordRadioChecked)
-			.prop('checked', true);
+		if ($this.hasClass(accordRadioChecked)) { // Если кликнули на уже красную кнопку
+			$this
+				.removeClass(accordRadioChecked)
+				.prop('checked', false);
 
-		cost += +$this.val();
-	}
+			cost -= +$this.val();
+		} else {
 
-	$mainCostWrap.text(cost);
-	$bottomCostWrap.text(cost);
+			if ($this.attr('type') == 'radio') { // Если кликаем на радио, а не чекбоксы
+				var $prev = $this.parent().parent().find('.' + accordRadioChecked); // radio, уже выбранный на момент клика
 
-	/* Добавление стоимости в скрытое поле формы */
-	if ($inputHidPrice.length) {
-		$inputHidPrice.val(cost);
-	}
-	/* ===== */
+				if ($prev.length) { // Если уже есть выделенный радио-батон
 
-	/* Добавление выбранных значений в скрытое поле формы */
-	if ($inputHidValues.length) {
+					$prev
+						.removeClass(accordRadioChecked)
+						.prop('checked', false);
 
-		var values = {};
-		values.panel = [];
-
-		$accordPanels.each(function() {
-			var
-				$this = $(this),
-				inputs = $this.find('.' + accordRadio),
-				panelObj = {},
-				inputsArr = [];
-
-			inputs.each(function() {
-				if (!$(this).hasClass(accordRadioChecked)) return;
-				inputsArr.push(
-					$(this)
-						.parent()
-						.find('.accord__sub-title')
-						.text()
-				);
-			});
-
-			if (!inputsArr.length) return;
-
-			panelObj.panelTitle = $this.find('.accord__title').text();
-			panelObj.items = inputsArr;
-
-			values.panel.push(panelObj);
-		});
-
-		var str = '';
-
-		for (var i = 0; i < values.panel.length; i++) {
-			var thisObj = values.panel[i];
-
-			if (i) str += ' ';
-
-			str += thisObj.panelTitle + ': ';
-
-			for (var j = 0; j < thisObj.items.length; j++) {
-				if (thisObj.items[j + 1]) {
-					str += thisObj.items[j] + ', ';
-				} else {
-					str += thisObj.items[j] + '.';
+					cost -= +$prev.val();
 				}
 			}
+
+			$this
+				.addClass(accordRadioChecked)
+				.prop('checked', true);
+
+			cost += +$this.val();
 		}
 
-		$inputHidValues.val(str);
-	}
-	/* ===== */
+		$mainCostWrap.text(cost);
+		$bottomCostWrap.text(cost);
+
+		/* Добавление стоимости в скрытое поле формы */
+		if ($inputHidPrice.length) {
+			$inputHidPrice.val(cost);
+		}
+		/* ===== */
+
+		/* Добавление выбранных значений в скрытое поле формы */
+		if ($inputHidValues.length) {
+
+			var values = {};
+			values.panel = [];
+
+			$accordPanels.each(function() {
+				var
+					$this = $(this),
+					inputs = $this.find('.' + accordRadio),
+					panelObj = {},
+					inputsArr = [];
+
+				inputs.each(function() {
+					if (!$(this).hasClass(accordRadioChecked)) return;
+					inputsArr.push(
+						$(this)
+							.parent()
+							.find('.accord__sub-title')
+							.text()
+					);
+				});
+
+				if (!inputsArr.length) return;
+
+				panelObj.panelTitle = $this.find('.accord__title').text();
+				panelObj.items = inputsArr;
+
+				values.panel.push(panelObj);
+			});
+
+			var str = '';
+
+			for (var i = 0; i < values.panel.length; i++) {
+				var thisObj = values.panel[i];
+
+				if (i) str += ' ';
+
+				str += thisObj.panelTitle + ': ';
+
+				for (var j = 0; j < thisObj.items.length; j++) {
+					if (thisObj.items[j + 1]) {
+						str += thisObj.items[j] + ', ';
+					} else {
+						str += thisObj.items[j] + '.';
+					}
+				}
+			}
+
+			$inputHidValues.val(str);
+		}
+		/* ===== */
+	});
+
+	if (!$thisRunner.length) return;
+
+	// Работа бегунка
+	$thisRunner.find('.runner__item').on('slide', function(event, ui) {
+
+		var
+			$this = $(this);
+
+		setTimeout(function() {
+			var
+				prevValue = parseInt($this.prev().find('.runner__cost-val').attr('data-prev-value')),
+				value = parseInt($this.slider('value')),
+				diff = value - prevValue,
+				prev = $thisRunner.prev().prev();
+
+			if (prev.hasClass(accordRadioChecked)) {
+				$bottomCostWrap.text(parseInt($bottomCostWrap.text()) + diff);
+				$mainCostWrap.text(parseInt($mainCostWrap.text()) + diff);
+			}
+
+			prev.val(value);
+		}, 0);
+	});
+	// =====
 });
+
 // ==========
 
 // Появление и скрытие фиксированного блока стоимости

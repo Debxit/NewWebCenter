@@ -226,4 +226,12 @@
 			margin: 0;
 		}
 	}
+
+	&__runner {
+		margin-left: 4em;
+
+		@include screen-sm() {
+			margin-left: 35px;
+		}
+	}
 }

@@ -9,6 +9,7 @@ $(document).ready(function () {
 	@@include('blocks/logo/logo.js')
 	@@include('blocks/big-logo/big-logo.js')
 	@@include('blocks/side-menu/side-menu.js')
+	@@include('blocks/runner/runner.js')
 	@@include('blocks/accord/accord.js')
 	@@include('blocks/price/price.js')
 	@@include('blocks/customer/customer.js')

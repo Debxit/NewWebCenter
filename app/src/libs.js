@@ -26,6 +26,7 @@
 @@include('../libs/jquery-ui/ui/widgets/selectmenu.js')
 @@include('../libs/jquery-ui/ui/widgets/mouse.js')
 @@include('../libs/jquery-ui/ui/widgets/draggable.js')
+@@include('../libs/jquery-ui/ui/widgets/slider.js')
 /* ========= */
 
 $(document).ready(function () {
