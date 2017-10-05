@@ -1,14 +1,40 @@
 .footer {
-  height: 60px;
-
-  @include screen-xl() {
-    height: 45px;
-  }
+  padding: 10px 0;
 
   &__company{
     font-weight: 500;
+    width: 300px;
+
+    @include screen-lg() {
+      width: auto;
+    }
+
     @include screen-xs(){
       max-width: 160px;
+    }
+  }
+
+  &__notice {
+    font-size: 13px;
+    text-align: center;
+
+    @include screen-lg() {
+      order: 1;
+      margin: 10px auto 0;
+      width: 100%;
+    }
+
+    @include screen-xs() {
+      font-size: 11px;
+    }
+  }
+
+  &__socials {
+    width: 300px;
+    justify-content: flex-end;
+
+    @include screen-lg() {
+      width: auto;
     }
   }
 
@@ -17,6 +43,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
+
+    @include screen-lg() {
+      align-items: baseline;
+    }
+
+    @include screen-xs() {
+      align-items: center;
+    }
   }
 }

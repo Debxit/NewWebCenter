@@ -138,14 +138,10 @@
 
 	&__desc {
 		margin: 0 0 15px;
-		font-size: 13px;
+		font-size: 15px;
 		flex: auto;
 		overflow: hidden;
 		font-weight: 400;
-
-		@include screen-lg() {
-			font-size: 14px;
-		}
 	}
 
 	&__btn {
