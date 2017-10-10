@@ -15,7 +15,7 @@ $panBtn.on('click', function() {
 		.toggleClass(mapLight)
 		.toggleClass(mapRight);
 
-	if ($panBtn.text() == 'Открыть карту') {
+	if ($.trim($panBtn.text()) == 'Открыть карту') {
 		$panBtn.text('Закрыть карту');
 	} else {
 		$panBtn.text('Открыть карту');

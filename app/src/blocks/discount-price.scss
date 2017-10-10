@@ -1,11 +1,8 @@
 .discount {
-	width: 66.666666%;
+	width: 100%;
 	display: flex;
 	margin: 0 auto;
 
-	@include screen-lg(){
-		width: 100%;
-	}
 	@include screen-sm(){
 		flex-wrap: wrap;
 		justify-content: center;

@@ -9,6 +9,15 @@
 		position: relative;
 		margin: 0 5%;
 
+		@include screen-sm() {
+			flex-wrap: wrap;
+			margin-top: 15px;
+		}
+
+		@include screen-xs() {
+			flex-direction: column;
+		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -19,9 +28,9 @@
 			height: 1px;
 			width: 86%;
 			border-bottom: 1px dashed $red;
+
 			@include screen-sm() {
-				width: 100%;
-				left: 0;
+				display: none;
 			}
 		}
 
@@ -107,10 +116,6 @@
 				margin-bottom: 15px;
 				font-weight: 500;
 				transition: all .2s ease;
-
-				@include screen-sm() {
-					display: none;
-				}
 			}
 
 			&__circle {
@@ -122,6 +127,10 @@
 				border-radius: 15px;
 				background: #fff;
 				transition: all .2s ease;
+
+				@include screen-sm() {
+					display: none;
+				}
 
 				&:before, &:after {
 					content: '';
