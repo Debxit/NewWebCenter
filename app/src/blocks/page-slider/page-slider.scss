@@ -44,7 +44,6 @@
 
 				.dot {
 					&__item {
-						position: relative;
 						top: -5px;
 					}
 					&__circle {
@@ -101,7 +100,6 @@
 				cursor: pointer;
 
 				.dot__item {
-					position: relative;
 					top: -5px;
 					color: $red;
 				}
@@ -111,6 +109,7 @@
 		.dot {
 
 			&__item {
+				position: relative;
 				top: 0;
 				margin: 0 10px;
 				margin-bottom: 15px;

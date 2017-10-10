@@ -28,14 +28,14 @@
 
 	&__section {
 		position: relative;
-		margin-bottom: 4em;
+		margin-bottom: 2em;
 
 		&_first {
 			background: url($path + 'img/landing/markiza/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
-			margin-bottom: 4em;
+			margin-bottom: 3em;
 
 			@include screen-xl() {
 				margin-top: -60px;
@@ -118,7 +118,7 @@
 
 	&__title-wrap {
 		text-align: center;
-		margin: 4em 0 2.5em;
+		margin: 2em 0 1.5em;
 	}
 
 	&__title {
@@ -185,7 +185,7 @@
 	&__sm-title {
 		font-size: 28px;
 		line-height: 1.5;
-		margin: 2em 0 1em;
+		margin: 1em 0 .5em;
 		font-weight: 400;
 
 		@include screen-lg() {
@@ -193,11 +193,11 @@
 		}
 
 		@include screen-md() {
-			font-size: 24px;
+			font-size: 22px;
 		}
 
 		@include screen-sm() {
-			font-size: 22px;
+			font-size: 19px;
 		}
 
 		&::after {

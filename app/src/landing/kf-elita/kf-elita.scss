@@ -27,14 +27,14 @@
 
 	&__section {
 		position: relative;
-		margin-bottom: 4em;
+		margin-bottom: 2em;
 
 		&_first {
 			background: url($path + 'img/landing/kf-elita/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
-			margin-bottom: 4em;
+			margin-bottom: 2em;
 
 			@include screen-xl() {
 				margin-top: -60px;
@@ -129,7 +129,7 @@
 	}
 
 	&__title {
-		font-size: 60px;
+		font-size: 50px;
 		font-weight: 500;
 		text-transform: uppercase;
 		color: $color-land-dark;
@@ -138,14 +138,14 @@
 		font-family: $font-land-third;
 		position: relative;
 		display: inline-block;
-		margin-right: 50px;
+		margin: .6em 50px .7em 0;
 
 		@include screen-lg() {
-			font-size: 54px;
+			font-size: 44px;
 		}
 
 		@include screen-md() {
-			font-size: 47px;
+			font-size: 37px;
 		}
 
 		@include screen-sm() {
@@ -190,6 +190,7 @@
 		font-size: 30px;
 		font-weight: 500;
 		line-height: 1.2;
+		margin: .5em 0;
 
 		@include screen-lg() {
 			font-size: 27px;

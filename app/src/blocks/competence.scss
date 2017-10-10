@@ -5,7 +5,7 @@
 	&__title {
 		font-size: 18px;
 		font-weight: 500;
-		margin: 0 0 15px;
+		margin: 0 0 10px;
 
 		@include screen-xs() {
 			text-align: center;
@@ -13,7 +13,7 @@
 	}
 
 	&__link {
-		margin: 0 0 20px;
+		margin: 0 0 10px;
 		max-width: 75%;
 		display: block;
 

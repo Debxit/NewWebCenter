@@ -26,14 +26,14 @@
 
 	&__section {
 		position: relative;
-		margin-bottom: 4em;
+		margin-bottom: 2em;
 
 		&_first {
 			background: url($path + 'img/landing/fas/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
-			margin-bottom: 4em;
+			margin-bottom: 2em;
 
 			@include screen-xl() {
 				margin-top: -60px;
@@ -128,7 +128,7 @@
 		position: relative;
 		display: block;
 		font-size: 36px;
-		margin: 3em 0 1.5em;
+		margin: 1.5em 0 .7em;
 		font-weight: 500;
 		color: $color-land-dark;
 
@@ -152,7 +152,7 @@
 	&__sm-title {
 		text-align: center;
 		font-size: 26px;
-		margin: 2em 0 1em;
+		margin: 1em 0 .5em;
 		font-weight: normal;
 		color: $color-land-dark;
 

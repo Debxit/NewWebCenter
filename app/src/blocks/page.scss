@@ -85,9 +85,5 @@
 		@include screen-xl() {
 			padding: 1% 0;
 		}
-
-		@include screen-sm() {
-			padding-top: 4%;
-		}
 	}
 }

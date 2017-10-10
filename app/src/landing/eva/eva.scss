@@ -28,14 +28,14 @@
 
 	&__section {
 		position: relative;
-		margin-bottom: 4em;
+		margin-bottom: 3em;
 
 		&_first {
 			background: url($path + 'img/landing/eva/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
-			margin-bottom: 4em;
+			margin-bottom: 3em;
 
 			@include screen-xl() {
 				margin-top: -60px;
@@ -128,7 +128,7 @@
 		display: block;
 		font-size: 34px;
 		font-weight: bold;
-		margin: 4em 0 1.5em;
+		margin: 0 0 .5em;
 
 		@include screen-lg() {
 			font-size: 37px;
@@ -152,7 +152,7 @@
 		font-size: 30px;
 		font-weight: normal;
 		line-height: 1.2;
-		margin: 2em 0 1em;
+		margin: 1em 0 .5em;
 
 		@include screen-lg() {
 			font-size: 27px;

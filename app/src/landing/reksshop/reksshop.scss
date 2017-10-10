@@ -28,14 +28,14 @@
 
 	&__section {
 		position: relative;
-		margin-bottom: 4em;
+		margin-bottom: 2em;
 
 		&_first {
 			background: url($path + 'img/landing/reksshop/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
-			margin-bottom: 4em;
+			margin-bottom: 3em;
 
 			@include screen-xl() {
 				margin-top: -60px;
@@ -144,7 +144,7 @@
 		display: block;
 		font-size: 42px;
 		font-weight: normal;
-		margin: 3em 0 1.5em;
+		margin: 1em 0 .5em;
 		font-family: $font-land;
 
 		@include screen-lg() {
@@ -169,7 +169,7 @@
 		text-align: center;
 		font-size: 25px;
 		line-height: 1.5;
-		margin: 2em 0 1em;
+		margin: 1.2em 0 .5em;
 		font-weight: 300;
 		font-family: $font-land;
 

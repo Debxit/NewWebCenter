@@ -27,14 +27,14 @@
 
 	&__section {
 		position: relative;
-		margin-bottom: 4em;
+		margin-bottom: 2em;
 
 		&_first {
 			background: url($path + 'img/landing/kf-sklad/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
-			margin-bottom: 4em;
+			margin-bottom: 3em;
 
 			@include screen-xl() {
 				margin-top: -60px;
@@ -115,16 +115,17 @@
 	}
 
 	&__title {
-		font-size: 54px;
+		font-size: 44px;
 		color: $color-land-dark;
 		text-align: center;
 		line-height: 1.1;
 		display: block;
 		text-transform: uppercase;
 		font-weight: 800;
+		margin: 1em 0 .7em;
 
 		@include screen-lg() {
-			font-size: 47px;
+			font-size: 40px;
 		}
 
 		@include screen-md() {
@@ -158,6 +159,7 @@
 		font-size: 30px;
 		font-weight: 500;
 		line-height: 1.2;
+		margin: 1em 0 .7em;
 
 		@include screen-lg() {
 			font-size: 27px;
