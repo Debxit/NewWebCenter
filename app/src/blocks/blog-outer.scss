@@ -12,21 +12,25 @@
 	@include screen-xl(){
 		top: -30px;
 	}
+
 	@include screen-lg(){
 		font-size: 123px;
 	}
+
 	@include screen-lg(){
 		font-size: 97px;
 		top: -20px;
 	}
+
 	@include screen-sm(){
 		display: none;
 	}
 }
+
 .blog-header{
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 	margin: 65px 0;
 	margin-bottom: 80px;
 
@@ -34,12 +38,15 @@
 		margin: 20px 0;
 		margin-bottom: 40px;
 	}
+
 	@include screen-md(){
 		padding: 0 15px;
 	}
+
 	@include screen-sm(){
 		flex-wrap: wrap;
 	}
+
 	@include screen-xs(){
 		margin: 10px 0;
 		margin-bottom: 25px;
@@ -52,11 +59,14 @@
 	@include screen-md(){
 		margin-right: 0;
 	}
+
 	@include screen-sm(){
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
+		flex-wrap: wrap;
 	}
+
 	&__item{
 		font-size: 18px;
 		font-family: $font-days;
@@ -64,11 +74,13 @@
 		margin-left: 30px;
 		transition: color .3s ease;
 		display: inline-block;
+		line-height: 3;
 
 		@include screen-sm(){
-			margin-left: 0;
+			margin: 0 15px;
 			font-size: 15px;
 		}
+
 		@include screen-xs(){
 			font-size: 13px;
 		}
@@ -76,7 +88,6 @@
 		&:hover{
 			cursor: pointer;
 			color: $red;
-
 		}
 
 		&.active{
