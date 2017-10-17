@@ -160,3 +160,7 @@ $('.page-slider').on('afterChange', function (event, slick, currentSlide) {
     }, 400, function () {
     })
 });
+
+$('.page__logo').on('click', function() {
+	$('.page-slider').slick('slickNext');
+});

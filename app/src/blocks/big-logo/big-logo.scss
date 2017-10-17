@@ -136,6 +136,8 @@
 
 		@include screen-xl() {
 			font-size: 55px;
+			position: relative;
+			top: 10px;
 		}
 
 		@include screen-lg() {
@@ -144,6 +146,8 @@
 
 		@include screen-md() {
 			font-size: 35px;
+			position: static;
+			top: 0;
 		}
 
 		@include screen-sm() {

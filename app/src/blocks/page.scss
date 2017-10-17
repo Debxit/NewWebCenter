@@ -61,6 +61,7 @@
 	&__logo {
 		max-width: 60%;
 		margin: 0 auto 25px;
+		cursor: pointer;
 
 		@include screen-xl() {
 			max-width: 40%;

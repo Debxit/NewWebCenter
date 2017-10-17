@@ -73,12 +73,27 @@
 			}
 		}
 
-		&_opened {
+		&_opened,
+		&_opened-full {
 
 			&::before {
 				background: $red;
 				border-color: $red;
 			}
+
+			.accord {
+				// =====
+
+				&__title {
+
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+
+		&_opened {
 
 			&::after {
 				background: linear-gradient(to bottom, $red, transparent), repeating-linear-gradient(to bottom, transparent, transparent 1px, $color-main 1px, $color-main 4px);
@@ -86,11 +101,6 @@
 		}
 
 		&_opened-full {
-
-			&::before {
-				background: $red;
-				border-color: $red;
-			}
 
 			&::after {
 				background: $red;
@@ -111,7 +121,23 @@
 	&__title {
 		margin: 0 0 10px;
 		font-weight: 500;
-		transition: $duration / 2 ease;
+		transition: $duration / 2 ease color;
+		position: relative;
+		padding-right: 1em;
+
+		&::after {
+			content: '\f107';
+			font-family: $font-fa;
+			display: inline-block;
+			transition: $duration / 5 ease transform;
+			position: absolute;
+			right: 0;
+			top: 0;
+			line-height: 1.3;
+			font-weight: bold;
+			width: 1em;
+			text-align: center;
+		}
 	}
 
 	&__desc {

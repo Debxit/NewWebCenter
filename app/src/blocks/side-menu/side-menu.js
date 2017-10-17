@@ -4,10 +4,15 @@
 		$sideMenu = $('.side-menu'),
 		$headerToggle = $(".header__menu-icon"),
 		$sideToggle = $(".side-menu__menu-icon"),
+		$nav = $('.nav'),
 		$subItems = $('.nav__item_toggle'),
 		$body = $('body'),
 		fogClass = 'fog',
 		delay = 200;
+
+	// Кастомный ползунок
+	$nav.perfectScrollbar();
+	// =====
 
 	// Работа гамбургеров
 	$headerToggle.on('click', function() {
@@ -55,6 +60,8 @@
 		if (hasScroll('Height')) {
 			toggleBodyNoScroll();
 		}
+
+		$nav.perfectScrollbar('update');
 	});
 	// =====
 
@@ -94,15 +101,19 @@
 				$this
 					.addClass('open')
 					.find('.nav')
-					.slideDown();
+					.slideDown(300);
 			}
 
 			if (action == 'close') {
 				$this
 					.removeClass('open')
 					.find('.nav')
-					.slideUp();
+					.slideUp(300);
 			}
+
+			setTimeout(function() {
+				$nav.perfectScrollbar('update');
+			}, 300);
 		});
 	}
 }());

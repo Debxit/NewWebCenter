@@ -64,7 +64,7 @@
 			overflow-y: auto;
 			padding-right: 15px;
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 		}
 
 		@include screen-xl(min) {
