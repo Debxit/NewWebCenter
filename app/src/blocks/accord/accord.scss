@@ -119,11 +119,11 @@
 	}
 
 	&__title {
-		margin: 0 0 10px;
+		margin: 0;
 		font-weight: 500;
 		transition: $duration / 2 ease color;
 		position: relative;
-		padding-right: 1em;
+		padding: 0 1em 10px 0;
 
 		&::after {
 			content: '\f107';
@@ -241,6 +241,10 @@
 		margin: 0 0 5px;
 		transition: $duration / 2 ease;
 		line-height: 1.4;
+
+		&.red {
+			white-space: nowrap;
+		}
 	}
 
 	&__sub-desc {

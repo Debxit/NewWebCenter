@@ -11,6 +11,7 @@ var
 	$bottomCostWrap = $('.main__total-cost'), // Блок стоимости снизу
 	$inputHidPrice = $('#priceCalc'), // Скрытое поле ввода со значением стоимости
 	$inputHidValues = $('#valuesCalc'), // Скрытое поле ввода со значением выбранных пунктов
+	subtitle = 'accord__sub-title', // Класс подзаголовка
 	accordRunner = 'accord__runner'; // Класс бегунка
 
 // Работа аккордеона
@@ -63,8 +64,11 @@ $accordHead.on('click', function() {
 $accordRadio.each(function() {
 	var
 		$this = $(this),
+		$thisSubtitle = $this.next().find('.' + subtitle),
 		$thisRunner = $this.next().next(),
 		runnerCost = 0; // Стоимость в бегунке
+
+	$thisSubtitle.append(" <span class='red'>(+ " + $this.val() + " руб.)</span>");
 
 	$this.on('click', function() {
 		var
@@ -189,6 +193,7 @@ $accordRadio.each(function() {
 			}
 
 			prev.val(value);
+			$thisSubtitle.find('.red').text("(+ " + value + " руб.)");
 		}, 0);
 	});
 	// =====
