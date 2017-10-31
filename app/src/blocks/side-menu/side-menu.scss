@@ -43,9 +43,12 @@
 	}
 
 	.nav {
-		list-style: none;
-		margin: 0;
-		padding: 0 30px;
+
+		&__i {
+			list-style: none;
+			margin: 0;
+			padding: 0 30px;
+		}
 
 		&__item {
 			transition: opacity .4s ease, transform .4s ease;

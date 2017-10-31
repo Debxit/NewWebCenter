@@ -4,7 +4,7 @@
 		$sideMenu = $('.side-menu'),
 		$headerToggle = $(".header__menu-icon"),
 		$sideToggle = $(".side-menu__menu-icon"),
-		$nav = $('.nav'),
+		$nav = $('.side-menu > .nav'),
 		$subItems = $('.nav__item_toggle'),
 		$body = $('body'),
 		fogClass = 'fog',
