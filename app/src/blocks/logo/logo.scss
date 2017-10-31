@@ -1,10 +1,5 @@
 .logo {
 	transform: scaleY(1.2);
-
-	&_full{
-		background: url("../img/webCenter-logo.svg") center/contain no-repeat;
-		transform: scaleY(0.8);
-	}
 	a {
 		color: $color-main;
 		text-align: center;
@@ -36,6 +31,38 @@
 		width: 16px;
 		height: 22px;
 		margin: 0 3px;
+
+		&:nth-child(3) {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				background: url($path + 'img/bat.svg') no-repeat center/contain;
+				width: 200%;
+				padding-bottom: 200%;
+				top: -95%;
+				left: -60%;
+			}
+		}
+	}
+
+	&_full{
+		background: url("../img/webCenter-logo.svg") center/contain no-repeat;
+		transform: scaleY(0.8);
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 30%;
+			padding-bottom: 30%;
+			top: -35%;
+			right: -4%;
+			background: url($path + 'img/bat.svg') no-repeat center/contain;
+		}
 	}
 }
 

@@ -88,6 +88,17 @@
 
 	&__right {
 		transform: translateX(60px);
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			background: url($path + 'img/bat.svg') no-repeat center/contain;
+			width: 200%;
+			padding-bottom: 200%;
+			top: -95%;
+			left: -60%;
+		}
 	}
 
 	&__web,
