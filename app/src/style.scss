@@ -25,7 +25,6 @@
 @import url('blocks/file-input/file-input.scss'); // Инпут типа "файл"
 @import url('blocks/cont-panel/cont-panel.scss'); // Панель на странице контактов
 @import url('blocks/map/map.scss'); // Карта
-@import url('blocks/accord/accord.scss'); // Аккордеон
 @import url('blocks/price/price.scss'); // Стоимость услуг
 @import url('blocks/competence.scss'); // Блок компетенций
 @import url('blocks/customer/customer.scss'); // Слайдер с логотипами клиентов
@@ -44,6 +43,7 @@
 @import url('blocks/int-offer.scss'); // Блок с предложением оставить заявку на странице интеграции
 @import url('blocks/hidden-title.scss'); // Скрытый заголовок
 @import url('blocks/text.scss'); // Стили для текстовых страниц
+@import url('blocks/accord/accord.scss'); // Аккордеон
 @import url('blocks/video/video.scss'); // Адаптивный блок видео
 @import url('blocks/disc-ol.scss'); // Список с жирными точками
 @import url('blocks/svg-ol.scss'); // Список с точками в виде svg-картинок
