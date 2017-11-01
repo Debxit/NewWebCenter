@@ -1,0 +1,467 @@
+@import url('../../global/variables.scss');
+@import url('variables.scss');
+@import url('fonts.scss');
+
+::selection {
+	background-color: $color-land;
+	color: white;
+}
+
+.land {
+	font-family: $font-land;
+	font-weight: 300;
+	color: $color-land-dark;
+	font-size: 22px;
+	line-height: 1.3;
+
+	@include screen-lg() {
+		font-size: 20px;
+	}
+
+	@include screen-md() {
+		font-size: 18px;
+	}
+
+	@include screen-sm() {
+		font-size: 16px;
+	}
+
+	&__section {
+		position: relative;
+		margin-bottom: 3em;
+
+		&_first {
+			background: url($path + 'img/landing/olivia/bg.jpg') no-repeat 50% 0;
+			background-size: 100% auto;
+			height: 100vh;
+			margin-top: -91px;
+			margin-bottom: 3em;
+
+			@include screen-xl() {
+				margin-top: -60px;
+			}
+
+			@include screen-lg() {
+				background-size: cover;
+				background-position: 50% 50%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: linear-gradient(to bottom, white 0, transparent 40%);
+			}
+		}
+	}
+
+	&__head-wrap {
+		z-index: 1;
+	}
+
+	&__logo {
+		max-width: 50%;
+		margin-top: 20vh;
+
+		@include screen-xs() {
+			margin-top: 70px;
+			max-width: 100%;
+		}
+	}
+
+	&__main-title {
+		position: relative;
+		z-index: 1;
+		color: white;
+		margin: 1em 0;
+		font-weight: 300;
+		font-size: 40px;
+
+		@include screen-lg() {
+			font-size: 35px;
+		}
+
+		@include screen-md() {
+			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 27px;
+		}
+
+		@include screen-xs() {
+			font-size: 25px;
+		}
+	}
+
+	&__right-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: auto;
+		max-width: 95%;
+		max-height: 100%;
+		padding-top: 90px;
+
+		@include screen-xl() {
+			padding-top: 60px;
+		}
+
+		@include screen-xs() {
+			max-width: 100%;
+		}
+	}
+
+	&__title-wrap {
+		text-align: center;
+		margin: 2em 0 1.5em;
+	}
+
+	&__title {
+		text-align: center;
+		line-height: 1.5;
+		position: relative;
+		display: block;
+		font-size: 40px;
+		margin: 0 0 .5em;
+		font-weight: 300;
+		color: $color-land;
+
+		@include screen-lg() {
+			font-size: 27px;
+		}
+
+		@include screen-md() {
+			font-size: 23px;
+		}
+
+		@include screen-sm() {
+			font-size: 20px;
+		}
+	}
+
+	&__text {
+		text-align: justify;
+		line-height: 1.5;
+	}
+
+	&__sm-title {
+		font-size: 28px;
+		line-height: 1.5;
+		margin: 1em 0 .5em;
+		font-weight: 300;
+		text-align: center;
+
+		@include screen-lg() {
+			font-size: 26px;
+		}
+
+		@include screen-md() {
+			font-size: 22px;
+		}
+
+		@include screen-sm() {
+			font-size: 19px;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		text-align: left;
+		margin-bottom: 1.5em;
+	}
+
+	&__list-item {
+		list-style-type: none;
+		line-height: 1.5;
+		padding: 3px 0;
+		text-align: justify;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: $color-land;
+			border-radius: 50%;
+			margin-right: 15px;
+			vertical-align: middle;
+		}
+	}
+
+	&__link-wrap {
+		font-size: 24px;
+		text-align: center;
+		margin: 0;
+
+		@include screen-lg() {
+			font-size: 22px;
+		}
+
+		@include screen-md() {
+			font-size: 19px;
+		}
+
+		@include screen-sm() {
+			font-size: 17px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		color: $color-land-dark;
+		border-bottom: 2px solid $color-land-dark;
+		transition: $duration ease color, $duration / 2 ease border-color;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: transparent;
+			color: $color-land;
+		}
+	}
+
+	&__gray-title {
+		font-weight: normal;
+		text-transform: uppercase;
+
+		&_fog {
+			background: white;
+			box-shadow: 0 0 5px 3px white;
+		}
+	}
+
+	&__example-title {
+		font-size: 36px;
+		line-height: 1.5;
+		margin: .5em 0;
+		font-weight: 300;
+		color: $color-land;
+
+		@include screen-lg() {
+			font-size: 32px;
+		}
+
+		@include screen-md() {
+			font-size: 28px;
+		}
+
+		@include screen-sm() {
+			font-size: 26px;
+		}
+
+		@include screen-xs() {
+			text-align: left;
+		}
+	}
+
+	&__example-text {
+		font-size: 16px;
+		margin-bottom: 1em;
+		line-height: 1.5;
+
+		@include screen-xs() {
+			text-align: left;
+		}
+	}
+
+	&__font-name {
+		white-space: nowrap;
+		font-size: 80%;
+
+		@include screen-sm() {
+			margin-top: 0;
+			font-size: 100%;
+		}
+	}
+
+	&__rect {
+		font-size: 51px;
+		text-align: center;
+		width: 162px;
+		height: 162px;
+		line-height: 162px;
+		box-shadow: 0 0 7px rgba(black, .2);
+		position: relative;
+		background: white;
+		display: inline-block;
+		font-weight: 300;
+
+		@include screen-lg() {
+			font-size: 46px;
+		}
+
+		@include screen-md() {
+			font-size: 41px;
+		}
+
+		@include screen-sm() {
+			font-size: 36px;
+		}
+
+		@include screen-xs() {
+			margin-bottom: 1em;
+		}
+
+		&_second {
+			font-weight: 600;
+		}
+
+		&_line_first,
+		&_line_second {
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 50px;
+				transform-origin: 0 0;
+
+				@include screen-sm() {
+					display: none;
+				}
+			}
+		}
+
+		&_line_first {
+
+			&::before,
+			&::after {
+				background: $color-land;
+			}
+
+			&::before {
+				bottom: -50px;
+			}
+
+			&::after {
+				bottom: -100px;
+				transform: rotate(-44.7deg) scaleY(4.51);
+
+				@include screen-lg() {
+					transform: rotate(-53.1deg) scaleY(2.95);
+				}
+
+				@include screen-md() {
+					transform: rotate(-29.6deg) scaleY(1.25);
+				}
+			}
+		}
+
+		&_line_second {
+
+			&::before,
+			&::after {
+				background: $color-land-dark;
+
+				@include screen-md() {
+
+				}
+			}
+
+			&::before {
+				bottom: -50px;
+
+				@include screen-md() {
+					right: auto;
+					left: 0;
+					top: 0;
+					transform: rotate(135deg);
+				}
+			}
+
+			&::after {
+				bottom: -100px;
+				transform: rotate(-13.4deg) scaleY(1.65);
+
+				@include screen-lg() {
+					transform: rotate(29deg) scaleY(0.85);
+				}
+
+				@include screen-md() {
+					right: auto;
+					left: -35px;
+					top: -35px;
+					transform: rotate(-270deg) scaleY(0.63);
+				}
+			}
+		}
+	}
+
+	&__rect-sm-img {
+		height: 30px;
+		position: absolute;
+		bottom: -15px;
+		right: -20px;
+	}
+
+	&__rect-img {
+		width: 62px;
+		height: 62px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -31px;
+		margin-left: -31px;
+		background: $color-land;
+
+		&_second {
+			background: $color-land-dark;
+		}
+	}
+
+	&__fog-logo {
+		opacity: .08;
+		width: 80%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+
+		&_right {
+			margin-right: 0;
+		}
+
+		&_fog {
+			box-shadow: 0 0 7px rgba(black, .2);
+		}
+	}
+
+	&__abs {
+		padding: 0 15px;
+		display: inline-block;
+
+		@include screen-xs(min) {
+			position: absolute;
+		}
+
+		&_1 {
+
+			@include screen-xs(min) {
+				left: 0;
+			}
+		}
+
+		&_2 {
+
+			@include screen-xs(min) {
+				left: 260px;
+			}
+
+			@include screen-md() {
+				left: auto;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
