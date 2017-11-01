@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "PTSans";
+	src: url($path + "fonts/landing/PTSans/PTSansRegular.eot");
+	src: url($path + "fonts/landing/PTSans/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/PTSans/PTSansRegular.woff") format("woff"),
+	url($path + "fonts/landing/PTSans/PTSansRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "PTSans";
+	src: url($path + "fonts/landing/PTSans/PTSansItalic.eot");
+	src: url($path + "fonts/landing/PTSans/PTSansItalic.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/PTSans/PTSansItalic.woff") format("woff"),
+	url($path + "fonts/landing/PTSans/PTSansItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "PTSans";
+	src: url($path + "fonts/landing/PTSans/PTSansBold.eot");
+	src: url($path + "fonts/landing/PTSans/PTSansBold.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/PTSans/PTSansBold.woff") format("woff"),
+	url($path + "fonts/landing/PTSans/PTSansBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "PTSerifCaption";
+	src: url($path + "fonts/landing/PTSerifCaption/PTSerifCaptionRegular.eot");
+	src: url($path + "fonts/landing/PTSerifCaption/PTSerifCaptionRegular.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/PTSerifCaption/PTSerifCaptionRegular.woff") format("woff"),
+	url($path + "fonts/landing/PTSerifCaption/PTSerifCaptionRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
