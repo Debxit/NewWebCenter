@@ -1,0 +1,617 @@
+@import url('../../global/variables.scss');
+@import url('variables.scss');
+@import url('fonts.scss');
+
+::selection {
+	background-color: $color-land;
+	color: white;
+}
+
+.land {
+	font-family: $font-land;
+	font-weight: normal;
+	color: $color-land-dark;
+	font-size: 22px;
+	line-height: 1.3;
+	background: url($path + 'img/landing/solomon/bg-2.svg') no-repeat 50% calc(100vh - (100vh - (100vw / 2.24))) / contain;
+
+	@include screen-lg() {
+		font-size: 20px;
+		background-position-y: 100vh;
+	}
+
+	@include screen-md() {
+		font-size: 18px;
+	}
+
+	@include screen-sm() {
+		font-size: 16px;
+	}
+
+	&__section {
+		position: relative;
+		margin-bottom: 2em;
+
+		&_first {
+			background: url($path + 'img/landing/solomon/bg.jpg') no-repeat 50% 0;
+			background-size: 100% auto;
+			height: 100vh;
+			margin-top: -91px;
+			margin-bottom: 3em;
+			display: flex;
+			align-items: center;
+
+			@include screen-xl() {
+				margin-top: -60px;
+			}
+
+			@include screen-lg() {
+				background-size: cover;
+				background-position: 50% 50%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: linear-gradient(to bottom, white 0, transparent 40%);
+			}
+		}
+	}
+
+	&__head-wrap {
+		z-index: 1;
+	}
+
+	&__logo {
+		max-width: 50%;
+
+		@include screen-xs() {
+			max-width: 100%;
+		}
+	}
+
+	&__main-title {
+		position: relative;
+		z-index: 1;
+		color: white;
+		margin: .5em 0;
+		font-weight: normal;
+		font-size: 35px;
+		text-shadow: 1px 1px 1px rgba($color-land-dark, .5);
+
+		@include screen-lg() {
+			font-size: 30px;
+		}
+
+		@include screen-md() {
+			font-size: 27px;
+		}
+
+		@include screen-sm() {
+			font-size: 24px;
+		}
+
+		@include screen-xs() {
+			font-size: 21px;
+		}
+	}
+
+	&__right-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: auto;
+		max-width: 95%;
+		max-height: 100%;
+		padding-top: 90px;
+
+		@include screen-xl() {
+			padding-top: 60px;
+		}
+
+		@include screen-xs() {
+			max-width: 100%;
+		}
+	}
+
+	&__title-wrap {
+		text-align: center;
+		margin: 2em 0 1.5em;
+
+		&_icon {
+			margin: 3.5em 0 2em;
+
+			.land__title {
+				display: inline-block;
+				position: relative;
+
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 3.75em;
+					height: 3.675em;
+					top: -100%;
+					left: -30%;
+					z-index: -1;
+					background: no-repeat center / contain;
+					@include bgi-retina('../img/landing/solomon/title-icon', 'png', contain);
+				}
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		line-height: 1.5;
+		position: relative;
+		display: block;
+		font-size: 40px;
+		margin: 0 0 .5em;
+		font-family: $font-land-second;
+
+		@include screen-lg() {
+			font-size: 35px;
+		}
+
+		@include screen-md() {
+			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		text-align: justify;
+		line-height: 1.5;
+	}
+
+	&__sm-title {
+		font-size: 28px;
+		line-height: 1.5;
+		margin: 1em 0 .5em;
+		text-align: center;
+		font-family: $font-land-second;
+
+		@include screen-lg() {
+			font-size: 26px;
+		}
+
+		@include screen-md() {
+			font-size: 22px;
+		}
+
+		@include screen-sm() {
+			font-size: 19px;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		text-align: left;
+		margin-bottom: 1.5em;
+	}
+
+	&__list-item {
+		list-style-type: none;
+		line-height: 1.5;
+		padding: 3px 0;
+		text-align: justify;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: linear-gradient(to top left, $color-land-second 0%, $color-land-second 20%, $color-land 80%, $color-land 100%);
+			border-radius: 50%;
+			margin-right: 15px;
+			vertical-align: middle;
+		}
+	}
+
+	&__link-wrap {
+		font-size: 24px;
+		text-align: center;
+		margin: 0;
+		display: none;
+
+		@include screen-lg() {
+			font-size: 22px;
+		}
+
+		@include screen-md() {
+			font-size: 19px;
+		}
+
+		@include screen-sm() {
+			font-size: 17px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		color: $color-land;
+		border-bottom: 1px solid $color-land;
+
+		&:hover,
+		&:focus {
+			color: $color-land-third;
+			border-bottom-color: $color-land-third;
+		}
+	}
+
+	&__gray-title {
+		font-weight: normal;
+		text-transform: uppercase;
+
+		&_fog {
+			background: white;
+			box-shadow: 0 0 5px 3px white;
+		}
+	}
+
+	&__example-title {
+		font-size: 36px;
+		line-height: 1.2;
+		margin: .7em 0 1em;
+		color: $color-land-gray;
+		font-weight: bold;
+
+		@include screen-lg() {
+			font-size: 33px;
+		}
+
+		@include screen-md() {
+			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 27px;
+		}
+
+		@include screen-xs() {
+			text-align: left;
+		}
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 1.6em;
+			height: 2px;
+			vertical-align: middle;
+			margin-right: .3em;
+			background: $color-land-second;
+		}
+	}
+
+	&__example-text {
+		font-size: 16px;
+		margin: .7em 0;
+		line-height: 1.4;
+
+		@include screen-xs() {
+			text-align: left;
+		}
+	}
+
+	&__font-name {
+		white-space: nowrap;
+		margin: .7em 0 1em;
+
+		@include screen-sm() {
+			margin-top: 0;
+		}
+	}
+
+	&__rect {
+		font-size: 51px;
+		text-align: center;
+		width: 162px;
+		height: 162px;
+		line-height: 162px;
+		box-shadow: 0 0 7px rgba(black, .2);
+		position: relative;
+		background: white;
+		display: inline-block;
+		font-weight: normal;
+
+		@include screen-lg() {
+			font-size: 46px;
+		}
+
+		@include screen-md() {
+			font-size: 41px;
+		}
+
+		@include screen-sm() {
+			font-size: 36px;
+		}
+
+		@include screen-xs() {
+			margin-bottom: 1em;
+		}
+
+		&_second {
+			font-family: $font-land-second;
+		}
+
+		&_line_first,
+		&_line_second,
+		&_line_third{
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 50px;
+				transform-origin: 0 0;
+
+				@include screen-sm() {
+					display: none;
+				}
+			}
+		}
+
+		&_line_first {
+
+			&::before,
+			&::after {
+				background: $color-land;
+			}
+
+			&::before {
+				bottom: -50px;
+				right: 0;
+				transform: rotate(-45deg);
+
+				@include screen-md() {
+					top: 50%;
+					bottom: auto;
+					transform: rotate(-90deg);
+				}
+			}
+
+			&::after {
+				bottom: -85px;
+				right: -35px;
+				transform: rotate(-76.6deg) scaleY(9.1);
+
+				@include screen-lg() {
+					transform: rotate(-79.9deg) scaleY(6.65);
+				}
+
+				@include screen-md() {
+					top: 50%;
+					right: -50px;
+					bottom: auto;
+					transform: rotate(-65.3deg) scaleY(4.67);
+				}
+			}
+		}
+
+		&_line_second {
+
+			&::before,
+			&::after {
+				background: $color-land-third;
+
+				@include screen-md() {
+
+				}
+			}
+
+			&::before {
+				right: -50px;
+				top: 50%;
+				transform: rotate(90deg);
+				height: 50px;
+
+				@include screen-md() {
+					right: 0;
+					top: 0;
+					transform: rotate(-135deg);
+				}
+			}
+
+			&::after {
+				top: 50%;
+				right: -50px;
+				transform: rotate(-68.2deg) scaleY(5);
+				margin-top: 1px;
+
+				@include screen-lg() {
+					transform: rotate(-60deg) scaleY(2.7);
+				}
+
+				@include screen-md() {
+					right: -35px;
+					top: -36px;
+					transform: rotate(-115.1deg) scaleY(6.2);
+				}
+			}
+		}
+
+		&_line_third {
+
+			&::before,
+			&::after {
+				background: $color-land-second;
+
+				@include screen-md() {
+
+				}
+			}
+
+			&::before {
+				right: -50px;
+				top: 50%;
+				transform: rotate(90deg);
+				height: 50px;
+			}
+
+			&::after {
+				top: 50%;
+				right: -50px;
+				transform: rotate(-96.1deg) scaleY(14.95);
+				margin-top: 1px;
+
+				@include screen-lg() {
+					transform: rotate(-101.7deg) scaleY(11.67);
+				}
+
+				@include screen-md() {
+					transform: rotate(-142deg) scaleY(4.73);
+				}
+			}
+		}
+	}
+
+	&__rect-sm-img {
+		height: 40px;
+		position: absolute;
+		bottom: -20px;
+		right: -20px;
+	}
+
+	&__rect-img {
+		width: 62px;
+		height: 62px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -31px;
+		margin-left: -31px;
+		background: $color-land;
+
+		&_second {
+			background: $color-land-third;
+		}
+
+		&_third {
+			background: $color-land-second;
+		}
+	}
+
+	&__fog-logo {
+		opacity: .03;
+		height: 50vh;
+		max-width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+
+		&_right {
+			position: absolute;
+			width: 50%;
+			right: 15px;
+			top: 95px;
+
+			@include screen-md() {
+				width: 45%;
+			}
+
+			@include screen-xs() {
+				position: static;
+				width: 100%;
+			}
+		}
+	}
+
+	&__abs {
+		padding: 0 15px;
+		display: inline-block;
+		margin-bottom: 50px;
+		margin-right: 50px;
+		position: relative;
+		z-index: 1;
+
+		@include screen-xs() {
+			margin-bottom: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__icons-wrap {
+		margin: 0 -15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		&:last-child {
+
+			.land__icon {
+				margin-bottom: 20px;
+			}
+		}
+
+		&_9-in-row {
+
+			.land__icon {
+				width: 10%;
+
+				@include screen-md() {
+					width: 20%;
+				}
+
+				@include screen-xs() {
+					width: 33%;
+				}
+			}
+		}
+
+		&_3-in-row {
+
+			.land__icon {
+				width: 25%;
+
+				@include screen-xs() {
+					width: 33%;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		padding: 0 15px;
+		margin-bottom: 70px;
+	}
+
+	&__icon-i {
+		background: no-repeat center / contain;
+		width: 100%;
+		padding-bottom: 100%;
+	}
+
+	&__clear {
+		display: none;
+
+		&_mobile {
+
+			@include screen-md() {
+				display: block;
+			}
+		}
+
+		&_desktop {
+
+			@include screen-md(min) {
+				display: block;
+			}
+		}
+	}
+}

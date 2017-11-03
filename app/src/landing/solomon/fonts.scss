@@ -1,0 +1,51 @@
+@font-face {
+	font-family: "Arimo";
+	src: url($path + "fonts/landing/Arimo/ArimoRegular.eot");
+	src: url($path + "fonts/landing/Arimo/ArimoRegular.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Arimo/ArimoRegular.woff") format("woff"),
+	url($path + "fonts/landing/Arimo/ArimoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Arimo";
+	src: url($path + "fonts/landing/Arimo/ArimoItalic.eot");
+	src: url($path + "fonts/landing/Arimo/ArimoItalic.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Arimo/ArimoItalic.woff") format("woff"),
+	url($path + "fonts/landing/Arimo/ArimoItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Arimo";
+	src: url($path + "fonts/landing/Arimo/ArimoBold.eot");
+	src: url($path + "fonts/landing/Arimo/ArimoBold.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Arimo/ArimoBold.woff") format("woff"),
+	url($path + "fonts/landing/Arimo/ArimoBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Arimo";
+	src: url($path + "fonts/landing/Arimo/ArimoBoldItalic.eot");
+	src: url($path + "fonts/landing/Arimo/ArimoBoldItalic.eot?#iefix")format("embedded-opentype"),
+	url($path + "fonts/landing/Arimo/ArimoBoldItalic.woff") format("woff"),
+	url($path + "fonts/landing/Arimo/ArimoBoldItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Museo';
+	src: url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.eot');
+	src: url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.eot?#iefix') format('embedded-opentype'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.woff2') format('woff2'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.woff') format('woff'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.ttf') format('truetype'),
+	url($path + 'fonts/landing/museo/exljbris_-_museo_cyrl_700.svg#museo_cyrl700') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
