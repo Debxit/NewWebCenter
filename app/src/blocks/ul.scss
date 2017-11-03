@@ -1,0 +1,22 @@
+.ul {
+	margin: 20px 0;
+	display: block;
+
+	&__item {
+		position: relative;
+		line-height: 1.4;
+		padding-left: 1em;
+		margin-bottom: 5px;
+		display: block;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: .4em;
+			height: .15em;
+			background: $red;
+			top: .6em;
+			left: 3px;
+		}
+	}
+}

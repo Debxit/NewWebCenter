@@ -60,6 +60,14 @@
 	}
 
 
+	&_sm-between {
+
+		@include screen-sm(min) {
+			justify-content: space-between;
+		}
+	}
+
+
 	&_md-between {
 
 		@include screen-md(min) {
