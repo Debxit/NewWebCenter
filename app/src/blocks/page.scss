@@ -51,6 +51,7 @@
 	&__small-line {
 		font-family: $font-days;
 		font-size: 19px;
+		font-weight: normal;
 		transform: scaleY(1.2);
 
 		@include screen-xs() {
