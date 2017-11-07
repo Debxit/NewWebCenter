@@ -172,3 +172,35 @@ hr {
 		text-align: center;
 	}
 }
+
+.img-left {
+	display: block;
+	float: left;
+	margin: 0 15px 15px 0;
+	width: 30%;
+
+	@include screen-sm() {
+		float: none;
+		width: auto;
+		margin: 0 auto 15px;
+	}
+}
+
+.img-right {
+	display: block;
+	float: right;
+	margin: 0 0 15px 15px;
+	width: 30%;
+
+	@include screen-sm() {
+		float: none;
+		width: auto;
+		margin: 0 auto 15px;
+	}
+}
+
+.clear {
+	display: table;
+	width: 100%;
+	clear: both;
+}
