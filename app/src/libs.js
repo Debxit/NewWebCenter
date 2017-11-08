@@ -5,6 +5,7 @@
 @@include('../libs/perfect-scrollbar/js/perfect-scrollbar.jquery.js')
 @@include('../libs/fancybox/dist/jquery.fancybox.js')
 @@include('../libs/jquery.maskedinput/dist/jquery.maskedinput.js')
+@@include('../libs/highlight/build/highlight.pack.js')
 
 /* jQuery UI */
 @@include('../libs/jquery-ui/ui/version.js')

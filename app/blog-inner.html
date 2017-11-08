@@ -12,7 +12,7 @@
 
 	<main class="main">
 		<div class="container">
-			<div class="grid grid_neg grid_md-center text" itemscope itemtype="http://schema.org/NewsArticle">
+			<div class="grid grid_neg grid_md-center" itemscope itemtype="http://schema.org/NewsArticle">
 				<meta itemprop="genre" content="web-разработка">
 				<div class="grid__md-10">
 					<div class="center">
@@ -26,49 +26,99 @@
 						</div>
 					</div>
 
-					<div class="quote" itemprop="description">
-						<strong>Lorem ipsum dolor sit amet:</strong> As a community, we can learn so much from
-						discovering
-						what other developers are doing around the world. We encourage everyone to participate
-						in this very brief survey created by Jens Oliver Meiert. Jens will share the results—and
-						an updated guide to web maintainability based on the findings—in a few weeks.
-					</div>
-					<p>
+					<div class="text">
+						<div class="quote" itemprop="description">
+							<strong>Lorem ipsum dolor sit amet:</strong> As a community, we can learn so much from
+							discovering
+							what other developers are doing around the world. We encourage everyone to participate
+							in this very brief survey created by Jens Oliver Meiert. Jens will share the results—and
+							an updated guide to web maintainability based on the findings—in a few weeks.
+						</div>
+						<p>
 						<span class="bold">
 							How often do we consider the maintenance and general maintainability of our websites
 							and apps? What steps do we actively take to make and keep them maintainable?
-							What stands in the way when we maintain our and other people’s projects?
+							What stands in the way when we maintain <code>/bitrix/templates/*/header.php</code> people’s projects?
 						</span>
-					</p>
-					<p>
-						Many of us, as web developers, know very well how to code something. But whether we know
-						just as well how to maintain what we—and others—have written, that is not so clear. Our bosses
-						and clients may not always think about maintenance down the road, either.
+						</p>
 
-					</p>
-					<p>
-						As an <a href="" >O’Reilly author</a> and former Googler, I’ve been studying the
-						topic of
-						<a href="" > maintainability since 2008 </a>—and we have yet to gather our
-						industry’s views on the subject. To help us all get a better
-						picture of how we maintain and how we can maintain more effectively, I set up a brief,
-						unassuming survey (announcement) and kindly ask for your assistance.
-					</p>
-					<p>
+						<h3>.htaccess</h3>
+<pre><code>User-agent: *
+Disallow: /*
+Allow: /*
+Host: ***site.ru
+Sitemap: http*://site.ru/sitemap.xml
+</code></pre>
 
-						The survey aims to collect specific practices and resources—in other words, your views on
-						current practices (both useful and harmful) and everything you find helpful:
-					</p>
-					<ul >
-						<li >What helps maintenance?</li>
-						<li>What prevents maintenance?</li>
-						<li>What resources do developers turn to for improving maintainability?</li>
-					</ul>
-					<p>
-						The outcome of the survey and an updated guide to web maintainability will be published
-						in a few weeks on my website, meiert.com (and noted on my Twitter profile). <br>
-						Thank you for your support.
-					</p>
+						<h3>PHP</h3>
+<pre><code>function ShowOgTitle(){
+   global $APPLICATION;
+   $ogttitle = $APPLICATION->GetPageProperty("ogtitle");
+   if (!$ogttitle){
+      return $APPLICATION->GetTitle();
+   } else {
+      return $ogttitle;
+   }
+}
+</code></pre>
+
+						<h3>CSS</h3>
+<pre><code>.land__section::before {
+   position: relative;
+   margin-bottom: 3em;
+}
+</code></pre>
+
+						<h3>Other</h3>
+<pre><code>&lt;!-- начало canonical {$wa->domainUrl()} --&gt;
+{if $smarty.server.REQUEST_URI == "`$wa->shop->productUrl($product, 'reviews')`"}
+   {$canonical_reviews = $wa->shop->productUrl($product)}
+   &lt;link rel="canonical" id="link" href="https://site.ru{$canonical_reviews}"/&gt;
+{else}
+   {if $smarty.get != null} <!-- есть параметры -->
+      {$trimmed_absolute_url = $wa->currentUrl(true, true)}
+      &lt;link rel="canonical" href="{$trimmed_absolute_url}"/>
+   {else}
+      &lt;link rel="canonical" href="https://site.ru{$wa->currentUrl()}"/&gt;
+   {/if}
+{/if}
+&lt;!-- конец canonical --&gt;</code></pre>
+
+
+						<p>
+							Many of us, as web developers, know very well how to code something. But whether we know
+							just as well how to maintain what we—and others—have written, that is not so clear. Our bosses
+							and clients may not always think about maintenance down the road, either.
+						</p>
+						<p>
+							As an <a href="#">O’Reilly author</a> and former Googler, I’ve been studying the
+							topic of
+							<a href="#"> maintainability since 2008 </a>—and we have yet to gather our
+							industry’s views on the subject. To help us all get a better
+							picture of how we maintain and how we can maintain more effectively, I set up a brief,
+							unassuming survey (announcement) and kindly ask for your assistance.
+						</p>
+						<ul>
+							<li>What helps maintenance?</li>
+							<li>What prevents maintenance?</li>
+							<li>What resources do developers turn to for improving maintainability?</li>
+						</ul>
+						<p>
+							The survey aims to collect specific practices and resources—in other words, your views on
+							current practices (both useful and harmful) and everything you find helpful:
+						</p>
+						<ol>
+							<li>What helps maintenance?</li>
+							<li>What prevents maintenance?</li>
+							<li>What resources do developers turn to for improving maintainability?</li>
+						</ol>
+						<p>
+							The outcome of the survey and an updated guide to web maintainability will be published
+							in a few weeks on my website, meiert.com (and noted on my Twitter profile). <br>
+							Thank you for your support.
+						</p>
+					</div>
+
 					<div class="share-wrap">
 						<div class="share">
 							Поделиться:

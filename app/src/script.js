@@ -25,6 +25,7 @@ $(document).ready(function () {
 	@@include('blocks/effective-offer/effective-offer.js')
 	@@include('blocks/fancybox.js')
 	@@include('blocks/input/input.js')
+	@@include('blocks/highlight/highlight.js')
 });
 
 @@include('global/functions.js')

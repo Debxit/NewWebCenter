@@ -148,7 +148,7 @@ hr {
 }
 
 .bold {
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .text-left {
@@ -197,6 +197,11 @@ hr {
 		width: auto;
 		margin: 0 auto 15px;
 	}
+}
+
+.img-center {
+	display: block;
+	margin: 0 auto 15px;
 }
 
 .clear {
