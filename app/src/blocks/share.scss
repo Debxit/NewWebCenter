@@ -1,34 +1,38 @@
-.share-wrap{
+.share-wrap {
 	margin: 50px 0 30px;
 	font-weight: bold;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	@include screen-xs(){
+	@include screen-xs() {
 		flex-wrap: wrap;
 	}
 }
 
-.share{
+.share {
 	color: $red;
-	@include screen-xs(){
+
+	@include screen-xs() {
 		margin-top: 20px;
 	}
-	&__socials{
+
+	&__socials {
 		display: inline-block;
-		margin-left: 5px;
 		font-size: 0;
 	}
-	&__vk,&__google,&__fb,&__tw{
+
+	&__item {
 		font-size: 18px;
 		display: inline-block;
-		margin: 0 5px;
+		padding: 5px;
 		font-weight: bold;
 		color: $color-main;
+		cursor: pointer;
+		transition: $duration ease;
 
-		&:hover{
-			cursor: pointer;
+		&:hover {
+			color: $red;
 		}
 	}
 }

@@ -18,7 +18,7 @@
 	ul {
 		margin: 20px 0;
 
-		li {
+		> li {
 			position: relative;
 			line-height: 1.4;
 			padding-left: 2em;
@@ -42,7 +42,7 @@
 		list-style-type: none;
 		counter-reset: list;
 
-		li {
+		> li {
 			line-height: 1.4;
 			margin-bottom: 8px;
 			position: relative;
@@ -52,6 +52,7 @@
 				counter-increment: list;
 				content: counter(list) ". ";
 				color: $red;
+				font-weight: 500;
 				margin-right: .5em;
 				display: inline-block;
 				box-sizing: content-box;
@@ -78,8 +79,7 @@
 	}
 
 	code {
-		background: lighten($color-gray, 44%);
-		border: 1px solid lighten($color-gray, 15%);
+		background: lighten($color-gray, 41%);
 		padding: 0 3px;
 		word-break: break-word;
 	}

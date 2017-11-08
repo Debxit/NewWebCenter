@@ -177,7 +177,6 @@ hr {
 	display: block;
 	float: left;
 	margin: 0 15px 15px 0;
-	width: 30%;
 
 	@include screen-sm() {
 		float: none;
@@ -190,7 +189,6 @@ hr {
 	display: block;
 	float: right;
 	margin: 0 0 15px 15px;
-	width: 30%;
 
 	@include screen-sm() {
 		float: none;

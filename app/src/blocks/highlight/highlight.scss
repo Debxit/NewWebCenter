@@ -70,7 +70,7 @@ pre .hljs {
 	overflow-x: auto;
 	color: $color-main;
 	padding: 20px 30px;
-	border: none;
+	max-height: 70vh;
 	border-left: 4px solid lighten($color-main, 30%);
 	background: lighten($color-gray, 44%);
 }
