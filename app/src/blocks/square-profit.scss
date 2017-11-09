@@ -12,9 +12,9 @@
 	align-items: center;
 	justify-content: space-around;
 	transition: $duration / 2 ease;
+	cursor: default;
 
 	&:hover{
-		cursor: pointer;
 		color: $red;
 	}
 	&__img{
