@@ -127,7 +127,10 @@ gulp.task('css-libs', function() {
 
 /* ======== ТАСК "JS" ======== */
 gulp.task('js', function() {
-	return gulp.src(app + 'src/script.js') // Берём все необходимые скрипты
+	return gulp.src([
+		app + 'src/script.js',
+		app + 'src/events/black-friday.js'
+	]) // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
 		.pipe(prod ? prettify({ // Форматируем код

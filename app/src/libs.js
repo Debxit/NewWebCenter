@@ -6,6 +6,7 @@
 @@include('../libs/fancybox/dist/jquery.fancybox.js')
 @@include('../libs/jquery.maskedinput/dist/jquery.maskedinput.js')
 @@include('../libs/highlight/build/highlight.pack.js')
+@@include('../libs/jquery.cookie/jquery.cookie.js')
 
 /* jQuery UI */
 @@include('../libs/jquery-ui/ui/version.js')

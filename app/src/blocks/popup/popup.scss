@@ -115,8 +115,32 @@
 		}
 	}
 
+	&__img {
+		max-width: 100%;
+	}
+
 	&_visible {
 		display: flex;
+	}
+
+	&_full {
+
+		.popup {
+			// =====
+
+			&__wrap {
+				padding: 0;
+				width: auto;
+
+				@include screen-xs(min) {
+					overflow: hidden;
+				}
+			}
+
+			&__img {
+				display: block;
+			}
+		}
 	}
 
 	form {

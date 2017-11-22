@@ -66,6 +66,10 @@
 	// =====
 
 	function popup(action, id) {
+		if (id.charAt(0) != '#') {
+			id = '#' + id;
+		}
+
 		var
 			$popup = $(id),
 			$wrap = $popup.find('.popup__wrap'),

@@ -139,6 +139,20 @@ hr {
 	display: none;
 }
 
+.hidden-xs {
+
+	@include screen-xs() {
+		display: none !important;
+	}
+}
+
+.visible-xs {
+
+	@include screen-xs(min) {
+		display: none !important;
+	}
+}
+
 .red {
 	color: $red;
 }
