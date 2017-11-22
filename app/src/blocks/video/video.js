@@ -27,6 +27,6 @@ $('.video').each(function() {
 				.append("<iframe class='video__frame' src='https://www.youtube.com/embed/" + item.attr('data-id') + "?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0' frameborder='0' allowfullscreen></iframe>");
 		})
 		.find('.video__preview')
-		.attr('style', 'background-image: url(https://i.ytimg.com/vi/' + item.attr('data-id') + '/hqdefault.jpg)');
+		.attr('style', 'background-image: url(https://i.ytimg.com/vi/' + item.attr('data-id') + '/maxresdefault.jpg)');
 });
 /* ========== */
