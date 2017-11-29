@@ -42,17 +42,20 @@
 		height: 1.5em;
 		overflow: hidden;
 		transition: $duration ease;
+		background: url($path + 'img/icons/clip.svg') no-repeat center / contain;
+		margin-left: 5px;
 
 		&::after {
-			content: '\2716';
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
-			transform: rotate(45deg);
 			text-align: center;
 			line-height: 1.5;
+			color: $red;
+			transform: scale(1);
 			transition: $duration ease;
 		}
 	}
@@ -69,11 +72,11 @@
 
 			&__reset {
 				cursor: pointer;
-				margin-left: 5px;
+				background: none;
 
 				&::after {
+					content: '\2716';
 					transform: scale(2);
-					color: $red;
 				}
 			}
 		}
