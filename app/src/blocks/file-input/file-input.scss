@@ -5,7 +5,7 @@
 	transition: opacity $duration ease;
 
 	&__label {
-		border-bottom: 1px solid $color-main;
+		border-bottom: 1px dashed $color-main;
 		position: relative;
 		cursor: pointer;
 		transition: $duration ease;
@@ -14,6 +14,20 @@
 		&:hover,
 		&_focus {
 			border-bottom-color: transparent;
+		}
+
+		&::after {
+			content: '';
+			font-size: 1rem;
+			width: 1.6em;
+			height: 1.6em;
+			position: absolute;
+			right: -2.3em;
+			top: 50%;
+			padding-left: .7em;
+			box-sizing: content-box;
+			background: url($path + 'img/icons/clip.svg') no-repeat right / contain;
+			transform: translateY(-50%);
 		}
 	}
 
@@ -28,25 +42,24 @@
 		&:focus {
 
 			+ label {
-				border-bottom-color: transparent;
+				border-bottom-color: $color-main;
 			}
 		}
 	}
 
 	&__reset {
 		position: relative;
-		display: inline-block;
 		vertical-align: middle;
 		font-size: 1rem;
 		width: 1.5em;
 		height: 1.5em;
-		overflow: hidden;
 		transition: $duration ease;
-		background: url($path + 'img/icons/clip.svg') no-repeat center / contain;
-		margin-left: 5px;
+		margin-left: .75em;
+		cursor: pointer;
+		display: none;
 
 		&::after {
-			content: '';
+			content: '\2716';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -55,8 +68,15 @@
 			text-align: center;
 			line-height: 1.5;
 			color: $red;
-			transform: scale(1);
 			transition: $duration ease;
+			transform: scale(2);
+		}
+
+		&:hover {
+
+			&::after {
+				transform: scale(2.7);
+			}
 		}
 	}
 
@@ -70,14 +90,15 @@
 		.file-input {
 			// =====
 
-			&__reset {
-				cursor: pointer;
-				background: none;
+			&__label {
 
 				&::after {
-					content: '\2716';
-					transform: scale(2);
+					display: none;
 				}
+			}
+
+			&__reset {
+				display: inline-block;
 			}
 		}
 	}
