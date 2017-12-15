@@ -98,7 +98,8 @@ gulp.task('sass', function() {
 		app + 'src/landing/emeter/emeter.scss',
 		app + 'src/landing/olivia/olivia.scss',
 		app + 'src/landing/primorski/primorski.scss',
-		app + 'src/landing/solomon/solomon.scss'
+		app + 'src/landing/solomon/solomon.scss',
+		app + 'src/landing/parus/parus.scss'
 	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
