@@ -1,20 +1,23 @@
 /* Блок стоимости */
 var
 	$price = $('.main__price'), // Блок стоимости
-	priceFixed = 'main__price_fixed', // Класс фиксированного блока стоимости
-	$priceParent = $price.parent(), // Внешний контейнер блока стоимости
-	$priceNext = $price.next(); // Блок рядом с блоком стоимости
+	priceFixed = 'main__price_fixed'; // Класс фиксированного блока стоимости
 
-setPricePos();
+$price.each(function () {
+	var
+		$this = $(this),
+        onReady = 0;
 
-$(window).on('scroll resize', function() {
-	setPricePos();
+    setPricePos($this, 1);
+
+    $(window).on('scroll resize', function() {
+        setPricePos($this);
+    });
+
 });
 
-$priceNext.perfectScrollbar();
-
-function setPricePos() {
-	if (!$price.length) return;
+function setPricePos($this, onReady) {
+	if (!$this.length) return;
 
 	if (window.innerWidth <= 991) {
 		setNextPos(false);
@@ -22,26 +25,32 @@ function setPricePos() {
 	}
 
 	var
+    	$priceParent = $this.parent(), // Внешний контейнер блока стоимости
+    	$priceNext = $this.next(), // Блок рядом с блоком стоимости
 		docTop = $(window).scrollTop() + 15, // Расстояние от верха страницы до верха окна
-		priceTop = $price.offset().top, // Расстояние блока стоимости от верха страницы
+		priceTop = $this.offset().top, // Расстояние блока стоимости от верха страницы
 		priceParentTop = $priceParent.offset().top, // Расстояние внешнего контейнера от верха страницы
 		priceParentWidth = $priceParent.width(), // Ширина внешнего контейнера
-		priceHeight = $price.outerHeight(true) + 15; // Высота блока стоимости, включая margin
+		priceHeight = $this.outerHeight(true) + 15; // Высота блока стоимости, включая margin
 
 	if (priceTop < docTop) { // Если блок стоимости ВЫШЕ верха окна
-		$price.addClass(priceFixed);
+		$this.addClass(priceFixed);
 		setNextPos(true);
 	} else {
 		if (priceTop <= priceParentTop) {
-			$price.removeClass(priceFixed);
+			$this.removeClass(priceFixed);
 			setNextPos(false);
 		} else {
 			setNextPos(true);
 		}
 	}
 
-	$priceNext.perfectScrollbar('update');
-	
+	if (onReady) {
+        $priceNext.perfectScrollbar();
+    } else {
+        $priceNext.perfectScrollbar('update');
+    }
+
 	function setNextPos(toggle) {
 		if (toggle) {
 			$priceNext.css({

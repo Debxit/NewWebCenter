@@ -70,6 +70,7 @@ $tabLink.on('click', function(event) {
 		});
 
 		setTimeout(function() {
+            setPricePos($item.find('.main__price'));
 			$item.fadeIn(300, function() {
 				$item.addClass(tabItemAct);
 				tabToggle = false;
