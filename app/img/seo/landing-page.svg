@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 448.66">
+    <g>
+        <g>
+            <path class="cls-1"
+                  d="M0,0V448.66H512V0ZM496.17,432.82H15.84V89.73H496.16V432.82Zm0-358.93H15.84V15.84H496.16V73.9Z"/>
+            <rect class="cls-1" x="39.59" y="36.95" width="21.11" height="15.83"/>
+            <rect class="cls-1" x="71.26" y="36.95" width="21.11" height="15.83"/>
+            <rect class="cls-1" x="451.3" y="36.95" width="21.11" height="15.83"/>
+            <path class="cls-1"
+                  d="M36.95,110.84V411.71h438.1V110.84Zm422.27,285H52.78V353.65H459.22v42.23Zm0-58.06H211.13V269.2h132V153.07H195.3V337.81H52.78V126.68H459.22V337.81ZM211.13,253.36V168.91H327.26v84.45Z"/>
+            <rect class="cls-1" x="266.56" y="190.02" width="36.95" height="15.84"/>
+            <rect class="cls-1" x="234.89" y="216.41" width="68.62" height="15.83"/>
+            <rect class="cls-1" x="71.26" y="147.79" width="21.11" height="15.84"/>
+            <rect class="cls-1" x="71.26" y="179.46" width="21.11" height="15.84"/>
+            <rect class="cls-1" x="102.93" y="147.79" width="21.11" height="15.84"/>
+            <rect class="cls-1" x="419.63" y="300.87" width="21.11" height="15.83"/>
+            <rect class="cls-1" x="419.63" y="269.2" width="21.11" height="15.83"/>
+            <rect class="cls-1" x="387.96" y="300.87" width="21.11" height="15.83"/>
+        </g>
+    </g>
+</svg>

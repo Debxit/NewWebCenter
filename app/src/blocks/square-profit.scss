@@ -17,6 +17,7 @@
 	&:hover{
 		color: $red;
 	}
+
 	&__img{
 		font-family: $font-sup;
 		font-style: normal;
@@ -32,10 +33,21 @@
 		text-align: center;
 		color: $color-main;
 	}
+
+	&__svg {
+		transition: $duration / 2 ease;
+		fill: $color-main;
+		width: 40px;
+		height: 40px;
+	}
 	
 	&.active{
 		border: solid 2px $red;
 		color: $red;
+
+		.square-profit__svg {
+			fill: $red;
+		}
 	}
 
 

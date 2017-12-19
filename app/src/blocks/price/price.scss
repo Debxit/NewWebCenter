@@ -61,10 +61,24 @@
 		margin: 0;
 	}
 
+	&>&__cost-seo {
+		max-width: 200px;
+		line-height: 0.9;
+		padding-bottom: 20px;
+	}
+
 	&__cost {
 		font-family: $font-days;
 		transform: scaleY(1.2);
 		display: inline-block;
+
+		&_sm {
+			font-size: 0.8em;
+		}
+
+		&_xs {
+		font-size: 0.6em;
+		}
 	}
 
 	&__currency {
