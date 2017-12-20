@@ -61,6 +61,7 @@ $tabLink.on('click', function(event) {
 		setTimeout(function() {
 			$tabItem.removeClass(tabItemAct);
 			$item.addClass(tabItemAct);
+			setPriceOnTabChange();
 		}, 300);
 
 	} else {
@@ -70,17 +71,27 @@ $tabLink.on('click', function(event) {
 		});
 
 		setTimeout(function() {
-            setPricePos($item.find('.main__price'));
 			$item.fadeIn(300, function() {
 				$item.addClass(tabItemAct);
+				setPriceOnTabChange();
 				tabToggle = false;
 			});
+			setPricePos($item.find('.main__price'));
 		}, 300);
 	}
 	// ==============
 
 	if (window.innerWidth >= tabPoint){
 		moveLine($this);
+	}
+
+	function setPriceOnTabChange() {
+		var
+			cost = $('.' + tabItemAct).find('.main__price .price__cost').text(),
+			$panels = $('.' + tabItemAct).find('.accord__panel');
+
+		setHidPrice(cost);
+		setHidValues($panels);
 	}
 });
 

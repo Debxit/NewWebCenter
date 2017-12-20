@@ -146,15 +146,16 @@
 			cursor: pointer;
 			pointer-events: none;
 		}
-	}
 
-	&__line-rail--seo {
-		@include screen-sm(min) {
-			margin: -40px 0;
-		}
+		&_seo {
 
-		@include screen-lg(max) {
-			display: none;
+			@include screen-sm(min) {
+				margin: -40px 0;
+			}
+
+			@include screen-lg(max) {
+				display: none;
+			}
 		}
 	}
 
@@ -218,20 +219,12 @@
 
 			&__title {
 
-				@include screen-lg(max) {
-					width: 50%;
-				}
-
-				@include screen-sm(max) {
-					width: 100%;
-				}
-
-
 				@include screen-sm(min) {
 					position: static;
 					float: none;
 					margin-right: 0;
 					margin-bottom: 0;
+					width: 50%;
 				}
 
 				@include screen-lg(min) {
@@ -239,6 +232,7 @@
 					float: left;
 					margin-right: 30px;
 					margin-bottom: 63px;
+					width: auto;
 				}
 
 				&::after {
@@ -278,7 +272,6 @@
 				@include screen-lg(min) {
 					display: block;
 				}
-
 			}
 		}
 	}

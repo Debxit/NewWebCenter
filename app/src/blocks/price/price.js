@@ -6,7 +6,7 @@ var
 $price.each(function () {
 	var
 		$this = $(this),
-        onReady = 0;
+      onReady = 0;
 
     setPricePos($this, 1);
 
@@ -45,13 +45,20 @@ function setPricePos($this, onReady) {
 		}
 	}
 
-	if (onReady) {
-        $priceNext.perfectScrollbar();
-    } else {
-        $priceNext.perfectScrollbar('update');
-    }
+	if ($priceNext.length) {
+
+		if (onReady) {
+			$priceNext.perfectScrollbar();
+		} else {
+			$priceNext.perfectScrollbar('update');
+		}
+	}
+
 
 	function setNextPos(toggle) {
+
+		if ($priceNext === undefined || !$priceNext.length) return;
+
 		if (toggle) {
 			$priceNext.css({
 				'position': 'fixed',

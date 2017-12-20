@@ -121,6 +121,7 @@
 	&__title {
 		margin: 0;
 		font-weight: 500;
+		font-size: 1.8rem;
 		transition: $duration / 2 ease color;
 		position: relative;
 		padding: 0 1em 10px 0;
@@ -143,6 +144,7 @@
 	&__desc {
 		margin: 0 0 5px;
 		line-height: 1.4;
+		font-size: 1.6rem;
 
 		&:last-child {
 			margin: 0;
@@ -165,14 +167,6 @@
 	&__radio {
 		display: none;
 
-		&:checked + label {
-
-			&::before {
-				background: $red;
-				border-color: $red;
-			}
-		}
-
 		&[type="checkbox"] {
 
 			+ label {
@@ -186,11 +180,25 @@
 					font-size: 20px;
 				}
 			}
+		}
 
-			&:checked + label {
+		&_checked {
+
+			&[type="checkbox"] {
+
+				+ label {
+
+					&::before {
+						color: $color-main;
+					}
+				}
+			}
+
+			+ label {
 
 				&::before {
-					color: $color-main;
+					background: $red;
+					border-color: $red;
 				}
 			}
 		}
@@ -238,6 +246,7 @@
 	&__sub-title {
 		display: block;
 		font-weight: 500;
+		font-size: 1.6rem;
 		margin: 0 0 5px;
 		transition: $duration / 2 ease;
 		line-height: 1.4;
@@ -251,6 +260,7 @@
 		display: block;
 		margin: 0 0 5px;
 		line-height: 1.4;
+		font-size: 1.6rem;
 
 		&:last-child {
 			margin: 0;
