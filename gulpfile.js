@@ -79,6 +79,7 @@ gulp.task('sass', function() {
 	return gulp.src([ // Берём источник
 		app + 'src/style.scss',
 		app + 'src/events/helloween.scss',
+		app + 'src/events/new-year.scss',
 		app + 'src/landing/kf-sklad/kf-sklad.scss',
 		app + 'src/landing/kf-elita/kf-elita.scss',
 		app + 'src/landing/kf-street-retail/kf-street-retail.scss',

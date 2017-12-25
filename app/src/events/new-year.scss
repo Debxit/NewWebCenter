@@ -1,0 +1,26 @@
+@import url('../global/variables.scss'); // SASS переменные
+
+.big-logo {
+
+	&__web {
+		background: url($path + 'img/events/new-year/web.svg') no-repeat center / contain;
+		color: transparent;
+		transform: none;
+	}
+
+	&__left {
+		background: url($path + 'img/events/new-year/logosml.svg') no-repeat center / contain;
+
+		img {
+			opacity: 0;
+		}
+	}
+
+	&__right {
+		background: url($path + 'img/events/new-year/logosmr.svg') no-repeat center / contain;
+
+		img {
+			opacity: 0;
+		}
+	}
+}
