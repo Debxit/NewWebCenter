@@ -32,6 +32,17 @@
 		transition: $duration * 2 ease width;
 	}
 
+	&__info-title {
+		font-weight: bold;
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	&__info-addr {
+		display: block;
+		font-weight: 300;
+	}
+
 	&_light {
 
 		&::after {

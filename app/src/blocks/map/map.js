@@ -24,12 +24,49 @@ function initMap() {
 			}
 		});
 
+		/* Образец карточки */
+		var contentString =
+				'<div class="map__info-wrap">' +
+					'<span class="map__info-title">Адрес:</span>' +
+					'<span class="map__info-addr">197227, Россия, Санкт-Петербург,<br>ул. Гаккелевская, 21А (БЦ "БДЦ"),<br>офис 20.03</span>' +
+				'</div>'
+			;
+		/* ================ */
+
+		/* Рамка */
+		var infoBubble = new InfoBubble({
+			content: contentString,
+			padding: 7,
+			borderWidth: 1,
+			borderColor: '#334b61',
+			disableAutoPan: false,
+			borderRadius: 3,
+			disableAnimation: true,
+			hideCloseButton: true,
+			backgroundColor: 'white',
+			color: '#334b61',
+			arrowSize: 10,
+			arrowPosition: 50,
+			arrowStyle: 0,
+			shadowStyle: 0,
+			minHeight: 0,
+			minWidth: 0
+		});
+		/* ===== */
+
+		/* Маркеры */
+		var markerImage = '../img/map-marker.svg';
+
 		var marker1 = new google.maps.Marker({
 			position: dot1,
 			map: map1,
-			title: 'Webcenter',
-			id: 'marker1'
+			icon: markerImage
 		});
+
+		marker1.addListener('click', function() {
+			infoBubble.open(map1, marker1);
+		});
+		/* ===== */
 
 		/* Центрирование карты при ресайзе */
 		var lastSize = 0; // Предыдущая ширина экрана
