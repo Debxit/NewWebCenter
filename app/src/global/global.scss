@@ -54,28 +54,6 @@ p {
 	line-height: 1.4;
 }
 
-a {
-	text-decoration: none;
-}
-
-input,
-textarea {
-
-	&:hover,
-	&:focus,
-	&:active {
-		outline: none;
-	}
-}
-
-textarea {
-	resize: none;
-}
-
-hr {
-	margin: 0;
-}
-
 .container {
 	padding-left: 15px;
 	padding-right: 15px;
