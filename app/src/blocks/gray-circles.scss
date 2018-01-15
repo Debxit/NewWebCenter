@@ -203,6 +203,125 @@
 		}
 	}
 
+	&__logo-profit {
+		padding: 10px;
+		width: 50%;
+		position: relative;
+
+		@include screen-xs(min) {
+			width: 33.333333%;
+		}
+
+		@include screen-sm(min) {
+			width: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+
+		&::after {
+
+			@include screen-sm(min) {
+				content: '\f105';
+				display: block;
+				position: absolute;
+				font-family: $font-fa;
+				font-size: 25px;
+				opacity: .5;
+				top: 50%;
+				transform: translateY(-50%);
+				right: auto;
+				left: 50%;
+			}
+		}
+
+		$items: 6; // Количество объектов
+		$angle: 300 / $items; // Отклонение в градусах одного объекта
+		@for $i from 1 through $items {
+			$cnt: $angle * ($i - 1.7);
+
+			@if $cnt < 0 {
+				$cnt: $cnt + 360;
+			}
+			@if $cnt >= 360 {
+				$cnt: $cnt - 360;
+			}
+
+			&:nth-child(#{$i + 1}) {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(-#{$cnt}deg) translateX(-250px) rotate(#{$cnt}deg);
+				}
+			}
+		}
+
+		&:nth-child(2) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(112deg) translateX(106px);
+				}
+			}
+		}
+
+		&:nth-child(3) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(61deg) translateX(111px);
+				}
+			}
+		}
+
+		&:nth-child(4) {
+
+			&::after {
+
+				@include screen-sm(min) {
+                  transform: translate(-50%, 29%) rotate(1deg) translateX(109px);
+				}
+			}
+		}
+
+		&:nth-child(5) {
+
+			&::after {
+
+				@include screen-sm(min) {
+                  transform: translate(-50%, -50%) rotate(-39deg) translateX(112px);
+				}
+			}
+		}
+
+		&:nth-child(6) {
+
+			&::after {
+
+				@include screen-sm(min) {
+					transform: translate(-50%, -50%) rotate(-88deg) translateX(109px);
+				}
+			}
+		}
+
+		&:nth-child(7) {
+
+			&::after {
+
+				display:none;
+			}
+		}
+
+
+		.profit__name {
+			font-size: 14px;
+		}
+	}
+
+
+
+
 	&__title {
 		margin: 0;
 

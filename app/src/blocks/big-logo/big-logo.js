@@ -11,14 +11,14 @@ $('.big-logo').velocity({
 			opacity: "1",
 			translateX: "0"
 		}, 500, "ease",function(){
-			setInterval(function () {
+			/*setInterval(function () {
 				$('.big-logo__web').addClass('glitched-web');
 				$('.big-logo__center').addClass('glitched-center');
 				setTimeout(function(){
 					$('.big-logo__web').removeClass('glitched-web');
 					$('.big-logo__center').removeClass('glitched-center');
 				},1500);
-			}, 5000);
+			}, 5000);*/
 		});
 	});
 });
