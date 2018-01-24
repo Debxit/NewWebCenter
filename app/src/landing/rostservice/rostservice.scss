@@ -1,0 +1,601 @@
+@import url('../../global/variables.scss');
+@import url('variables.scss');
+@import url('fonts.scss');
+
+::selection {
+	background-color: $color-land;
+	color: white;
+}
+
+.land {
+	font-family: $font-land;
+	font-weight: normal;
+	color: $color-land-gray;
+	font-size: 1.8rem;
+	line-height: 1.15;
+
+	/*@include screen-lg() {
+		font-size: 1.8rem;
+	}
+
+	@include screen-md() {
+		font-size: 1.4rem;
+	}*/
+
+	@include screen-sm() {
+		font-size: 1em;
+	}
+	&__section {
+		position: relative;
+		margin-bottom: 3em;
+
+		&_first {
+			background: url($path + 'img/landing/rostservice/bg.jpg') no-repeat 100% 0;
+			background-size: 100% auto;
+			height: auto;
+			margin-bottom: 3em;
+			padding-bottom: 6em;
+
+			@include screen-xl() {
+				margin-top: 0;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: linear-gradient(to bottom, white 0, transparent 40%);
+			}
+		}
+	}
+
+	&__head-wrap {
+		z-index: 1;
+	}
+
+	&__logo {
+		width: 35%;
+		margin-top: 20vh;
+
+		@include screen-xs() {
+			margin-top: 30px;
+			width: 80%;
+		}
+	}
+
+	&__main-title {
+		position: relative;
+		z-index: 1;
+		margin: 4rem 0;
+		top: 0;
+		width: 50%;
+		font-size: 1.6em;
+		font-family: "FuturaBookC", sans-serif;
+		color: $color-land-gray;
+
+		@include screen-lg() {
+			font-size: 1.4em;
+		}
+
+		@include screen-md() {
+			font-size: 1.2em;
+		}
+
+		@include screen-sm() {
+			font-size: 1em;
+		}
+
+		@include screen-xs() {
+			font-size: 1.8rem;
+			margin-bottom: 11rem;
+			width: 100%;
+		}
+	}
+
+	&__left-img{
+		position: relative;
+		top: 0;
+		left: 0;
+		height: auto;
+		max-width: 90%;
+		max-height: 590px;
+		margin-bottom: 40px;
+	}
+
+	&__right-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		padding-top: 90px;
+
+		@include screen-xl() {
+			padding-top: 60px;
+		}
+
+		@include screen-xs() {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: $color-land-gray;
+		text-align: center;
+		line-height: 1.1;
+		position: relative;
+		display: block;
+		font-size: 34px;
+		font-weight: bold;
+		margin: 0 0 .5em;
+
+		@include screen-lg() {
+			font-size: 37px;
+		}
+
+		@include screen-md() {
+			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		text-align: justify;
+	}
+
+	&__sm-title {
+		text-align: center;
+		font-size: 30px;
+		font-weight: normal;
+		line-height: 1.2;
+		margin: 1em 0 .5em;
+
+		@include screen-lg() {
+			font-size: 27px;
+		}
+
+		@include screen-md() {
+			font-size: 24px;
+		}
+
+		@include screen-sm() {
+			font-size: 21px;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		text-align: left;
+		margin-bottom: 1.5em;
+	}
+
+	&__list-item {
+		list-style-type: none;
+		line-height: 1.3;
+		padding: 3px 0;
+		text-align: justify;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: $color-land;
+			border-radius: 50%;
+			margin-right: 15px;
+			vertical-align: middle;
+		}
+	}
+
+	&__link-wrap {
+		font-size: 24px;
+		text-align: center;
+		margin: 0;
+
+		@include screen-lg() {
+			font-size: 22px;
+		}
+
+		@include screen-md() {
+			font-size: 19px;
+		}
+
+		@include screen-sm() {
+			font-size: 17px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		border-bottom: 1px solid #134a88;
+		color: #134a88;
+		transition: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: #134a88;
+			border-bottom-color: #134a88;
+		}
+	}
+
+	&__gray-title {
+		font-weight: normal;
+		text-transform: uppercase;
+
+		&_fog {
+			background: white;
+			box-shadow: 0 0 5px 3px white;
+		}
+	}
+
+	&__example-title {
+		font-size: 23px;
+		color: $color-land-gray;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 1.9em 0 1.6em;
+
+		@include screen-lg() {
+			margin: 1.6em 0;
+		}
+
+		@include screen-md() {
+			margin: 1.4em 0 1.6em;
+		}
+	}
+	&__main-title{
+
+	}
+
+	&__example-text {
+		text-align: justify;
+		font-size: 14px;
+		margin-bottom: 10px;
+		line-height: 2;
+	}
+
+	&__font-name {
+		white-space: nowrap;
+
+		@include screen-sm(min) {
+			font-size: 80%;
+		}
+
+		@include screen-sm() {
+			margin-top: 0;
+		}
+	}
+
+	&__rect {
+		font-size: 51px;
+		text-align: center;
+		width: 162px;
+		height: 162px;
+		line-height: 162px;
+		box-shadow: 0 0 7px rgba(black, .2);
+		position: relative;
+		background: white;
+		display: inline-block;
+		font-weight: normal;
+
+		@include screen-lg() {
+			font-size: 46px;
+		}
+
+		@include screen-md() {
+			font-size: 41px;
+		}
+
+		@include screen-sm() {
+			font-size: 36px;
+		}
+
+		@include screen-xs() {
+			margin-bottom: 1em;
+		}
+
+		&_second {
+			font-weight: 300;
+			font-family: $font-land-second;
+		}
+
+		&_line_first,
+		&_line_code,
+		&_line_second {
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 42px;
+				background: $color-land-dark;
+				transform-origin: 0 0;
+
+				@include screen-sm() {
+					display: none;
+				}
+			}
+		}
+		&_line_code{
+			&::before,
+			&::after {
+				background: $color-land-gray;
+			}
+			&::before {
+				bottom: 55px;
+				left: 18px;
+				transform: rotate(58deg);
+				@include screen-lg(){
+					bottom: 68px;
+					left: 22px;
+				}
+			}
+			&::after {
+				bottom: 10px;
+				left: -111px;
+				transform: rotate(-103deg) scaleY(2.27);
+				@include screen-lg(){
+					bottom: 23px;
+					left: -108px;
+				}
+
+			}
+		}
+		&_line_first {
+
+			&::before,
+			&::after {
+				background: $color-land-gray;
+			}
+
+			&::before {
+				bottom: 52px;
+				right: 20px;
+				transform: rotate(-49deg);
+				@include screen-lg(){
+					bottom: 67px;
+					right: 21px;
+				}
+
+				@include screen-md() {
+					bottom: 21%;
+					right: 20px;
+					transform: rotate(-370deg) scaleY(3.6);
+				}
+			}
+
+			&::after {
+				bottom: 24px;
+				right: -12px;
+				transform: rotate(-73deg) scaleY(2.27);
+
+				@include screen-lg(){
+					bottom: 39px;
+					right: -11px;
+				}
+
+				@include screen-md() {
+					bottom: auto;
+					left: auto;
+					top: 35px;
+					right: 165px;
+					transform: rotate(-69.4deg) scaleY(3.65);
+				}
+			}
+		}
+
+		&_line_second {
+
+			&::before,
+			&::after {
+				background: $color-land-gray;
+
+			}
+
+			&::before {
+				bottom: 51px;
+				right: 19px;
+				transform: rotate(-49deg);
+				@include screen-lg(){
+					bottom: 71px;
+					right: 18px;
+				}
+				@include screen-md() {
+					right: auto;
+					left: 15px;
+					top: 47px;
+					transform: rotate(43deg);
+				}
+			}
+
+			&::after {
+				top: 56%;
+				right: -13px;
+				transform: rotate(-70deg) scaleY(2.03);
+				@include screen-lg(){
+					top: 49%;
+					right: -14px;
+					transform: rotate(-91deg) scaleY(2.03);
+				}
+				@include screen-md() {
+					right: auto;
+					left: -14px;
+					top: 78px;
+					transform: rotate(-360.2deg) scaleY(3.83);
+				}
+			}
+		}
+	}
+
+	&__rect-sm-img {
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		bottom: -24px;
+		right: -24px;
+	}
+
+	&__rect-img {
+		width: 70px;
+		height: 70px;
+		position: relative;
+		padding: 15px;
+		display: block;
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+		left: 100%;
+		border-radius: 50%;
+		margin: 0 -70px;
+		@include screen-md() {
+			left: 70px;
+		}
+		@include screen-sm() {
+			left: 70px;
+		}
+
+		&_second {
+
+		}
+	}
+
+	&__fog-logo {
+		opacity: .03;
+		height: 50vh;
+		max-width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+
+		&_right {
+			margin-right: 0;
+		}
+
+		&_fog {
+			box-shadow: 0 0 7px rgba(black, .2);
+		}
+
+	}
+	&__img-1{
+		margin: 0 auto;
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 45%;
+		top: 20%;
+		@include screen-md(){
+			width: 65%;
+			top: 42%;
+			left: -30%;
+		}
+		@include screen-sm(){
+			width: 65%;
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+	&__abs {
+		padding: 0 15px;
+		font-size: 1.3rem;
+		display: block;
+		width: 25%;
+
+		@include screen-md(){
+			width: 35%;
+		}
+		@include screen-sm()  {
+			position: absolute;
+			width: auto;
+		}
+
+		&_1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: right;
+			@include screen-md(){
+				top: 0;text-align: left;
+			}
+			@include screen-sm () {
+				top: 0;
+				text-align: left;
+			}
+		}
+
+		&_2 {
+			position: absolute;
+			bottom: 15%;
+			text-align: right;
+			left: 0;
+			@include screen-md(){
+				left: auto;
+				right: 20%;
+				top: 0;text-align: left;
+			}
+			@include screen-sm() {
+				top: 30%;
+				text-align: left;
+			}
+
+		}
+		&_3 {
+			top: 20%;
+			position: absolute;
+			text-align: left;
+			right: 0;
+			&-img-left{
+				width: 70px;
+				height: 70px;
+				position: relative;
+				padding: 15px;
+				display: block;
+				box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+				right: 0;
+				border-radius: 50%;
+				margin: 0;
+			}
+			@include screen-md() {
+				left: 68%;
+				bottom: 0;
+				top: 50%;
+			 }
+			@include screen-sm() {
+				top: 65%;
+				right: 0;
+				left: 0;
+			}
+		}
+	}
+	&__container{
+		position: relative;
+		z-index: 1;
+		min-height: 400px;
+		top: 10%;
+		@include screen-md(){
+			min-height: 500px;
+			top:20%;
+		}
+		@include screen-sm(){
+			top: 20%;
+			min-height: 550px;
+		}
+	}
+}
