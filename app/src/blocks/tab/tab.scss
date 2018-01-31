@@ -104,28 +104,6 @@
 			}
 		}
 
-		&-svg {
-
-			font-family: $font-sup;
-			font-style: normal;
-			font-weight: normal;
-			speak: none;
-			display: block;
-			width: 1em;
-			font-size: 35px;
-			color: inherit;
-			margin: 0 auto;
-			transition: fill .2s ease;
-			fill: $color-main;
-
-
-			&:hover,
-			&_active {
-
-				fill: $red;
-			}
-		}
-
 		&:hover,
 		&_active {
 
@@ -142,10 +120,29 @@
 
 				&__title-svg {
 					fill: $red;
-
 				}
 			}
+		}
+	}
 
+	&__title-svg {
+
+		font-family: $font-sup;
+		font-style: normal;
+		font-weight: normal;
+		speak: none;
+		display: block;
+		width: 1em;
+		font-size: 35px;
+		color: inherit;
+		margin: 0 auto;
+		transition: fill .2s ease;
+		fill: $color-main;
+
+
+		&:hover,
+		&_active {
+			fill: $red;
 		}
 	}
 

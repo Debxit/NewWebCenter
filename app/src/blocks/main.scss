@@ -138,8 +138,12 @@
 			width: 100%;
 		}
 
-		&-or {
-			margin: 0 30px;
+		&_or {
+			margin: 0 30px 15px;
+
+			@include screen-xs() {
+				margin: 0 0 15px;
+			}
 		}
 	}
 
@@ -315,7 +319,7 @@
 	}
 
 	&__margin-bottom {
-		margin-bottom:  30px;
+		margin-bottom: 30px;
 	}
 }
 
