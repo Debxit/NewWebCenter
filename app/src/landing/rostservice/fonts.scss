@@ -1,15 +1,1 @@
-@font-face {
-	font-family: 'RobotoSlab';
-	src: url($path + 'fonts/landing/robotoslab/robotoslab-regular.woff2') format('woff2'),
-	url($path + 'fonts/landing/robotoslab/robotoslab-regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'RobotoSlab';
-	src: url($path + 'fonts/landing/robotoslab/robotoslab-bold.woff2') format('woff2'),
-	url($path + 'fonts/landing/robotoslab/robotoslab-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic');
