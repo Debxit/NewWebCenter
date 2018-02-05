@@ -102,7 +102,8 @@ gulp.task('sass', function() {
 		app + 'src/landing/solomon/solomon.scss',
 		app + 'src/landing/parus/parus.scss',
 		app + 'src/landing/rostservice/rostservice.scss',
-		app + 'src/landing/burevestnik/burevestnik.scss'
+		app + 'src/landing/burevestnik/burevestnik.scss',
+		app + 'src/landing/nsella/nsella.scss'
 	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
