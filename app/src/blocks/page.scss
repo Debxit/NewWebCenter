@@ -33,6 +33,10 @@
 		@include screen-sm() {
 			flex-wrap: wrap;
 		}
+
+		&-align_top {
+			align-items: flex-start;
+		}
 	}
 
 	&__profit {

@@ -55,6 +55,10 @@
 				border-bottom-color: inherit;
 			}
 		}
+
+		&-center {
+			text-align: center;
+		}
 	}
 
 	&__link {
@@ -208,6 +212,10 @@
 		@include screen-xs() {
 			width: 270px;
 			height: 270px;
+		}
+
+		&_nopadding {
+			padding-bottom: 0;
 		}
 	}
 
