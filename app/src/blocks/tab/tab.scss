@@ -126,7 +126,6 @@
 	}
 
 	&__title-svg {
-
 		font-family: $font-sup;
 		font-style: normal;
 		font-weight: normal;
@@ -138,7 +137,6 @@
 		margin: 0 auto;
 		transition: fill .2s ease;
 		fill: $color-main;
-
 
 		&:hover,
 		&_active {
@@ -297,6 +295,45 @@
 
 				@include screen-lg(min) {
 					display: block;
+				}
+			}
+		}
+	}
+
+	&_fixed-width {
+
+		.tab {
+			// =====
+
+			&__head-i {
+
+				@include screen-sm(min) {
+					display: flex;
+				}
+			}
+
+			&__link {
+
+				@include screen-sm(min) {
+					line-height: 1.4;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	&_fixed_5x {
+
+		.tab {
+			// =====
+
+			&__title {
+
+				@include screen-sm(min) {
+					width: 20%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
 			}
 		}

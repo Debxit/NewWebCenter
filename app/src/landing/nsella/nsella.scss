@@ -1,4 +1,5 @@
 @import url('../../global/variables.scss');
+@import url('fonts.scss');
 @import url('variables.scss');
 
 ::selection {
@@ -30,7 +31,7 @@
 		margin-bottom: 2em;
 
 		&_first {
-			background: url($path + 'img/landing/nsella/bg_nsella.png') no-repeat 50% 0;
+			background: url($path + 'img/landing/nsella/bg.jpg') no-repeat 50% 0;
 			background-size: 100% auto;
 			height: 100vh;
 			margin-top: -91px;
@@ -62,15 +63,16 @@
 	}
 
 	&__logo {
-		max-width: 50%;
-		position: relative;
-		top: 0;
-		left: 0;
-		margin-top: 150px;
+		width: 35%;
+		margin-top: 20vh;
+
+		@include screen-md() {
+			max-width: 320px;
+			width: 100%;
+		}
 
 		@include screen-xs() {
-			margin-top: 70px;
-			max-width: 100%;
+			margin-top: 90px;
 		}
 	}
 
@@ -78,24 +80,26 @@
 		position: relative;
 		z-index: 1;
 		margin: 1.5em 0;
-		font-weight: normal;
-		font-size: 1.6em;
+		font-size: 32px;
+		font-weight: 500;
+		max-width: 60%;
 
 		@include screen-lg() {
-			font-size: 45px;
+			font-size: 29px;
 		}
 
 		@include screen-md() {
-			font-size: 40px;
+			font-size: 27px;
 		}
 
 		@include screen-sm() {
-			font-size: 35px;
+			font-size: 25px;
 			margin: 1em 0;
+			max-width: 100%;
 		}
 
 		@include screen-xs() {
-			font-size: 25px;
+			font-size: 20px;
 		}
 	}
 
@@ -131,8 +135,8 @@
 		display: block;
 		font-size: 36px;
 		margin: 1.5em 0 .7em;
-		font-weight: 500;
 		color: $color-land-dark;
+		font-weight: 300;
 
 		@include screen-lg() {
 			font-size: 33px;
@@ -145,6 +149,15 @@
 		@include screen-sm() {
 			font-size: 27px;
 		}
+
+		&::after {
+			content: '';
+			height: 2px;
+			width: 76px;
+			display: block;
+			margin: 10px auto 0;
+			background: $color-land;
+		}
 	}
 
 	&__text {
@@ -155,7 +168,7 @@
 		text-align: center;
 		font-size: 26px;
 		margin: 1em 0 .5em;
-		font-weight: normal;
+		font-weight: 500;
 		color: $color-land-dark;
 
 		@include screen-lg() {
@@ -214,18 +227,20 @@
 
 	&__link {
 		display: inline-block;
-		color: #668bc1;
-		border-bottom: 1px solid #668bc1;
+		color: $color-land-dark;
+		border-bottom: 1px solid $color-land-dark;
+		font-weight: 500;
 
 		&:hover,
 		&:focus {
-			color: $color-land-dark;
+			color: $color-land;
 			border-bottom-color: transparent;
 		}
 	}
 
 	&__gray-title {
 		text-transform: uppercase;
+		font-size: 19px;
 
 		&_fog {
 			background: white;
@@ -234,29 +249,34 @@
 	}
 
 	&__example-title {
-		font-size: 34px;
-		font-weight: 500;
-		margin: .9em 0 1em;
+		font-size: 30px;
+		font-weight: 300;
+		margin: 1em 0 1em;
 		color: $color-land-dark;
 
-		@include screen-lg() {
+		@include screen-sm() {
 			font-size: 26px;
 		}
 
-		@include screen-md() {
-			font-size: 23px;
-		}
-
-		@include screen-sm() {
-			font-size: 20px;
+		&::after {
+			content: '';
+			height: 2px;
+			width: 76px;
+			display: block;
+			margin-top: 5px;
+			background: $color-land;
 		}
 	}
 
 	&__example-text {
-		font-size: 14px;
+		font-size: 18px;
 		margin: 8px 0;
-		font-weight: normal;
-		color: #666666;
+		font-weight: 300;
+		color: $color-land-gray;
+
+		@include screen-sm() {
+			font-size: 16px;
+		}
 
 		@include screen-xs() {
 			text-align: left;
@@ -265,6 +285,7 @@
 
 	&__font-name {
 		white-space: nowrap;
+		font-size: 20px;
 
 		@include screen-sm() {
 			margin-top: 0;
@@ -288,6 +309,7 @@
 		position: relative;
 		background: white;
 		display: inline-block;
+		font-weight: 300;
 
 		@include screen-lg() {
 			font-size: 46px;
@@ -330,7 +352,7 @@
 
 			&::before,
 			&::after {
-				background: $color-land-red;
+				background: $color-land-second;
 			}
 
 			&::before {
@@ -339,14 +361,14 @@
 
 			&::after {
 				bottom: -100px;
-				transform: rotate(-90deg) scaleY(7.25);
+				transform: rotate(-87.1deg) scaleY(9.15);
 
 				@include screen-lg() {
-					transform: rotate(-88.6deg) scaleY(3.32);
+					transform: rotate(-94.6deg) scaleY(7.27);
 				}
 
 				@include screen-md() {
-					transform: rotate(-103.6deg) scaleY(3.05);
+					transform: rotate(-100deg) scaleY(2.69);
 				}
 			}
 		}
@@ -379,18 +401,18 @@
 			&::after {
 				top: 50%;
 				right: -50px;
-				transform: rotate(-117.8deg) scaleY(2.12);
+				transform: rotate(-105.8deg) scaleY(5.02);
 				margin-top: 1px;
 
 				@include screen-lg() {
-					transform: rotate(-121.4deg) scaleY(1.85);
+					transform: rotate(-124.9deg) scaleY(2.9);
 				}
 
 				@include screen-md() {
 					right: auto;
 					left: -35px;
 					top: -35px;
-					transform: rotate(-177.9deg) scaleY(6.43);
+					transform: rotate(-211.5deg) scaleY(6.37);
 				}
 			}
 		}
@@ -404,7 +426,7 @@
 		left: 50%;
 		margin-top: -31px;
 		margin-left: -31px;
-		background: $color-land-red;
+		background: $color-land-second;
 
 		&_second {
 			background: $color-land;
@@ -412,8 +434,8 @@
 	}
 
 	&__fog-logo {
-		opacity: 1;
-		height: 100px;
+		opacity: .03;
+		height: 125px;
 		max-width: 100%;
 		position: absolute;
 		bottom: 0;
@@ -428,6 +450,11 @@
 
 		&_right {
 			margin-right: 0;
+			max-width: 75%;
+
+			@include screen-md() {
+				max-width: 100%;
+			}
 		}
 
 		&_fog {
@@ -447,7 +474,6 @@
 
 			@include screen-xs(min) {
 				left: 0;
-				top: 80px;
 			}
 		}
 
