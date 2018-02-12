@@ -159,6 +159,8 @@ $accord.each(function() {
 
 	function toggleMobilePrice() {
 		if (!$accordHead.length) return;
+		if (!$mainCostWrap.length) return;
+		if (!$bottomCostWrap.length) return;
 
 		var
 			$mainCostOuter = $mainCostWrap.parent().parent(), // Внешний контейнер главной стоимости
