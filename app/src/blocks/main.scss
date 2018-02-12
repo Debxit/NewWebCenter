@@ -47,6 +47,10 @@
 			}
 		}
 
+		&_center {
+			text-align: center;
+		}
+
 		a {
 			border-bottom: 1px solid transparent;
 			transition: $duration ease;
@@ -54,10 +58,6 @@
 			&:hover {
 				border-bottom-color: inherit;
 			}
-		}
-
-		&-center {
-			text-align: center;
 		}
 	}
 
@@ -128,6 +128,16 @@
 		@include screen-sm() {
 			margin-left: 0;
 			text-align: center;
+		}
+
+		&_hidden {
+			visibility: hidden;
+			height: 0;
+			margin-left: 0;
+
+			@include screen-md() {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -274,6 +284,10 @@
 
 	&__mt-1em {
 		margin-top: 1em;
+	}
+
+	&__mb-1em {
+		margin-bottom: 1em;
 	}
 
 	&__space-bot {
