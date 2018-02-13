@@ -26,18 +26,26 @@
   &__right, &__left {
     align-items: center;
     display: inline-flex;
-    position: absolute;
-    right: 15px;
-    top: 7px;
   }
 
   &__left {
-    left: 15px;
-    top: 0px;
+
+  }
+
+  &__img-link {
+    display: inline-block;
+  }
+
+  &__img {
+    display: block;
+    height: 55px;
   }
 
   .container {
     position: relative;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
