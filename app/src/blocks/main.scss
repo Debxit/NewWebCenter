@@ -183,7 +183,6 @@
 		position: absolute;
 		top: 0;
 		right: 15%;
-		z-index: -1;
 
 		@include screen-sm() {
 			width: 320px;
@@ -222,6 +221,11 @@
 		@include screen-xs() {
 			width: 270px;
 			height: 270px;
+		}
+
+		&_up {
+			padding-bottom: 190px;
+			margin: 0 auto -190px;
 		}
 
 		&_nopadding {
@@ -288,6 +292,10 @@
 
 	&__mb-1em {
 		margin-bottom: 1em;
+	}
+
+	&__mb-2em {
+		margin-bottom: 2em;
 	}
 
 	&__space-bot {

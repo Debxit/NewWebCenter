@@ -67,6 +67,21 @@
 		}
 	}
 
+	&__profit-3 {
+		width: 33.33333%;
+		padding: 0 15px;
+
+		@include screen-sm() {
+			width: 50%;
+			margin-bottom: 20px;
+		}
+
+		@include screen-xs() {
+			width: 100%;
+			padding: 0;
+		}
+	}
+
 	&__small-line {
 		font-family: $font-days;
 		font-size: 19px;

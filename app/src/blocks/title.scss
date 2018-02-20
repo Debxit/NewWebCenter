@@ -118,6 +118,7 @@
 		margin-top: 140px;
 		margin-bottom: 15px;
 		max-width: 62%;
+		z-index: 1;
 
 		@include screen-xl() {
 			margin-top: 140px;
@@ -134,7 +135,7 @@
 			margin-top: 55px;
 		}
 
-		&:after{
+		&:after {
 			content: '';
 			position: absolute;
 			z-index: -1;

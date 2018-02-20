@@ -162,6 +162,12 @@
 
 	&__radio-wrap {
 
+		&:last-child {
+
+			.accord__runner {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__radio {
@@ -269,6 +275,7 @@
 
 	&__runner {
 		margin-left: 4em;
+		margin-bottom: 21px;
 
 		@include screen-sm() {
 			margin-left: 35px;

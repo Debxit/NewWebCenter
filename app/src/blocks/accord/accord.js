@@ -70,8 +70,8 @@ $accord.each(function() {
 			$thisRunner = $this.next().next(),
 			runnerCost = 0; // Стоимость в бегунке
 
-		if ($thisSubtitle.attr('data-noprice') !== undefined) {
-			$thisSubtitle.append(" <span class='red'>(+ " + $this.val() + " руб.)</span>");
+		if ($thisSubtitle.attr('data-noprice') === undefined) {
+			$thisSubtitle.append(" <span class='red'>(" + ($this.val() == 0 ? '' : '+ ') + $this.val() + " руб.)</span>");
 		}
 
 		$this.on('click', function() {
@@ -142,7 +142,8 @@ $accord.each(function() {
 				}
 
 				$prev.val(value);
-				$thisSubtitle.find('.red').text("(+ " + value + " руб.)");
+
+				$thisSubtitle.find('.red').text('(' + (value == 0 ? '' : '+ ') + value + ' руб.)');
 
 				setHidPrice($mainCostWrap.text());
 			}, 0);
