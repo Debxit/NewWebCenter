@@ -1,5 +1,6 @@
 /* Табы */
 var
+	$tab = $('.tab'), // Блоки табов
 	$tabLink = $('.tab__title'), // Заголовки табов
 	tabLinkAct = 'tab__title_active', // Класс активного заголовка
 	tabBodyClass = 'tab__body', // Класс тела табов
@@ -7,7 +8,8 @@ var
 	tabItemAct = 'tab__item_active', // Класс активного таба
 	$line = $('.tab__line'), // Ползунок
 	tabToggle = false, // Заглушка
-	tabPoint = 768; // Брейкпоинт на мобильную версию
+	tabPoint = 768, // Брейкпоинт на мобильную версию
+	tabHoverClass = 'js-tab_hover'; // Класс, который добавляется при наведении курсора
 
 $('.' + tabItemAct).css('display', 'block');
 
@@ -17,8 +19,25 @@ if (window.innerWidth < tabPoint) {
 	moveLine($('.' + tabLinkAct));
 }
 
+tabAutoPlay(3000);
+
+$tab.on('mouseenter', function() {
+
+	if (window.innerWidth >= tabPoint) {
+		$(this).addClass(tabHoverClass);
+	}
+});
+
+$tab.on('mouseleave', function() {
+
+	if (window.innerWidth >= tabPoint) {
+		$(this).removeClass(tabHoverClass);
+	}
+});
+
 $(window).on('resize', function() {
 	if (window.innerWidth < tabPoint) {
+		$tab.removeClass(tabHoverClass);
 		moveTabs(true);
 	} else {
 		moveTabs(false);
@@ -192,7 +211,6 @@ function moveTabs(toggle) {
 	});
 }
 
-//TODO Сделать переключение слайдов по таймеру
 //TODO Сделать поддержку быстрого переключения
 function moveLine(tabTitle, inner) {
 	if (!tabTitle.length) return;
@@ -214,5 +232,20 @@ function moveLine(tabTitle, inner) {
 	setTimeout(function() {
 		moveLine($this, true);
 	}, 300);
+}
+
+function tabAutoPlay(delay) {
+
+	setInterval(function() {
+		if ($tab.hasClass(tabHoverClass) || window.innerWidth < tabPoint) return;
+
+		var $tabAct = $tabLink.filter('.' + tabLinkAct);
+
+		if ($tabAct.next().length) {
+			$tabAct.next().trigger('click');
+		} else {
+			$tabLink.first().trigger('click');
+		}
+	}, delay);
 }
 /* ========== */
