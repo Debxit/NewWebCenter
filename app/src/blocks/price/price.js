@@ -19,11 +19,6 @@ $price.each(function () {
 function setPricePos($this, onReady) {
 	if (!$this.length) return;
 
-	if (window.innerWidth <= 991) {
-		setNextPos(false);
-		return;
-	}
-
 	var
     	$priceParent = $this.parent(), // Внешний контейнер блока стоимости
     	$priceNext = $this.next(), // Блок рядом с блоком стоимости
@@ -31,16 +26,26 @@ function setPricePos($this, onReady) {
 		priceTop = $this.offset().top, // Расстояние блока стоимости от верха страницы
 		priceParentTop = $priceParent.offset().top, // Расстояние внешнего контейнера от верха страницы
 		priceParentWidth = $priceParent.width(), // Ширина внешнего контейнера
+		priceParentHeight = $priceParent.height(), // Высота внешнего контейнера
 		priceHeight = $this.outerHeight(true) + 15; // Высота блока стоимости, включая margin
 
+	if (window.innerWidth <= 991) {
+		setNextPos(false);
+		$this.parent().css('height', '');
+		return;
+	}
+
 	if (priceTop < docTop) { // Если блок стоимости ВЫШЕ верха окна
+		$priceParent.css('height', priceParentHeight);
 		$this.addClass(priceFixed);
 		setNextPos(true);
 	} else {
 		if (priceTop <= priceParentTop) {
 			$this.removeClass(priceFixed);
 			setNextPos(false);
+			$priceParent.css('height', '');
 		} else {
+			$priceParent.css('height', priceParentHeight);
 			setNextPos(true);
 		}
 	}
