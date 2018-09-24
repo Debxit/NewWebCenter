@@ -1,0 +1,494 @@
+@import url('../../global/variables.scss');
+@import url('variables.scss');
+
+
+::selection {
+	background-color: $color-land;
+	color: white;
+}
+
+.land {
+	font-family: Roboto;
+	font-weight: normal;
+	color: $color-land-dark;
+	font-size: 22px;
+	line-height: 1.3;
+
+	@include screen-lg() {
+		font-size: 20px;
+	}
+
+	@include screen-md() {
+		font-size: 18px;
+	}
+
+	@include screen-sm() {
+		font-size: 16px;
+	}
+
+	&__section {
+		position: relative;
+		margin-bottom: 3em;
+
+		&_first {
+			background: url($path + 'img/landing/myslitsky/bg.jpg') no-repeat 50% 0;
+			background-size: 100% auto;
+			height: 100vh;
+			margin-top: -91px;
+			margin-bottom: 3em;
+
+			@include screen-xl() {
+				margin-top: -60px;
+			}
+
+			@include screen-lg() {
+				background-size: cover;
+				background-position: 20% 50%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: linear-gradient(to bottom, white 0, transparent 40%);
+			}
+		}
+	}
+
+	&__head-wrap {
+		z-index: 1;
+	}
+
+	&__logo {
+		width: 35%;
+		margin-top: 20vh;
+
+		@include screen-xs() {
+			margin-top: 70px;
+		}
+	}
+
+	&__main-title {
+		position: relative;
+		z-index: 1;
+		color: $color-land;
+		margin: 1em 0;
+		font-weight: 700;
+		font-size: 50px;
+
+		@include screen-lg() {
+			font-size: 44px;
+		}
+
+		@include screen-md() {
+			font-size: 37px;
+		}
+
+		@include screen-sm() {
+			font-size: 30px;
+		}
+
+		@include screen-xs() {
+			font-size: 25px;
+		}
+	}
+
+	&__right-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		padding-top: 90px;
+
+		@include screen-xl() {
+			padding-top: 60px;
+		}
+
+		@include screen-xs() {
+			max-width: 100%;
+		}
+	}
+
+	&__title-wrap {
+
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: $color-land-text;
+		text-align: center;
+		line-height: 1.1;
+		position: relative;
+		display: block;
+		font-size: 34px;
+		font-weight: bold;
+		margin: 0 0 .5em;
+		margin-bottom: 40px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 2px;
+			height: 31px;
+			width: 6px;
+			margin-right: 6px;
+			background-color: #6aacd5;
+			float: left;
+			margin-left: -13px;
+		}
+
+		@include screen-lg() {
+			font-size: 37px;
+		}
+
+		@include screen-md() {
+			font-size: 30px;
+		}
+
+		@include screen-sm() {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		text-align: justify;
+	}
+
+	&__sm-title {
+		text-align: center;
+		font-size: 30px;
+		font-weight: normal;
+		line-height: 1.2;
+		margin: 1em 0 .5em;
+
+		@include screen-lg() {
+			font-size: 27px;
+		}
+
+		@include screen-md() {
+			font-size: 24px;
+		}
+
+		@include screen-sm() {
+			font-size: 21px;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		text-align: left;
+		margin-bottom: 1.5em;
+	}
+
+	&__list-item {
+		list-style-type: none;
+		line-height: 1.3;
+		padding: 3px 0;
+		text-align: justify;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: $color-land;
+			border-radius: 50%;
+			margin-right: 15px;
+			vertical-align: middle;
+		}
+	}
+
+	&__link-wrap {
+		font-size: 24px;
+		text-align: center;
+		margin: 0;
+
+		@include screen-lg() {
+			font-size: 22px;
+		}
+
+		@include screen-md() {
+			font-size: 19px;
+		}
+
+		@include screen-sm() {
+			font-size: 17px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		border-bottom: 1px solid $color-land-gray;
+		color: $color-land-dark;
+		transition: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color-land;
+			border-bottom-color: $color-land;
+		}
+	}
+
+	&__gray-title {
+		font-weight: normal;
+		text-transform: uppercase;
+
+		&_fog {
+			background: white;
+			box-shadow: 0 0 5px 3px white;
+		}
+	}
+
+	&__example-title {
+		font-size: 22px;
+		color: $color-land-text;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 1.9em 0 1.6em;
+
+		@include screen-lg() {
+			margin: 1.6em 0;
+		}
+
+		@include screen-md() {
+			margin: 1.4em 0 1.6em;
+		}
+	}
+
+	&__example-text {
+		text-align: justify;
+		font-size: 14px;
+		margin-bottom: 10px;
+		line-height: 2;
+	}
+
+	&__font-name {
+		white-space: nowrap;
+
+		@include screen-sm(min) {
+			font-size: 80%;
+		}
+
+		@include screen-sm() {
+			margin-top: 0;
+		}
+	}
+
+	&__rect {
+		font-size: 51px;
+		text-align: center;
+		width: 162px;
+		height: 162px;
+		line-height: 162px;
+		box-shadow: 0 0 7px rgba(black, .2);
+		position: relative;
+		background: white;
+		display: inline-block;
+		font-weight: normal;
+
+		@include screen-lg() {
+			font-size: 46px;
+		}
+
+		@include screen-md() {
+			font-size: 41px;
+		}
+
+		@include screen-sm() {
+			font-size: 36px;
+		}
+
+		@include screen-xs() {
+			margin-bottom: 1em;
+		}
+
+		&_second {
+			font-weight: 700;
+			font-family: Roboto;
+		}
+
+		&_line_first,
+		&_line_second {
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 170px;
+				transform-origin: 0 0;
+
+				@include screen-sm() {
+					display: none;
+				}
+			}
+		}
+
+		&_line_first {
+
+			&::before,
+			&::after {
+				background: $color-land;
+				right: 0;
+			}
+
+			&::before {
+				bottom: -170px;
+				transform: rotate(-45deg)scaleY(0.0);
+				@include screen-lg() {
+
+				}
+
+				@include screen-md() {
+					bottom: -105%;
+					right: 60px;
+					transform: rotate(-62deg) scaleY(2.2);
+				}
+			}
+
+			&::after {
+				bottom: -170px;
+				right: 0px;
+				transform: rotate(-81deg) scaleY(4.27);
+
+				@include screen-lg() {
+					transform: rotate(-54deg) scaleY(3.1);
+				}
+
+				@include screen-md() {
+					bottom: auto;
+					left: auto;
+					top: 1px;
+					right: -72px;
+					transform: rotate(-98.4deg) scaleY(0.0);
+				}
+			}
+		}
+
+		&_line_second {
+
+			&::before,
+			&::after {
+				background: #fe3f40;
+
+				@include screen-md() {
+
+				}
+			}
+
+			&::before {
+				right: -50px;
+				top: 50%;
+				transform: rotate(90deg);
+				height: 0px;
+
+				@include screen-md() {
+					right: auto;
+					left: 0;
+					top: 0;
+					transform: rotate(135deg);
+				}
+			}
+
+			&::after {
+				top: 50%;
+				right: 0px;
+				transform: rotate(-104deg) scaleY(1.2);
+				margin-top: 1px;
+
+				@include screen-lg() {
+					transform: rotate(-126deg) scaleY(0.7);
+				}
+
+				@include screen-md() {
+					right: auto;
+					left: -1px;
+					top: 30px;
+					transform: rotate(-200.2deg) scaleY(2.8);
+				}
+			}
+		}
+	}
+
+	&__rect-sm-img {
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		bottom: -24px;
+		right: -24px;
+	}
+
+	&__rect-img {
+		width: 62px;
+		height: 62px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -31px;
+		margin-left: -31px;
+		background: $color-land;
+
+		&_second {
+			background: #fe3f40;
+		}
+	}
+
+	&__fog-logo {
+		opacity: .03;
+		height: 50vh;
+		max-width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+
+		&_right {
+			margin-right: 0;
+		}
+
+		&_fog {
+			box-shadow: 0 0 7px rgba(black, .2);
+		}
+	}
+
+	&__abs {
+		padding: 0 15px;
+		display: inline-block;
+
+		@include screen-xs(min) {
+			position: absolute;
+		}
+
+		&_1 {
+
+			@include screen-xs(min) {
+				left: 0;
+			}
+		}
+
+		&_2 {
+
+			@include screen-xs(min) {
+				left: 260px;
+			}
+
+			@include screen-md() {
+				left: auto;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
