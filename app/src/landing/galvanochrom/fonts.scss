@@ -1,0 +1,18 @@
+@font-face {
+	font-family: "Fire Sans";
+	src:
+	url($path + "fonts/landing/FireSans/FiraSans-Light.otf") format("otf"),
+	url($path + "fonts/landing/FireSans/FiraSans-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Fire Sans";
+	src:
+	url($path + "fonts/landing/FireSans/FiraSans-Medium.otf") format("otf"),
+	url($path + "fonts/landing/FireSans/FiraSans-Medium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+

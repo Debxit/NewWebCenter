@@ -1,5 +1,6 @@
 @import url('../../global/variables.scss');
 @import url('variables.scss');
+@import url('fonts.scss');
 
 
 ::selection {
@@ -8,7 +9,7 @@
 }
 
 .land {
-	font-family: Roboto;
+	font-family: Fire Sans;
 	font-weight: normal;
 	color: $color-land-dark;
 	font-size: 22px;
@@ -129,18 +130,6 @@
 		font-weight: bold;
 		margin: 0 0 .5em;
 		margin-bottom: 40px;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 2px;
-			height: 31px;
-			width: 6px;
-			margin-right: 6px;
-			background-color: #6aacd5;
-			float: left;
-			margin-left: -13px;
-		}
 
 		@include screen-lg() {
 			font-size: 37px;
@@ -310,7 +299,7 @@
 
 		&_second {
 			font-weight: 700;
-			font-family: Roboto;
+			font-family: Fire Sans;
 		}
 
 		&_line_first,
@@ -346,9 +335,9 @@
 				}
 
 				@include screen-md() {
-					bottom: -105%;
-					right: 60px;
-					transform: rotate(-62deg) scaleY(2.2);
+					bottom: -85%;
+					right: -3px;
+					transform: rotate(-107deg) scaleY(1.6);
 				}
 			}
 
@@ -358,7 +347,7 @@
 				transform: rotate(-81deg) scaleY(4.27);
 
 				@include screen-lg() {
-					transform: rotate(-54deg) scaleY(3.1);
+					transform: rotate(-87deg) scaleY(3.8);
 				}
 
 				@include screen-md() {
@@ -375,7 +364,7 @@
 
 			&::before,
 			&::after {
-				background: #fe3f40;
+				background: $color-land-second;
 
 				@include screen-md() {
 
@@ -399,18 +388,18 @@
 			&::after {
 				top: 50%;
 				right: 0px;
-				transform: rotate(-104deg) scaleY(1.2);
+				transform: rotate(-87deg) scaleY(1.8);
 				margin-top: 1px;
 
 				@include screen-lg() {
-					transform: rotate(-126deg) scaleY(0.7);
+					transform: rotate(-98deg) scaleY(1.1);
 				}
 
 				@include screen-md() {
 					right: auto;
 					left: -1px;
 					top: 30px;
-					transform: rotate(-200.2deg) scaleY(2.8);
+					transform: rotate(-247.2deg) scaleY(2.75);
 				}
 			}
 		}
@@ -435,7 +424,7 @@
 		background: $color-land;
 
 		&_second {
-			background: #fe3f40;
+			background: $color-land-second;
 		}
 	}
 
